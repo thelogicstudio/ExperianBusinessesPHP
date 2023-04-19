@@ -1,0 +1,52 @@
+# ExpandedCreditSummary
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**bankruptcy_count** | **float** | Bankruptcy count | [optional] 
+**oldest_bankruptcy_date** | **string** | Oldest bankruptcy date on file | [optional] 
+**most_recent_bankruptcy_date** | **string** | Most recent bankruptcy date on file | [optional] 
+**tax_lien_count** | **float** | Tax lien count | [optional] 
+**oldest_tax_lien_date** | **string** | Oldest tax lien date on file | [optional] 
+**most_recent_tax_lien_date** | **string** | Most recent tax lien date on file | [optional] 
+**judgment_count** | **float** | Judgment count | [optional] 
+**oldest_judgment_date** | **string** | Oldest judgment date on file | [optional] 
+**most_recent_judgment_date** | **string** | Most recent judgment date on file | [optional] 
+**collection_count** | **float** | Collection count | [optional] 
+**collection_balance** | **float** | Collection balance | [optional] 
+**collection_count_past24_months** | **float** | Collect count in the past 24 months | [optional] 
+**legal_balance** | **float** | Total balance of bankruptcies, liens, judgments, and collections | [optional] 
+**ucc_filings** | **float** | Count of Uniform Commercial Code (UCC) filings | [optional] 
+**ucc_derogatory_count** | **float** | Derogatory UCCs include one or more of the following as collateral-  accounts, accounts receivable, contracts, hereafter acquired inventory,  leases, notes receivable, or proceeds. When a business pledges these key  assets to secure financing it may indicate the business is under financial stress | [optional] 
+**current_account_balance** | **float** | Current account balance | [optional] 
+**current_tradeline_count** | **float** | Current tradeline count | [optional] 
+**monthly_average_dbt** | **float** | Monthly average DBT | [optional] 
+**highest_dbt6_months** | **float** | The highest DBT in the past 6 months | [optional] 
+**highest_dbt5_quarters** | **float** | The highest DBT in the past 5 quarters | [optional] 
+**active_tradeline_count** | **float** | Active tradeline count | [optional] 
+**all_tradeline_balance** | **float** | Total balance of all tradelines | [optional] 
+**all_tradeline_count** | **float** | Total count of all tradelines | [optional] 
+**average_balance5_quarters** | **float** | Average balance over the past 5 quarters | [optional] 
+**single_high_credit** | **float** | Single high credit in any one tradeline | [optional] 
+**low_balance6_months** | **float** | Lowest total balance in the past 6 months | [optional] 
+**high_balance6_months** | **float** | Highest total balance in the past 6 months | [optional] 
+**oldest_collection_date** | **string** | Oldest collection date | [optional] 
+**most_recent_collection_date** | **string** | Most recent collection date | [optional] 
+**current_dbt** | **float** | Current DBT | [optional] 
+**oldest_ucc_date** | **string** | Oldest UCC filing date | [optional] 
+**most_recent_ucc_date** | **string** | Most recent UCC filing date | [optional] 
+**bankruptcy_indicator** | **bool** | If true indicates a bankruptcy is on file | [optional] 
+**judgment_indicator** | **bool** | If true indicates a judgment is on file | [optional] 
+**tax_lien_indicator** | **bool** | If true indicates a tax lien is on file | [optional] 
+**trade_collection_count** | **float** | Count of all collections on file | [optional] 
+**trade_collection_balance** | **float** | Balance of all collections on file | [optional] 
+**open_collection_count** | **float** | Count of open collections | [optional] 
+**open_collection_balance** | **float** | Balance of all open collections | [optional] 
+**ofac_match_warning** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\ExpandedCreditSummaryOfacMatchWarning**](ExpandedCreditSummaryOfacMatchWarning.md) |  | [optional] 
+**victim_statement_indicator** | **bool** | If true the business has filed a statement with Experian indicating they were a victim of fraud or identity theft | [optional] 
+**commercial_fraud_risk_indicator_count** | **float** | Count of high risk commercial fraud indicators present | [optional] 
+**unsummarized_tradeline_count** | **float** | Total count of all unsummarized trades on file for the business | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

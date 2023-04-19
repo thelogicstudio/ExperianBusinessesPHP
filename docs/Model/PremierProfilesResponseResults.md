@@ -1,0 +1,52 @@
+# PremierProfilesResponseResults
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**collections_detail** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCollectionsDetailResult[]**](BusinessCollectionsDetailResult.md) | Array containing details of collections on file for business | [optional] 
+**trade_payment_experiences** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\TradePaymentExperiencesResult[]**](TradePaymentExperiencesResult.md) | Array containing details of all trade payment experiences on file for the business | [optional] 
+**additional_payment_experiences** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\TradePaymentExperiencesResult[]**](TradePaymentExperiencesResult.md) | Array containing additional trade payment experiences | [optional] 
+**payment_totals** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\PaymentTotalsResult**](PaymentTotalsResult.md) | Object that contains trade payment total counts for different types of trades | [optional] 
+**monthly_payment_trends** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\TradePaymentTrend[]**](TradePaymentTrend.md) | Snapshot of key performance metrics and trade balances for the last 6 months; current and 6 previous | [optional] 
+**industry_payment_trends** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\PremierProfilesResponseResultsIndustryPaymentTrends**](PremierProfilesResponseResultsIndustryPaymentTrends.md) |  | [optional] 
+**quarterly_payment_trends** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\TradePaymentTrend[]**](TradePaymentTrend.md) | Snapshot of key performance metrics and trade balance for the last 5 quarters; current and 4 previous | [optional] 
+**bankruptcy_detail** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BankruptcyDetail[]**](BankruptcyDetail.md) | Array containing details of bankruptcies filed by the business | [optional] 
+**tax_lien_detail** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\LienDetail[]**](LienDetail.md) | Array containing details of tax liens filed by the business | [optional] 
+**judgment_detail** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\JudgmentDetail[]**](JudgmentDetail.md) | Array containing details of judgments filed by the business | [optional] 
+**ucc_filings_summary** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\PremierProfilesResponseResultsUccFilingsSummary**](PremierProfilesResponseResultsUccFilingsSummary.md) |  | [optional] 
+**ucc_filings_detail** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\UCCFilingsDetail[]**](UCCFilingsDetail.md) | Array containing details of judgments filed by the business | [optional] 
+**corporate_registration** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCorporateRegistrationResult**](BusinessCorporateRegistrationResult.md) | Object containing Corporate Registration information | [optional] 
+**executive_information** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\ExecutiveInformation[]**](ExecutiveInformation.md) | Key company contacts including owners, officers, and directors | [optional] 
+**business_facts** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessFacts**](BusinessFacts.md) | An in-depth look at the business, including how long the business has been in operation, other legal names under which the business operates, firmographics, and more information | [optional] 
+**corporate_linkage** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\CorporateLinkage[]**](CorporateLinkage.md) | Returns the Ultimate Parent, the immediate Parent/Headquarters, up to 10 Subsidiaries, and up to 10 branches. If additional data is available, the returnLimitExceeded indicator will be true | [optional] 
+**commercial_fraud_shield_summary** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\CommercialFraudShieldSummary**](CommercialFraudShieldSummary.md) | Object containing Commercial Fraud Shield Summary information | [optional] 
+**expanded_credit_summary** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\ExpandedCreditSummary**](ExpandedCreditSummary.md) | Object containing Expanded Credit Summary | [optional] 
+**executive_summary** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\ExecutiveSummary**](ExecutiveSummary.md) | Object containing Expanded Credit Summary | [optional] 
+**inquiries** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\Inquiries[]**](Inquiries.md) | Array containing inquiry information | [optional] 
+**competitors** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\Competitors[]**](Competitors.md) | Array containing Competitor information | [optional] 
+**proprietor_name_and_address** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\ProprietorNameAndAddress[]**](ProprietorNameAndAddress.md) | Object containing Proprietor Information | [optional] 
+**ucc_co_debtors** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\UccCoDebtors[]**](UccCoDebtors.md) | Array containing UCCCoDebtor information | [optional] 
+**sic_codes** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\SICCode[]**](SICCode.md) | Array of objects representing SIC codes for the business each with a code and description | [optional] 
+**naics_codes** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\NAICSCode[]**](NAICSCode.md) | Array of objects representing NAICS codes for the business each with a code and description | [optional] 
+**score_information** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\ScoreInformation**](ScoreInformation.md) | Object containing Score Information | [optional] 
+**stock_exchange** | **string** | What stock exchange the stock is offered on (e.g. New York Stock Exchange) | [optional] 
+**fortune1000** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\Fortune1000[]**](Fortune1000.md) | Array representing if the business was listed on the fortune 1000 list in the past 3 years (if not ever listed the value will be null) | [optional] 
+**enhanced_business_description** | **string** | Provides a detailed description of the business and its operations | [optional] 
+**corporate_financial_information** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\CorporateFinancialInformation**](CorporateFinancialInformation.md) | Corporate Financial Information provides objective data on the financial health of the business if it is a publicly held company | [optional] 
+**consumer_statement** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\ConsumerStatement[]**](ConsumerStatement.md) | Array containing Consumer Statement information | [optional] 
+**commercial_government_entity_code** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\CommercialGovernmentEntityCode**](CommercialGovernmentEntityCode.md) | Object containing Commercial Government Entity Code information | [optional] 
+**economic_diversity** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\EconomicDiversity**](EconomicDiversity.md) | Object containing Economic Diversity information | [optional] 
+**government_activity** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\GovernmentActivity**](GovernmentActivity.md) | Object containing Government Activity information | [optional] 
+**contract_spending_summary** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\ContractSpendingSummary**](ContractSpendingSummary.md) | Object containing Contract Spending Summary information | [optional] 
+**contract_spending_detail** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\ContractSpendingDetail[]**](ContractSpendingDetail.md) | Array containing Contract Spending Detail information | [optional] 
+**leasing_information** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\LeasingInformationResult[]**](LeasingInformationResult.md) | Array containing Leasing information | [optional] 
+**license_details** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\LicenseDetailsResult[]**](LicenseDetailsResult.md) | Array containing license Details | [optional] 
+**bond_details** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\PremierProfilesResponseResultsBondDetails[]**](PremierProfilesResponseResultsBondDetails.md) | Bond details | [optional] 
+**insurance_details** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\PremierProfilesResponseResultsInsuranceDetails[]**](PremierProfilesResponseResultsInsuranceDetails.md) | Insurance Details | [optional] 
+**stocks** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\PremierProfilesResponseResultsStocks**](PremierProfilesResponseResultsStocks.md) |  | [optional] 
+**commercial_bank_information** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\PremierProfilesResponseResultsCommercialBankInformation[]**](PremierProfilesResponseResultsCommercialBankInformation.md) | Commercial banking information | [optional] 
+**aggregates** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BizAggregates**](BizAggregates.md) | Object containing business aggregates (BizAggs) | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
