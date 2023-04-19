@@ -13,10 +13,11 @@ PHP 5.5 and later
 ## Installation & Usage
 ### Composer
 
-To install the bindings via [Composer](http://getcomposer.org/), add the following to `composer.json`:
+To install the bindings via [Composer](http://getcomposer.org/), navigate to where your composer.json file is and run the command:
+
 
 ```
-composer require thelogicstudio/experian-businesses-php navigate to where your composer.json file is and run the command:
+composer require thelogicstudio/experian-businesses-php
 ```
 
 
