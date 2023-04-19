@@ -126,13 +126,6 @@ class BusinessCorporateRegistrationResultTest extends \PHPUnit_Framework_TestCas
     }
 
     /**
-     * Test attribute "status_flag"
-     */
-    public function testPropertyStatusFlag()
-    {
-    }
-
-    /**
      * Test attribute "status_description"
      */
     public function testPropertyStatusDescription()
