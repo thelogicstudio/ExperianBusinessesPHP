@@ -13,7 +13,7 @@
 /**
  * Businesses
  *
- * <p>Experian's Business Information Services is a leader in providing data and predictive insights to organizations, helping them mitigate risk and improve profitability.  The Businesses API provides integrated access to our business database which provides comprehensive, third-party-verified information on 99.9 percent of all U.S. companies, with the industry's most extensive data on the broad spectrum of small and midsize businesses.</p> <p>&nbsp;</p> <p>The Businesses API provides a la carte access to Experian's commercial credit and  commercial public record information, including commercial scores, trades, corporate linkage, bankruptcies, liens, judgments, and more.</p> <p>&nbsp;</p> <p><strong>It All Starts With a Search</strong></p> <p>The Business Search API allows you to input a business name, address, city, and state to find their Business Identification Number (BIN) - you'll need this to get data from most of the other APIs.  The primary search method is called \"Advanced Search\" and can be used for automated matching using our Match Reliability Code.   A secondary search method, called \"QuickSearch\" and is a type-ahead style search that allows a human user to quickly find a business using a smaller amount of data.</p> <p><strong>SBCS Consortium Members</strong> can use the Businesses API search endpoints.</p> <p><strong>SBFE Consortium Members</strong> must use the <a href=\"/products/us/small-business-financial-exchangetm\">SBFE API</a>, using either the  List of Similars product option to search for a business, or a Name/Address request for automated matching.</p>  <p>&nbsp;</p> <p><strong>Businesses API in the Sandbox</strong></p> <ul> <li><strong>Advanced Search</strong> - The primary way to search for US businesses and return a List of Similars. Designed for both automation and human interaction</li> <li><strong>Quick Search</strong> - The secondary search method. A flexible, type-ahead style search API for US businesses. Designed primarily for human interaction</li> <li><strong>Headers</strong> - Business identity information. Available as stand-alone and included with most API responses</li> <li><strong>Scores</strong> - Commercial Intelliscore Plus and Financial Stability Risk Scores, with scores, score factors, and monthly and quarterly trends</li> <li><strong>Scores Auto Search</strong> - Returns the Scores API, but with a Business Name and Address request input</li> <li><strong>Premier Profiles JSON</strong> - Experian's flagship commercial credit report</li> <li><strong>Premier Profiles HTML</strong> - Renders a styled Premier Profile report using HTML/CSS</li> <li><strong>Premier Profiles PDF</strong> - Provides an encoded Premier Profile PDF report</li> <li><strong>Intelliscore Report JSON</strong> – Our score only report</li> <li><strong>Intelliscore Report HTML</strong> – Our score only report in HTML format</li> <li><strong>Intelliscore Report PDF</strong> – Our score only report in PDF format</li> <li><strong>Business Compliance Insight JSON</strong> – The BCI report helps with client onboarding and Know-Your-Customer investigations</li> <li><strong>Business Compliance Insight HTML</strong> – The BCI Report in HTML format</li> <li><strong>Business Compliance Insight PDF</strong> – The BCI report in PDF format</li> <li><strong>Aggregates</strong> - The BizAggs represent over 400 unique data attributes that represent the building blocks of commercial credit</li> <li><strong>MultiSegments</strong> - MultiSegments allows you to request segments from most Businesses API endpoints in a single API call</li> <li><strong>Risk Dashboards</strong> - Includes commercial and FSR scores, credit limit amount, current DBT</li> <li><strong>Business Facts</strong> - Key operational facts including SIC, NAICS, public status, sales, employees</li> <li><strong>Fraud Shields</strong> - Screens for potential indicators of fraud. Includes possible OFAC match</li> <li><strong>Credit Status</strong> - Key credit facts about the business including tradeline count, balance, DBT</li> <li><strong>Legal Filings and Collections Summaries</strong> - Summary of all legal filings and collections</li> <li><strong>Collections</strong> - Summary and Detail</li> <li><strong>Trades</strong> - Trade summary, payment experiences, payment totals, and trade payment trends</li> <li><strong>Bankruptcies</strong> - Summary and Detail</li> <li><strong>Liens</strong> - Summary and Detail</li> <li><strong>Judgments</strong> - Summary and Detail</li> <li><strong>UCC Filings</strong> - Summary and Trends</li> <li><strong>Corporate Registrations</strong> - Corporate registration info for the business, including filing status</li> <li><strong>Corporate Linkage</strong> - Partial and/or Full Family Tree</li> <li><strong>Business Contacts</strong> - Individual owners, company owners, contacts and titles, and contacts business affiliations</li> <li><strong>Reverse Addresses</strong> - Input an address and find businesses affiliated with that address</li> <li><strong>Reverse Phones</strong> - Input a phone number and find businesses affiliated with that phone number</li> <li><strong>Reverse Tax IDs</strong> - Input a Tax ID (EIN) and find businesses affiliated with that Tax ID</li> <li><strong>Government Details</strong> – Economic diversity and government contract data for the business</li> <li><strong>IST Watch</strong> - Manage OFAC regulatory compliance and watchlist screening with the IST Watch API</li> </ul> <p>&nbsp;</p> <p><strong>Businesses API Environments</strong></p> <ul> <li><strong>Sandbox </strong> - https://sandbox-us-api.experian.com/businessinformation/businesses</li> <li><strong>UAT </strong> - https://uat-us-api.experian.com/businessinformation/businesses</li> <li><strong>Production</strong> - https://us-api.experian.com/businessinformation/businesses</li> </ul> <p>&nbsp;</p> <p>Please note that the Businesses API in the Developer Portal Sandbox is a non-production service that is for testing and demonstration purposes only. Only a limited number of businesses are available in the sandbox test environment. A list of valid Business Identification Numbers  (BINs) can be provided to you upon your request, and valid BINs in the sandbox can  also be obtained using the Business Search API. Please contact your Experian Account Executive to discuss obtaining production access to the Businesses API.</p> <p>&nbsp;</p> <p><strong>IPv3 Sample Subcodes</strong></p> <ul> <li>IPv3 Logistic Regression - 0586286</li> <li>IPv3 Machine Learning - 0586548</li> </ul> <p>&nbsp;</p> <p><strong>Additional Developer Tools</strong></p> <ul> <li><a href=\"https://github.com/experianplc/Experian-BIS-Postman-Collection\"><strong>BIS API Postman Collection</strong></a> - A starter Postman Collection and Environment for many BIS APIs</li> <li><a href=\"https://github.com/experianplc/BIS-HTML-Resources\"><strong>BIS HTML Resources</strong></a> - Images, CSS, and Javsscript files necessary to render BIS HTML API reports</li> </ul>
+ * <p>Experian's Business Information Services is a leader in providing data and predictive insights to organizations, helping them mitigate risk and improve profitability.  The Businesses API provides integrated access to our business database which provides comprehensive, third-party-verified information on 99.9 percent of all U.S. companies, with the industry's most extensive data on the broad spectrum of small and midsize businesses.</p> <p>&nbsp;</p> <p>The Businesses API provides a la carte access to Experian's commercial credit and  commercial public record information, including commercial scores, trades, corporate linkage, bankruptcies, liens, judgments, and more.</p> <p>&nbsp;</p> <p><strong>It All Starts With a Search</strong></p> <p>The Business Search API allows you to input a business name, address, city, and state to find their Business Identification Number (BIN) - you'll need this to get data from most of the other APIs.  The primary search method is called \"Advanced Search\" and can be used for automated matching using our Match Reliability Code. A secondary search method, called \"QuickSearch\" and is a type-ahead style search that allows a human user to quickly find a business using a smaller amount of data.</p> <p><strong>SBCS Consortium Members</strong> can use the Businesses API search endpoints.</p> <p><strong>SBFE Consortium Members</strong> must use the <a href=\"/products/us/small-business-financial-exchangetm\">SBFE API</a>, using either the List of Similars product option to search for a business, or a Name/Address request for automated matching.</p> <p>&nbsp;</p> <p><strong>Businesses API in the Sandbox</strong></p> <ul> <li><strong>Advanced Search</strong> - The primary way to search for US businesses and return a List of Similars. Designed for both automation and human interaction</li> <li><strong>Quick Search</strong> - The secondary search method. A flexible, type-ahead style search API for US businesses. Designed primarily for human interaction</li> <li><strong>Headers</strong> - Business identity information. Available as stand-alone and included with most API responses</li> <li><strong>Scores</strong> - Commercial Intelliscore Plus and Financial Stability Risk Scores, with scores, score factors, and monthly and quarterly trends</li> <li><strong>Scores Auto Search</strong> - Returns the Scores API, but with a Business Name and Address request input</li> <li><strong>Premier Profiles JSON</strong> - Experian's flagship commercial credit report</li> <li><strong>Premier Profiles HTML</strong> - Renders a styled Premier Profile report using HTML/CSS</li> <li><strong>Premier Profiles PDF</strong> - Provides an encoded Premier Profile PDF report</li> <li><strong>Intelliscore Report JSON</strong> – Our score only report</li> <li><strong>Intelliscore Report HTML</strong> – Our score only report in HTML format</li> <li><strong>Intelliscore Report PDF</strong> – Our score only report in PDF format</li> <li><strong>Business Compliance Insight JSON</strong> – The BCI report helps with client onboarding and Know-Your-Customer investigations</li> <li><strong>Business Compliance Insight HTML</strong> – The BCI Report in HTML format</li> <li><strong>Business Compliance Insight PDF</strong> – The BCI report in PDF format</li> <li><strong>Aggregates</strong> - The BizAggs represent over 400 unique data attributes that represent the building blocks of commercial credit</li> <li><strong>MultiSegments</strong> - MultiSegments allows you to request segments from most Businesses API endpoints in a single API call</li> <li><strong>Risk Dashboards</strong> - Includes commercial and FSR scores, credit limit amount, current DBT</li> <li><strong>Business Facts</strong> - Key operational facts including SIC, NAICS, public status, sales, employees</li> <li><strong>Fraud Shields</strong> - Screens for potential indicators of fraud. Includes possible OFAC match</li> <li><strong>Credit Status</strong> - Key credit facts about the business including tradeline count, balance, DBT</li> <li><strong>Legal Filings and Collections Summaries</strong> - Summary of all legal filings and collections</li> <li><strong>Collections</strong> - Summary and Detail</li> <li><strong>Trades</strong> - Trade summary, payment experiences, payment totals, and trade payment trends</li> <li><strong>Bankruptcies</strong> - Summary and Detail</li> <li><strong>Liens</strong> - Summary and Detail</li> <li><strong>Judgments</strong> - Summary and Detail</li> <li><strong>UCC Filings</strong> - Summary and Trends</li> <li><strong>Corporate Registrations</strong> - Corporate registration info for the business, including filing status</li> <li><strong>Corporate Linkage</strong> - Partial and/or Full Family Tree</li> <li><strong>Business Contacts</strong> - Individual owners, company owners, contacts and titles, and contacts business affiliations</li> <li><strong>Reverse Addresses</strong> - Input an address and find businesses affiliated with that address</li> <li><strong>Reverse Phones</strong> - Input a phone number and find businesses affiliated with that phone number</li> <li><strong>Reverse Tax IDs</strong> - Input a Tax ID (EIN) and find businesses affiliated with that Tax ID</li> <li><strong>Government Details</strong> – Economic diversity and government contract data for the business</li> <li><strong>IST Watch</strong> - Manage OFAC regulatory compliance and watchlist screening with the IST Watch API</li> </ul> <p>&nbsp;</p> <p><strong>Businesses API Environments</strong></p> <ul> <li><strong>Sandbox </strong> - https://sandbox-us-api.experian.com/businessinformation/businesses</li> <li><strong>UAT </strong> - https://uat-us-api.experian.com/businessinformation/businesses</li> <li><strong>Production</strong> - https://us-api.experian.com/businessinformation/businesses</li> </ul> <p>&nbsp;</p> <p>Please note that the Businesses API in the Developer Portal Sandbox is a non-production service that is for testing and demonstration purposes only. Only a limited number of businesses are available in the sandbox test environment. A list of valid Business Identification Numbers  (BINs) can be provided to you upon your request, and valid BINs in the sandbox can  also be obtained using the Business Search API. Please contact your Experian Account Executive to discuss obtaining production access to the Businesses API.</p> <p>&nbsp;</p> <p><strong>IPv3 Sample Subcodes</strong></p> <ul> <li>IPv3 Logistic Regression - 0586286</li> <li>IPv3 Machine Learning - 0586548</li> </ul> <p>&nbsp;</p> <p><strong>Additional Developer Tools</strong></p> <ul> <li><a href=\"https://github.com/experianplc/Experian-BIS-Postman-Collection\"><strong>BIS API Postman Collection</strong></a> - A starter Postman Collection and Environment for many BIS APIs</li> <li><a href=\"https://github.com/experianplc/BIS-HTML-Resources\"><strong>BIS HTML Resources</strong></a> - Images, CSS, and Javsscript files necessary to render BIS HTML API reports</li> </ul>
  *
  * OpenAPI spec version: 1.0.2
  * 
@@ -351,110 +351,6 @@ class ISTWatchlistResult implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if (!is_null($this->container['add_num']) && (mb_strlen($this->container['add_num']) > 50)) {
-            $invalidProperties[] = "invalid value for 'add_num', the character length must be smaller than or equal to 50.";
-        }
-
-        if (!is_null($this->container['add_remarks']) && (mb_strlen($this->container['add_remarks']) > 200)) {
-            $invalidProperties[] = "invalid value for 'add_remarks', the character length must be smaller than or equal to 200.";
-        }
-
-        if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 350)) {
-            $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 350.";
-        }
-
-        if (!is_null($this->container['name_search_key']) && (mb_strlen($this->container['name_search_key']) > 10)) {
-            $invalidProperties[] = "invalid value for 'name_search_key', the character length must be smaller than or equal to 10.";
-        }
-
-        if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) > 750)) {
-            $invalidProperties[] = "invalid value for 'state', the character length must be smaller than or equal to 750.";
-        }
-
-        if (!is_null($this->container['city']) && (mb_strlen($this->container['city']) > 50)) {
-            $invalidProperties[] = "invalid value for 'city', the character length must be smaller than or equal to 50.";
-        }
-
-        if (!is_null($this->container['phone']) && (mb_strlen($this->container['phone']) > 50)) {
-            $invalidProperties[] = "invalid value for 'phone', the character length must be smaller than or equal to 50.";
-        }
-
-        if (!is_null($this->container['country']) && (mb_strlen($this->container['country']) > 50)) {
-            $invalidProperties[] = "invalid value for 'country', the character length must be smaller than or equal to 50.";
-        }
-
-        if (!is_null($this->container['call_sign']) && (mb_strlen($this->container['call_sign']) > 8)) {
-            $invalidProperties[] = "invalid value for 'call_sign', the character length must be smaller than or equal to 8.";
-        }
-
-        if (!is_null($this->container['date_entered']) && (mb_strlen($this->container['date_entered']) > 10)) {
-            $invalidProperties[] = "invalid value for 'date_entered', the character length must be smaller than or equal to 10.";
-        }
-
-        if (!is_null($this->container['dup_id']) && (mb_strlen($this->container['dup_id']) > 10)) {
-            $invalidProperties[] = "invalid value for 'dup_id', the character length must be smaller than or equal to 10.";
-        }
-
-        if (!is_null($this->container['effective_date']) && (mb_strlen($this->container['effective_date']) > 255)) {
-            $invalidProperties[] = "invalid value for 'effective_date', the character length must be smaller than or equal to 255.";
-        }
-
-        if (!is_null($this->container['error_desc']) && (mb_strlen($this->container['error_desc']) > 255)) {
-            $invalidProperties[] = "invalid value for 'error_desc', the character length must be smaller than or equal to 255.";
-        }
-
-        if (!is_null($this->container['expiration_date']) && (mb_strlen($this->container['expiration_date']) > 255)) {
-            $invalidProperties[] = "invalid value for 'expiration_date', the character length must be smaller than or equal to 255.";
-        }
-
-        if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 10)) {
-            $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 10.";
-        }
-
-        if (!is_null($this->container['memo']) && (mb_strlen($this->container['memo']) > 4000)) {
-            $invalidProperties[] = "invalid value for 'memo', the character length must be smaller than or equal to 4000.";
-        }
-
-        if (!is_null($this->container['program']) && (mb_strlen($this->container['program']) > 50)) {
-            $invalidProperties[] = "invalid value for 'program', the character length must be smaller than or equal to 50.";
-        }
-
-        if (!is_null($this->container['return_codes']) && (mb_strlen($this->container['return_codes']) > 9)) {
-            $invalidProperties[] = "invalid value for 'return_codes', the character length must be smaller than or equal to 9.";
-        }
-
-        if (!is_null($this->container['score']) && (mb_strlen($this->container['score']) > 11)) {
-            $invalidProperties[] = "invalid value for 'score', the character length must be smaller than or equal to 11.";
-        }
-
-        if (!is_null($this->container['searches_left']) && (mb_strlen($this->container['searches_left']) > 9)) {
-            $invalidProperties[] = "invalid value for 'searches_left', the character length must be smaller than or equal to 9.";
-        }
-
-        if (!is_null($this->container['standard_order']) && (mb_strlen($this->container['standard_order']) > 255)) {
-            $invalidProperties[] = "invalid value for 'standard_order', the character length must be smaller than or equal to 255.";
-        }
-
-        if (!is_null($this->container['title']) && (mb_strlen($this->container['title']) > 200)) {
-            $invalidProperties[] = "invalid value for 'title', the character length must be smaller than or equal to 200.";
-        }
-
-        if (!is_null($this->container['tonnage']) && (mb_strlen($this->container['tonnage']) > 14)) {
-            $invalidProperties[] = "invalid value for 'tonnage', the character length must be smaller than or equal to 14.";
-        }
-
-        if (!is_null($this->container['vess_flag']) && (mb_strlen($this->container['vess_flag']) > 40)) {
-            $invalidProperties[] = "invalid value for 'vess_flag', the character length must be smaller than or equal to 40.";
-        }
-
-        if (!is_null($this->container['vess_owner']) && (mb_strlen($this->container['vess_owner']) > 150)) {
-            $invalidProperties[] = "invalid value for 'vess_owner', the character length must be smaller than or equal to 150.";
-        }
-
-        if (!is_null($this->container['vess_type']) && (mb_strlen($this->container['vess_type']) > 25)) {
-            $invalidProperties[] = "invalid value for 'vess_type', the character length must be smaller than or equal to 25.";
-        }
-
         return $invalidProperties;
     }
 
@@ -489,10 +385,6 @@ class ISTWatchlistResult implements ModelInterface, ArrayAccess
      */
     public function setAddNum($add_num)
     {
-        if (!is_null($add_num) && (mb_strlen($add_num) > 50)) {
-            throw new \InvalidArgumentException('invalid length for $add_num when calling ISTWatchlistResult., must be smaller than or equal to 50.');
-        }
-
         $this->container['add_num'] = $add_num;
 
         return $this;
@@ -517,10 +409,6 @@ class ISTWatchlistResult implements ModelInterface, ArrayAccess
      */
     public function setAddRemarks($add_remarks)
     {
-        if (!is_null($add_remarks) && (mb_strlen($add_remarks) > 200)) {
-            throw new \InvalidArgumentException('invalid length for $add_remarks when calling ISTWatchlistResult., must be smaller than or equal to 200.');
-        }
-
         $this->container['add_remarks'] = $add_remarks;
 
         return $this;
@@ -545,10 +433,6 @@ class ISTWatchlistResult implements ModelInterface, ArrayAccess
      */
     public function setName($name)
     {
-        if (!is_null($name) && (mb_strlen($name) > 350)) {
-            throw new \InvalidArgumentException('invalid length for $name when calling ISTWatchlistResult., must be smaller than or equal to 350.');
-        }
-
         $this->container['name'] = $name;
 
         return $this;
@@ -573,10 +457,6 @@ class ISTWatchlistResult implements ModelInterface, ArrayAccess
      */
     public function setNameSearchKey($name_search_key)
     {
-        if (!is_null($name_search_key) && (mb_strlen($name_search_key) > 10)) {
-            throw new \InvalidArgumentException('invalid length for $name_search_key when calling ISTWatchlistResult., must be smaller than or equal to 10.');
-        }
-
         $this->container['name_search_key'] = $name_search_key;
 
         return $this;
@@ -625,10 +505,6 @@ class ISTWatchlistResult implements ModelInterface, ArrayAccess
      */
     public function setState($state)
     {
-        if (!is_null($state) && (mb_strlen($state) > 750)) {
-            throw new \InvalidArgumentException('invalid length for $state when calling ISTWatchlistResult., must be smaller than or equal to 750.');
-        }
-
         $this->container['state'] = $state;
 
         return $this;
@@ -653,10 +529,6 @@ class ISTWatchlistResult implements ModelInterface, ArrayAccess
      */
     public function setCity($city)
     {
-        if (!is_null($city) && (mb_strlen($city) > 50)) {
-            throw new \InvalidArgumentException('invalid length for $city when calling ISTWatchlistResult., must be smaller than or equal to 50.');
-        }
-
         $this->container['city'] = $city;
 
         return $this;
@@ -705,10 +577,6 @@ class ISTWatchlistResult implements ModelInterface, ArrayAccess
      */
     public function setPhone($phone)
     {
-        if (!is_null($phone) && (mb_strlen($phone) > 50)) {
-            throw new \InvalidArgumentException('invalid length for $phone when calling ISTWatchlistResult., must be smaller than or equal to 50.');
-        }
-
         $this->container['phone'] = $phone;
 
         return $this;
@@ -733,10 +601,6 @@ class ISTWatchlistResult implements ModelInterface, ArrayAccess
      */
     public function setCountry($country)
     {
-        if (!is_null($country) && (mb_strlen($country) > 50)) {
-            throw new \InvalidArgumentException('invalid length for $country when calling ISTWatchlistResult., must be smaller than or equal to 50.');
-        }
-
         $this->container['country'] = $country;
 
         return $this;
@@ -761,10 +625,6 @@ class ISTWatchlistResult implements ModelInterface, ArrayAccess
      */
     public function setCallSign($call_sign)
     {
-        if (!is_null($call_sign) && (mb_strlen($call_sign) > 8)) {
-            throw new \InvalidArgumentException('invalid length for $call_sign when calling ISTWatchlistResult., must be smaller than or equal to 8.');
-        }
-
         $this->container['call_sign'] = $call_sign;
 
         return $this;
@@ -789,10 +649,6 @@ class ISTWatchlistResult implements ModelInterface, ArrayAccess
      */
     public function setDateEntered($date_entered)
     {
-        if (!is_null($date_entered) && (mb_strlen($date_entered) > 10)) {
-            throw new \InvalidArgumentException('invalid length for $date_entered when calling ISTWatchlistResult., must be smaller than or equal to 10.');
-        }
-
         $this->container['date_entered'] = $date_entered;
 
         return $this;
@@ -817,10 +673,6 @@ class ISTWatchlistResult implements ModelInterface, ArrayAccess
      */
     public function setDupId($dup_id)
     {
-        if (!is_null($dup_id) && (mb_strlen($dup_id) > 10)) {
-            throw new \InvalidArgumentException('invalid length for $dup_id when calling ISTWatchlistResult., must be smaller than or equal to 10.');
-        }
-
         $this->container['dup_id'] = $dup_id;
 
         return $this;
@@ -845,10 +697,6 @@ class ISTWatchlistResult implements ModelInterface, ArrayAccess
      */
     public function setEffectiveDate($effective_date)
     {
-        if (!is_null($effective_date) && (mb_strlen($effective_date) > 255)) {
-            throw new \InvalidArgumentException('invalid length for $effective_date when calling ISTWatchlistResult., must be smaller than or equal to 255.');
-        }
-
         $this->container['effective_date'] = $effective_date;
 
         return $this;
@@ -873,10 +721,6 @@ class ISTWatchlistResult implements ModelInterface, ArrayAccess
      */
     public function setErrorDesc($error_desc)
     {
-        if (!is_null($error_desc) && (mb_strlen($error_desc) > 255)) {
-            throw new \InvalidArgumentException('invalid length for $error_desc when calling ISTWatchlistResult., must be smaller than or equal to 255.');
-        }
-
         $this->container['error_desc'] = $error_desc;
 
         return $this;
@@ -901,10 +745,6 @@ class ISTWatchlistResult implements ModelInterface, ArrayAccess
      */
     public function setExpirationDate($expiration_date)
     {
-        if (!is_null($expiration_date) && (mb_strlen($expiration_date) > 255)) {
-            throw new \InvalidArgumentException('invalid length for $expiration_date when calling ISTWatchlistResult., must be smaller than or equal to 255.');
-        }
-
         $this->container['expiration_date'] = $expiration_date;
 
         return $this;
@@ -929,10 +769,6 @@ class ISTWatchlistResult implements ModelInterface, ArrayAccess
      */
     public function setId($id)
     {
-        if (!is_null($id) && (mb_strlen($id) > 10)) {
-            throw new \InvalidArgumentException('invalid length for $id when calling ISTWatchlistResult., must be smaller than or equal to 10.');
-        }
-
         $this->container['id'] = $id;
 
         return $this;
@@ -957,10 +793,6 @@ class ISTWatchlistResult implements ModelInterface, ArrayAccess
      */
     public function setMemo($memo)
     {
-        if (!is_null($memo) && (mb_strlen($memo) > 4000)) {
-            throw new \InvalidArgumentException('invalid length for $memo when calling ISTWatchlistResult., must be smaller than or equal to 4000.');
-        }
-
         $this->container['memo'] = $memo;
 
         return $this;
@@ -985,10 +817,6 @@ class ISTWatchlistResult implements ModelInterface, ArrayAccess
      */
     public function setProgram($program)
     {
-        if (!is_null($program) && (mb_strlen($program) > 50)) {
-            throw new \InvalidArgumentException('invalid length for $program when calling ISTWatchlistResult., must be smaller than or equal to 50.');
-        }
-
         $this->container['program'] = $program;
 
         return $this;
@@ -1013,10 +841,6 @@ class ISTWatchlistResult implements ModelInterface, ArrayAccess
      */
     public function setReturnCodes($return_codes)
     {
-        if (!is_null($return_codes) && (mb_strlen($return_codes) > 9)) {
-            throw new \InvalidArgumentException('invalid length for $return_codes when calling ISTWatchlistResult., must be smaller than or equal to 9.');
-        }
-
         $this->container['return_codes'] = $return_codes;
 
         return $this;
@@ -1041,10 +865,6 @@ class ISTWatchlistResult implements ModelInterface, ArrayAccess
      */
     public function setScore($score)
     {
-        if (!is_null($score) && (mb_strlen($score) > 11)) {
-            throw new \InvalidArgumentException('invalid length for $score when calling ISTWatchlistResult., must be smaller than or equal to 11.');
-        }
-
         $this->container['score'] = $score;
 
         return $this;
@@ -1069,10 +889,6 @@ class ISTWatchlistResult implements ModelInterface, ArrayAccess
      */
     public function setSearchesLeft($searches_left)
     {
-        if (!is_null($searches_left) && (mb_strlen($searches_left) > 9)) {
-            throw new \InvalidArgumentException('invalid length for $searches_left when calling ISTWatchlistResult., must be smaller than or equal to 9.');
-        }
-
         $this->container['searches_left'] = $searches_left;
 
         return $this;
@@ -1097,10 +913,6 @@ class ISTWatchlistResult implements ModelInterface, ArrayAccess
      */
     public function setStandardOrder($standard_order)
     {
-        if (!is_null($standard_order) && (mb_strlen($standard_order) > 255)) {
-            throw new \InvalidArgumentException('invalid length for $standard_order when calling ISTWatchlistResult., must be smaller than or equal to 255.');
-        }
-
         $this->container['standard_order'] = $standard_order;
 
         return $this;
@@ -1125,10 +937,6 @@ class ISTWatchlistResult implements ModelInterface, ArrayAccess
      */
     public function setTitle($title)
     {
-        if (!is_null($title) && (mb_strlen($title) > 200)) {
-            throw new \InvalidArgumentException('invalid length for $title when calling ISTWatchlistResult., must be smaller than or equal to 200.');
-        }
-
         $this->container['title'] = $title;
 
         return $this;
@@ -1153,10 +961,6 @@ class ISTWatchlistResult implements ModelInterface, ArrayAccess
      */
     public function setTonnage($tonnage)
     {
-        if (!is_null($tonnage) && (mb_strlen($tonnage) > 14)) {
-            throw new \InvalidArgumentException('invalid length for $tonnage when calling ISTWatchlistResult., must be smaller than or equal to 14.');
-        }
-
         $this->container['tonnage'] = $tonnage;
 
         return $this;
@@ -1181,10 +985,6 @@ class ISTWatchlistResult implements ModelInterface, ArrayAccess
      */
     public function setVessFlag($vess_flag)
     {
-        if (!is_null($vess_flag) && (mb_strlen($vess_flag) > 40)) {
-            throw new \InvalidArgumentException('invalid length for $vess_flag when calling ISTWatchlistResult., must be smaller than or equal to 40.');
-        }
-
         $this->container['vess_flag'] = $vess_flag;
 
         return $this;
@@ -1209,10 +1009,6 @@ class ISTWatchlistResult implements ModelInterface, ArrayAccess
      */
     public function setVessOwner($vess_owner)
     {
-        if (!is_null($vess_owner) && (mb_strlen($vess_owner) > 150)) {
-            throw new \InvalidArgumentException('invalid length for $vess_owner when calling ISTWatchlistResult., must be smaller than or equal to 150.');
-        }
-
         $this->container['vess_owner'] = $vess_owner;
 
         return $this;
@@ -1237,10 +1033,6 @@ class ISTWatchlistResult implements ModelInterface, ArrayAccess
      */
     public function setVessType($vess_type)
     {
-        if (!is_null($vess_type) && (mb_strlen($vess_type) > 25)) {
-            throw new \InvalidArgumentException('invalid length for $vess_type when calling ISTWatchlistResult., must be smaller than or equal to 25.');
-        }
-
         $this->container['vess_type'] = $vess_type;
 
         return $this;

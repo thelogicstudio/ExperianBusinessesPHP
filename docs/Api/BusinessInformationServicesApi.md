@@ -189,7 +189,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BCIRequest**](../Model/BCIRequest.md)| BCI Request |
- **content_type** | **string**| Content-Type field is to describe the data contained in the body | [default to application/json]
+ **content_type** | **string**| Content-Type field is to describe the data contained in the body | [optional] [default to application/json]
 
 ### Return type
 
@@ -244,7 +244,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BCIRequest**](../Model/BCIRequest.md)| BCI Request |
- **content_type** | **string**| Content-Type field is to describe the data contained in the body | [default to application/json]
+ **content_type** | **string**| Content-Type field is to describe the data contained in the body | [optional] [default to application/json]
 
 ### Return type
 
@@ -299,7 +299,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BCIRequest**](../Model/BCIRequest.md)| BCI Request |
- **content_type** | **string**| Content-Type field is to describe the data contained in the body | [default to application/json]
+ **content_type** | **string**| Content-Type field is to describe the data contained in the body | [optional] [default to application/json]
 
 ### Return type
 
@@ -1421,7 +1421,7 @@ Name | Type | Description  | Notes
 
 Quick Search.  Our secondary search method
 
-<p>Experian's proprietary Quick Search API is powered by OneSearch, our advanced search/match technology and offers new ways to search for a business within Experian's commercial database.  Quick Search API users can search by:</p> <p><ul> <li>Business Name</li> <li>Address</li> <li>Phone Number</li> <li>Contact Name</li> <li>Business Identification Number (BIN)</li> </ul></p> <p>Quick Search contains millions of active businesses and the most inquiried upon businesses in Experian's database.  If you don't find a result using Quick Search, please don't stop there.  Use Experian's Advanced Search to perform a more extensive search of Experian's database.</p> <p>Search Automation.  For users looking to automate their search/match workflow, it is recommend to use our Advanced Search and our Match Reliability Code.   The Quick Search API does not provide a Match Reliability Code; it uses a more flexible search algorithm primarily targeted to  human users as a type-ahead search.</p> <p>Billing and Caching.  Experian does not perform any caching of Quick Search results at this time.  Every Quick Search API  call invokes the latest data available in our database and results in a billing log entry.  We highly recommend implementing  caching to prevent duplicate searches from being billed.</p>
+<p>Experian's proprietary Quick Search API is powered by OneSearch, our advanced search/match technology and offers new ways to search for a business within Experian's commercial database.  Quick Search API users can search by:</p> <p><ul> <li>Business Name</li> <li>Address</li> <li>Phone Number</li> <li>Contact Name</li> <li>Business Identification Number (BIN)</li> </ul></p> <p>Quick Search contains millions of active businesses and the most inquiried upon businesses in Experian's database.  If you don't find a result using Quick Search, please don't stop there.  Use Experian's Advanced Search to perform a more extensive search of Experian's database.</p> <p>Search Automation.  For users looking to automate their search/match workflow, it is recommend to use our Advanced Search and our Match Reliability Code. The Quick Search API does not provide a Match Reliability Code; it uses a more flexible search algorithm primarily targeted to human users as a type-ahead search.</p> <p>Billing and Caching.  Experian does not perform any caching of Quick Search results at this time.  Every Quick Search API call invokes the latest data available in our database and results in a billing log entry.  We highly recommend implementing caching to prevent duplicate searches from being billed.</p>
 
 ### Example
 ```php
@@ -1696,7 +1696,7 @@ Name | Type | Description  | Notes
 
 Commercial Scores
 
-<p>The Commercial Scores API allows you to request Experian's Intelliscore Plus Score,  Financial Stability Risk Score, or Commercial Recovery Score, or any combination thereof. </p> <p>Sample subcodes for Intelliscore Plus version 3</p> <ul> <li>IPv3 Logistic Regression - 0586286</li> <li>IPv3 Machine Learning - 0586548</li> </ul> <p>Sample subcode for Commercial Recovery Score (Collections Score)</p> <ul> <li>Commercial Recovery Score Logistic Regression (Model 243) - 0517614</li> <li>Commercial Recovery Score Machine Learning (Model 245) - 0517614</li> </ul> <p>&nbsp;</p>
+<p>The Commercial Scores API allows you to request Experian's Intelliscore Plus Score, Financial Stability Risk Score, or Commercial Recovery Score, or any combination thereof. </p> <p>Sample subcodes for Intelliscore Plus version 3</p> <ul> <li>IPv3 Logistic Regression - 0586286</li> <li>IPv3 Machine Learning - 0586548</li> </ul> <p>Sample subcode for Commercial Recovery Score (Collections Score)</p> <ul> <li>Commercial Recovery Score Logistic Regression (Model 243) - 0517614</li> <li>Commercial Recovery Score Machine Learning (Model 245) - 0517614</li> </ul> <p>&nbsp;</p>
 
 ### Example
 ```php
@@ -1751,7 +1751,7 @@ Name | Type | Description  | Notes
 
 Scores Auto Search
 
-<p>The Scores Auto Search API provides our Scores API response, but with  a Business Name and Address request input. The Commercial Scores API allows you to request Experian's Intelliscore Plus Score,  Financial Stability Risk Score, or Commercial Recovery Score, or any combination thereof.</p> <p>Scores Auto Search uses the following inputs:</p>  <p>  <ul> <li>Business Name, City and State - Required</li>  <li>Street Address, Zip Code, Phone and Tax ID - Optional</li>  <li>Match Reliability Code - Optional. The default MRC value is 96, if not specified</li>  <li>Geo - Optional. Geo set as true will return geographic data on the location</li> <li>Comments - Optional. Echos back in your response.</li> <li>Commercial Score - Optional. Controls if you receive commercial score info</li>  <li>FSR Score - Optional. Controls if you receive FSR score info</li> <li>Colllections Score (object) - Optional.  Controls if you receive the Collections score info</li> <li>Subcode - Required</li> </ul> </p> <p>Sample subcodes for Intelliscore Plus version 3</p> <ul> <li>IPv3 Logistic Regression - 0586286</li> <li>IPv3 Machine Learning - 0586548</li> </ul> <p>Sample subcode for Commercial Recovery Score (Collections Score)</p> <ul> <li>Commercial Recovery Score Logistic Regression (Model 243) - 0517614</li> <li>Commercial Recovery Score Machine Learning (Model 245) - 0517614</li> </ul> <p>&nbsp;</p>
+<p>The Scores Auto Search API provides our Scores API response, but with  a Business Name and Address request input. The Commercial Scores API allows you to request Experian's Intelliscore Plus Score, Financial Stability Risk Score, or Commercial Recovery Score, or any combination thereof.</p> <p>Scores Auto Search uses the following inputs:</p> <p> <ul> <li>Business Name, City and State - Required</li> <li>Street Address, Zip Code, Phone and Tax ID - Optional</li> <li>Match Reliability Code - Optional. The default MRC value is 96, if not specified</li> <li>Geo - Optional. Geo set as true will return geographic data on the location</li> <li>Comments - Optional. Echos back in your response.</li> <li>Commercial Score - Optional. Controls if you receive commercial score info</li> <li>FSR Score - Optional. Controls if you receive FSR score info</li> <li>Colllections Score (object) - Optional.  Controls if you receive the Collections score info</li> <li>Subcode - Required</li> </ul> </p> <p>Sample subcodes for Intelliscore Plus version 3</p> <ul> <li>IPv3 Logistic Regression - 0586286</li> <li>IPv3 Machine Learning - 0586548</li> </ul> <p>Sample subcode for Commercial Recovery Score (Collections Score)</p> <ul> <li>Commercial Recovery Score Logistic Regression (Model 243) - 0517614</li> <li>Commercial Recovery Score Machine Learning (Model 245) - 0517614</li> </ul> <p>&nbsp;</p>
 
 ### Example
 ```php
@@ -1806,7 +1806,7 @@ Name | Type | Description  | Notes
 
 Advanced Business Search.  The primary search method
 
-<p>The Business Search API allows you to leverage Experian's powerful search match technology to find information on a business.  The Search API presents a list of business to the business you are searching for, ranked by match reliability code.  Each business returned in the list will include the legal name, address, and phone number of the business Experian has on file, and optionally business geocode data. Additionally, several depth indicators show the businesses trade line activity and the availability of other key data, each of which help provide confidence in having the best matching business based on your search input.</p><br> <p><strong>SBCS Consortium Members</strong> can use the Businesses API /search endpoint.</p> <p><strong>SBFE Consortium Members</strong> must use the <a href=\"/products/us/businesses/small-business-financial-exchangetm\">SBFE MultiSegments API</a>, using either the  List of Similars product option to search for a business, or a Name/Address request for automated matching.</p>  <br> <p><b>Product Request</b></p><br><p>In order to request business data for most of Experian's Business Information APIs, the Business Identification Number (BIN) must be provided on the request.  You can search for a BIN by providing the following information:</p> <ul> <li>Business Name, City and State - Required</li> <li>Street Address, Zip Code, Phone and Tax ID - Optional</li> <li>Geo - Optional. Geo set as true will return geographic data on the location</li> <li>Comments - Optional. Echos back in your response</li> <li>Subcode - Required</li>
+<p>The Business Search API allows you to leverage Experian's powerful search match technology to find information on a business.  The Search API presents a list of business to the business you are searching for, ranked by match reliability code.  Each business returned in the list will include the legal name, address, and phone number of the business Experian has on file, and optionally business geocode data. Additionally, several depth indicators show the businesses trade line activity and the availability of other key data, each of which help provide confidence in having the best matching business based on your search input.</p><br> <p><strong>SBCS Consortium Members</strong> can use the Businesses API /search endpoint.</p> <p><strong>SBFE Consortium Members</strong> must use the <a href=\"/products/us/businesses/small-business-financial-exchangetm\">SBFE MultiSegments API</a>, using either the List of Similars product option to search for a business, or a Name/Address request for automated matching.</p> <br> <p><b>Product Request</b></p><br><p>In order to request business data for most of Experian's Business Information APIs, the Business Identification Number (BIN) must be provided on the request.  You can search for a BIN by providing the following information:</p> <ul> <li>Business Name, City and State - Required</li> <li>Street Address, Zip Code, Phone and Tax ID - Optional</li> <li>Geo - Optional. Geo set as true will return geographic data on the location</li> <li>Comments - Optional. Echos back in your response</li> <li>Subcode - Required</li>
 
 ### Example
 ```php
