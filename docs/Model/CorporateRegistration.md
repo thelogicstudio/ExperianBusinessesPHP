@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **recent_filing_date** | **string** | Date of the most recent corporate registration filing. Format &#x3D; YYYY-MM-DD. Null if not available | [optional] 
 **incorporated_date** | **string** | Date the business incorporated in the state. Format &#x3D; YYYY-MM-DD. Null if not available | [optional] 
 **business_type** | **string** | Business type, such as LLC, Corporation, etc. Null if not available | [optional] 
-**status_flag** | **string** | A &#x3D; Active. I &#x3D; Inactive. Null if not available | [optional] 
 **status_description** | **string** | Active businesses are classified as either \&quot;Good standing\&quot; or \&quot;Reinstated\&quot;. A description for inactive businesses is also provided; \&quot;Bankruptcy\&quot;, \&quot;Terminated\&quot;, \&quot;Revoked\&quot;, etc. | [optional] 
 **profit_flag** | **string** | \&quot;Profit\&quot;, \&quot;Non-profit\&quot;, or \&quot;Unknown\&quot;. Null if not available | [optional] 
 **charter_number** | **string** | Number assigned to each business by the state. Null if not available | [optional] 

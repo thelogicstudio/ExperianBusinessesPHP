@@ -63,7 +63,6 @@ class CorporateRegistration implements ModelInterface, ArrayAccess
         'recent_filing_date' => 'string',
         'incorporated_date' => 'string',
         'business_type' => 'string',
-        'status_flag' => 'string',
         'status_description' => 'string',
         'profit_flag' => 'string',
         'charter_number' => 'string',
@@ -87,7 +86,6 @@ class CorporateRegistration implements ModelInterface, ArrayAccess
         'recent_filing_date' => null,
         'incorporated_date' => null,
         'business_type' => null,
-        'status_flag' => null,
         'status_description' => null,
         'profit_flag' => null,
         'charter_number' => null,
@@ -132,7 +130,6 @@ class CorporateRegistration implements ModelInterface, ArrayAccess
         'recent_filing_date' => 'recentFilingDate',
         'incorporated_date' => 'incorporatedDate',
         'business_type' => 'businessType',
-        'status_flag' => 'statusFlag',
         'status_description' => 'statusDescription',
         'profit_flag' => 'profitFlag',
         'charter_number' => 'charterNumber',
@@ -156,7 +153,6 @@ class CorporateRegistration implements ModelInterface, ArrayAccess
         'recent_filing_date' => 'setRecentFilingDate',
         'incorporated_date' => 'setIncorporatedDate',
         'business_type' => 'setBusinessType',
-        'status_flag' => 'setStatusFlag',
         'status_description' => 'setStatusDescription',
         'profit_flag' => 'setProfitFlag',
         'charter_number' => 'setCharterNumber',
@@ -180,7 +176,6 @@ class CorporateRegistration implements ModelInterface, ArrayAccess
         'recent_filing_date' => 'getRecentFilingDate',
         'incorporated_date' => 'getIncorporatedDate',
         'business_type' => 'getBusinessType',
-        'status_flag' => 'getStatusFlag',
         'status_description' => 'getStatusDescription',
         'profit_flag' => 'getProfitFlag',
         'charter_number' => 'getCharterNumber',
@@ -258,7 +253,6 @@ class CorporateRegistration implements ModelInterface, ArrayAccess
         $this->container['recent_filing_date'] = isset($data['recent_filing_date']) ? $data['recent_filing_date'] : null;
         $this->container['incorporated_date'] = isset($data['incorporated_date']) ? $data['incorporated_date'] : null;
         $this->container['business_type'] = isset($data['business_type']) ? $data['business_type'] : null;
-        $this->container['status_flag'] = isset($data['status_flag']) ? $data['status_flag'] : null;
         $this->container['status_description'] = isset($data['status_description']) ? $data['status_description'] : null;
         $this->container['profit_flag'] = isset($data['profit_flag']) ? $data['profit_flag'] : null;
         $this->container['charter_number'] = isset($data['charter_number']) ? $data['charter_number'] : null;
@@ -411,30 +405,6 @@ class CorporateRegistration implements ModelInterface, ArrayAccess
     public function setBusinessType($business_type)
     {
         $this->container['business_type'] = $business_type;
-
-        return $this;
-    }
-
-    /**
-     * Gets status_flag
-     *
-     * @return string
-     */
-    public function getStatusFlag()
-    {
-        return $this->container['status_flag'];
-    }
-
-    /**
-     * Sets status_flag
-     *
-     * @param string $status_flag A = Active. I = Inactive. Null if not available
-     *
-     * @return $this
-     */
-    public function setStatusFlag($status_flag)
-    {
-        $this->container['status_flag'] = $status_flag;
 
         return $this;
     }
