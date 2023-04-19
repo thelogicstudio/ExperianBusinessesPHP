@@ -93,13 +93,13 @@ class BusinessInformationServicesApi
      * BizAggs
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessAggregatesRequest $body Business Aggregates Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body. (optional, default to application/json)
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessAggregatesResponse
      */
-    public function aggregates($body, $content_type)
+    public function aggregates($body, $content_type = 'application/json')
     {
         list($response) = $this->aggregatesWithHttpInfo($body, $content_type);
         return $response;
@@ -111,13 +111,13 @@ class BusinessInformationServicesApi
      * BizAggs
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessAggregatesRequest $body Business Aggregates Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body. (optional, default to application/json)
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessAggregatesResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function aggregatesWithHttpInfo($body, $content_type)
+    public function aggregatesWithHttpInfo($body, $content_type = 'application/json')
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessAggregatesResponse';
         $request = $this->aggregatesRequest($body, $content_type);
@@ -235,12 +235,12 @@ class BusinessInformationServicesApi
      * BizAggs
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessAggregatesRequest $body Business Aggregates Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body. (optional, default to application/json)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function aggregatesAsync($body, $content_type)
+    public function aggregatesAsync($body, $content_type = 'application/json')
     {
         return $this->aggregatesAsyncWithHttpInfo($body, $content_type)
             ->then(
@@ -256,12 +256,12 @@ class BusinessInformationServicesApi
      * BizAggs
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessAggregatesRequest $body Business Aggregates Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body. (optional, default to application/json)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function aggregatesAsyncWithHttpInfo($body, $content_type)
+    public function aggregatesAsyncWithHttpInfo($body, $content_type = 'application/json')
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessAggregatesResponse';
         $request = $this->aggregatesRequest($body, $content_type);
@@ -307,23 +307,17 @@ class BusinessInformationServicesApi
      * Create request for operation 'aggregates'
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessAggregatesRequest $body Business Aggregates Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body. (optional, default to application/json)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function aggregatesRequest($body, $content_type)
+    protected function aggregatesRequest($body, $content_type = 'application/json')
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $body when calling aggregates'
-            );
-        }
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling aggregates'
             );
         }
 
@@ -4017,13 +4011,13 @@ class BusinessInformationServicesApi
      * Government Details
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\GovernmentDetailsRequest $body Government Details Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body (optional, default to application/json)
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\GovernmentDetailsResponse
      */
-    public function governmentdetails($body, $content_type)
+    public function governmentdetails($body, $content_type = 'application/json')
     {
         list($response) = $this->governmentdetailsWithHttpInfo($body, $content_type);
         return $response;
@@ -4035,13 +4029,13 @@ class BusinessInformationServicesApi
      * Government Details
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\GovernmentDetailsRequest $body Government Details Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body (optional, default to application/json)
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\GovernmentDetailsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function governmentdetailsWithHttpInfo($body, $content_type)
+    public function governmentdetailsWithHttpInfo($body, $content_type = 'application/json')
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\GovernmentDetailsResponse';
         $request = $this->governmentdetailsRequest($body, $content_type);
@@ -4159,12 +4153,12 @@ class BusinessInformationServicesApi
      * Government Details
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\GovernmentDetailsRequest $body Government Details Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body (optional, default to application/json)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function governmentdetailsAsync($body, $content_type)
+    public function governmentdetailsAsync($body, $content_type = 'application/json')
     {
         return $this->governmentdetailsAsyncWithHttpInfo($body, $content_type)
             ->then(
@@ -4180,12 +4174,12 @@ class BusinessInformationServicesApi
      * Government Details
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\GovernmentDetailsRequest $body Government Details Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body (optional, default to application/json)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function governmentdetailsAsyncWithHttpInfo($body, $content_type)
+    public function governmentdetailsAsyncWithHttpInfo($body, $content_type = 'application/json')
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\GovernmentDetailsResponse';
         $request = $this->governmentdetailsRequest($body, $content_type);
@@ -4231,23 +4225,17 @@ class BusinessInformationServicesApi
      * Create request for operation 'governmentdetails'
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\GovernmentDetailsRequest $body Government Details Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body (optional, default to application/json)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function governmentdetailsRequest($body, $content_type)
+    protected function governmentdetailsRequest($body, $content_type = 'application/json')
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $body when calling governmentdetails'
-            );
-        }
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling governmentdetails'
             );
         }
 
@@ -4673,13 +4661,13 @@ class BusinessInformationServicesApi
      * Intelliscore Plus JSON
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest $body Intelliscore Plus Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body. (optional, default to application/json)
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusResponse
      */
-    public function intelliscoreplus($body, $content_type)
+    public function intelliscoreplus($body, $content_type = 'application/json')
     {
         list($response) = $this->intelliscoreplusWithHttpInfo($body, $content_type);
         return $response;
@@ -4691,13 +4679,13 @@ class BusinessInformationServicesApi
      * Intelliscore Plus JSON
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest $body Intelliscore Plus Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body. (optional, default to application/json)
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function intelliscoreplusWithHttpInfo($body, $content_type)
+    public function intelliscoreplusWithHttpInfo($body, $content_type = 'application/json')
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusResponse';
         $request = $this->intelliscoreplusRequest($body, $content_type);
@@ -4815,12 +4803,12 @@ class BusinessInformationServicesApi
      * Intelliscore Plus JSON
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest $body Intelliscore Plus Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body. (optional, default to application/json)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function intelliscoreplusAsync($body, $content_type)
+    public function intelliscoreplusAsync($body, $content_type = 'application/json')
     {
         return $this->intelliscoreplusAsyncWithHttpInfo($body, $content_type)
             ->then(
@@ -4836,12 +4824,12 @@ class BusinessInformationServicesApi
      * Intelliscore Plus JSON
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest $body Intelliscore Plus Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body. (optional, default to application/json)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function intelliscoreplusAsyncWithHttpInfo($body, $content_type)
+    public function intelliscoreplusAsyncWithHttpInfo($body, $content_type = 'application/json')
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusResponse';
         $request = $this->intelliscoreplusRequest($body, $content_type);
@@ -4887,23 +4875,17 @@ class BusinessInformationServicesApi
      * Create request for operation 'intelliscoreplus'
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest $body Intelliscore Plus Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body. (optional, default to application/json)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function intelliscoreplusRequest($body, $content_type)
+    protected function intelliscoreplusRequest($body, $content_type = 'application/json')
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $body when calling intelliscoreplus'
-            );
-        }
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling intelliscoreplus'
             );
         }
 
@@ -5004,13 +4986,13 @@ class BusinessInformationServicesApi
      * Intelliscore Plus HTML
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest $body Intelliscore Plus HTML Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body. (optional, default to application/json)
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusHTMLResponse
      */
-    public function intelliscoreplushtml($body, $content_type)
+    public function intelliscoreplushtml($body, $content_type = 'application/json')
     {
         list($response) = $this->intelliscoreplushtmlWithHttpInfo($body, $content_type);
         return $response;
@@ -5022,13 +5004,13 @@ class BusinessInformationServicesApi
      * Intelliscore Plus HTML
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest $body Intelliscore Plus HTML Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body. (optional, default to application/json)
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusHTMLResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function intelliscoreplushtmlWithHttpInfo($body, $content_type)
+    public function intelliscoreplushtmlWithHttpInfo($body, $content_type = 'application/json')
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusHTMLResponse';
         $request = $this->intelliscoreplushtmlRequest($body, $content_type);
@@ -5146,12 +5128,12 @@ class BusinessInformationServicesApi
      * Intelliscore Plus HTML
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest $body Intelliscore Plus HTML Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body. (optional, default to application/json)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function intelliscoreplushtmlAsync($body, $content_type)
+    public function intelliscoreplushtmlAsync($body, $content_type = 'application/json')
     {
         return $this->intelliscoreplushtmlAsyncWithHttpInfo($body, $content_type)
             ->then(
@@ -5167,12 +5149,12 @@ class BusinessInformationServicesApi
      * Intelliscore Plus HTML
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest $body Intelliscore Plus HTML Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body. (optional, default to application/json)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function intelliscoreplushtmlAsyncWithHttpInfo($body, $content_type)
+    public function intelliscoreplushtmlAsyncWithHttpInfo($body, $content_type = 'application/json')
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusHTMLResponse';
         $request = $this->intelliscoreplushtmlRequest($body, $content_type);
@@ -5218,23 +5200,17 @@ class BusinessInformationServicesApi
      * Create request for operation 'intelliscoreplushtml'
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest $body Intelliscore Plus HTML Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body. (optional, default to application/json)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function intelliscoreplushtmlRequest($body, $content_type)
+    protected function intelliscoreplushtmlRequest($body, $content_type = 'application/json')
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $body when calling intelliscoreplushtml'
-            );
-        }
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling intelliscoreplushtml'
             );
         }
 
@@ -5335,13 +5311,13 @@ class BusinessInformationServicesApi
      * Intelliscore Plus PDF
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest $body Intelliscore Plus PDF Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body. (optional, default to application/json)
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusPDFResponse
      */
-    public function intelliscorepluspdf($body, $content_type)
+    public function intelliscorepluspdf($body, $content_type = 'application/json')
     {
         list($response) = $this->intelliscorepluspdfWithHttpInfo($body, $content_type);
         return $response;
@@ -5353,13 +5329,13 @@ class BusinessInformationServicesApi
      * Intelliscore Plus PDF
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest $body Intelliscore Plus PDF Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body. (optional, default to application/json)
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusPDFResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function intelliscorepluspdfWithHttpInfo($body, $content_type)
+    public function intelliscorepluspdfWithHttpInfo($body, $content_type = 'application/json')
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusPDFResponse';
         $request = $this->intelliscorepluspdfRequest($body, $content_type);
@@ -5477,12 +5453,12 @@ class BusinessInformationServicesApi
      * Intelliscore Plus PDF
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest $body Intelliscore Plus PDF Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body. (optional, default to application/json)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function intelliscorepluspdfAsync($body, $content_type)
+    public function intelliscorepluspdfAsync($body, $content_type = 'application/json')
     {
         return $this->intelliscorepluspdfAsyncWithHttpInfo($body, $content_type)
             ->then(
@@ -5498,12 +5474,12 @@ class BusinessInformationServicesApi
      * Intelliscore Plus PDF
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest $body Intelliscore Plus PDF Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body. (optional, default to application/json)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function intelliscorepluspdfAsyncWithHttpInfo($body, $content_type)
+    public function intelliscorepluspdfAsyncWithHttpInfo($body, $content_type = 'application/json')
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusPDFResponse';
         $request = $this->intelliscorepluspdfRequest($body, $content_type);
@@ -5549,23 +5525,17 @@ class BusinessInformationServicesApi
      * Create request for operation 'intelliscorepluspdf'
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest $body Intelliscore Plus PDF Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body. (optional, default to application/json)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function intelliscorepluspdfRequest($body, $content_type)
+    protected function intelliscorepluspdfRequest($body, $content_type = 'application/json')
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $body when calling intelliscorepluspdf'
-            );
-        }
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling intelliscorepluspdf'
             );
         }
 
@@ -7291,13 +7261,13 @@ class BusinessInformationServicesApi
      * Premier Profiles JSON
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest $body Business Premier Profile Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body. (optional, default to application/json)
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\PremierProfilesResponse
      */
-    public function premierprofiles($body, $content_type)
+    public function premierprofiles($body, $content_type = 'application/json')
     {
         list($response) = $this->premierprofilesWithHttpInfo($body, $content_type);
         return $response;
@@ -7309,13 +7279,13 @@ class BusinessInformationServicesApi
      * Premier Profiles JSON
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest $body Business Premier Profile Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body. (optional, default to application/json)
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\PremierProfilesResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function premierprofilesWithHttpInfo($body, $content_type)
+    public function premierprofilesWithHttpInfo($body, $content_type = 'application/json')
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\PremierProfilesResponse';
         $request = $this->premierprofilesRequest($body, $content_type);
@@ -7433,12 +7403,12 @@ class BusinessInformationServicesApi
      * Premier Profiles JSON
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest $body Business Premier Profile Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body. (optional, default to application/json)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function premierprofilesAsync($body, $content_type)
+    public function premierprofilesAsync($body, $content_type = 'application/json')
     {
         return $this->premierprofilesAsyncWithHttpInfo($body, $content_type)
             ->then(
@@ -7454,12 +7424,12 @@ class BusinessInformationServicesApi
      * Premier Profiles JSON
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest $body Business Premier Profile Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body. (optional, default to application/json)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function premierprofilesAsyncWithHttpInfo($body, $content_type)
+    public function premierprofilesAsyncWithHttpInfo($body, $content_type = 'application/json')
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\PremierProfilesResponse';
         $request = $this->premierprofilesRequest($body, $content_type);
@@ -7505,23 +7475,17 @@ class BusinessInformationServicesApi
      * Create request for operation 'premierprofiles'
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest $body Business Premier Profile Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body. (optional, default to application/json)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function premierprofilesRequest($body, $content_type)
+    protected function premierprofilesRequest($body, $content_type = 'application/json')
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $body when calling premierprofiles'
-            );
-        }
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling premierprofiles'
             );
         }
 
@@ -7622,13 +7586,13 @@ class BusinessInformationServicesApi
      * Premier Profiles HTML
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest $body Business Premier Profile Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body. (optional, default to application/json)
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\PremierProfilesHTMLResponse
      */
-    public function premierprofileshtml($body, $content_type)
+    public function premierprofileshtml($body, $content_type = 'application/json')
     {
         list($response) = $this->premierprofileshtmlWithHttpInfo($body, $content_type);
         return $response;
@@ -7640,13 +7604,13 @@ class BusinessInformationServicesApi
      * Premier Profiles HTML
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest $body Business Premier Profile Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body. (optional, default to application/json)
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\PremierProfilesHTMLResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function premierprofileshtmlWithHttpInfo($body, $content_type)
+    public function premierprofileshtmlWithHttpInfo($body, $content_type = 'application/json')
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\PremierProfilesHTMLResponse';
         $request = $this->premierprofileshtmlRequest($body, $content_type);
@@ -7764,12 +7728,12 @@ class BusinessInformationServicesApi
      * Premier Profiles HTML
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest $body Business Premier Profile Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body. (optional, default to application/json)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function premierprofileshtmlAsync($body, $content_type)
+    public function premierprofileshtmlAsync($body, $content_type = 'application/json')
     {
         return $this->premierprofileshtmlAsyncWithHttpInfo($body, $content_type)
             ->then(
@@ -7785,12 +7749,12 @@ class BusinessInformationServicesApi
      * Premier Profiles HTML
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest $body Business Premier Profile Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body. (optional, default to application/json)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function premierprofileshtmlAsyncWithHttpInfo($body, $content_type)
+    public function premierprofileshtmlAsyncWithHttpInfo($body, $content_type = 'application/json')
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\PremierProfilesHTMLResponse';
         $request = $this->premierprofileshtmlRequest($body, $content_type);
@@ -7836,23 +7800,17 @@ class BusinessInformationServicesApi
      * Create request for operation 'premierprofileshtml'
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest $body Business Premier Profile Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body. (optional, default to application/json)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function premierprofileshtmlRequest($body, $content_type)
+    protected function premierprofileshtmlRequest($body, $content_type = 'application/json')
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $body when calling premierprofileshtml'
-            );
-        }
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling premierprofileshtml'
             );
         }
 
@@ -7953,13 +7911,13 @@ class BusinessInformationServicesApi
      * Premier Profiles PDF
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest $body Business Premier Profile PDF Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body. (optional, default to application/json)
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\PremierProfilesPDFResponse
      */
-    public function premierprofilespdf($body, $content_type)
+    public function premierprofilespdf($body, $content_type = 'application/json')
     {
         list($response) = $this->premierprofilespdfWithHttpInfo($body, $content_type);
         return $response;
@@ -7971,13 +7929,13 @@ class BusinessInformationServicesApi
      * Premier Profiles PDF
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest $body Business Premier Profile PDF Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body. (optional, default to application/json)
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\PremierProfilesPDFResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function premierprofilespdfWithHttpInfo($body, $content_type)
+    public function premierprofilespdfWithHttpInfo($body, $content_type = 'application/json')
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\PremierProfilesPDFResponse';
         $request = $this->premierprofilespdfRequest($body, $content_type);
@@ -8095,12 +8053,12 @@ class BusinessInformationServicesApi
      * Premier Profiles PDF
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest $body Business Premier Profile PDF Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body. (optional, default to application/json)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function premierprofilespdfAsync($body, $content_type)
+    public function premierprofilespdfAsync($body, $content_type = 'application/json')
     {
         return $this->premierprofilespdfAsyncWithHttpInfo($body, $content_type)
             ->then(
@@ -8116,12 +8074,12 @@ class BusinessInformationServicesApi
      * Premier Profiles PDF
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest $body Business Premier Profile PDF Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body. (optional, default to application/json)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function premierprofilespdfAsyncWithHttpInfo($body, $content_type)
+    public function premierprofilespdfAsyncWithHttpInfo($body, $content_type = 'application/json')
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\PremierProfilesPDFResponse';
         $request = $this->premierprofilespdfRequest($body, $content_type);
@@ -8167,23 +8125,17 @@ class BusinessInformationServicesApi
      * Create request for operation 'premierprofilespdf'
      *
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest $body Business Premier Profile PDF Request (required)
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
+     * @param  string $content_type Content-Type field is to describe the data contained in the body. (optional, default to application/json)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function premierprofilespdfRequest($body, $content_type)
+    protected function premierprofilespdfRequest($body, $content_type = 'application/json')
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $body when calling premierprofilespdf'
-            );
-        }
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling premierprofilespdf'
             );
         }
 

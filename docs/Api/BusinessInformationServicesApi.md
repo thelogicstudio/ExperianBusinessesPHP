@@ -79,7 +79,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessAggregatesRequest**](../Model/BusinessAggregatesRequest.md)| Business Aggregates Request |
- **content_type** | **string**| Content-Type field is to describe the data contained in the body. | [default to application/json]
+ **content_type** | **string**| Content-Type field is to describe the data contained in the body. | [optional] [default to application/json]
 
 ### Return type
 
@@ -739,7 +739,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\GovernmentDetailsRequest**](../Model/GovernmentDetailsRequest.md)| Government Details Request |
- **content_type** | **string**| Content-Type field is to describe the data contained in the body | [default to application/json]
+ **content_type** | **string**| Content-Type field is to describe the data contained in the body | [optional] [default to application/json]
 
 ### Return type
 
@@ -849,7 +849,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest**](../Model/IntelliscorePlusRequest.md)| Intelliscore Plus Request |
- **content_type** | **string**| Content-Type field is to describe the data contained in the body. | [default to application/json]
+ **content_type** | **string**| Content-Type field is to describe the data contained in the body. | [optional] [default to application/json]
 
 ### Return type
 
@@ -904,7 +904,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest**](../Model/IntelliscorePlusRequest.md)| Intelliscore Plus HTML Request |
- **content_type** | **string**| Content-Type field is to describe the data contained in the body. | [default to application/json]
+ **content_type** | **string**| Content-Type field is to describe the data contained in the body. | [optional] [default to application/json]
 
 ### Return type
 
@@ -959,7 +959,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest**](../Model/IntelliscorePlusRequest.md)| Intelliscore Plus PDF Request |
- **content_type** | **string**| Content-Type field is to describe the data contained in the body. | [default to application/json]
+ **content_type** | **string**| Content-Type field is to describe the data contained in the body. | [optional] [default to application/json]
 
 ### Return type
 
@@ -1289,7 +1289,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest**](../Model/BusinessPremierProfileRequest.md)| Business Premier Profile Request |
- **content_type** | **string**| Content-Type field is to describe the data contained in the body. | [default to application/json]
+ **content_type** | **string**| Content-Type field is to describe the data contained in the body. | [optional] [default to application/json]
 
 ### Return type
 
@@ -1344,7 +1344,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest**](../Model/BusinessPremierProfileRequest.md)| Business Premier Profile Request |
- **content_type** | **string**| Content-Type field is to describe the data contained in the body. | [default to application/json]
+ **content_type** | **string**| Content-Type field is to describe the data contained in the body. | [optional] [default to application/json]
 
 ### Return type
 
@@ -1399,7 +1399,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest**](../Model/BusinessPremierProfileRequest.md)| Business Premier Profile PDF Request |
- **content_type** | **string**| Content-Type field is to describe the data contained in the body. | [default to application/json]
+ **content_type** | **string**| Content-Type field is to describe the data contained in the body. | [optional] [default to application/json]
 
 ### Return type
 
