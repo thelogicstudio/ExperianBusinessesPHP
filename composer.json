@@ -1,18 +1,17 @@
 {
-    "name": "TheLogicStudio/ExperianBusinessesPHP",
-    "description": "",
+    "name": "thelogicstudio/experian-businesses-php",
+    "description": "Unofficial PHP SDK for Experian's Businesses API",
     "keywords": [
-        "swagger",
+        "experian",
         "php",
         "sdk",
         "api"
     ],
-    "homepage": "http://swagger.io",
-    "license": "proprietary",
+    "homepage": "https://logicstudio.nz",
+    "license": "mit",
     "authors": [
         {
-            "name": "Swagger and contributors",
-            "homepage": "https://github.com/swagger-api/swagger-codegen"
+            "name": "Ian Simpson"
         }
     ],
     "require": {
