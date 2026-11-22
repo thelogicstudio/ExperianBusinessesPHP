@@ -2,28 +2,27 @@
 /**
  * GovernmentDetailsResultGovernmentActivity
  *
- * PHP version 5
+ * PHP version 8.1
  *
  * @category Class
  * @package  TheLogicStudio\ExperianBusinessesPHP
- * @author   Swagger Codegen team
- * @link     https://github.com/swagger-api/swagger-codegen
+ * @author   OpenAPI Generator team
+ * @link     https://openapi-generator.tech
  */
 
 /**
  * Businesses
  *
- * <p>Experian's Business Information Services is a leader in providing data and predictive insights to organizations, helping them mitigate risk and improve profitability.  The Businesses API provides integrated access to our business database which provides comprehensive, third-party-verified information on 99.9 percent of all U.S. companies, with the industry's most extensive data on the broad spectrum of small and midsize businesses.</p> <p>&nbsp;</p> <p>The Businesses API provides a la carte access to Experian's commercial credit and  commercial public record information, including commercial scores, trades, corporate linkage, bankruptcies, liens, judgments, and more.</p> <p>&nbsp;</p> <p><strong>It All Starts With a Search</strong></p> <p>The Business Search API allows you to input a business name, address, city, and state to find their Business Identification Number (BIN) - you'll need this to get data from most of the other APIs.  The primary search method is called \"Advanced Search\" and can be used for automated matching using our Match Reliability Code. A secondary search method, called \"QuickSearch\" and is a type-ahead style search that allows a human user to quickly find a business using a smaller amount of data.</p> <p><strong>SBCS Consortium Members</strong> can use the Businesses API search endpoints.</p> <p><strong>SBFE Consortium Members</strong> must use the <a href=\"/products/us/small-business-financial-exchangetm\">SBFE API</a>, using either the List of Similars product option to search for a business, or a Name/Address request for automated matching.</p> <p>&nbsp;</p> <p><strong>Businesses API in the Sandbox</strong></p> <ul> <li><strong>Advanced Search</strong> - The primary way to search for US businesses and return a List of Similars. Designed for both automation and human interaction</li> <li><strong>Quick Search</strong> - The secondary search method. A flexible, type-ahead style search API for US businesses. Designed primarily for human interaction</li> <li><strong>Headers</strong> - Business identity information. Available as stand-alone and included with most API responses</li> <li><strong>Scores</strong> - Commercial Intelliscore Plus and Financial Stability Risk Scores, with scores, score factors, and monthly and quarterly trends</li> <li><strong>Scores Auto Search</strong> - Returns the Scores API, but with a Business Name and Address request input</li> <li><strong>Premier Profiles JSON</strong> - Experian's flagship commercial credit report</li> <li><strong>Premier Profiles HTML</strong> - Renders a styled Premier Profile report using HTML/CSS</li> <li><strong>Premier Profiles PDF</strong> - Provides an encoded Premier Profile PDF report</li> <li><strong>Intelliscore Report JSON</strong> – Our score only report</li> <li><strong>Intelliscore Report HTML</strong> – Our score only report in HTML format</li> <li><strong>Intelliscore Report PDF</strong> – Our score only report in PDF format</li> <li><strong>Business Compliance Insight JSON</strong> – The BCI report helps with client onboarding and Know-Your-Customer investigations</li> <li><strong>Business Compliance Insight HTML</strong> – The BCI Report in HTML format</li> <li><strong>Business Compliance Insight PDF</strong> – The BCI report in PDF format</li> <li><strong>Aggregates</strong> - The BizAggs represent over 400 unique data attributes that represent the building blocks of commercial credit</li> <li><strong>MultiSegments</strong> - MultiSegments allows you to request segments from most Businesses API endpoints in a single API call</li> <li><strong>Risk Dashboards</strong> - Includes commercial and FSR scores, credit limit amount, current DBT</li> <li><strong>Business Facts</strong> - Key operational facts including SIC, NAICS, public status, sales, employees</li> <li><strong>Fraud Shields</strong> - Screens for potential indicators of fraud. Includes possible OFAC match</li> <li><strong>Credit Status</strong> - Key credit facts about the business including tradeline count, balance, DBT</li> <li><strong>Legal Filings and Collections Summaries</strong> - Summary of all legal filings and collections</li> <li><strong>Collections</strong> - Summary and Detail</li> <li><strong>Trades</strong> - Trade summary, payment experiences, payment totals, and trade payment trends</li> <li><strong>Bankruptcies</strong> - Summary and Detail</li> <li><strong>Liens</strong> - Summary and Detail</li> <li><strong>Judgments</strong> - Summary and Detail</li> <li><strong>UCC Filings</strong> - Summary and Trends</li> <li><strong>Corporate Registrations</strong> - Corporate registration info for the business, including filing status</li> <li><strong>Corporate Linkage</strong> - Partial and/or Full Family Tree</li> <li><strong>Business Contacts</strong> - Individual owners, company owners, contacts and titles, and contacts business affiliations</li> <li><strong>Reverse Addresses</strong> - Input an address and find businesses affiliated with that address</li> <li><strong>Reverse Phones</strong> - Input a phone number and find businesses affiliated with that phone number</li> <li><strong>Reverse Tax IDs</strong> - Input a Tax ID (EIN) and find businesses affiliated with that Tax ID</li> <li><strong>Government Details</strong> – Economic diversity and government contract data for the business</li> <li><strong>IST Watch</strong> - Manage OFAC regulatory compliance and watchlist screening with the IST Watch API</li> </ul> <p>&nbsp;</p> <p><strong>Businesses API Environments</strong></p> <ul> <li><strong>Sandbox </strong> - https://sandbox-us-api.experian.com/businessinformation/businesses</li> <li><strong>UAT </strong> - https://uat-us-api.experian.com/businessinformation/businesses</li> <li><strong>Production</strong> - https://us-api.experian.com/businessinformation/businesses</li> </ul> <p>&nbsp;</p> <p>Please note that the Businesses API in the Developer Portal Sandbox is a non-production service that is for testing and demonstration purposes only. Only a limited number of businesses are available in the sandbox test environment. A list of valid Business Identification Numbers  (BINs) can be provided to you upon your request, and valid BINs in the sandbox can  also be obtained using the Business Search API. Please contact your Experian Account Executive to discuss obtaining production access to the Businesses API.</p> <p>&nbsp;</p> <p><strong>IPv3 Sample Subcodes</strong></p> <ul> <li>IPv3 Logistic Regression - 0586286</li> <li>IPv3 Machine Learning - 0586548</li> </ul> <p>&nbsp;</p> <p><strong>Additional Developer Tools</strong></p> <ul> <li><a href=\"https://github.com/experianplc/Experian-BIS-Postman-Collection\"><strong>BIS API Postman Collection</strong></a> - A starter Postman Collection and Environment for many BIS APIs</li> <li><a href=\"https://github.com/experianplc/BIS-HTML-Resources\"><strong>BIS HTML Resources</strong></a> - Images, CSS, and Javsscript files necessary to render BIS HTML API reports</li> </ul>
+ * <p>Experian's Business Information Services is a leader in providing data and predictive insights to organizations, helping them mitigate risk and improve profitability.  The Businesses API provides integrated access to our business database which provides comprehensive, third-party-verified information on 99.9 percent of all U.S. companies, with the industry's most extensive data on the broad spectrum of small and midsize businesses.</p> <p>&nbsp;</p> <p>The Businesses API provides a la carte access to Experian's commercial credit and  commercial public record information, including commercial scores, trades, corporate linkage, bankruptcies, liens, judgments, and more.</p> <p>&nbsp;</p> <p><strong>It All Starts With a Search</strong></p> <p>The Business Search API allows you to input a business name, address, city, and state to find their Business Identification Number (BIN) - you'll need this to get data from most of the other APIs.  The primary search method is called \"Advanced Search\" and can be used for automated matching using our Match Reliability Code.   A secondary search method, called \"QuickSearch\" and is a type-ahead style search that allows a human user to quickly find a business using a smaller amount of data.</p> <p><strong>SBCS Consortium Members</strong> can use the Businesses API search endpoints.</p> <p><strong>SBFE Consortium Members</strong> must use the <a href=\"/products/us/small-business-financial-exchangetm\">SBFE API</a>, using either the  List of Similars product option to search for a business, or a Name/Address request for automated matching.</p>  <p>&nbsp;</p> <p><strong>Businesses API in the Sandbox</strong></p> <ul> <li><strong>Advanced Search</strong> - The primary way to search for US businesses and return a List of Similars. Designed for both automation and human interaction</li> <li><strong>Quick Search</strong> - The secondary search method. A flexible, type-ahead style search API for US businesses. Designed primarily for human interaction</li> <li><strong>Headers</strong> - Business identity information. Available as stand-alone and included with most API responses</li> <li><strong>Scores</strong> - Commercial Intelliscore Plus and Financial Stability Risk Scores, with scores, score factors, and monthly and quarterly trends</li> <li><strong>Scores Auto Search</strong> - Returns the Scores API, but with a Business Name and Address request input</li> <li><strong>Premier Profiles JSON</strong> - Experian's flagship commercial credit report</li> <li><strong>Premier Profiles HTML</strong> - Renders a styled Premier Profile report using HTML/CSS</li> <li><strong>Premier Profiles PDF</strong> - Provides an encoded Premier Profile PDF report</li> <li><strong>Intelliscore Report JSON</strong> – Our score only report</li> <li><strong>Intelliscore Report HTML</strong> – Our score only report in HTML format</li> <li><strong>Intelliscore Report PDF</strong> – Our score only report in PDF format</li> <li><strong>Business Compliance Insight JSON</strong> – The BCI report helps with client onboarding and Know-Your-Customer investigations</li> <li><strong>Business Compliance Insight HTML</strong> – The BCI Report in HTML format</li> <li><strong>Business Compliance Insight PDF</strong> – The BCI report in PDF format</li> <li><strong>Aggregates</strong> - The BizAggs represent over 400 unique data attributes that represent the building blocks of commercial credit</li> <li><strong>MultiSegments</strong> - MultiSegments allows you to request segments from most Businesses API endpoints in a single API call</li> <li><strong>Risk Dashboards</strong> - Includes commercial and FSR scores, credit limit amount, current DBT</li> <li><strong>Business Facts</strong> - Key operational facts including SIC, NAICS, public status, sales, employees</li> <li><strong>Fraud Shields</strong> - Screens for potential indicators of fraud. Includes possible OFAC match</li> <li><strong>Credit Status</strong> - Key credit facts about the business including tradeline count, balance, DBT</li> <li><strong>Legal Filings and Collections Summaries</strong> - Summary of all legal filings and collections</li> <li><strong>Collections</strong> - Summary and Detail</li> <li><strong>Trades</strong> - Trade summary, payment experiences, payment totals, and trade payment trends</li> <li><strong>Bankruptcies</strong> - Summary and Detail</li> <li><strong>Liens</strong> - Summary and Detail</li> <li><strong>Judgments</strong> - Summary and Detail</li> <li><strong>UCC Filings</strong> - Summary and Trends</li> <li><strong>Corporate Registrations</strong> - Corporate registration info for the business, including filing status</li> <li><strong>Corporate Linkage</strong> - Partial and/or Full Family Tree</li> <li><strong>Business Contacts</strong> - Individual owners, company owners, contacts and titles, and contacts business affiliations</li> <li><strong>Reverse Addresses</strong> - Input an address and find businesses affiliated with that address</li> <li><strong>Reverse Phones</strong> - Input a phone number and find businesses affiliated with that phone number</li> <li><strong>Reverse Tax IDs</strong> - Input a Tax ID (EIN) and find businesses affiliated with that Tax ID</li> <li><strong>Government Details</strong> – Economic diversity and government contract data for the business</li> <li><strong>IST Watch</strong> - Manage OFAC regulatory compliance and watchlist screening with the IST Watch API</li> <li><strong>Cyber Risk Score and Attributes</strong> – Identifies employee cyber risk behaviors that indicate risk for a business</li> </ul> <p>&nbsp;</p> <p><strong>Businesses API Environments</strong></p> <ul> <li><strong>Sandbox </strong> - https://sandbox-us-api.experian.com/businessinformation/businesses</li> <li><strong>UAT </strong> - https://uat-us-api.experian.com/businessinformation/businesses</li> <li><strong>Production</strong> - https://us-api.experian.com/businessinformation/businesses</li> </ul> <p>&nbsp;</p> <p>Please note that the Businesses API in the Developer Portal Sandbox is a non-production service that is for testing and demonstration purposes only. Only a limited number of businesses are available in the sandbox test environment. A list of valid Business Identification Numbers  (BINs) can be provided to you upon your request, and valid BINs in the sandbox can  also be obtained using the Business Search API. Please contact your Experian Account Executive to discuss obtaining production access to the Businesses API.</p> <p>&nbsp;</p> <p><strong>IPv3 Sample Subcodes</strong></p> <ul> <li>IPv3 Logistic Regression - 0586286</li> <li>IPv3 Machine Learning - 0586548</li> </ul> <p>&nbsp;</p> <p><strong>Additional Developer Tools</strong></p> <ul> <li><a href=\"https://github.com/experianplc/Experian-BIS-Postman-Collection\"><strong>BIS API Postman Collection</strong></a> - A starter Postman Collection and Environment for many BIS APIs</li> <li><a href=\"https://github.com/experianplc/BIS-HTML-Resources\"><strong>BIS HTML Resources</strong></a> - Images, CSS, and Javsscript files necessary to render BIS HTML API reports</li> </ul>
  *
- * OpenAPI spec version: 1.0.2
- * 
- * Generated by: https://github.com/swagger-api/swagger-codegen.git
- * Swagger Codegen version: 2.4.31
+ * The version of the OpenAPI document: 1.0.3
+ * Generated by: https://openapi-generator.tech
+ * Generator version: 7.17.0
  */
 
 /**
- * NOTE: This class is auto generated by the swagger code generator program.
- * https://github.com/swagger-api/swagger-codegen
+ * NOTE: This class is auto generated by OpenAPI Generator (https://openapi-generator.tech).
+ * https://openapi-generator.tech
  * Do not edit the class manually.
  */
 
@@ -38,26 +37,27 @@ use \TheLogicStudio\ExperianBusinessesPHP\ObjectSerializer;
  * @category Class
  * @description Details the business’s activities with respect to federal contracting programs. This information may be helpful in determining if the business may have participated in federal contracts in the past or if it is currently debarred from doing business with the federal government
  * @package  TheLogicStudio\ExperianBusinessesPHP
- * @author   Swagger Codegen team
- * @link     https://github.com/swagger-api/swagger-codegen
+ * @author   OpenAPI Generator team
+ * @link     https://openapi-generator.tech
+ * @implements \ArrayAccess<string, mixed>
  */
-class GovernmentDetailsResultGovernmentActivity implements ModelInterface, ArrayAccess
+class GovernmentDetailsResultGovernmentActivity implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
       *
       * @var string
       */
-    protected static $swaggerModelName = 'GovernmentDetailsResult_governmentActivity';
+    protected static $openAPIModelName = 'GovernmentDetailsResult_governmentActivity';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       *
       * @var string[]
       */
-    protected static $swaggerTypes = [
+    protected static $openAPITypes = [
         'congressional_district' => 'string',
         'contractor_indicator' => 'bool',
         'debarred_indicator' => 'bool',
@@ -72,8 +72,10 @@ class GovernmentDetailsResultGovernmentActivity implements ModelInterface, Array
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
-    protected static $swaggerFormats = [
+    protected static $openAPIFormats = [
         'congressional_district' => null,
         'contractor_indicator' => null,
         'debarred_indicator' => null,
@@ -85,13 +87,36 @@ class GovernmentDetailsResultGovernmentActivity implements ModelInterface, Array
     ];
 
     /**
+      * Array of nullable properties. Used for (de)serialization
+      *
+      * @var boolean[]
+      */
+    protected static array $openAPINullables = [
+        'congressional_district' => false,
+        'contractor_indicator' => false,
+        'debarred_indicator' => false,
+        'agency' => false,
+        'exclusion_type' => false,
+        'active_date' => false,
+        'termination_date' => false,
+        'import_export_code' => false
+    ];
+
+    /**
+      * If a nullable field gets set to null, insert it here
+      *
+      * @var boolean[]
+      */
+    protected array $openAPINullablesSetToNull = [];
+
+    /**
      * Array of property to type mappings. Used for (de)serialization
      *
      * @return array
      */
-    public static function swaggerTypes()
+    public static function openAPITypes()
     {
-        return self::$swaggerTypes;
+        return self::$openAPITypes;
     }
 
     /**
@@ -99,9 +124,61 @@ class GovernmentDetailsResultGovernmentActivity implements ModelInterface, Array
      *
      * @return array
      */
-    public static function swaggerFormats()
+    public static function openAPIFormats()
     {
-        return self::$swaggerFormats;
+        return self::$openAPIFormats;
+    }
+
+    /**
+     * Array of nullable properties
+     *
+     * @return array
+     */
+    protected static function openAPINullables(): array
+    {
+        return self::$openAPINullables;
+    }
+
+    /**
+     * Array of nullable field names deliberately set to null
+     *
+     * @return boolean[]
+     */
+    private function getOpenAPINullablesSetToNull(): array
+    {
+        return $this->openAPINullablesSetToNull;
+    }
+
+    /**
+     * Setter - Array of nullable field names deliberately set to null
+     *
+     * @param boolean[] $openAPINullablesSetToNull
+     */
+    private function setOpenAPINullablesSetToNull(array $openAPINullablesSetToNull): void
+    {
+        $this->openAPINullablesSetToNull = $openAPINullablesSetToNull;
+    }
+
+    /**
+     * Checks if a property is nullable
+     *
+     * @param string $property
+     * @return bool
+     */
+    public static function isNullable(string $property): bool
+    {
+        return self::openAPINullables()[$property] ?? false;
+    }
+
+    /**
+     * Checks if a nullable property is set to null.
+     *
+     * @param string $property
+     * @return bool
+     */
+    public function isNullableSetToNull(string $property): bool
+    {
+        return in_array($property, $this->getOpenAPINullablesSetToNull(), true);
     }
 
     /**
@@ -191,12 +268,9 @@ class GovernmentDetailsResultGovernmentActivity implements ModelInterface, Array
      */
     public function getModelName()
     {
-        return self::$swaggerModelName;
+        return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -208,19 +282,37 @@ class GovernmentDetailsResultGovernmentActivity implements ModelInterface, Array
     /**
      * Constructor
      *
-     * @param mixed[] $data Associated array of property values
+     * @param mixed[]|null $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
-        $this->container['congressional_district'] = isset($data['congressional_district']) ? $data['congressional_district'] : null;
-        $this->container['contractor_indicator'] = isset($data['contractor_indicator']) ? $data['contractor_indicator'] : null;
-        $this->container['debarred_indicator'] = isset($data['debarred_indicator']) ? $data['debarred_indicator'] : null;
-        $this->container['agency'] = isset($data['agency']) ? $data['agency'] : null;
-        $this->container['exclusion_type'] = isset($data['exclusion_type']) ? $data['exclusion_type'] : null;
-        $this->container['active_date'] = isset($data['active_date']) ? $data['active_date'] : null;
-        $this->container['termination_date'] = isset($data['termination_date']) ? $data['termination_date'] : null;
-        $this->container['import_export_code'] = isset($data['import_export_code']) ? $data['import_export_code'] : null;
+        $this->setIfExists('congressional_district', $data ?? [], null);
+        $this->setIfExists('contractor_indicator', $data ?? [], null);
+        $this->setIfExists('debarred_indicator', $data ?? [], null);
+        $this->setIfExists('agency', $data ?? [], null);
+        $this->setIfExists('exclusion_type', $data ?? [], null);
+        $this->setIfExists('active_date', $data ?? [], null);
+        $this->setIfExists('termination_date', $data ?? [], null);
+        $this->setIfExists('import_export_code', $data ?? [], null);
+    }
+
+    /**
+    * Sets $this->container[$variableName] to the given data or to the given default Value; if $variableName
+    * is nullable and its value is set to null in the $fields array, then mark it as "set to null" in the
+    * $this->openAPINullablesSetToNull array
+    *
+    * @param string $variableName
+    * @param array  $fields
+    * @param mixed  $defaultValue
+    */
+    private function setIfExists(string $variableName, array $fields, $defaultValue): void
+    {
+        if (self::isNullable($variableName) && array_key_exists($variableName, $fields) && is_null($fields[$variableName])) {
+            $this->openAPINullablesSetToNull[] = $variableName;
+        }
+
+        $this->container[$variableName] = $fields[$variableName] ?? $defaultValue;
     }
 
     /**
@@ -231,6 +323,26 @@ class GovernmentDetailsResultGovernmentActivity implements ModelInterface, Array
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+
+        if (!is_null($this->container['congressional_district']) && (mb_strlen($this->container['congressional_district']) > 30)) {
+            $invalidProperties[] = "invalid value for 'congressional_district', the character length must be smaller than or equal to 30.";
+        }
+
+        if (!is_null($this->container['exclusion_type']) && (mb_strlen($this->container['exclusion_type']) > 30)) {
+            $invalidProperties[] = "invalid value for 'exclusion_type', the character length must be smaller than or equal to 30.";
+        }
+
+        if (!is_null($this->container['active_date']) && (mb_strlen($this->container['active_date']) > 10)) {
+            $invalidProperties[] = "invalid value for 'active_date', the character length must be smaller than or equal to 10.";
+        }
+
+        if (!is_null($this->container['termination_date']) && (mb_strlen($this->container['termination_date']) > 10)) {
+            $invalidProperties[] = "invalid value for 'termination_date', the character length must be smaller than or equal to 10.";
+        }
+
+        if (!is_null($this->container['import_export_code']) && (mb_strlen($this->container['import_export_code']) > 2)) {
+            $invalidProperties[] = "invalid value for 'import_export_code', the character length must be smaller than or equal to 2.";
+        }
 
         return $invalidProperties;
     }
@@ -250,7 +362,7 @@ class GovernmentDetailsResultGovernmentActivity implements ModelInterface, Array
     /**
      * Gets congressional_district
      *
-     * @return string
+     * @return string|null
      */
     public function getCongressionalDistrict()
     {
@@ -260,12 +372,19 @@ class GovernmentDetailsResultGovernmentActivity implements ModelInterface, Array
     /**
      * Sets congressional_district
      *
-     * @param string $congressional_district The Congressional District wherein the business is located (within the state)
+     * @param string|null $congressional_district The Congressional District wherein the business is located (within the state)
      *
-     * @return $this
+     * @return self
      */
     public function setCongressionalDistrict($congressional_district)
     {
+        if (is_null($congressional_district)) {
+            throw new \InvalidArgumentException('non-nullable congressional_district cannot be null');
+        }
+        if ((mb_strlen($congressional_district) > 30)) {
+            throw new \InvalidArgumentException('invalid length for $congressional_district when calling GovernmentDetailsResultGovernmentActivity., must be smaller than or equal to 30.');
+        }
+
         $this->container['congressional_district'] = $congressional_district;
 
         return $this;
@@ -274,7 +393,7 @@ class GovernmentDetailsResultGovernmentActivity implements ModelInterface, Array
     /**
      * Gets contractor_indicator
      *
-     * @return bool
+     * @return bool|null
      */
     public function getContractorIndicator()
     {
@@ -284,12 +403,15 @@ class GovernmentDetailsResultGovernmentActivity implements ModelInterface, Array
     /**
      * Sets contractor_indicator
      *
-     * @param bool $contractor_indicator If true, indicates the business is registered with Central Contractor Registration (CCR)
+     * @param bool|null $contractor_indicator If true, indicates the business is registered with Central Contractor Registration (CCR)
      *
-     * @return $this
+     * @return self
      */
     public function setContractorIndicator($contractor_indicator)
     {
+        if (is_null($contractor_indicator)) {
+            throw new \InvalidArgumentException('non-nullable contractor_indicator cannot be null');
+        }
         $this->container['contractor_indicator'] = $contractor_indicator;
 
         return $this;
@@ -298,7 +420,7 @@ class GovernmentDetailsResultGovernmentActivity implements ModelInterface, Array
     /**
      * Gets debarred_indicator
      *
-     * @return bool
+     * @return bool|null
      */
     public function getDebarredIndicator()
     {
@@ -308,12 +430,15 @@ class GovernmentDetailsResultGovernmentActivity implements ModelInterface, Array
     /**
      * Sets debarred_indicator
      *
-     * @param bool $debarred_indicator If true, indicates that the business is excluded from receiving Federal contracts, certain subcontracts, and certain types of Federal financial and non-financial assistance and benefits
+     * @param bool|null $debarred_indicator If true, indicates that the business is excluded from receiving Federal contracts, certain subcontracts, and certain types of Federal financial and non-financial assistance and benefits
      *
-     * @return $this
+     * @return self
      */
     public function setDebarredIndicator($debarred_indicator)
     {
+        if (is_null($debarred_indicator)) {
+            throw new \InvalidArgumentException('non-nullable debarred_indicator cannot be null');
+        }
         $this->container['debarred_indicator'] = $debarred_indicator;
 
         return $this;
@@ -322,7 +447,7 @@ class GovernmentDetailsResultGovernmentActivity implements ModelInterface, Array
     /**
      * Gets agency
      *
-     * @return \TheLogicStudio\ExperianBusinessesPHP\Model\GovernmentDetailsResultGovernmentActivityAgency
+     * @return \TheLogicStudio\ExperianBusinessesPHP\Model\GovernmentDetailsResultGovernmentActivityAgency|null
      */
     public function getAgency()
     {
@@ -332,12 +457,15 @@ class GovernmentDetailsResultGovernmentActivity implements ModelInterface, Array
     /**
      * Sets agency
      *
-     * @param \TheLogicStudio\ExperianBusinessesPHP\Model\GovernmentDetailsResultGovernmentActivityAgency $agency agency
+     * @param \TheLogicStudio\ExperianBusinessesPHP\Model\GovernmentDetailsResultGovernmentActivityAgency|null $agency agency
      *
-     * @return $this
+     * @return self
      */
     public function setAgency($agency)
     {
+        if (is_null($agency)) {
+            throw new \InvalidArgumentException('non-nullable agency cannot be null');
+        }
         $this->container['agency'] = $agency;
 
         return $this;
@@ -346,7 +474,7 @@ class GovernmentDetailsResultGovernmentActivity implements ModelInterface, Array
     /**
      * Gets exclusion_type
      *
-     * @return string
+     * @return string|null
      */
     public function getExclusionType()
     {
@@ -356,12 +484,19 @@ class GovernmentDetailsResultGovernmentActivity implements ModelInterface, Array
     /**
      * Sets exclusion_type
      *
-     * @param string $exclusion_type Type of Exclusions: Preliminarily Ineligible (Proceedings Pending), Ineligible (Proceedings Completed), Prohibition/Restriction, Voluntary Exclusion, or Null if not available
+     * @param string|null $exclusion_type Type of Exclusions: Preliminarily Ineligible (Proceedings Pending), Ineligible (Proceedings Completed), Prohibition/Restriction, Voluntary Exclusion, or Null if not available
      *
-     * @return $this
+     * @return self
      */
     public function setExclusionType($exclusion_type)
     {
+        if (is_null($exclusion_type)) {
+            throw new \InvalidArgumentException('non-nullable exclusion_type cannot be null');
+        }
+        if ((mb_strlen($exclusion_type) > 30)) {
+            throw new \InvalidArgumentException('invalid length for $exclusion_type when calling GovernmentDetailsResultGovernmentActivity., must be smaller than or equal to 30.');
+        }
+
         $this->container['exclusion_type'] = $exclusion_type;
 
         return $this;
@@ -370,7 +505,7 @@ class GovernmentDetailsResultGovernmentActivity implements ModelInterface, Array
     /**
      * Gets active_date
      *
-     * @return string
+     * @return string|null
      */
     public function getActiveDate()
     {
@@ -380,12 +515,19 @@ class GovernmentDetailsResultGovernmentActivity implements ModelInterface, Array
     /**
      * Sets active_date
      *
-     * @param string $active_date The date that the exclusion became active, when the entity is no longer able to do business with the Federal Government. Format YYYY-MM-DD
+     * @param string|null $active_date The date that the exclusion became active, when the entity is no longer able to do business with the Federal Government. Format YYYY-MM-DD
      *
-     * @return $this
+     * @return self
      */
     public function setActiveDate($active_date)
     {
+        if (is_null($active_date)) {
+            throw new \InvalidArgumentException('non-nullable active_date cannot be null');
+        }
+        if ((mb_strlen($active_date) > 10)) {
+            throw new \InvalidArgumentException('invalid length for $active_date when calling GovernmentDetailsResultGovernmentActivity., must be smaller than or equal to 10.');
+        }
+
         $this->container['active_date'] = $active_date;
 
         return $this;
@@ -394,7 +536,7 @@ class GovernmentDetailsResultGovernmentActivity implements ModelInterface, Array
     /**
      * Gets termination_date
      *
-     * @return string
+     * @return string|null
      */
     public function getTerminationDate()
     {
@@ -404,12 +546,19 @@ class GovernmentDetailsResultGovernmentActivity implements ModelInterface, Array
     /**
      * Sets termination_date
      *
-     * @param string $termination_date The date that the exclusion will be removed from the current list of active exclusions and placed in the inactive list. Format YYYY-MM-DD
+     * @param string|null $termination_date The date that the exclusion will be removed from the current list of active exclusions and placed in the inactive list. Format YYYY-MM-DD
      *
-     * @return $this
+     * @return self
      */
     public function setTerminationDate($termination_date)
     {
+        if (is_null($termination_date)) {
+            throw new \InvalidArgumentException('non-nullable termination_date cannot be null');
+        }
+        if ((mb_strlen($termination_date) > 10)) {
+            throw new \InvalidArgumentException('invalid length for $termination_date when calling GovernmentDetailsResultGovernmentActivity., must be smaller than or equal to 10.');
+        }
+
         $this->container['termination_date'] = $termination_date;
 
         return $this;
@@ -418,7 +567,7 @@ class GovernmentDetailsResultGovernmentActivity implements ModelInterface, Array
     /**
      * Gets import_export_code
      *
-     * @return string
+     * @return string|null
      */
     public function getImportExportCode()
     {
@@ -428,12 +577,19 @@ class GovernmentDetailsResultGovernmentActivity implements ModelInterface, Array
     /**
      * Sets import_export_code
      *
-     * @param string $import_export_code Identifies if a business is an Importer, Exporter, or Both. Future Field
+     * @param string|null $import_export_code Identifies if a business is an Importer, Exporter, or Both. Future Field
      *
-     * @return $this
+     * @return self
      */
     public function setImportExportCode($import_export_code)
     {
+        if (is_null($import_export_code)) {
+            throw new \InvalidArgumentException('non-nullable import_export_code cannot be null');
+        }
+        if ((mb_strlen($import_export_code) > 2)) {
+            throw new \InvalidArgumentException('invalid length for $import_export_code when calling GovernmentDetailsResultGovernmentActivity., must be smaller than or equal to 2.');
+        }
+
         $this->container['import_export_code'] = $import_export_code;
 
         return $this;
@@ -441,12 +597,11 @@ class GovernmentDetailsResultGovernmentActivity implements ModelInterface, Array
     /**
      * Returns true if offset exists. False otherwise.
      *
-     * @param integer $offset Offset
+     * @param integer|string $offset Offset
      *
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -454,26 +609,25 @@ class GovernmentDetailsResultGovernmentActivity implements ModelInterface, Array
     /**
      * Gets offset.
      *
-     * @param integer $offset Offset
+     * @param integer|string $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     #[\ReturnTypeWillChange]
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
-    #[\ReturnTypeWillChange]
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -485,14 +639,26 @@ class GovernmentDetailsResultGovernmentActivity implements ModelInterface, Array
     /**
      * Unsets offset.
      *
-     * @param integer $offset Offset
+     * @param integer|string $offset Offset
      *
      * @return void
      */
-    #[\ReturnTypeWillChange]
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    #[\ReturnTypeWillChange]
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -502,13 +668,19 @@ class GovernmentDetailsResultGovernmentActivity implements ModelInterface, Array
      */
     public function __toString()
     {
-        if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(
-                ObjectSerializer::sanitizeForSerialization($this),
-                JSON_PRETTY_PRINT
-            );
-        }
+        return json_encode(
+            ObjectSerializer::sanitizeForSerialization($this),
+            JSON_PRETTY_PRINT
+        );
+    }
 
+    /**
+     * Gets a header-safe presentation of the object
+     *
+     * @return string
+     */
+    public function toHeaderValue()
+    {
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }

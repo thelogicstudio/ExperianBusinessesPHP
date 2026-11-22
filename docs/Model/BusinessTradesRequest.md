@@ -1,6 +1,7 @@
-# BusinessTradesRequest
+# # BusinessTradesRequest
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **bin** | **string** | 9-digit Business Identification Number (BIN) | [default to '700000001']
@@ -10,6 +11,4 @@ Name | Type | Description | Notes
 **trade_payment_experiences** | **bool** | If true receive tradePaymentExperiences | [optional] [default to true]
 **trade_payment_trends** | **bool** | If true receive tradePaymentTrends | [optional] [default to true]
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

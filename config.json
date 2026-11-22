@@ -1,0 +1,9 @@
+{
+	"invokerPackage":      "TheLogicStudio\\ExperianBusinessesPHP",
+	"composerPackageName": "thelogicstudio/experian-businesses-php",
+	"gitUserId":           "TheLogicStudio",
+	"gitRepoId":           "ExperianBusinessesPHP",
+	"licenseName":         "MIT",
+	"packageName":         "Experian Businesses PHP SDK",
+	"composerDescription":  "Unofficial PHP SDK for Experian's Businesses API"
+}

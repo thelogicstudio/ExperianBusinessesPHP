@@ -2,28 +2,27 @@
 /**
  * ExpandedCreditSummary
  *
- * PHP version 5
+ * PHP version 8.1
  *
  * @category Class
  * @package  TheLogicStudio\ExperianBusinessesPHP
- * @author   Swagger Codegen team
- * @link     https://github.com/swagger-api/swagger-codegen
+ * @author   OpenAPI Generator team
+ * @link     https://openapi-generator.tech
  */
 
 /**
  * Businesses
  *
- * <p>Experian's Business Information Services is a leader in providing data and predictive insights to organizations, helping them mitigate risk and improve profitability.  The Businesses API provides integrated access to our business database which provides comprehensive, third-party-verified information on 99.9 percent of all U.S. companies, with the industry's most extensive data on the broad spectrum of small and midsize businesses.</p> <p>&nbsp;</p> <p>The Businesses API provides a la carte access to Experian's commercial credit and  commercial public record information, including commercial scores, trades, corporate linkage, bankruptcies, liens, judgments, and more.</p> <p>&nbsp;</p> <p><strong>It All Starts With a Search</strong></p> <p>The Business Search API allows you to input a business name, address, city, and state to find their Business Identification Number (BIN) - you'll need this to get data from most of the other APIs.  The primary search method is called \"Advanced Search\" and can be used for automated matching using our Match Reliability Code. A secondary search method, called \"QuickSearch\" and is a type-ahead style search that allows a human user to quickly find a business using a smaller amount of data.</p> <p><strong>SBCS Consortium Members</strong> can use the Businesses API search endpoints.</p> <p><strong>SBFE Consortium Members</strong> must use the <a href=\"/products/us/small-business-financial-exchangetm\">SBFE API</a>, using either the List of Similars product option to search for a business, or a Name/Address request for automated matching.</p> <p>&nbsp;</p> <p><strong>Businesses API in the Sandbox</strong></p> <ul> <li><strong>Advanced Search</strong> - The primary way to search for US businesses and return a List of Similars. Designed for both automation and human interaction</li> <li><strong>Quick Search</strong> - The secondary search method. A flexible, type-ahead style search API for US businesses. Designed primarily for human interaction</li> <li><strong>Headers</strong> - Business identity information. Available as stand-alone and included with most API responses</li> <li><strong>Scores</strong> - Commercial Intelliscore Plus and Financial Stability Risk Scores, with scores, score factors, and monthly and quarterly trends</li> <li><strong>Scores Auto Search</strong> - Returns the Scores API, but with a Business Name and Address request input</li> <li><strong>Premier Profiles JSON</strong> - Experian's flagship commercial credit report</li> <li><strong>Premier Profiles HTML</strong> - Renders a styled Premier Profile report using HTML/CSS</li> <li><strong>Premier Profiles PDF</strong> - Provides an encoded Premier Profile PDF report</li> <li><strong>Intelliscore Report JSON</strong> – Our score only report</li> <li><strong>Intelliscore Report HTML</strong> – Our score only report in HTML format</li> <li><strong>Intelliscore Report PDF</strong> – Our score only report in PDF format</li> <li><strong>Business Compliance Insight JSON</strong> – The BCI report helps with client onboarding and Know-Your-Customer investigations</li> <li><strong>Business Compliance Insight HTML</strong> – The BCI Report in HTML format</li> <li><strong>Business Compliance Insight PDF</strong> – The BCI report in PDF format</li> <li><strong>Aggregates</strong> - The BizAggs represent over 400 unique data attributes that represent the building blocks of commercial credit</li> <li><strong>MultiSegments</strong> - MultiSegments allows you to request segments from most Businesses API endpoints in a single API call</li> <li><strong>Risk Dashboards</strong> - Includes commercial and FSR scores, credit limit amount, current DBT</li> <li><strong>Business Facts</strong> - Key operational facts including SIC, NAICS, public status, sales, employees</li> <li><strong>Fraud Shields</strong> - Screens for potential indicators of fraud. Includes possible OFAC match</li> <li><strong>Credit Status</strong> - Key credit facts about the business including tradeline count, balance, DBT</li> <li><strong>Legal Filings and Collections Summaries</strong> - Summary of all legal filings and collections</li> <li><strong>Collections</strong> - Summary and Detail</li> <li><strong>Trades</strong> - Trade summary, payment experiences, payment totals, and trade payment trends</li> <li><strong>Bankruptcies</strong> - Summary and Detail</li> <li><strong>Liens</strong> - Summary and Detail</li> <li><strong>Judgments</strong> - Summary and Detail</li> <li><strong>UCC Filings</strong> - Summary and Trends</li> <li><strong>Corporate Registrations</strong> - Corporate registration info for the business, including filing status</li> <li><strong>Corporate Linkage</strong> - Partial and/or Full Family Tree</li> <li><strong>Business Contacts</strong> - Individual owners, company owners, contacts and titles, and contacts business affiliations</li> <li><strong>Reverse Addresses</strong> - Input an address and find businesses affiliated with that address</li> <li><strong>Reverse Phones</strong> - Input a phone number and find businesses affiliated with that phone number</li> <li><strong>Reverse Tax IDs</strong> - Input a Tax ID (EIN) and find businesses affiliated with that Tax ID</li> <li><strong>Government Details</strong> – Economic diversity and government contract data for the business</li> <li><strong>IST Watch</strong> - Manage OFAC regulatory compliance and watchlist screening with the IST Watch API</li> </ul> <p>&nbsp;</p> <p><strong>Businesses API Environments</strong></p> <ul> <li><strong>Sandbox </strong> - https://sandbox-us-api.experian.com/businessinformation/businesses</li> <li><strong>UAT </strong> - https://uat-us-api.experian.com/businessinformation/businesses</li> <li><strong>Production</strong> - https://us-api.experian.com/businessinformation/businesses</li> </ul> <p>&nbsp;</p> <p>Please note that the Businesses API in the Developer Portal Sandbox is a non-production service that is for testing and demonstration purposes only. Only a limited number of businesses are available in the sandbox test environment. A list of valid Business Identification Numbers  (BINs) can be provided to you upon your request, and valid BINs in the sandbox can  also be obtained using the Business Search API. Please contact your Experian Account Executive to discuss obtaining production access to the Businesses API.</p> <p>&nbsp;</p> <p><strong>IPv3 Sample Subcodes</strong></p> <ul> <li>IPv3 Logistic Regression - 0586286</li> <li>IPv3 Machine Learning - 0586548</li> </ul> <p>&nbsp;</p> <p><strong>Additional Developer Tools</strong></p> <ul> <li><a href=\"https://github.com/experianplc/Experian-BIS-Postman-Collection\"><strong>BIS API Postman Collection</strong></a> - A starter Postman Collection and Environment for many BIS APIs</li> <li><a href=\"https://github.com/experianplc/BIS-HTML-Resources\"><strong>BIS HTML Resources</strong></a> - Images, CSS, and Javsscript files necessary to render BIS HTML API reports</li> </ul>
+ * <p>Experian's Business Information Services is a leader in providing data and predictive insights to organizations, helping them mitigate risk and improve profitability.  The Businesses API provides integrated access to our business database which provides comprehensive, third-party-verified information on 99.9 percent of all U.S. companies, with the industry's most extensive data on the broad spectrum of small and midsize businesses.</p> <p>&nbsp;</p> <p>The Businesses API provides a la carte access to Experian's commercial credit and  commercial public record information, including commercial scores, trades, corporate linkage, bankruptcies, liens, judgments, and more.</p> <p>&nbsp;</p> <p><strong>It All Starts With a Search</strong></p> <p>The Business Search API allows you to input a business name, address, city, and state to find their Business Identification Number (BIN) - you'll need this to get data from most of the other APIs.  The primary search method is called \"Advanced Search\" and can be used for automated matching using our Match Reliability Code.   A secondary search method, called \"QuickSearch\" and is a type-ahead style search that allows a human user to quickly find a business using a smaller amount of data.</p> <p><strong>SBCS Consortium Members</strong> can use the Businesses API search endpoints.</p> <p><strong>SBFE Consortium Members</strong> must use the <a href=\"/products/us/small-business-financial-exchangetm\">SBFE API</a>, using either the  List of Similars product option to search for a business, or a Name/Address request for automated matching.</p>  <p>&nbsp;</p> <p><strong>Businesses API in the Sandbox</strong></p> <ul> <li><strong>Advanced Search</strong> - The primary way to search for US businesses and return a List of Similars. Designed for both automation and human interaction</li> <li><strong>Quick Search</strong> - The secondary search method. A flexible, type-ahead style search API for US businesses. Designed primarily for human interaction</li> <li><strong>Headers</strong> - Business identity information. Available as stand-alone and included with most API responses</li> <li><strong>Scores</strong> - Commercial Intelliscore Plus and Financial Stability Risk Scores, with scores, score factors, and monthly and quarterly trends</li> <li><strong>Scores Auto Search</strong> - Returns the Scores API, but with a Business Name and Address request input</li> <li><strong>Premier Profiles JSON</strong> - Experian's flagship commercial credit report</li> <li><strong>Premier Profiles HTML</strong> - Renders a styled Premier Profile report using HTML/CSS</li> <li><strong>Premier Profiles PDF</strong> - Provides an encoded Premier Profile PDF report</li> <li><strong>Intelliscore Report JSON</strong> – Our score only report</li> <li><strong>Intelliscore Report HTML</strong> – Our score only report in HTML format</li> <li><strong>Intelliscore Report PDF</strong> – Our score only report in PDF format</li> <li><strong>Business Compliance Insight JSON</strong> – The BCI report helps with client onboarding and Know-Your-Customer investigations</li> <li><strong>Business Compliance Insight HTML</strong> – The BCI Report in HTML format</li> <li><strong>Business Compliance Insight PDF</strong> – The BCI report in PDF format</li> <li><strong>Aggregates</strong> - The BizAggs represent over 400 unique data attributes that represent the building blocks of commercial credit</li> <li><strong>MultiSegments</strong> - MultiSegments allows you to request segments from most Businesses API endpoints in a single API call</li> <li><strong>Risk Dashboards</strong> - Includes commercial and FSR scores, credit limit amount, current DBT</li> <li><strong>Business Facts</strong> - Key operational facts including SIC, NAICS, public status, sales, employees</li> <li><strong>Fraud Shields</strong> - Screens for potential indicators of fraud. Includes possible OFAC match</li> <li><strong>Credit Status</strong> - Key credit facts about the business including tradeline count, balance, DBT</li> <li><strong>Legal Filings and Collections Summaries</strong> - Summary of all legal filings and collections</li> <li><strong>Collections</strong> - Summary and Detail</li> <li><strong>Trades</strong> - Trade summary, payment experiences, payment totals, and trade payment trends</li> <li><strong>Bankruptcies</strong> - Summary and Detail</li> <li><strong>Liens</strong> - Summary and Detail</li> <li><strong>Judgments</strong> - Summary and Detail</li> <li><strong>UCC Filings</strong> - Summary and Trends</li> <li><strong>Corporate Registrations</strong> - Corporate registration info for the business, including filing status</li> <li><strong>Corporate Linkage</strong> - Partial and/or Full Family Tree</li> <li><strong>Business Contacts</strong> - Individual owners, company owners, contacts and titles, and contacts business affiliations</li> <li><strong>Reverse Addresses</strong> - Input an address and find businesses affiliated with that address</li> <li><strong>Reverse Phones</strong> - Input a phone number and find businesses affiliated with that phone number</li> <li><strong>Reverse Tax IDs</strong> - Input a Tax ID (EIN) and find businesses affiliated with that Tax ID</li> <li><strong>Government Details</strong> – Economic diversity and government contract data for the business</li> <li><strong>IST Watch</strong> - Manage OFAC regulatory compliance and watchlist screening with the IST Watch API</li> <li><strong>Cyber Risk Score and Attributes</strong> – Identifies employee cyber risk behaviors that indicate risk for a business</li> </ul> <p>&nbsp;</p> <p><strong>Businesses API Environments</strong></p> <ul> <li><strong>Sandbox </strong> - https://sandbox-us-api.experian.com/businessinformation/businesses</li> <li><strong>UAT </strong> - https://uat-us-api.experian.com/businessinformation/businesses</li> <li><strong>Production</strong> - https://us-api.experian.com/businessinformation/businesses</li> </ul> <p>&nbsp;</p> <p>Please note that the Businesses API in the Developer Portal Sandbox is a non-production service that is for testing and demonstration purposes only. Only a limited number of businesses are available in the sandbox test environment. A list of valid Business Identification Numbers  (BINs) can be provided to you upon your request, and valid BINs in the sandbox can  also be obtained using the Business Search API. Please contact your Experian Account Executive to discuss obtaining production access to the Businesses API.</p> <p>&nbsp;</p> <p><strong>IPv3 Sample Subcodes</strong></p> <ul> <li>IPv3 Logistic Regression - 0586286</li> <li>IPv3 Machine Learning - 0586548</li> </ul> <p>&nbsp;</p> <p><strong>Additional Developer Tools</strong></p> <ul> <li><a href=\"https://github.com/experianplc/Experian-BIS-Postman-Collection\"><strong>BIS API Postman Collection</strong></a> - A starter Postman Collection and Environment for many BIS APIs</li> <li><a href=\"https://github.com/experianplc/BIS-HTML-Resources\"><strong>BIS HTML Resources</strong></a> - Images, CSS, and Javsscript files necessary to render BIS HTML API reports</li> </ul>
  *
- * OpenAPI spec version: 1.0.2
- * 
- * Generated by: https://github.com/swagger-api/swagger-codegen.git
- * Swagger Codegen version: 2.4.31
+ * The version of the OpenAPI document: 1.0.3
+ * Generated by: https://openapi-generator.tech
+ * Generator version: 7.17.0
  */
 
 /**
- * NOTE: This class is auto generated by the swagger code generator program.
- * https://github.com/swagger-api/swagger-codegen
+ * NOTE: This class is auto generated by OpenAPI Generator (https://openapi-generator.tech).
+ * https://openapi-generator.tech
  * Do not edit the class manually.
  */
 
@@ -37,26 +36,27 @@ use \TheLogicStudio\ExperianBusinessesPHP\ObjectSerializer;
  *
  * @category Class
  * @package  TheLogicStudio\ExperianBusinessesPHP
- * @author   Swagger Codegen team
- * @link     https://github.com/swagger-api/swagger-codegen
+ * @author   OpenAPI Generator team
+ * @link     https://openapi-generator.tech
+ * @implements \ArrayAccess<string, mixed>
  */
-class ExpandedCreditSummary implements ModelInterface, ArrayAccess
+class ExpandedCreditSummary implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
       *
       * @var string
       */
-    protected static $swaggerModelName = 'expandedCreditSummary';
+    protected static $openAPIModelName = 'expandedCreditSummary';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       *
       * @var string[]
       */
-    protected static $swaggerTypes = [
+    protected static $openAPITypes = [
         'bankruptcy_count' => 'float',
         'oldest_bankruptcy_date' => 'string',
         'most_recent_bankruptcy_date' => 'string',
@@ -106,8 +106,10 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
-    protected static $swaggerFormats = [
+    protected static $openAPIFormats = [
         'bankruptcy_count' => null,
         'oldest_bankruptcy_date' => null,
         'most_recent_bankruptcy_date' => null,
@@ -154,13 +156,71 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     ];
 
     /**
+      * Array of nullable properties. Used for (de)serialization
+      *
+      * @var boolean[]
+      */
+    protected static array $openAPINullables = [
+        'bankruptcy_count' => false,
+        'oldest_bankruptcy_date' => false,
+        'most_recent_bankruptcy_date' => false,
+        'tax_lien_count' => false,
+        'oldest_tax_lien_date' => false,
+        'most_recent_tax_lien_date' => false,
+        'judgment_count' => false,
+        'oldest_judgment_date' => false,
+        'most_recent_judgment_date' => false,
+        'collection_count' => false,
+        'collection_balance' => false,
+        'collection_count_past24_months' => false,
+        'legal_balance' => false,
+        'ucc_filings' => false,
+        'ucc_derogatory_count' => false,
+        'current_account_balance' => false,
+        'current_tradeline_count' => false,
+        'monthly_average_dbt' => false,
+        'highest_dbt6_months' => false,
+        'highest_dbt5_quarters' => false,
+        'active_tradeline_count' => false,
+        'all_tradeline_balance' => false,
+        'all_tradeline_count' => false,
+        'average_balance5_quarters' => false,
+        'single_high_credit' => false,
+        'low_balance6_months' => false,
+        'high_balance6_months' => false,
+        'oldest_collection_date' => false,
+        'most_recent_collection_date' => false,
+        'current_dbt' => false,
+        'oldest_ucc_date' => false,
+        'most_recent_ucc_date' => false,
+        'bankruptcy_indicator' => false,
+        'judgment_indicator' => false,
+        'tax_lien_indicator' => false,
+        'trade_collection_count' => false,
+        'trade_collection_balance' => false,
+        'open_collection_count' => false,
+        'open_collection_balance' => false,
+        'ofac_match_warning' => false,
+        'victim_statement_indicator' => false,
+        'commercial_fraud_risk_indicator_count' => false,
+        'unsummarized_tradeline_count' => false
+    ];
+
+    /**
+      * If a nullable field gets set to null, insert it here
+      *
+      * @var boolean[]
+      */
+    protected array $openAPINullablesSetToNull = [];
+
+    /**
      * Array of property to type mappings. Used for (de)serialization
      *
      * @return array
      */
-    public static function swaggerTypes()
+    public static function openAPITypes()
     {
-        return self::$swaggerTypes;
+        return self::$openAPITypes;
     }
 
     /**
@@ -168,9 +228,61 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerFormats()
+    public static function openAPIFormats()
     {
-        return self::$swaggerFormats;
+        return self::$openAPIFormats;
+    }
+
+    /**
+     * Array of nullable properties
+     *
+     * @return array
+     */
+    protected static function openAPINullables(): array
+    {
+        return self::$openAPINullables;
+    }
+
+    /**
+     * Array of nullable field names deliberately set to null
+     *
+     * @return boolean[]
+     */
+    private function getOpenAPINullablesSetToNull(): array
+    {
+        return $this->openAPINullablesSetToNull;
+    }
+
+    /**
+     * Setter - Array of nullable field names deliberately set to null
+     *
+     * @param boolean[] $openAPINullablesSetToNull
+     */
+    private function setOpenAPINullablesSetToNull(array $openAPINullablesSetToNull): void
+    {
+        $this->openAPINullablesSetToNull = $openAPINullablesSetToNull;
+    }
+
+    /**
+     * Checks if a property is nullable
+     *
+     * @param string $property
+     * @return bool
+     */
+    public static function isNullable(string $property): bool
+    {
+        return self::openAPINullables()[$property] ?? false;
+    }
+
+    /**
+     * Checks if a nullable property is set to null.
+     *
+     * @param string $property
+     * @return bool
+     */
+    public function isNullableSetToNull(string $property): bool
+    {
+        return in_array($property, $this->getOpenAPINullablesSetToNull(), true);
     }
 
     /**
@@ -365,12 +477,9 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
      */
     public function getModelName()
     {
-        return self::$swaggerModelName;
+        return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -382,54 +491,72 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Constructor
      *
-     * @param mixed[] $data Associated array of property values
+     * @param mixed[]|null $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
-        $this->container['bankruptcy_count'] = isset($data['bankruptcy_count']) ? $data['bankruptcy_count'] : null;
-        $this->container['oldest_bankruptcy_date'] = isset($data['oldest_bankruptcy_date']) ? $data['oldest_bankruptcy_date'] : null;
-        $this->container['most_recent_bankruptcy_date'] = isset($data['most_recent_bankruptcy_date']) ? $data['most_recent_bankruptcy_date'] : null;
-        $this->container['tax_lien_count'] = isset($data['tax_lien_count']) ? $data['tax_lien_count'] : null;
-        $this->container['oldest_tax_lien_date'] = isset($data['oldest_tax_lien_date']) ? $data['oldest_tax_lien_date'] : null;
-        $this->container['most_recent_tax_lien_date'] = isset($data['most_recent_tax_lien_date']) ? $data['most_recent_tax_lien_date'] : null;
-        $this->container['judgment_count'] = isset($data['judgment_count']) ? $data['judgment_count'] : null;
-        $this->container['oldest_judgment_date'] = isset($data['oldest_judgment_date']) ? $data['oldest_judgment_date'] : null;
-        $this->container['most_recent_judgment_date'] = isset($data['most_recent_judgment_date']) ? $data['most_recent_judgment_date'] : null;
-        $this->container['collection_count'] = isset($data['collection_count']) ? $data['collection_count'] : null;
-        $this->container['collection_balance'] = isset($data['collection_balance']) ? $data['collection_balance'] : null;
-        $this->container['collection_count_past24_months'] = isset($data['collection_count_past24_months']) ? $data['collection_count_past24_months'] : null;
-        $this->container['legal_balance'] = isset($data['legal_balance']) ? $data['legal_balance'] : null;
-        $this->container['ucc_filings'] = isset($data['ucc_filings']) ? $data['ucc_filings'] : null;
-        $this->container['ucc_derogatory_count'] = isset($data['ucc_derogatory_count']) ? $data['ucc_derogatory_count'] : null;
-        $this->container['current_account_balance'] = isset($data['current_account_balance']) ? $data['current_account_balance'] : null;
-        $this->container['current_tradeline_count'] = isset($data['current_tradeline_count']) ? $data['current_tradeline_count'] : null;
-        $this->container['monthly_average_dbt'] = isset($data['monthly_average_dbt']) ? $data['monthly_average_dbt'] : null;
-        $this->container['highest_dbt6_months'] = isset($data['highest_dbt6_months']) ? $data['highest_dbt6_months'] : null;
-        $this->container['highest_dbt5_quarters'] = isset($data['highest_dbt5_quarters']) ? $data['highest_dbt5_quarters'] : null;
-        $this->container['active_tradeline_count'] = isset($data['active_tradeline_count']) ? $data['active_tradeline_count'] : null;
-        $this->container['all_tradeline_balance'] = isset($data['all_tradeline_balance']) ? $data['all_tradeline_balance'] : null;
-        $this->container['all_tradeline_count'] = isset($data['all_tradeline_count']) ? $data['all_tradeline_count'] : null;
-        $this->container['average_balance5_quarters'] = isset($data['average_balance5_quarters']) ? $data['average_balance5_quarters'] : null;
-        $this->container['single_high_credit'] = isset($data['single_high_credit']) ? $data['single_high_credit'] : null;
-        $this->container['low_balance6_months'] = isset($data['low_balance6_months']) ? $data['low_balance6_months'] : null;
-        $this->container['high_balance6_months'] = isset($data['high_balance6_months']) ? $data['high_balance6_months'] : null;
-        $this->container['oldest_collection_date'] = isset($data['oldest_collection_date']) ? $data['oldest_collection_date'] : null;
-        $this->container['most_recent_collection_date'] = isset($data['most_recent_collection_date']) ? $data['most_recent_collection_date'] : null;
-        $this->container['current_dbt'] = isset($data['current_dbt']) ? $data['current_dbt'] : null;
-        $this->container['oldest_ucc_date'] = isset($data['oldest_ucc_date']) ? $data['oldest_ucc_date'] : null;
-        $this->container['most_recent_ucc_date'] = isset($data['most_recent_ucc_date']) ? $data['most_recent_ucc_date'] : null;
-        $this->container['bankruptcy_indicator'] = isset($data['bankruptcy_indicator']) ? $data['bankruptcy_indicator'] : null;
-        $this->container['judgment_indicator'] = isset($data['judgment_indicator']) ? $data['judgment_indicator'] : null;
-        $this->container['tax_lien_indicator'] = isset($data['tax_lien_indicator']) ? $data['tax_lien_indicator'] : null;
-        $this->container['trade_collection_count'] = isset($data['trade_collection_count']) ? $data['trade_collection_count'] : null;
-        $this->container['trade_collection_balance'] = isset($data['trade_collection_balance']) ? $data['trade_collection_balance'] : null;
-        $this->container['open_collection_count'] = isset($data['open_collection_count']) ? $data['open_collection_count'] : null;
-        $this->container['open_collection_balance'] = isset($data['open_collection_balance']) ? $data['open_collection_balance'] : null;
-        $this->container['ofac_match_warning'] = isset($data['ofac_match_warning']) ? $data['ofac_match_warning'] : null;
-        $this->container['victim_statement_indicator'] = isset($data['victim_statement_indicator']) ? $data['victim_statement_indicator'] : null;
-        $this->container['commercial_fraud_risk_indicator_count'] = isset($data['commercial_fraud_risk_indicator_count']) ? $data['commercial_fraud_risk_indicator_count'] : null;
-        $this->container['unsummarized_tradeline_count'] = isset($data['unsummarized_tradeline_count']) ? $data['unsummarized_tradeline_count'] : null;
+        $this->setIfExists('bankruptcy_count', $data ?? [], null);
+        $this->setIfExists('oldest_bankruptcy_date', $data ?? [], null);
+        $this->setIfExists('most_recent_bankruptcy_date', $data ?? [], null);
+        $this->setIfExists('tax_lien_count', $data ?? [], null);
+        $this->setIfExists('oldest_tax_lien_date', $data ?? [], null);
+        $this->setIfExists('most_recent_tax_lien_date', $data ?? [], null);
+        $this->setIfExists('judgment_count', $data ?? [], null);
+        $this->setIfExists('oldest_judgment_date', $data ?? [], null);
+        $this->setIfExists('most_recent_judgment_date', $data ?? [], null);
+        $this->setIfExists('collection_count', $data ?? [], null);
+        $this->setIfExists('collection_balance', $data ?? [], null);
+        $this->setIfExists('collection_count_past24_months', $data ?? [], null);
+        $this->setIfExists('legal_balance', $data ?? [], null);
+        $this->setIfExists('ucc_filings', $data ?? [], null);
+        $this->setIfExists('ucc_derogatory_count', $data ?? [], null);
+        $this->setIfExists('current_account_balance', $data ?? [], null);
+        $this->setIfExists('current_tradeline_count', $data ?? [], null);
+        $this->setIfExists('monthly_average_dbt', $data ?? [], null);
+        $this->setIfExists('highest_dbt6_months', $data ?? [], null);
+        $this->setIfExists('highest_dbt5_quarters', $data ?? [], null);
+        $this->setIfExists('active_tradeline_count', $data ?? [], null);
+        $this->setIfExists('all_tradeline_balance', $data ?? [], null);
+        $this->setIfExists('all_tradeline_count', $data ?? [], null);
+        $this->setIfExists('average_balance5_quarters', $data ?? [], null);
+        $this->setIfExists('single_high_credit', $data ?? [], null);
+        $this->setIfExists('low_balance6_months', $data ?? [], null);
+        $this->setIfExists('high_balance6_months', $data ?? [], null);
+        $this->setIfExists('oldest_collection_date', $data ?? [], null);
+        $this->setIfExists('most_recent_collection_date', $data ?? [], null);
+        $this->setIfExists('current_dbt', $data ?? [], null);
+        $this->setIfExists('oldest_ucc_date', $data ?? [], null);
+        $this->setIfExists('most_recent_ucc_date', $data ?? [], null);
+        $this->setIfExists('bankruptcy_indicator', $data ?? [], null);
+        $this->setIfExists('judgment_indicator', $data ?? [], null);
+        $this->setIfExists('tax_lien_indicator', $data ?? [], null);
+        $this->setIfExists('trade_collection_count', $data ?? [], null);
+        $this->setIfExists('trade_collection_balance', $data ?? [], null);
+        $this->setIfExists('open_collection_count', $data ?? [], null);
+        $this->setIfExists('open_collection_balance', $data ?? [], null);
+        $this->setIfExists('ofac_match_warning', $data ?? [], null);
+        $this->setIfExists('victim_statement_indicator', $data ?? [], null);
+        $this->setIfExists('commercial_fraud_risk_indicator_count', $data ?? [], null);
+        $this->setIfExists('unsummarized_tradeline_count', $data ?? [], null);
+    }
+
+    /**
+    * Sets $this->container[$variableName] to the given data or to the given default Value; if $variableName
+    * is nullable and its value is set to null in the $fields array, then mark it as "set to null" in the
+    * $this->openAPINullablesSetToNull array
+    *
+    * @param string $variableName
+    * @param array  $fields
+    * @param mixed  $defaultValue
+    */
+    private function setIfExists(string $variableName, array $fields, $defaultValue): void
+    {
+        if (self::isNullable($variableName) && array_key_exists($variableName, $fields) && is_null($fields[$variableName])) {
+            $this->openAPINullablesSetToNull[] = $variableName;
+        }
+
+        $this->container[$variableName] = $fields[$variableName] ?? $defaultValue;
     }
 
     /**
@@ -459,7 +586,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets bankruptcy_count
      *
-     * @return float
+     * @return float|null
      */
     public function getBankruptcyCount()
     {
@@ -469,12 +596,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets bankruptcy_count
      *
-     * @param float $bankruptcy_count Bankruptcy count
+     * @param float|null $bankruptcy_count Bankruptcy count
      *
-     * @return $this
+     * @return self
      */
     public function setBankruptcyCount($bankruptcy_count)
     {
+        if (is_null($bankruptcy_count)) {
+            throw new \InvalidArgumentException('non-nullable bankruptcy_count cannot be null');
+        }
         $this->container['bankruptcy_count'] = $bankruptcy_count;
 
         return $this;
@@ -483,7 +613,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets oldest_bankruptcy_date
      *
-     * @return string
+     * @return string|null
      */
     public function getOldestBankruptcyDate()
     {
@@ -493,12 +623,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets oldest_bankruptcy_date
      *
-     * @param string $oldest_bankruptcy_date Oldest bankruptcy date on file
+     * @param string|null $oldest_bankruptcy_date Oldest bankruptcy date on file
      *
-     * @return $this
+     * @return self
      */
     public function setOldestBankruptcyDate($oldest_bankruptcy_date)
     {
+        if (is_null($oldest_bankruptcy_date)) {
+            throw new \InvalidArgumentException('non-nullable oldest_bankruptcy_date cannot be null');
+        }
         $this->container['oldest_bankruptcy_date'] = $oldest_bankruptcy_date;
 
         return $this;
@@ -507,7 +640,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets most_recent_bankruptcy_date
      *
-     * @return string
+     * @return string|null
      */
     public function getMostRecentBankruptcyDate()
     {
@@ -517,12 +650,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets most_recent_bankruptcy_date
      *
-     * @param string $most_recent_bankruptcy_date Most recent bankruptcy date on file
+     * @param string|null $most_recent_bankruptcy_date Most recent bankruptcy date on file
      *
-     * @return $this
+     * @return self
      */
     public function setMostRecentBankruptcyDate($most_recent_bankruptcy_date)
     {
+        if (is_null($most_recent_bankruptcy_date)) {
+            throw new \InvalidArgumentException('non-nullable most_recent_bankruptcy_date cannot be null');
+        }
         $this->container['most_recent_bankruptcy_date'] = $most_recent_bankruptcy_date;
 
         return $this;
@@ -531,7 +667,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets tax_lien_count
      *
-     * @return float
+     * @return float|null
      */
     public function getTaxLienCount()
     {
@@ -541,12 +677,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets tax_lien_count
      *
-     * @param float $tax_lien_count Tax lien count
+     * @param float|null $tax_lien_count Tax lien count
      *
-     * @return $this
+     * @return self
      */
     public function setTaxLienCount($tax_lien_count)
     {
+        if (is_null($tax_lien_count)) {
+            throw new \InvalidArgumentException('non-nullable tax_lien_count cannot be null');
+        }
         $this->container['tax_lien_count'] = $tax_lien_count;
 
         return $this;
@@ -555,7 +694,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets oldest_tax_lien_date
      *
-     * @return string
+     * @return string|null
      */
     public function getOldestTaxLienDate()
     {
@@ -565,12 +704,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets oldest_tax_lien_date
      *
-     * @param string $oldest_tax_lien_date Oldest tax lien date on file
+     * @param string|null $oldest_tax_lien_date Oldest tax lien date on file
      *
-     * @return $this
+     * @return self
      */
     public function setOldestTaxLienDate($oldest_tax_lien_date)
     {
+        if (is_null($oldest_tax_lien_date)) {
+            throw new \InvalidArgumentException('non-nullable oldest_tax_lien_date cannot be null');
+        }
         $this->container['oldest_tax_lien_date'] = $oldest_tax_lien_date;
 
         return $this;
@@ -579,7 +721,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets most_recent_tax_lien_date
      *
-     * @return string
+     * @return string|null
      */
     public function getMostRecentTaxLienDate()
     {
@@ -589,12 +731,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets most_recent_tax_lien_date
      *
-     * @param string $most_recent_tax_lien_date Most recent tax lien date on file
+     * @param string|null $most_recent_tax_lien_date Most recent tax lien date on file
      *
-     * @return $this
+     * @return self
      */
     public function setMostRecentTaxLienDate($most_recent_tax_lien_date)
     {
+        if (is_null($most_recent_tax_lien_date)) {
+            throw new \InvalidArgumentException('non-nullable most_recent_tax_lien_date cannot be null');
+        }
         $this->container['most_recent_tax_lien_date'] = $most_recent_tax_lien_date;
 
         return $this;
@@ -603,7 +748,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets judgment_count
      *
-     * @return float
+     * @return float|null
      */
     public function getJudgmentCount()
     {
@@ -613,12 +758,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets judgment_count
      *
-     * @param float $judgment_count Judgment count
+     * @param float|null $judgment_count Judgment count
      *
-     * @return $this
+     * @return self
      */
     public function setJudgmentCount($judgment_count)
     {
+        if (is_null($judgment_count)) {
+            throw new \InvalidArgumentException('non-nullable judgment_count cannot be null');
+        }
         $this->container['judgment_count'] = $judgment_count;
 
         return $this;
@@ -627,7 +775,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets oldest_judgment_date
      *
-     * @return string
+     * @return string|null
      */
     public function getOldestJudgmentDate()
     {
@@ -637,12 +785,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets oldest_judgment_date
      *
-     * @param string $oldest_judgment_date Oldest judgment date on file
+     * @param string|null $oldest_judgment_date Oldest judgment date on file
      *
-     * @return $this
+     * @return self
      */
     public function setOldestJudgmentDate($oldest_judgment_date)
     {
+        if (is_null($oldest_judgment_date)) {
+            throw new \InvalidArgumentException('non-nullable oldest_judgment_date cannot be null');
+        }
         $this->container['oldest_judgment_date'] = $oldest_judgment_date;
 
         return $this;
@@ -651,7 +802,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets most_recent_judgment_date
      *
-     * @return string
+     * @return string|null
      */
     public function getMostRecentJudgmentDate()
     {
@@ -661,12 +812,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets most_recent_judgment_date
      *
-     * @param string $most_recent_judgment_date Most recent judgment date on file
+     * @param string|null $most_recent_judgment_date Most recent judgment date on file
      *
-     * @return $this
+     * @return self
      */
     public function setMostRecentJudgmentDate($most_recent_judgment_date)
     {
+        if (is_null($most_recent_judgment_date)) {
+            throw new \InvalidArgumentException('non-nullable most_recent_judgment_date cannot be null');
+        }
         $this->container['most_recent_judgment_date'] = $most_recent_judgment_date;
 
         return $this;
@@ -675,7 +829,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets collection_count
      *
-     * @return float
+     * @return float|null
      */
     public function getCollectionCount()
     {
@@ -685,12 +839,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets collection_count
      *
-     * @param float $collection_count Collection count
+     * @param float|null $collection_count Collection count
      *
-     * @return $this
+     * @return self
      */
     public function setCollectionCount($collection_count)
     {
+        if (is_null($collection_count)) {
+            throw new \InvalidArgumentException('non-nullable collection_count cannot be null');
+        }
         $this->container['collection_count'] = $collection_count;
 
         return $this;
@@ -699,7 +856,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets collection_balance
      *
-     * @return float
+     * @return float|null
      */
     public function getCollectionBalance()
     {
@@ -709,12 +866,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets collection_balance
      *
-     * @param float $collection_balance Collection balance
+     * @param float|null $collection_balance Collection balance
      *
-     * @return $this
+     * @return self
      */
     public function setCollectionBalance($collection_balance)
     {
+        if (is_null($collection_balance)) {
+            throw new \InvalidArgumentException('non-nullable collection_balance cannot be null');
+        }
         $this->container['collection_balance'] = $collection_balance;
 
         return $this;
@@ -723,7 +883,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets collection_count_past24_months
      *
-     * @return float
+     * @return float|null
      */
     public function getCollectionCountPast24Months()
     {
@@ -733,12 +893,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets collection_count_past24_months
      *
-     * @param float $collection_count_past24_months Collect count in the past 24 months
+     * @param float|null $collection_count_past24_months Collect count in the past 24 months
      *
-     * @return $this
+     * @return self
      */
     public function setCollectionCountPast24Months($collection_count_past24_months)
     {
+        if (is_null($collection_count_past24_months)) {
+            throw new \InvalidArgumentException('non-nullable collection_count_past24_months cannot be null');
+        }
         $this->container['collection_count_past24_months'] = $collection_count_past24_months;
 
         return $this;
@@ -747,7 +910,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets legal_balance
      *
-     * @return float
+     * @return float|null
      */
     public function getLegalBalance()
     {
@@ -757,12 +920,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets legal_balance
      *
-     * @param float $legal_balance Total balance of bankruptcies, liens, judgments, and collections
+     * @param float|null $legal_balance Total balance of bankruptcies, liens, judgments, and collections
      *
-     * @return $this
+     * @return self
      */
     public function setLegalBalance($legal_balance)
     {
+        if (is_null($legal_balance)) {
+            throw new \InvalidArgumentException('non-nullable legal_balance cannot be null');
+        }
         $this->container['legal_balance'] = $legal_balance;
 
         return $this;
@@ -771,7 +937,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets ucc_filings
      *
-     * @return float
+     * @return float|null
      */
     public function getUccFilings()
     {
@@ -781,12 +947,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets ucc_filings
      *
-     * @param float $ucc_filings Count of Uniform Commercial Code (UCC) filings
+     * @param float|null $ucc_filings Count of Uniform Commercial Code (UCC) filings
      *
-     * @return $this
+     * @return self
      */
     public function setUccFilings($ucc_filings)
     {
+        if (is_null($ucc_filings)) {
+            throw new \InvalidArgumentException('non-nullable ucc_filings cannot be null');
+        }
         $this->container['ucc_filings'] = $ucc_filings;
 
         return $this;
@@ -795,7 +964,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets ucc_derogatory_count
      *
-     * @return float
+     * @return float|null
      */
     public function getUccDerogatoryCount()
     {
@@ -805,12 +974,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets ucc_derogatory_count
      *
-     * @param float $ucc_derogatory_count Derogatory UCCs include one or more of the following as collateral-  accounts, accounts receivable, contracts, hereafter acquired inventory,  leases, notes receivable, or proceeds. When a business pledges these key  assets to secure financing it may indicate the business is under financial stress
+     * @param float|null $ucc_derogatory_count Derogatory UCCs include one or more of the following as collateral-  accounts, accounts receivable, contracts, hereafter acquired inventory,  leases, notes receivable, or proceeds. When a business pledges these key  assets to secure financing it may indicate the business is under financial stress
      *
-     * @return $this
+     * @return self
      */
     public function setUccDerogatoryCount($ucc_derogatory_count)
     {
+        if (is_null($ucc_derogatory_count)) {
+            throw new \InvalidArgumentException('non-nullable ucc_derogatory_count cannot be null');
+        }
         $this->container['ucc_derogatory_count'] = $ucc_derogatory_count;
 
         return $this;
@@ -819,7 +991,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets current_account_balance
      *
-     * @return float
+     * @return float|null
      */
     public function getCurrentAccountBalance()
     {
@@ -829,12 +1001,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets current_account_balance
      *
-     * @param float $current_account_balance Current account balance
+     * @param float|null $current_account_balance Current account balance
      *
-     * @return $this
+     * @return self
      */
     public function setCurrentAccountBalance($current_account_balance)
     {
+        if (is_null($current_account_balance)) {
+            throw new \InvalidArgumentException('non-nullable current_account_balance cannot be null');
+        }
         $this->container['current_account_balance'] = $current_account_balance;
 
         return $this;
@@ -843,7 +1018,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets current_tradeline_count
      *
-     * @return float
+     * @return float|null
      */
     public function getCurrentTradelineCount()
     {
@@ -853,12 +1028,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets current_tradeline_count
      *
-     * @param float $current_tradeline_count Current tradeline count
+     * @param float|null $current_tradeline_count Current tradeline count
      *
-     * @return $this
+     * @return self
      */
     public function setCurrentTradelineCount($current_tradeline_count)
     {
+        if (is_null($current_tradeline_count)) {
+            throw new \InvalidArgumentException('non-nullable current_tradeline_count cannot be null');
+        }
         $this->container['current_tradeline_count'] = $current_tradeline_count;
 
         return $this;
@@ -867,7 +1045,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets monthly_average_dbt
      *
-     * @return float
+     * @return float|null
      */
     public function getMonthlyAverageDbt()
     {
@@ -877,12 +1055,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets monthly_average_dbt
      *
-     * @param float $monthly_average_dbt Monthly average DBT
+     * @param float|null $monthly_average_dbt Monthly average DBT
      *
-     * @return $this
+     * @return self
      */
     public function setMonthlyAverageDbt($monthly_average_dbt)
     {
+        if (is_null($monthly_average_dbt)) {
+            throw new \InvalidArgumentException('non-nullable monthly_average_dbt cannot be null');
+        }
         $this->container['monthly_average_dbt'] = $monthly_average_dbt;
 
         return $this;
@@ -891,7 +1072,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets highest_dbt6_months
      *
-     * @return float
+     * @return float|null
      */
     public function getHighestDbt6Months()
     {
@@ -901,12 +1082,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets highest_dbt6_months
      *
-     * @param float $highest_dbt6_months The highest DBT in the past 6 months
+     * @param float|null $highest_dbt6_months The highest DBT in the past 6 months
      *
-     * @return $this
+     * @return self
      */
     public function setHighestDbt6Months($highest_dbt6_months)
     {
+        if (is_null($highest_dbt6_months)) {
+            throw new \InvalidArgumentException('non-nullable highest_dbt6_months cannot be null');
+        }
         $this->container['highest_dbt6_months'] = $highest_dbt6_months;
 
         return $this;
@@ -915,7 +1099,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets highest_dbt5_quarters
      *
-     * @return float
+     * @return float|null
      */
     public function getHighestDbt5Quarters()
     {
@@ -925,12 +1109,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets highest_dbt5_quarters
      *
-     * @param float $highest_dbt5_quarters The highest DBT in the past 5 quarters
+     * @param float|null $highest_dbt5_quarters The highest DBT in the past 5 quarters
      *
-     * @return $this
+     * @return self
      */
     public function setHighestDbt5Quarters($highest_dbt5_quarters)
     {
+        if (is_null($highest_dbt5_quarters)) {
+            throw new \InvalidArgumentException('non-nullable highest_dbt5_quarters cannot be null');
+        }
         $this->container['highest_dbt5_quarters'] = $highest_dbt5_quarters;
 
         return $this;
@@ -939,7 +1126,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets active_tradeline_count
      *
-     * @return float
+     * @return float|null
      */
     public function getActiveTradelineCount()
     {
@@ -949,12 +1136,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets active_tradeline_count
      *
-     * @param float $active_tradeline_count Active tradeline count
+     * @param float|null $active_tradeline_count Active tradeline count
      *
-     * @return $this
+     * @return self
      */
     public function setActiveTradelineCount($active_tradeline_count)
     {
+        if (is_null($active_tradeline_count)) {
+            throw new \InvalidArgumentException('non-nullable active_tradeline_count cannot be null');
+        }
         $this->container['active_tradeline_count'] = $active_tradeline_count;
 
         return $this;
@@ -963,7 +1153,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets all_tradeline_balance
      *
-     * @return float
+     * @return float|null
      */
     public function getAllTradelineBalance()
     {
@@ -973,12 +1163,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets all_tradeline_balance
      *
-     * @param float $all_tradeline_balance Total balance of all tradelines
+     * @param float|null $all_tradeline_balance Total balance of all tradelines
      *
-     * @return $this
+     * @return self
      */
     public function setAllTradelineBalance($all_tradeline_balance)
     {
+        if (is_null($all_tradeline_balance)) {
+            throw new \InvalidArgumentException('non-nullable all_tradeline_balance cannot be null');
+        }
         $this->container['all_tradeline_balance'] = $all_tradeline_balance;
 
         return $this;
@@ -987,7 +1180,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets all_tradeline_count
      *
-     * @return float
+     * @return float|null
      */
     public function getAllTradelineCount()
     {
@@ -997,12 +1190,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets all_tradeline_count
      *
-     * @param float $all_tradeline_count Total count of all tradelines
+     * @param float|null $all_tradeline_count Total count of all tradelines
      *
-     * @return $this
+     * @return self
      */
     public function setAllTradelineCount($all_tradeline_count)
     {
+        if (is_null($all_tradeline_count)) {
+            throw new \InvalidArgumentException('non-nullable all_tradeline_count cannot be null');
+        }
         $this->container['all_tradeline_count'] = $all_tradeline_count;
 
         return $this;
@@ -1011,7 +1207,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets average_balance5_quarters
      *
-     * @return float
+     * @return float|null
      */
     public function getAverageBalance5Quarters()
     {
@@ -1021,12 +1217,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets average_balance5_quarters
      *
-     * @param float $average_balance5_quarters Average balance over the past 5 quarters
+     * @param float|null $average_balance5_quarters Average balance over the past 5 quarters
      *
-     * @return $this
+     * @return self
      */
     public function setAverageBalance5Quarters($average_balance5_quarters)
     {
+        if (is_null($average_balance5_quarters)) {
+            throw new \InvalidArgumentException('non-nullable average_balance5_quarters cannot be null');
+        }
         $this->container['average_balance5_quarters'] = $average_balance5_quarters;
 
         return $this;
@@ -1035,7 +1234,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets single_high_credit
      *
-     * @return float
+     * @return float|null
      */
     public function getSingleHighCredit()
     {
@@ -1045,12 +1244,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets single_high_credit
      *
-     * @param float $single_high_credit Single high credit in any one tradeline
+     * @param float|null $single_high_credit Single high credit in any one tradeline
      *
-     * @return $this
+     * @return self
      */
     public function setSingleHighCredit($single_high_credit)
     {
+        if (is_null($single_high_credit)) {
+            throw new \InvalidArgumentException('non-nullable single_high_credit cannot be null');
+        }
         $this->container['single_high_credit'] = $single_high_credit;
 
         return $this;
@@ -1059,7 +1261,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets low_balance6_months
      *
-     * @return float
+     * @return float|null
      */
     public function getLowBalance6Months()
     {
@@ -1069,12 +1271,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets low_balance6_months
      *
-     * @param float $low_balance6_months Lowest total balance in the past 6 months
+     * @param float|null $low_balance6_months Lowest total balance in the past 6 months
      *
-     * @return $this
+     * @return self
      */
     public function setLowBalance6Months($low_balance6_months)
     {
+        if (is_null($low_balance6_months)) {
+            throw new \InvalidArgumentException('non-nullable low_balance6_months cannot be null');
+        }
         $this->container['low_balance6_months'] = $low_balance6_months;
 
         return $this;
@@ -1083,7 +1288,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets high_balance6_months
      *
-     * @return float
+     * @return float|null
      */
     public function getHighBalance6Months()
     {
@@ -1093,12 +1298,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets high_balance6_months
      *
-     * @param float $high_balance6_months Highest total balance in the past 6 months
+     * @param float|null $high_balance6_months Highest total balance in the past 6 months
      *
-     * @return $this
+     * @return self
      */
     public function setHighBalance6Months($high_balance6_months)
     {
+        if (is_null($high_balance6_months)) {
+            throw new \InvalidArgumentException('non-nullable high_balance6_months cannot be null');
+        }
         $this->container['high_balance6_months'] = $high_balance6_months;
 
         return $this;
@@ -1107,7 +1315,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets oldest_collection_date
      *
-     * @return string
+     * @return string|null
      */
     public function getOldestCollectionDate()
     {
@@ -1117,12 +1325,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets oldest_collection_date
      *
-     * @param string $oldest_collection_date Oldest collection date
+     * @param string|null $oldest_collection_date Oldest collection date
      *
-     * @return $this
+     * @return self
      */
     public function setOldestCollectionDate($oldest_collection_date)
     {
+        if (is_null($oldest_collection_date)) {
+            throw new \InvalidArgumentException('non-nullable oldest_collection_date cannot be null');
+        }
         $this->container['oldest_collection_date'] = $oldest_collection_date;
 
         return $this;
@@ -1131,7 +1342,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets most_recent_collection_date
      *
-     * @return string
+     * @return string|null
      */
     public function getMostRecentCollectionDate()
     {
@@ -1141,12 +1352,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets most_recent_collection_date
      *
-     * @param string $most_recent_collection_date Most recent collection date
+     * @param string|null $most_recent_collection_date Most recent collection date
      *
-     * @return $this
+     * @return self
      */
     public function setMostRecentCollectionDate($most_recent_collection_date)
     {
+        if (is_null($most_recent_collection_date)) {
+            throw new \InvalidArgumentException('non-nullable most_recent_collection_date cannot be null');
+        }
         $this->container['most_recent_collection_date'] = $most_recent_collection_date;
 
         return $this;
@@ -1155,7 +1369,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets current_dbt
      *
-     * @return float
+     * @return float|null
      */
     public function getCurrentDbt()
     {
@@ -1165,12 +1379,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets current_dbt
      *
-     * @param float $current_dbt Current DBT
+     * @param float|null $current_dbt Current DBT
      *
-     * @return $this
+     * @return self
      */
     public function setCurrentDbt($current_dbt)
     {
+        if (is_null($current_dbt)) {
+            throw new \InvalidArgumentException('non-nullable current_dbt cannot be null');
+        }
         $this->container['current_dbt'] = $current_dbt;
 
         return $this;
@@ -1179,7 +1396,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets oldest_ucc_date
      *
-     * @return string
+     * @return string|null
      */
     public function getOldestUccDate()
     {
@@ -1189,12 +1406,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets oldest_ucc_date
      *
-     * @param string $oldest_ucc_date Oldest UCC filing date
+     * @param string|null $oldest_ucc_date Oldest UCC filing date
      *
-     * @return $this
+     * @return self
      */
     public function setOldestUccDate($oldest_ucc_date)
     {
+        if (is_null($oldest_ucc_date)) {
+            throw new \InvalidArgumentException('non-nullable oldest_ucc_date cannot be null');
+        }
         $this->container['oldest_ucc_date'] = $oldest_ucc_date;
 
         return $this;
@@ -1203,7 +1423,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets most_recent_ucc_date
      *
-     * @return string
+     * @return string|null
      */
     public function getMostRecentUccDate()
     {
@@ -1213,12 +1433,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets most_recent_ucc_date
      *
-     * @param string $most_recent_ucc_date Most recent UCC filing date
+     * @param string|null $most_recent_ucc_date Most recent UCC filing date
      *
-     * @return $this
+     * @return self
      */
     public function setMostRecentUccDate($most_recent_ucc_date)
     {
+        if (is_null($most_recent_ucc_date)) {
+            throw new \InvalidArgumentException('non-nullable most_recent_ucc_date cannot be null');
+        }
         $this->container['most_recent_ucc_date'] = $most_recent_ucc_date;
 
         return $this;
@@ -1227,7 +1450,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets bankruptcy_indicator
      *
-     * @return bool
+     * @return bool|null
      */
     public function getBankruptcyIndicator()
     {
@@ -1237,12 +1460,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets bankruptcy_indicator
      *
-     * @param bool $bankruptcy_indicator If true indicates a bankruptcy is on file
+     * @param bool|null $bankruptcy_indicator True = Bankruptices on file have been Dismissed, Discharged or Completed
      *
-     * @return $this
+     * @return self
      */
     public function setBankruptcyIndicator($bankruptcy_indicator)
     {
+        if (is_null($bankruptcy_indicator)) {
+            throw new \InvalidArgumentException('non-nullable bankruptcy_indicator cannot be null');
+        }
         $this->container['bankruptcy_indicator'] = $bankruptcy_indicator;
 
         return $this;
@@ -1251,7 +1477,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets judgment_indicator
      *
-     * @return bool
+     * @return bool|null
      */
     public function getJudgmentIndicator()
     {
@@ -1261,12 +1487,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets judgment_indicator
      *
-     * @param bool $judgment_indicator If true indicates a judgment is on file
+     * @param bool|null $judgment_indicator True = Judgments on file have been Satisfied
      *
-     * @return $this
+     * @return self
      */
     public function setJudgmentIndicator($judgment_indicator)
     {
+        if (is_null($judgment_indicator)) {
+            throw new \InvalidArgumentException('non-nullable judgment_indicator cannot be null');
+        }
         $this->container['judgment_indicator'] = $judgment_indicator;
 
         return $this;
@@ -1275,7 +1504,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets tax_lien_indicator
      *
-     * @return bool
+     * @return bool|null
      */
     public function getTaxLienIndicator()
     {
@@ -1285,12 +1514,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets tax_lien_indicator
      *
-     * @param bool $tax_lien_indicator If true indicates a tax lien is on file
+     * @param bool|null $tax_lien_indicator True = Liens on file have been Released
      *
-     * @return $this
+     * @return self
      */
     public function setTaxLienIndicator($tax_lien_indicator)
     {
+        if (is_null($tax_lien_indicator)) {
+            throw new \InvalidArgumentException('non-nullable tax_lien_indicator cannot be null');
+        }
         $this->container['tax_lien_indicator'] = $tax_lien_indicator;
 
         return $this;
@@ -1299,7 +1531,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets trade_collection_count
      *
-     * @return float
+     * @return float|null
      */
     public function getTradeCollectionCount()
     {
@@ -1309,12 +1541,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets trade_collection_count
      *
-     * @param float $trade_collection_count Count of all collections on file
+     * @param float|null $trade_collection_count Count of all collections on file
      *
-     * @return $this
+     * @return self
      */
     public function setTradeCollectionCount($trade_collection_count)
     {
+        if (is_null($trade_collection_count)) {
+            throw new \InvalidArgumentException('non-nullable trade_collection_count cannot be null');
+        }
         $this->container['trade_collection_count'] = $trade_collection_count;
 
         return $this;
@@ -1323,7 +1558,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets trade_collection_balance
      *
-     * @return float
+     * @return float|null
      */
     public function getTradeCollectionBalance()
     {
@@ -1333,12 +1568,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets trade_collection_balance
      *
-     * @param float $trade_collection_balance Balance of all collections on file
+     * @param float|null $trade_collection_balance Balance of all collections on file
      *
-     * @return $this
+     * @return self
      */
     public function setTradeCollectionBalance($trade_collection_balance)
     {
+        if (is_null($trade_collection_balance)) {
+            throw new \InvalidArgumentException('non-nullable trade_collection_balance cannot be null');
+        }
         $this->container['trade_collection_balance'] = $trade_collection_balance;
 
         return $this;
@@ -1347,7 +1585,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets open_collection_count
      *
-     * @return float
+     * @return float|null
      */
     public function getOpenCollectionCount()
     {
@@ -1357,12 +1595,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets open_collection_count
      *
-     * @param float $open_collection_count Count of open collections
+     * @param float|null $open_collection_count Count of open collections
      *
-     * @return $this
+     * @return self
      */
     public function setOpenCollectionCount($open_collection_count)
     {
+        if (is_null($open_collection_count)) {
+            throw new \InvalidArgumentException('non-nullable open_collection_count cannot be null');
+        }
         $this->container['open_collection_count'] = $open_collection_count;
 
         return $this;
@@ -1371,7 +1612,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets open_collection_balance
      *
-     * @return float
+     * @return float|null
      */
     public function getOpenCollectionBalance()
     {
@@ -1381,12 +1622,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets open_collection_balance
      *
-     * @param float $open_collection_balance Balance of all open collections
+     * @param float|null $open_collection_balance Balance of all open collections
      *
-     * @return $this
+     * @return self
      */
     public function setOpenCollectionBalance($open_collection_balance)
     {
+        if (is_null($open_collection_balance)) {
+            throw new \InvalidArgumentException('non-nullable open_collection_balance cannot be null');
+        }
         $this->container['open_collection_balance'] = $open_collection_balance;
 
         return $this;
@@ -1395,7 +1639,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets ofac_match_warning
      *
-     * @return \TheLogicStudio\ExperianBusinessesPHP\Model\ExpandedCreditSummaryOfacMatchWarning
+     * @return \TheLogicStudio\ExperianBusinessesPHP\Model\ExpandedCreditSummaryOfacMatchWarning|null
      */
     public function getOfacMatchWarning()
     {
@@ -1405,12 +1649,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets ofac_match_warning
      *
-     * @param \TheLogicStudio\ExperianBusinessesPHP\Model\ExpandedCreditSummaryOfacMatchWarning $ofac_match_warning ofac_match_warning
+     * @param \TheLogicStudio\ExperianBusinessesPHP\Model\ExpandedCreditSummaryOfacMatchWarning|null $ofac_match_warning ofac_match_warning
      *
-     * @return $this
+     * @return self
      */
     public function setOfacMatchWarning($ofac_match_warning)
     {
+        if (is_null($ofac_match_warning)) {
+            throw new \InvalidArgumentException('non-nullable ofac_match_warning cannot be null');
+        }
         $this->container['ofac_match_warning'] = $ofac_match_warning;
 
         return $this;
@@ -1419,7 +1666,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets victim_statement_indicator
      *
-     * @return bool
+     * @return bool|null
      */
     public function getVictimStatementIndicator()
     {
@@ -1429,12 +1676,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets victim_statement_indicator
      *
-     * @param bool $victim_statement_indicator If true the business has filed a statement with Experian indicating they were a victim of fraud or identity theft
+     * @param bool|null $victim_statement_indicator If true the business has filed a statement with Experian indicating they were a victim of fraud or identity theft
      *
-     * @return $this
+     * @return self
      */
     public function setVictimStatementIndicator($victim_statement_indicator)
     {
+        if (is_null($victim_statement_indicator)) {
+            throw new \InvalidArgumentException('non-nullable victim_statement_indicator cannot be null');
+        }
         $this->container['victim_statement_indicator'] = $victim_statement_indicator;
 
         return $this;
@@ -1443,7 +1693,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets commercial_fraud_risk_indicator_count
      *
-     * @return float
+     * @return float|null
      */
     public function getCommercialFraudRiskIndicatorCount()
     {
@@ -1453,12 +1703,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets commercial_fraud_risk_indicator_count
      *
-     * @param float $commercial_fraud_risk_indicator_count Count of high risk commercial fraud indicators present
+     * @param float|null $commercial_fraud_risk_indicator_count Count of high risk commercial fraud indicators present
      *
-     * @return $this
+     * @return self
      */
     public function setCommercialFraudRiskIndicatorCount($commercial_fraud_risk_indicator_count)
     {
+        if (is_null($commercial_fraud_risk_indicator_count)) {
+            throw new \InvalidArgumentException('non-nullable commercial_fraud_risk_indicator_count cannot be null');
+        }
         $this->container['commercial_fraud_risk_indicator_count'] = $commercial_fraud_risk_indicator_count;
 
         return $this;
@@ -1467,7 +1720,7 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets unsummarized_tradeline_count
      *
-     * @return float
+     * @return float|null
      */
     public function getUnsummarizedTradelineCount()
     {
@@ -1477,12 +1730,15 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Sets unsummarized_tradeline_count
      *
-     * @param float $unsummarized_tradeline_count Total count of all unsummarized trades on file for the business
+     * @param float|null $unsummarized_tradeline_count Total count of all unsummarized trades on file for the business
      *
-     * @return $this
+     * @return self
      */
     public function setUnsummarizedTradelineCount($unsummarized_tradeline_count)
     {
+        if (is_null($unsummarized_tradeline_count)) {
+            throw new \InvalidArgumentException('non-nullable unsummarized_tradeline_count cannot be null');
+        }
         $this->container['unsummarized_tradeline_count'] = $unsummarized_tradeline_count;
 
         return $this;
@@ -1490,12 +1746,11 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Returns true if offset exists. False otherwise.
      *
-     * @param integer $offset Offset
+     * @param integer|string $offset Offset
      *
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -1503,26 +1758,25 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Gets offset.
      *
-     * @param integer $offset Offset
+     * @param integer|string $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     #[\ReturnTypeWillChange]
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
-    #[\ReturnTypeWillChange]
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -1534,14 +1788,26 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
     /**
      * Unsets offset.
      *
-     * @param integer $offset Offset
+     * @param integer|string $offset Offset
      *
      * @return void
      */
-    #[\ReturnTypeWillChange]
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    #[\ReturnTypeWillChange]
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -1551,13 +1817,19 @@ class ExpandedCreditSummary implements ModelInterface, ArrayAccess
      */
     public function __toString()
     {
-        if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(
-                ObjectSerializer::sanitizeForSerialization($this),
-                JSON_PRETTY_PRINT
-            );
-        }
+        return json_encode(
+            ObjectSerializer::sanitizeForSerialization($this),
+            JSON_PRETTY_PRINT
+        );
+    }
 
+    /**
+     * Gets a header-safe presentation of the object
+     *
+     * @return string
+     */
+    public function toHeaderValue()
+    {
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }

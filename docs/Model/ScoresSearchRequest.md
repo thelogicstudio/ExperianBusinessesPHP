@@ -1,6 +1,7 @@
-# ScoresSearchRequest
+# # ScoresSearchRequest
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **string** | Business name (required) | [default to 'Experian']
@@ -17,8 +18,6 @@ Name | Type | Description | Notes
 **match_reliability_code** | **int** | Your desired Match Reliability Code threshold. The default is 96 | [optional] [default to 90]
 **commercial_score** | **bool** | If true, receive the commercial score that has been configured for your subcode | [optional] [default to true]
 **fsr_score** | **bool** | If true, receive the Financial Stability Risk score | [optional] [default to true]
-**collection_score** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\ScoresSearchRequestCollectionScore**](ScoresSearchRequestCollectionScore.md) |  | [optional] 
+**collection_score** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\ScoresSearchRequestCollectionScore**](ScoresSearchRequestCollectionScore.md) |  | [optional]
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

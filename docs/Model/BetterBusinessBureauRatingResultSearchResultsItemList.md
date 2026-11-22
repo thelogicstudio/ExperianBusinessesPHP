@@ -1,10 +1,10 @@
-# BetterBusinessBureauRatingResultSearchResultsItemList
+# # BetterBusinessBureauRatingResultSearchResultsItemList
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**item** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BetterBusinessBureauRatingResultSearchResultsItemListItem**](BetterBusinessBureauRatingResultSearchResultsItemListItem.md) |  | [optional] 
+**size** | **string** | BBB ratings item list size | [optional]
+**item** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BetterBusinessBureauRatingResultSearchResultsItemListItem**](BetterBusinessBureauRatingResultSearchResultsItemListItem.md) |  | [optional]
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

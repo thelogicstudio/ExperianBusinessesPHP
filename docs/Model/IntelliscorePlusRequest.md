@@ -1,8 +1,10 @@
-# IntelliscorePlusRequest
+# # IntelliscorePlusRequest
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**bin** | **string** | 9-digit Business Identification Number (BIN) | [optional] [default to '800914632']
 **name** | **string** | Business name (required) | [optional] [default to 'Experian']
 **city** | **string** | Business city | [optional] [default to 'Costa Mesa']
 **state** | **string** | Business state code (e.g. CA) | [optional] [default to 'CA']
@@ -14,6 +16,4 @@ Name | Type | Description | Notes
 **tax_id** | **string** | 9-digit federal tax ID or Employer Identification Number | [optional] [default to '176970333']
 **comments** | **string** | Optionally, you can send a comment along with your request; and the comment will be returned with your response. Useful for your internal ID tracking | [optional] [default to 'testing']
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

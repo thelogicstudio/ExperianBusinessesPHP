@@ -1,6 +1,7 @@
-# BusinessReverseAddressesRequest
+# # BusinessReverseAddressesRequest
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **subcode** | **string** | Your Experian account subcode for billing purposes | [default to '0586548']
@@ -9,6 +10,4 @@ Name | Type | Description | Notes
 **state** | **string** | Business state code (e.g. CA) | [default to 'CA']
 **zip** | **string** | 5-digit zip code | [default to '10118']
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

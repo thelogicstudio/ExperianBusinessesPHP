@@ -1,10 +1,10 @@
-# BCIResponseResultsDepartmentOfJusticeSearchResultsItemList
+# # BCIResponseResultsDepartmentOfJusticeSearchResultsItemList
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**item** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BCIResponseResultsDepartmentOfJusticeSearchResultsItemListItem[]**](BCIResponseResultsDepartmentOfJusticeSearchResultsItemListItem.md) |  | [optional] 
+**size** | **string** | number of items in the DOJ search results | [optional]
+**item** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BCIResponseResultsDepartmentOfJusticeSearchResultsItemListItemInner[]**](BCIResponseResultsDepartmentOfJusticeSearchResultsItemListItemInner.md) |  | [optional]
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

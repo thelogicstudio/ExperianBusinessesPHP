@@ -2,28 +2,27 @@
 /**
  * BizAggregates
  *
- * PHP version 5
+ * PHP version 8.1
  *
  * @category Class
  * @package  TheLogicStudio\ExperianBusinessesPHP
- * @author   Swagger Codegen team
- * @link     https://github.com/swagger-api/swagger-codegen
+ * @author   OpenAPI Generator team
+ * @link     https://openapi-generator.tech
  */
 
 /**
  * Businesses
  *
- * <p>Experian's Business Information Services is a leader in providing data and predictive insights to organizations, helping them mitigate risk and improve profitability.  The Businesses API provides integrated access to our business database which provides comprehensive, third-party-verified information on 99.9 percent of all U.S. companies, with the industry's most extensive data on the broad spectrum of small and midsize businesses.</p> <p>&nbsp;</p> <p>The Businesses API provides a la carte access to Experian's commercial credit and  commercial public record information, including commercial scores, trades, corporate linkage, bankruptcies, liens, judgments, and more.</p> <p>&nbsp;</p> <p><strong>It All Starts With a Search</strong></p> <p>The Business Search API allows you to input a business name, address, city, and state to find their Business Identification Number (BIN) - you'll need this to get data from most of the other APIs.  The primary search method is called \"Advanced Search\" and can be used for automated matching using our Match Reliability Code. A secondary search method, called \"QuickSearch\" and is a type-ahead style search that allows a human user to quickly find a business using a smaller amount of data.</p> <p><strong>SBCS Consortium Members</strong> can use the Businesses API search endpoints.</p> <p><strong>SBFE Consortium Members</strong> must use the <a href=\"/products/us/small-business-financial-exchangetm\">SBFE API</a>, using either the List of Similars product option to search for a business, or a Name/Address request for automated matching.</p> <p>&nbsp;</p> <p><strong>Businesses API in the Sandbox</strong></p> <ul> <li><strong>Advanced Search</strong> - The primary way to search for US businesses and return a List of Similars. Designed for both automation and human interaction</li> <li><strong>Quick Search</strong> - The secondary search method. A flexible, type-ahead style search API for US businesses. Designed primarily for human interaction</li> <li><strong>Headers</strong> - Business identity information. Available as stand-alone and included with most API responses</li> <li><strong>Scores</strong> - Commercial Intelliscore Plus and Financial Stability Risk Scores, with scores, score factors, and monthly and quarterly trends</li> <li><strong>Scores Auto Search</strong> - Returns the Scores API, but with a Business Name and Address request input</li> <li><strong>Premier Profiles JSON</strong> - Experian's flagship commercial credit report</li> <li><strong>Premier Profiles HTML</strong> - Renders a styled Premier Profile report using HTML/CSS</li> <li><strong>Premier Profiles PDF</strong> - Provides an encoded Premier Profile PDF report</li> <li><strong>Intelliscore Report JSON</strong> – Our score only report</li> <li><strong>Intelliscore Report HTML</strong> – Our score only report in HTML format</li> <li><strong>Intelliscore Report PDF</strong> – Our score only report in PDF format</li> <li><strong>Business Compliance Insight JSON</strong> – The BCI report helps with client onboarding and Know-Your-Customer investigations</li> <li><strong>Business Compliance Insight HTML</strong> – The BCI Report in HTML format</li> <li><strong>Business Compliance Insight PDF</strong> – The BCI report in PDF format</li> <li><strong>Aggregates</strong> - The BizAggs represent over 400 unique data attributes that represent the building blocks of commercial credit</li> <li><strong>MultiSegments</strong> - MultiSegments allows you to request segments from most Businesses API endpoints in a single API call</li> <li><strong>Risk Dashboards</strong> - Includes commercial and FSR scores, credit limit amount, current DBT</li> <li><strong>Business Facts</strong> - Key operational facts including SIC, NAICS, public status, sales, employees</li> <li><strong>Fraud Shields</strong> - Screens for potential indicators of fraud. Includes possible OFAC match</li> <li><strong>Credit Status</strong> - Key credit facts about the business including tradeline count, balance, DBT</li> <li><strong>Legal Filings and Collections Summaries</strong> - Summary of all legal filings and collections</li> <li><strong>Collections</strong> - Summary and Detail</li> <li><strong>Trades</strong> - Trade summary, payment experiences, payment totals, and trade payment trends</li> <li><strong>Bankruptcies</strong> - Summary and Detail</li> <li><strong>Liens</strong> - Summary and Detail</li> <li><strong>Judgments</strong> - Summary and Detail</li> <li><strong>UCC Filings</strong> - Summary and Trends</li> <li><strong>Corporate Registrations</strong> - Corporate registration info for the business, including filing status</li> <li><strong>Corporate Linkage</strong> - Partial and/or Full Family Tree</li> <li><strong>Business Contacts</strong> - Individual owners, company owners, contacts and titles, and contacts business affiliations</li> <li><strong>Reverse Addresses</strong> - Input an address and find businesses affiliated with that address</li> <li><strong>Reverse Phones</strong> - Input a phone number and find businesses affiliated with that phone number</li> <li><strong>Reverse Tax IDs</strong> - Input a Tax ID (EIN) and find businesses affiliated with that Tax ID</li> <li><strong>Government Details</strong> – Economic diversity and government contract data for the business</li> <li><strong>IST Watch</strong> - Manage OFAC regulatory compliance and watchlist screening with the IST Watch API</li> </ul> <p>&nbsp;</p> <p><strong>Businesses API Environments</strong></p> <ul> <li><strong>Sandbox </strong> - https://sandbox-us-api.experian.com/businessinformation/businesses</li> <li><strong>UAT </strong> - https://uat-us-api.experian.com/businessinformation/businesses</li> <li><strong>Production</strong> - https://us-api.experian.com/businessinformation/businesses</li> </ul> <p>&nbsp;</p> <p>Please note that the Businesses API in the Developer Portal Sandbox is a non-production service that is for testing and demonstration purposes only. Only a limited number of businesses are available in the sandbox test environment. A list of valid Business Identification Numbers  (BINs) can be provided to you upon your request, and valid BINs in the sandbox can  also be obtained using the Business Search API. Please contact your Experian Account Executive to discuss obtaining production access to the Businesses API.</p> <p>&nbsp;</p> <p><strong>IPv3 Sample Subcodes</strong></p> <ul> <li>IPv3 Logistic Regression - 0586286</li> <li>IPv3 Machine Learning - 0586548</li> </ul> <p>&nbsp;</p> <p><strong>Additional Developer Tools</strong></p> <ul> <li><a href=\"https://github.com/experianplc/Experian-BIS-Postman-Collection\"><strong>BIS API Postman Collection</strong></a> - A starter Postman Collection and Environment for many BIS APIs</li> <li><a href=\"https://github.com/experianplc/BIS-HTML-Resources\"><strong>BIS HTML Resources</strong></a> - Images, CSS, and Javsscript files necessary to render BIS HTML API reports</li> </ul>
+ * <p>Experian's Business Information Services is a leader in providing data and predictive insights to organizations, helping them mitigate risk and improve profitability.  The Businesses API provides integrated access to our business database which provides comprehensive, third-party-verified information on 99.9 percent of all U.S. companies, with the industry's most extensive data on the broad spectrum of small and midsize businesses.</p> <p>&nbsp;</p> <p>The Businesses API provides a la carte access to Experian's commercial credit and  commercial public record information, including commercial scores, trades, corporate linkage, bankruptcies, liens, judgments, and more.</p> <p>&nbsp;</p> <p><strong>It All Starts With a Search</strong></p> <p>The Business Search API allows you to input a business name, address, city, and state to find their Business Identification Number (BIN) - you'll need this to get data from most of the other APIs.  The primary search method is called \"Advanced Search\" and can be used for automated matching using our Match Reliability Code.   A secondary search method, called \"QuickSearch\" and is a type-ahead style search that allows a human user to quickly find a business using a smaller amount of data.</p> <p><strong>SBCS Consortium Members</strong> can use the Businesses API search endpoints.</p> <p><strong>SBFE Consortium Members</strong> must use the <a href=\"/products/us/small-business-financial-exchangetm\">SBFE API</a>, using either the  List of Similars product option to search for a business, or a Name/Address request for automated matching.</p>  <p>&nbsp;</p> <p><strong>Businesses API in the Sandbox</strong></p> <ul> <li><strong>Advanced Search</strong> - The primary way to search for US businesses and return a List of Similars. Designed for both automation and human interaction</li> <li><strong>Quick Search</strong> - The secondary search method. A flexible, type-ahead style search API for US businesses. Designed primarily for human interaction</li> <li><strong>Headers</strong> - Business identity information. Available as stand-alone and included with most API responses</li> <li><strong>Scores</strong> - Commercial Intelliscore Plus and Financial Stability Risk Scores, with scores, score factors, and monthly and quarterly trends</li> <li><strong>Scores Auto Search</strong> - Returns the Scores API, but with a Business Name and Address request input</li> <li><strong>Premier Profiles JSON</strong> - Experian's flagship commercial credit report</li> <li><strong>Premier Profiles HTML</strong> - Renders a styled Premier Profile report using HTML/CSS</li> <li><strong>Premier Profiles PDF</strong> - Provides an encoded Premier Profile PDF report</li> <li><strong>Intelliscore Report JSON</strong> – Our score only report</li> <li><strong>Intelliscore Report HTML</strong> – Our score only report in HTML format</li> <li><strong>Intelliscore Report PDF</strong> – Our score only report in PDF format</li> <li><strong>Business Compliance Insight JSON</strong> – The BCI report helps with client onboarding and Know-Your-Customer investigations</li> <li><strong>Business Compliance Insight HTML</strong> – The BCI Report in HTML format</li> <li><strong>Business Compliance Insight PDF</strong> – The BCI report in PDF format</li> <li><strong>Aggregates</strong> - The BizAggs represent over 400 unique data attributes that represent the building blocks of commercial credit</li> <li><strong>MultiSegments</strong> - MultiSegments allows you to request segments from most Businesses API endpoints in a single API call</li> <li><strong>Risk Dashboards</strong> - Includes commercial and FSR scores, credit limit amount, current DBT</li> <li><strong>Business Facts</strong> - Key operational facts including SIC, NAICS, public status, sales, employees</li> <li><strong>Fraud Shields</strong> - Screens for potential indicators of fraud. Includes possible OFAC match</li> <li><strong>Credit Status</strong> - Key credit facts about the business including tradeline count, balance, DBT</li> <li><strong>Legal Filings and Collections Summaries</strong> - Summary of all legal filings and collections</li> <li><strong>Collections</strong> - Summary and Detail</li> <li><strong>Trades</strong> - Trade summary, payment experiences, payment totals, and trade payment trends</li> <li><strong>Bankruptcies</strong> - Summary and Detail</li> <li><strong>Liens</strong> - Summary and Detail</li> <li><strong>Judgments</strong> - Summary and Detail</li> <li><strong>UCC Filings</strong> - Summary and Trends</li> <li><strong>Corporate Registrations</strong> - Corporate registration info for the business, including filing status</li> <li><strong>Corporate Linkage</strong> - Partial and/or Full Family Tree</li> <li><strong>Business Contacts</strong> - Individual owners, company owners, contacts and titles, and contacts business affiliations</li> <li><strong>Reverse Addresses</strong> - Input an address and find businesses affiliated with that address</li> <li><strong>Reverse Phones</strong> - Input a phone number and find businesses affiliated with that phone number</li> <li><strong>Reverse Tax IDs</strong> - Input a Tax ID (EIN) and find businesses affiliated with that Tax ID</li> <li><strong>Government Details</strong> – Economic diversity and government contract data for the business</li> <li><strong>IST Watch</strong> - Manage OFAC regulatory compliance and watchlist screening with the IST Watch API</li> <li><strong>Cyber Risk Score and Attributes</strong> – Identifies employee cyber risk behaviors that indicate risk for a business</li> </ul> <p>&nbsp;</p> <p><strong>Businesses API Environments</strong></p> <ul> <li><strong>Sandbox </strong> - https://sandbox-us-api.experian.com/businessinformation/businesses</li> <li><strong>UAT </strong> - https://uat-us-api.experian.com/businessinformation/businesses</li> <li><strong>Production</strong> - https://us-api.experian.com/businessinformation/businesses</li> </ul> <p>&nbsp;</p> <p>Please note that the Businesses API in the Developer Portal Sandbox is a non-production service that is for testing and demonstration purposes only. Only a limited number of businesses are available in the sandbox test environment. A list of valid Business Identification Numbers  (BINs) can be provided to you upon your request, and valid BINs in the sandbox can  also be obtained using the Business Search API. Please contact your Experian Account Executive to discuss obtaining production access to the Businesses API.</p> <p>&nbsp;</p> <p><strong>IPv3 Sample Subcodes</strong></p> <ul> <li>IPv3 Logistic Regression - 0586286</li> <li>IPv3 Machine Learning - 0586548</li> </ul> <p>&nbsp;</p> <p><strong>Additional Developer Tools</strong></p> <ul> <li><a href=\"https://github.com/experianplc/Experian-BIS-Postman-Collection\"><strong>BIS API Postman Collection</strong></a> - A starter Postman Collection and Environment for many BIS APIs</li> <li><a href=\"https://github.com/experianplc/BIS-HTML-Resources\"><strong>BIS HTML Resources</strong></a> - Images, CSS, and Javsscript files necessary to render BIS HTML API reports</li> </ul>
  *
- * OpenAPI spec version: 1.0.2
- * 
- * Generated by: https://github.com/swagger-api/swagger-codegen.git
- * Swagger Codegen version: 2.4.31
+ * The version of the OpenAPI document: 1.0.3
+ * Generated by: https://openapi-generator.tech
+ * Generator version: 7.17.0
  */
 
 /**
- * NOTE: This class is auto generated by the swagger code generator program.
- * https://github.com/swagger-api/swagger-codegen
+ * NOTE: This class is auto generated by OpenAPI Generator (https://openapi-generator.tech).
+ * https://openapi-generator.tech
  * Do not edit the class manually.
  */
 
@@ -38,26 +37,27 @@ use \TheLogicStudio\ExperianBusinessesPHP\ObjectSerializer;
  * @category Class
  * @description Object containing business aggregates (BizAggs)
  * @package  TheLogicStudio\ExperianBusinessesPHP
- * @author   Swagger Codegen team
- * @link     https://github.com/swagger-api/swagger-codegen
+ * @author   OpenAPI Generator team
+ * @link     https://openapi-generator.tech
+ * @implements \ArrayAccess<string, mixed>
  */
-class BizAggregates implements ModelInterface, ArrayAccess
+class BizAggregates implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
       *
       * @var string
       */
-    protected static $swaggerModelName = 'BizAggregates';
+    protected static $openAPIModelName = 'BizAggregates';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       *
       * @var string[]
       */
-    protected static $swaggerTypes = [
+    protected static $openAPITypes = [
         'atc039' => 'float',
         'ctb019' => 'float',
         'jdc008' => 'float',
@@ -510,8 +510,10 @@ class BizAggregates implements ModelInterface, ArrayAccess
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
-    protected static $swaggerFormats = [
+    protected static $openAPIFormats = [
         'atc039' => null,
         'ctb019' => null,
         'jdc008' => null,
@@ -961,13 +963,474 @@ class BizAggregates implements ModelInterface, ArrayAccess
     ];
 
     /**
+      * Array of nullable properties. Used for (de)serialization
+      *
+      * @var boolean[]
+      */
+    protected static array $openAPINullables = [
+        'atc039' => false,
+        'ctb019' => false,
+        'jdc008' => false,
+        'ntb019' => false,
+        'ntc032' => false,
+        'otb001' => false,
+        'otc006' => false,
+        'rtb019' => false,
+        'rtc048' => false,
+        'ttb021' => false,
+        'ttb022' => false,
+        'ttb028' => false,
+        'ttb029' => false,
+        'ttb030' => false,
+        'ttb031' => false,
+        'ttb032' => false,
+        'ttc050' => false,
+        'ttp085' => false,
+        'ttp086' => false,
+        'txb005' => false,
+        'txc008' => false,
+        'acc001' => false,
+        'acc002' => false,
+        'acc003' => false,
+        'acc004' => false,
+        'acc005' => false,
+        'acc006' => false,
+        'acc007' => false,
+        'acc008' => false,
+        'atb001' => false,
+        'atb002' => false,
+        'atb003' => false,
+        'atb004' => false,
+        'atb005' => false,
+        'atb006' => false,
+        'atb007' => false,
+        'atb008' => false,
+        'atb009' => false,
+        'atb010' => false,
+        'atb011' => false,
+        'atb012' => false,
+        'atb013' => false,
+        'atb014' => false,
+        'atb015' => false,
+        'atb016' => false,
+        'atb017' => false,
+        'atb018' => false,
+        'atb019' => false,
+        'atc020' => false,
+        'atc021' => false,
+        'atc022' => false,
+        'atc023' => false,
+        'atc024' => false,
+        'atc025' => false,
+        'atc026' => false,
+        'atc027' => false,
+        'atc028' => false,
+        'atc029' => false,
+        'atc030' => false,
+        'atc031' => false,
+        'atc032' => false,
+        'atd034' => false,
+        'atd035' => false,
+        'atp036' => false,
+        'atp037' => false,
+        'atp038' => false,
+        'bkb001' => false,
+        'bkb002' => false,
+        'bkb003' => false,
+        'bkc004' => false,
+        'bkc005' => false,
+        'bkc006' => false,
+        'bkc007' => false,
+        'bkc008' => false,
+        'bko009' => false,
+        'bko010' => false,
+        'bko011' => false,
+        'brb001' => false,
+        'brb002' => false,
+        'brb003' => false,
+        'brb004' => false,
+        'brb005' => false,
+        'brb006' => false,
+        'brb007' => false,
+        'brc008' => false,
+        'brc009' => false,
+        'brc010' => false,
+        'brc011' => false,
+        'brc012' => false,
+        'brc013' => false,
+        'brc014' => false,
+        'bro015' => false,
+        'bro016' => false,
+        'bro017' => false,
+        'brp018' => false,
+        'brp019' => false,
+        'brp020' => false,
+        'brp021' => false,
+        'brp022' => false,
+        'brp023' => false,
+        'clb001' => false,
+        'clb002' => false,
+        'clb003' => false,
+        'clb004' => false,
+        'clb005' => false,
+        'clc006' => false,
+        'clc007' => false,
+        'clc008' => false,
+        'clc009' => false,
+        'clc010' => false,
+        'clc011' => false,
+        'clc012' => false,
+        'clc013' => false,
+        'clo014' => false,
+        'clo015' => false,
+        'clp016' => false,
+        'clp017' => false,
+        'clp018' => false,
+        'clp019' => false,
+        'ctb001' => false,
+        'ctb002' => false,
+        'ctb003' => false,
+        'ctb004' => false,
+        'ctb005' => false,
+        'ctb006' => false,
+        'ctb007' => false,
+        'ctb008' => false,
+        'ctb009' => false,
+        'ctb010' => false,
+        'ctb011' => false,
+        'ctb012' => false,
+        'ctb013' => false,
+        'ctb014' => false,
+        'ctb015' => false,
+        'ctb016' => false,
+        'ctb017' => false,
+        'ctb018' => false,
+        'ctc021' => false,
+        'ctc022' => false,
+        'ctc023' => false,
+        'ctc024' => false,
+        'ctc025' => false,
+        'ctc026' => false,
+        'ctc027' => false,
+        'ctc028' => false,
+        'ctc029' => false,
+        'ctc030' => false,
+        'ctc031' => false,
+        'ctc032' => false,
+        'ctc033' => false,
+        'ctc034' => false,
+        'ctc035' => false,
+        'ctc036' => false,
+        'ctd038' => false,
+        'ctp039' => false,
+        'ctp040' => false,
+        'ctp041' => false,
+        'dmo003' => false,
+        'dmo009' => false,
+        'dmo013' => false,
+        'iqc001' => false,
+        'iqc002' => false,
+        'iqc003' => false,
+        'jdb001' => false,
+        'jdb002' => false,
+        'jdb003' => false,
+        'jdb004' => false,
+        'jdb005' => false,
+        'jdb006' => false,
+        'jdc007' => false,
+        'jdc009' => false,
+        'jdc010' => false,
+        'jdc011' => false,
+        'jdc012' => false,
+        'jdo013' => false,
+        'jdo014' => false,
+        'jdp015' => false,
+        'jdp016' => false,
+        'jdp017' => false,
+        'lgc002' => false,
+        'lgc003' => false,
+        'lgc004' => false,
+        'lsb001' => false,
+        'lsb002' => false,
+        'lsb003' => false,
+        'lsb004' => false,
+        'lsb005' => false,
+        'lsb006' => false,
+        'lsb007' => false,
+        'lsb008' => false,
+        'lsb009' => false,
+        'lsc010' => false,
+        'lsc011' => false,
+        'lsc012' => false,
+        'lsc013' => false,
+        'lsc014' => false,
+        'lsc015' => false,
+        'lsc016' => false,
+        'lsc017' => false,
+        'lsc018' => false,
+        'lsc019' => false,
+        'lsc020' => false,
+        'lsc021' => false,
+        'lsc022' => false,
+        'lsc023' => false,
+        'lsc024' => false,
+        'lsc025' => false,
+        'lsc026' => false,
+        'lsc027' => false,
+        'lsc028' => false,
+        'lsc029' => false,
+        'lsc030' => false,
+        'lsc031' => false,
+        'lsc032' => false,
+        'lsc033' => false,
+        'lsp034' => false,
+        'lsp035' => false,
+        'ntb001' => false,
+        'ntb002' => false,
+        'ntb003' => false,
+        'ntb004' => false,
+        'ntb005' => false,
+        'ntb006' => false,
+        'ntb007' => false,
+        'ntb008' => false,
+        'ntb009' => false,
+        'ntb010' => false,
+        'ntb011' => false,
+        'ntb012' => false,
+        'ntb013' => false,
+        'ntb014' => false,
+        'ntb015' => false,
+        'ntb016' => false,
+        'ntb017' => false,
+        'ntb018' => false,
+        'ntc020' => false,
+        'ntc021' => false,
+        'ntc022' => false,
+        'ntc023' => false,
+        'ntc024' => false,
+        'ntc025' => false,
+        'ntc026' => false,
+        'ntc027' => false,
+        'ntc028' => false,
+        'ntc029' => false,
+        'ntc030' => false,
+        'ntc031' => false,
+        'ntd034' => false,
+        'ntd035' => false,
+        'ntp036' => false,
+        'ntp037' => false,
+        'ntp038' => false,
+        'ntp039' => false,
+        'otb002' => false,
+        'otb003' => false,
+        'otb004' => false,
+        'otb005' => false,
+        'otc007' => false,
+        'otc008' => false,
+        'otc009' => false,
+        'otc010' => false,
+        'otc011' => false,
+        'otd012' => false,
+        'otd013' => false,
+        'otp014' => false,
+        'otp015' => false,
+        'otp016' => false,
+        'otp017' => false,
+        'otp018' => false,
+        'otp019' => false,
+        'otp020' => false,
+        'otp021' => false,
+        'pro001' => false,
+        'pro002' => false,
+        'pro003' => false,
+        'rtb001' => false,
+        'rtb002' => false,
+        'rtb003' => false,
+        'rtb004' => false,
+        'rtb005' => false,
+        'rtb006' => false,
+        'rtb007' => false,
+        'rtb008' => false,
+        'rtb009' => false,
+        'rtb010' => false,
+        'rtb011' => false,
+        'rtb012' => false,
+        'rtb013' => false,
+        'rtb014' => false,
+        'rtb015' => false,
+        'rtb016' => false,
+        'rtb017' => false,
+        'rtb018' => false,
+        'rtb020' => false,
+        'rtb021' => false,
+        'rtb022' => false,
+        'rtb023' => false,
+        'rtb024' => false,
+        'rtb025' => false,
+        'rtb026' => false,
+        'rtb027' => false,
+        'rtb028' => false,
+        'rtb029' => false,
+        'rtb030' => false,
+        'rtb031' => false,
+        'rtb032' => false,
+        'rtb033' => false,
+        'rtb034' => false,
+        'rtb035' => false,
+        'rtc036' => false,
+        'rtc037' => false,
+        'rtc038' => false,
+        'rtc039' => false,
+        'rtc040' => false,
+        'rtc041' => false,
+        'rtc042' => false,
+        'rtc043' => false,
+        'rtc044' => false,
+        'rtc045' => false,
+        'rtc046' => false,
+        'rtc047' => false,
+        'rtc049' => false,
+        'rtc050' => false,
+        'rtc051' => false,
+        'rtc052' => false,
+        'rtc053' => false,
+        'rtc054' => false,
+        'rtd059' => false,
+        'rtd060' => false,
+        'rtd061' => false,
+        'rtd062' => false,
+        'rtd063' => false,
+        'rtd064' => false,
+        'rtd065' => false,
+        'rtd067' => false,
+        'rtd068' => false,
+        'rtd069' => false,
+        'rtd070' => false,
+        'rtd071' => false,
+        'rtd072' => false,
+        'rto077' => false,
+        'rto079' => false,
+        'rtp081' => false,
+        'rtp082' => false,
+        'rtp083' => false,
+        'rtp086' => false,
+        'ttb001' => false,
+        'ttb002' => false,
+        'ttb003' => false,
+        'ttb004' => false,
+        'ttb005' => false,
+        'ttb006' => false,
+        'ttb007' => false,
+        'ttb008' => false,
+        'ttb009' => false,
+        'ttb010' => false,
+        'ttb011' => false,
+        'ttb012' => false,
+        'ttb013' => false,
+        'ttb014' => false,
+        'ttb015' => false,
+        'ttb016' => false,
+        'ttb017' => false,
+        'ttb018' => false,
+        'ttb019' => false,
+        'ttb020' => false,
+        'ttb023' => false,
+        'ttb024' => false,
+        'ttb025' => false,
+        'ttb026' => false,
+        'ttb027' => false,
+        'ttb033' => false,
+        'ttc035' => false,
+        'ttc036' => false,
+        'ttc037' => false,
+        'ttc038' => false,
+        'ttc039' => false,
+        'ttc040' => false,
+        'ttc041' => false,
+        'ttc042' => false,
+        'ttc043' => false,
+        'ttc044' => false,
+        'ttc045' => false,
+        'ttc046' => false,
+        'ttc047' => false,
+        'ttc048' => false,
+        'ttc049' => false,
+        'ttc051' => false,
+        'ttc052' => false,
+        'ttc053' => false,
+        'ttc054' => false,
+        'ttc055' => false,
+        'ttc056' => false,
+        'ttc057' => false,
+        'ttc058' => false,
+        'ttc059' => false,
+        'ttc060' => false,
+        'ttc061' => false,
+        'ttc063' => false,
+        'ttc064' => false,
+        'ttc065' => false,
+        'ttc066' => false,
+        'ttc067' => false,
+        'ttc068' => false,
+        'ttc069' => false,
+        'ttc070' => false,
+        'tto074' => false,
+        'tto075' => false,
+        'tto076' => false,
+        'tto077' => false,
+        'ttp079' => false,
+        'ttp080' => false,
+        'ttp084' => false,
+        'txb001' => false,
+        'txb002' => false,
+        'txb003' => false,
+        'txb004' => false,
+        'txb006' => false,
+        'txc007' => false,
+        'txc009' => false,
+        'txc010' => false,
+        'txc011' => false,
+        'txc012' => false,
+        'txo013' => false,
+        'txo014' => false,
+        'txp015' => false,
+        'txp016' => false,
+        'txp017' => false,
+        'ucc001' => false,
+        'ucc002' => false,
+        'ucc003' => false,
+        'ucc004' => false,
+        'ucc005' => false,
+        'ucc006' => false,
+        'ucc007' => false,
+        'ucc008' => false,
+        'ucc009' => false,
+        'ucc010' => false,
+        'ucc011' => false,
+        'ucc012' => false,
+        'ucc013' => false,
+        'ucc014' => false,
+        'ucc015' => false,
+        'ucc016' => false,
+        'dmo004' => false,
+        'dmo014' => false
+    ];
+
+    /**
+      * If a nullable field gets set to null, insert it here
+      *
+      * @var boolean[]
+      */
+    protected array $openAPINullablesSetToNull = [];
+
+    /**
      * Array of property to type mappings. Used for (de)serialization
      *
      * @return array
      */
-    public static function swaggerTypes()
+    public static function openAPITypes()
     {
-        return self::$swaggerTypes;
+        return self::$openAPITypes;
     }
 
     /**
@@ -975,9 +1438,61 @@ class BizAggregates implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerFormats()
+    public static function openAPIFormats()
     {
-        return self::$swaggerFormats;
+        return self::$openAPIFormats;
+    }
+
+    /**
+     * Array of nullable properties
+     *
+     * @return array
+     */
+    protected static function openAPINullables(): array
+    {
+        return self::$openAPINullables;
+    }
+
+    /**
+     * Array of nullable field names deliberately set to null
+     *
+     * @return boolean[]
+     */
+    private function getOpenAPINullablesSetToNull(): array
+    {
+        return $this->openAPINullablesSetToNull;
+    }
+
+    /**
+     * Setter - Array of nullable field names deliberately set to null
+     *
+     * @param boolean[] $openAPINullablesSetToNull
+     */
+    private function setOpenAPINullablesSetToNull(array $openAPINullablesSetToNull): void
+    {
+        $this->openAPINullablesSetToNull = $openAPINullablesSetToNull;
+    }
+
+    /**
+     * Checks if a property is nullable
+     *
+     * @param string $property
+     * @return bool
+     */
+    public static function isNullable(string $property): bool
+    {
+        return self::openAPINullables()[$property] ?? false;
+    }
+
+    /**
+     * Checks if a nullable property is set to null.
+     *
+     * @param string $property
+     * @return bool
+     */
+    public function isNullableSetToNull(string $property): bool
+    {
+        return in_array($property, $this->getOpenAPINullablesSetToNull(), true);
     }
 
     /**
@@ -2381,12 +2896,9 @@ class BizAggregates implements ModelInterface, ArrayAccess
      */
     public function getModelName()
     {
-        return self::$swaggerModelName;
+        return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -2398,457 +2910,475 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Constructor
      *
-     * @param mixed[] $data Associated array of property values
+     * @param mixed[]|null $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
-        $this->container['atc039'] = isset($data['atc039']) ? $data['atc039'] : null;
-        $this->container['ctb019'] = isset($data['ctb019']) ? $data['ctb019'] : null;
-        $this->container['jdc008'] = isset($data['jdc008']) ? $data['jdc008'] : null;
-        $this->container['ntb019'] = isset($data['ntb019']) ? $data['ntb019'] : null;
-        $this->container['ntc032'] = isset($data['ntc032']) ? $data['ntc032'] : null;
-        $this->container['otb001'] = isset($data['otb001']) ? $data['otb001'] : null;
-        $this->container['otc006'] = isset($data['otc006']) ? $data['otc006'] : null;
-        $this->container['rtb019'] = isset($data['rtb019']) ? $data['rtb019'] : null;
-        $this->container['rtc048'] = isset($data['rtc048']) ? $data['rtc048'] : null;
-        $this->container['ttb021'] = isset($data['ttb021']) ? $data['ttb021'] : null;
-        $this->container['ttb022'] = isset($data['ttb022']) ? $data['ttb022'] : null;
-        $this->container['ttb028'] = isset($data['ttb028']) ? $data['ttb028'] : null;
-        $this->container['ttb029'] = isset($data['ttb029']) ? $data['ttb029'] : null;
-        $this->container['ttb030'] = isset($data['ttb030']) ? $data['ttb030'] : null;
-        $this->container['ttb031'] = isset($data['ttb031']) ? $data['ttb031'] : null;
-        $this->container['ttb032'] = isset($data['ttb032']) ? $data['ttb032'] : null;
-        $this->container['ttc050'] = isset($data['ttc050']) ? $data['ttc050'] : null;
-        $this->container['ttp085'] = isset($data['ttp085']) ? $data['ttp085'] : null;
-        $this->container['ttp086'] = isset($data['ttp086']) ? $data['ttp086'] : null;
-        $this->container['txb005'] = isset($data['txb005']) ? $data['txb005'] : null;
-        $this->container['txc008'] = isset($data['txc008']) ? $data['txc008'] : null;
-        $this->container['acc001'] = isset($data['acc001']) ? $data['acc001'] : null;
-        $this->container['acc002'] = isset($data['acc002']) ? $data['acc002'] : null;
-        $this->container['acc003'] = isset($data['acc003']) ? $data['acc003'] : null;
-        $this->container['acc004'] = isset($data['acc004']) ? $data['acc004'] : null;
-        $this->container['acc005'] = isset($data['acc005']) ? $data['acc005'] : null;
-        $this->container['acc006'] = isset($data['acc006']) ? $data['acc006'] : null;
-        $this->container['acc007'] = isset($data['acc007']) ? $data['acc007'] : null;
-        $this->container['acc008'] = isset($data['acc008']) ? $data['acc008'] : null;
-        $this->container['atb001'] = isset($data['atb001']) ? $data['atb001'] : null;
-        $this->container['atb002'] = isset($data['atb002']) ? $data['atb002'] : null;
-        $this->container['atb003'] = isset($data['atb003']) ? $data['atb003'] : null;
-        $this->container['atb004'] = isset($data['atb004']) ? $data['atb004'] : null;
-        $this->container['atb005'] = isset($data['atb005']) ? $data['atb005'] : null;
-        $this->container['atb006'] = isset($data['atb006']) ? $data['atb006'] : null;
-        $this->container['atb007'] = isset($data['atb007']) ? $data['atb007'] : null;
-        $this->container['atb008'] = isset($data['atb008']) ? $data['atb008'] : null;
-        $this->container['atb009'] = isset($data['atb009']) ? $data['atb009'] : null;
-        $this->container['atb010'] = isset($data['atb010']) ? $data['atb010'] : null;
-        $this->container['atb011'] = isset($data['atb011']) ? $data['atb011'] : null;
-        $this->container['atb012'] = isset($data['atb012']) ? $data['atb012'] : null;
-        $this->container['atb013'] = isset($data['atb013']) ? $data['atb013'] : null;
-        $this->container['atb014'] = isset($data['atb014']) ? $data['atb014'] : null;
-        $this->container['atb015'] = isset($data['atb015']) ? $data['atb015'] : null;
-        $this->container['atb016'] = isset($data['atb016']) ? $data['atb016'] : null;
-        $this->container['atb017'] = isset($data['atb017']) ? $data['atb017'] : null;
-        $this->container['atb018'] = isset($data['atb018']) ? $data['atb018'] : null;
-        $this->container['atb019'] = isset($data['atb019']) ? $data['atb019'] : null;
-        $this->container['atc020'] = isset($data['atc020']) ? $data['atc020'] : null;
-        $this->container['atc021'] = isset($data['atc021']) ? $data['atc021'] : null;
-        $this->container['atc022'] = isset($data['atc022']) ? $data['atc022'] : null;
-        $this->container['atc023'] = isset($data['atc023']) ? $data['atc023'] : null;
-        $this->container['atc024'] = isset($data['atc024']) ? $data['atc024'] : null;
-        $this->container['atc025'] = isset($data['atc025']) ? $data['atc025'] : null;
-        $this->container['atc026'] = isset($data['atc026']) ? $data['atc026'] : null;
-        $this->container['atc027'] = isset($data['atc027']) ? $data['atc027'] : null;
-        $this->container['atc028'] = isset($data['atc028']) ? $data['atc028'] : null;
-        $this->container['atc029'] = isset($data['atc029']) ? $data['atc029'] : null;
-        $this->container['atc030'] = isset($data['atc030']) ? $data['atc030'] : null;
-        $this->container['atc031'] = isset($data['atc031']) ? $data['atc031'] : null;
-        $this->container['atc032'] = isset($data['atc032']) ? $data['atc032'] : null;
-        $this->container['atd034'] = isset($data['atd034']) ? $data['atd034'] : null;
-        $this->container['atd035'] = isset($data['atd035']) ? $data['atd035'] : null;
-        $this->container['atp036'] = isset($data['atp036']) ? $data['atp036'] : null;
-        $this->container['atp037'] = isset($data['atp037']) ? $data['atp037'] : null;
-        $this->container['atp038'] = isset($data['atp038']) ? $data['atp038'] : null;
-        $this->container['bkb001'] = isset($data['bkb001']) ? $data['bkb001'] : null;
-        $this->container['bkb002'] = isset($data['bkb002']) ? $data['bkb002'] : null;
-        $this->container['bkb003'] = isset($data['bkb003']) ? $data['bkb003'] : null;
-        $this->container['bkc004'] = isset($data['bkc004']) ? $data['bkc004'] : null;
-        $this->container['bkc005'] = isset($data['bkc005']) ? $data['bkc005'] : null;
-        $this->container['bkc006'] = isset($data['bkc006']) ? $data['bkc006'] : null;
-        $this->container['bkc007'] = isset($data['bkc007']) ? $data['bkc007'] : null;
-        $this->container['bkc008'] = isset($data['bkc008']) ? $data['bkc008'] : null;
-        $this->container['bko009'] = isset($data['bko009']) ? $data['bko009'] : null;
-        $this->container['bko010'] = isset($data['bko010']) ? $data['bko010'] : null;
-        $this->container['bko011'] = isset($data['bko011']) ? $data['bko011'] : null;
-        $this->container['brb001'] = isset($data['brb001']) ? $data['brb001'] : null;
-        $this->container['brb002'] = isset($data['brb002']) ? $data['brb002'] : null;
-        $this->container['brb003'] = isset($data['brb003']) ? $data['brb003'] : null;
-        $this->container['brb004'] = isset($data['brb004']) ? $data['brb004'] : null;
-        $this->container['brb005'] = isset($data['brb005']) ? $data['brb005'] : null;
-        $this->container['brb006'] = isset($data['brb006']) ? $data['brb006'] : null;
-        $this->container['brb007'] = isset($data['brb007']) ? $data['brb007'] : null;
-        $this->container['brc008'] = isset($data['brc008']) ? $data['brc008'] : null;
-        $this->container['brc009'] = isset($data['brc009']) ? $data['brc009'] : null;
-        $this->container['brc010'] = isset($data['brc010']) ? $data['brc010'] : null;
-        $this->container['brc011'] = isset($data['brc011']) ? $data['brc011'] : null;
-        $this->container['brc012'] = isset($data['brc012']) ? $data['brc012'] : null;
-        $this->container['brc013'] = isset($data['brc013']) ? $data['brc013'] : null;
-        $this->container['brc014'] = isset($data['brc014']) ? $data['brc014'] : null;
-        $this->container['bro015'] = isset($data['bro015']) ? $data['bro015'] : null;
-        $this->container['bro016'] = isset($data['bro016']) ? $data['bro016'] : null;
-        $this->container['bro017'] = isset($data['bro017']) ? $data['bro017'] : null;
-        $this->container['brp018'] = isset($data['brp018']) ? $data['brp018'] : null;
-        $this->container['brp019'] = isset($data['brp019']) ? $data['brp019'] : null;
-        $this->container['brp020'] = isset($data['brp020']) ? $data['brp020'] : null;
-        $this->container['brp021'] = isset($data['brp021']) ? $data['brp021'] : null;
-        $this->container['brp022'] = isset($data['brp022']) ? $data['brp022'] : null;
-        $this->container['brp023'] = isset($data['brp023']) ? $data['brp023'] : null;
-        $this->container['clb001'] = isset($data['clb001']) ? $data['clb001'] : null;
-        $this->container['clb002'] = isset($data['clb002']) ? $data['clb002'] : null;
-        $this->container['clb003'] = isset($data['clb003']) ? $data['clb003'] : null;
-        $this->container['clb004'] = isset($data['clb004']) ? $data['clb004'] : null;
-        $this->container['clb005'] = isset($data['clb005']) ? $data['clb005'] : null;
-        $this->container['clc006'] = isset($data['clc006']) ? $data['clc006'] : null;
-        $this->container['clc007'] = isset($data['clc007']) ? $data['clc007'] : null;
-        $this->container['clc008'] = isset($data['clc008']) ? $data['clc008'] : null;
-        $this->container['clc009'] = isset($data['clc009']) ? $data['clc009'] : null;
-        $this->container['clc010'] = isset($data['clc010']) ? $data['clc010'] : null;
-        $this->container['clc011'] = isset($data['clc011']) ? $data['clc011'] : null;
-        $this->container['clc012'] = isset($data['clc012']) ? $data['clc012'] : null;
-        $this->container['clc013'] = isset($data['clc013']) ? $data['clc013'] : null;
-        $this->container['clo014'] = isset($data['clo014']) ? $data['clo014'] : null;
-        $this->container['clo015'] = isset($data['clo015']) ? $data['clo015'] : null;
-        $this->container['clp016'] = isset($data['clp016']) ? $data['clp016'] : null;
-        $this->container['clp017'] = isset($data['clp017']) ? $data['clp017'] : null;
-        $this->container['clp018'] = isset($data['clp018']) ? $data['clp018'] : null;
-        $this->container['clp019'] = isset($data['clp019']) ? $data['clp019'] : null;
-        $this->container['ctb001'] = isset($data['ctb001']) ? $data['ctb001'] : null;
-        $this->container['ctb002'] = isset($data['ctb002']) ? $data['ctb002'] : null;
-        $this->container['ctb003'] = isset($data['ctb003']) ? $data['ctb003'] : null;
-        $this->container['ctb004'] = isset($data['ctb004']) ? $data['ctb004'] : null;
-        $this->container['ctb005'] = isset($data['ctb005']) ? $data['ctb005'] : null;
-        $this->container['ctb006'] = isset($data['ctb006']) ? $data['ctb006'] : null;
-        $this->container['ctb007'] = isset($data['ctb007']) ? $data['ctb007'] : null;
-        $this->container['ctb008'] = isset($data['ctb008']) ? $data['ctb008'] : null;
-        $this->container['ctb009'] = isset($data['ctb009']) ? $data['ctb009'] : null;
-        $this->container['ctb010'] = isset($data['ctb010']) ? $data['ctb010'] : null;
-        $this->container['ctb011'] = isset($data['ctb011']) ? $data['ctb011'] : null;
-        $this->container['ctb012'] = isset($data['ctb012']) ? $data['ctb012'] : null;
-        $this->container['ctb013'] = isset($data['ctb013']) ? $data['ctb013'] : null;
-        $this->container['ctb014'] = isset($data['ctb014']) ? $data['ctb014'] : null;
-        $this->container['ctb015'] = isset($data['ctb015']) ? $data['ctb015'] : null;
-        $this->container['ctb016'] = isset($data['ctb016']) ? $data['ctb016'] : null;
-        $this->container['ctb017'] = isset($data['ctb017']) ? $data['ctb017'] : null;
-        $this->container['ctb018'] = isset($data['ctb018']) ? $data['ctb018'] : null;
-        $this->container['ctc021'] = isset($data['ctc021']) ? $data['ctc021'] : null;
-        $this->container['ctc022'] = isset($data['ctc022']) ? $data['ctc022'] : null;
-        $this->container['ctc023'] = isset($data['ctc023']) ? $data['ctc023'] : null;
-        $this->container['ctc024'] = isset($data['ctc024']) ? $data['ctc024'] : null;
-        $this->container['ctc025'] = isset($data['ctc025']) ? $data['ctc025'] : null;
-        $this->container['ctc026'] = isset($data['ctc026']) ? $data['ctc026'] : null;
-        $this->container['ctc027'] = isset($data['ctc027']) ? $data['ctc027'] : null;
-        $this->container['ctc028'] = isset($data['ctc028']) ? $data['ctc028'] : null;
-        $this->container['ctc029'] = isset($data['ctc029']) ? $data['ctc029'] : null;
-        $this->container['ctc030'] = isset($data['ctc030']) ? $data['ctc030'] : null;
-        $this->container['ctc031'] = isset($data['ctc031']) ? $data['ctc031'] : null;
-        $this->container['ctc032'] = isset($data['ctc032']) ? $data['ctc032'] : null;
-        $this->container['ctc033'] = isset($data['ctc033']) ? $data['ctc033'] : null;
-        $this->container['ctc034'] = isset($data['ctc034']) ? $data['ctc034'] : null;
-        $this->container['ctc035'] = isset($data['ctc035']) ? $data['ctc035'] : null;
-        $this->container['ctc036'] = isset($data['ctc036']) ? $data['ctc036'] : null;
-        $this->container['ctd038'] = isset($data['ctd038']) ? $data['ctd038'] : null;
-        $this->container['ctp039'] = isset($data['ctp039']) ? $data['ctp039'] : null;
-        $this->container['ctp040'] = isset($data['ctp040']) ? $data['ctp040'] : null;
-        $this->container['ctp041'] = isset($data['ctp041']) ? $data['ctp041'] : null;
-        $this->container['dmo003'] = isset($data['dmo003']) ? $data['dmo003'] : null;
-        $this->container['dmo009'] = isset($data['dmo009']) ? $data['dmo009'] : null;
-        $this->container['dmo013'] = isset($data['dmo013']) ? $data['dmo013'] : null;
-        $this->container['iqc001'] = isset($data['iqc001']) ? $data['iqc001'] : null;
-        $this->container['iqc002'] = isset($data['iqc002']) ? $data['iqc002'] : null;
-        $this->container['iqc003'] = isset($data['iqc003']) ? $data['iqc003'] : null;
-        $this->container['jdb001'] = isset($data['jdb001']) ? $data['jdb001'] : null;
-        $this->container['jdb002'] = isset($data['jdb002']) ? $data['jdb002'] : null;
-        $this->container['jdb003'] = isset($data['jdb003']) ? $data['jdb003'] : null;
-        $this->container['jdb004'] = isset($data['jdb004']) ? $data['jdb004'] : null;
-        $this->container['jdb005'] = isset($data['jdb005']) ? $data['jdb005'] : null;
-        $this->container['jdb006'] = isset($data['jdb006']) ? $data['jdb006'] : null;
-        $this->container['jdc007'] = isset($data['jdc007']) ? $data['jdc007'] : null;
-        $this->container['jdc009'] = isset($data['jdc009']) ? $data['jdc009'] : null;
-        $this->container['jdc010'] = isset($data['jdc010']) ? $data['jdc010'] : null;
-        $this->container['jdc011'] = isset($data['jdc011']) ? $data['jdc011'] : null;
-        $this->container['jdc012'] = isset($data['jdc012']) ? $data['jdc012'] : null;
-        $this->container['jdo013'] = isset($data['jdo013']) ? $data['jdo013'] : null;
-        $this->container['jdo014'] = isset($data['jdo014']) ? $data['jdo014'] : null;
-        $this->container['jdp015'] = isset($data['jdp015']) ? $data['jdp015'] : null;
-        $this->container['jdp016'] = isset($data['jdp016']) ? $data['jdp016'] : null;
-        $this->container['jdp017'] = isset($data['jdp017']) ? $data['jdp017'] : null;
-        $this->container['lgc002'] = isset($data['lgc002']) ? $data['lgc002'] : null;
-        $this->container['lgc003'] = isset($data['lgc003']) ? $data['lgc003'] : null;
-        $this->container['lgc004'] = isset($data['lgc004']) ? $data['lgc004'] : null;
-        $this->container['lsb001'] = isset($data['lsb001']) ? $data['lsb001'] : null;
-        $this->container['lsb002'] = isset($data['lsb002']) ? $data['lsb002'] : null;
-        $this->container['lsb003'] = isset($data['lsb003']) ? $data['lsb003'] : null;
-        $this->container['lsb004'] = isset($data['lsb004']) ? $data['lsb004'] : null;
-        $this->container['lsb005'] = isset($data['lsb005']) ? $data['lsb005'] : null;
-        $this->container['lsb006'] = isset($data['lsb006']) ? $data['lsb006'] : null;
-        $this->container['lsb007'] = isset($data['lsb007']) ? $data['lsb007'] : null;
-        $this->container['lsb008'] = isset($data['lsb008']) ? $data['lsb008'] : null;
-        $this->container['lsb009'] = isset($data['lsb009']) ? $data['lsb009'] : null;
-        $this->container['lsc010'] = isset($data['lsc010']) ? $data['lsc010'] : null;
-        $this->container['lsc011'] = isset($data['lsc011']) ? $data['lsc011'] : null;
-        $this->container['lsc012'] = isset($data['lsc012']) ? $data['lsc012'] : null;
-        $this->container['lsc013'] = isset($data['lsc013']) ? $data['lsc013'] : null;
-        $this->container['lsc014'] = isset($data['lsc014']) ? $data['lsc014'] : null;
-        $this->container['lsc015'] = isset($data['lsc015']) ? $data['lsc015'] : null;
-        $this->container['lsc016'] = isset($data['lsc016']) ? $data['lsc016'] : null;
-        $this->container['lsc017'] = isset($data['lsc017']) ? $data['lsc017'] : null;
-        $this->container['lsc018'] = isset($data['lsc018']) ? $data['lsc018'] : null;
-        $this->container['lsc019'] = isset($data['lsc019']) ? $data['lsc019'] : null;
-        $this->container['lsc020'] = isset($data['lsc020']) ? $data['lsc020'] : null;
-        $this->container['lsc021'] = isset($data['lsc021']) ? $data['lsc021'] : null;
-        $this->container['lsc022'] = isset($data['lsc022']) ? $data['lsc022'] : null;
-        $this->container['lsc023'] = isset($data['lsc023']) ? $data['lsc023'] : null;
-        $this->container['lsc024'] = isset($data['lsc024']) ? $data['lsc024'] : null;
-        $this->container['lsc025'] = isset($data['lsc025']) ? $data['lsc025'] : null;
-        $this->container['lsc026'] = isset($data['lsc026']) ? $data['lsc026'] : null;
-        $this->container['lsc027'] = isset($data['lsc027']) ? $data['lsc027'] : null;
-        $this->container['lsc028'] = isset($data['lsc028']) ? $data['lsc028'] : null;
-        $this->container['lsc029'] = isset($data['lsc029']) ? $data['lsc029'] : null;
-        $this->container['lsc030'] = isset($data['lsc030']) ? $data['lsc030'] : null;
-        $this->container['lsc031'] = isset($data['lsc031']) ? $data['lsc031'] : null;
-        $this->container['lsc032'] = isset($data['lsc032']) ? $data['lsc032'] : null;
-        $this->container['lsc033'] = isset($data['lsc033']) ? $data['lsc033'] : null;
-        $this->container['lsp034'] = isset($data['lsp034']) ? $data['lsp034'] : null;
-        $this->container['lsp035'] = isset($data['lsp035']) ? $data['lsp035'] : null;
-        $this->container['ntb001'] = isset($data['ntb001']) ? $data['ntb001'] : null;
-        $this->container['ntb002'] = isset($data['ntb002']) ? $data['ntb002'] : null;
-        $this->container['ntb003'] = isset($data['ntb003']) ? $data['ntb003'] : null;
-        $this->container['ntb004'] = isset($data['ntb004']) ? $data['ntb004'] : null;
-        $this->container['ntb005'] = isset($data['ntb005']) ? $data['ntb005'] : null;
-        $this->container['ntb006'] = isset($data['ntb006']) ? $data['ntb006'] : null;
-        $this->container['ntb007'] = isset($data['ntb007']) ? $data['ntb007'] : null;
-        $this->container['ntb008'] = isset($data['ntb008']) ? $data['ntb008'] : null;
-        $this->container['ntb009'] = isset($data['ntb009']) ? $data['ntb009'] : null;
-        $this->container['ntb010'] = isset($data['ntb010']) ? $data['ntb010'] : null;
-        $this->container['ntb011'] = isset($data['ntb011']) ? $data['ntb011'] : null;
-        $this->container['ntb012'] = isset($data['ntb012']) ? $data['ntb012'] : null;
-        $this->container['ntb013'] = isset($data['ntb013']) ? $data['ntb013'] : null;
-        $this->container['ntb014'] = isset($data['ntb014']) ? $data['ntb014'] : null;
-        $this->container['ntb015'] = isset($data['ntb015']) ? $data['ntb015'] : null;
-        $this->container['ntb016'] = isset($data['ntb016']) ? $data['ntb016'] : null;
-        $this->container['ntb017'] = isset($data['ntb017']) ? $data['ntb017'] : null;
-        $this->container['ntb018'] = isset($data['ntb018']) ? $data['ntb018'] : null;
-        $this->container['ntc020'] = isset($data['ntc020']) ? $data['ntc020'] : null;
-        $this->container['ntc021'] = isset($data['ntc021']) ? $data['ntc021'] : null;
-        $this->container['ntc022'] = isset($data['ntc022']) ? $data['ntc022'] : null;
-        $this->container['ntc023'] = isset($data['ntc023']) ? $data['ntc023'] : null;
-        $this->container['ntc024'] = isset($data['ntc024']) ? $data['ntc024'] : null;
-        $this->container['ntc025'] = isset($data['ntc025']) ? $data['ntc025'] : null;
-        $this->container['ntc026'] = isset($data['ntc026']) ? $data['ntc026'] : null;
-        $this->container['ntc027'] = isset($data['ntc027']) ? $data['ntc027'] : null;
-        $this->container['ntc028'] = isset($data['ntc028']) ? $data['ntc028'] : null;
-        $this->container['ntc029'] = isset($data['ntc029']) ? $data['ntc029'] : null;
-        $this->container['ntc030'] = isset($data['ntc030']) ? $data['ntc030'] : null;
-        $this->container['ntc031'] = isset($data['ntc031']) ? $data['ntc031'] : null;
-        $this->container['ntd034'] = isset($data['ntd034']) ? $data['ntd034'] : null;
-        $this->container['ntd035'] = isset($data['ntd035']) ? $data['ntd035'] : null;
-        $this->container['ntp036'] = isset($data['ntp036']) ? $data['ntp036'] : null;
-        $this->container['ntp037'] = isset($data['ntp037']) ? $data['ntp037'] : null;
-        $this->container['ntp038'] = isset($data['ntp038']) ? $data['ntp038'] : null;
-        $this->container['ntp039'] = isset($data['ntp039']) ? $data['ntp039'] : null;
-        $this->container['otb002'] = isset($data['otb002']) ? $data['otb002'] : null;
-        $this->container['otb003'] = isset($data['otb003']) ? $data['otb003'] : null;
-        $this->container['otb004'] = isset($data['otb004']) ? $data['otb004'] : null;
-        $this->container['otb005'] = isset($data['otb005']) ? $data['otb005'] : null;
-        $this->container['otc007'] = isset($data['otc007']) ? $data['otc007'] : null;
-        $this->container['otc008'] = isset($data['otc008']) ? $data['otc008'] : null;
-        $this->container['otc009'] = isset($data['otc009']) ? $data['otc009'] : null;
-        $this->container['otc010'] = isset($data['otc010']) ? $data['otc010'] : null;
-        $this->container['otc011'] = isset($data['otc011']) ? $data['otc011'] : null;
-        $this->container['otd012'] = isset($data['otd012']) ? $data['otd012'] : null;
-        $this->container['otd013'] = isset($data['otd013']) ? $data['otd013'] : null;
-        $this->container['otp014'] = isset($data['otp014']) ? $data['otp014'] : null;
-        $this->container['otp015'] = isset($data['otp015']) ? $data['otp015'] : null;
-        $this->container['otp016'] = isset($data['otp016']) ? $data['otp016'] : null;
-        $this->container['otp017'] = isset($data['otp017']) ? $data['otp017'] : null;
-        $this->container['otp018'] = isset($data['otp018']) ? $data['otp018'] : null;
-        $this->container['otp019'] = isset($data['otp019']) ? $data['otp019'] : null;
-        $this->container['otp020'] = isset($data['otp020']) ? $data['otp020'] : null;
-        $this->container['otp021'] = isset($data['otp021']) ? $data['otp021'] : null;
-        $this->container['pro001'] = isset($data['pro001']) ? $data['pro001'] : null;
-        $this->container['pro002'] = isset($data['pro002']) ? $data['pro002'] : null;
-        $this->container['pro003'] = isset($data['pro003']) ? $data['pro003'] : null;
-        $this->container['rtb001'] = isset($data['rtb001']) ? $data['rtb001'] : null;
-        $this->container['rtb002'] = isset($data['rtb002']) ? $data['rtb002'] : null;
-        $this->container['rtb003'] = isset($data['rtb003']) ? $data['rtb003'] : null;
-        $this->container['rtb004'] = isset($data['rtb004']) ? $data['rtb004'] : null;
-        $this->container['rtb005'] = isset($data['rtb005']) ? $data['rtb005'] : null;
-        $this->container['rtb006'] = isset($data['rtb006']) ? $data['rtb006'] : null;
-        $this->container['rtb007'] = isset($data['rtb007']) ? $data['rtb007'] : null;
-        $this->container['rtb008'] = isset($data['rtb008']) ? $data['rtb008'] : null;
-        $this->container['rtb009'] = isset($data['rtb009']) ? $data['rtb009'] : null;
-        $this->container['rtb010'] = isset($data['rtb010']) ? $data['rtb010'] : null;
-        $this->container['rtb011'] = isset($data['rtb011']) ? $data['rtb011'] : null;
-        $this->container['rtb012'] = isset($data['rtb012']) ? $data['rtb012'] : null;
-        $this->container['rtb013'] = isset($data['rtb013']) ? $data['rtb013'] : null;
-        $this->container['rtb014'] = isset($data['rtb014']) ? $data['rtb014'] : null;
-        $this->container['rtb015'] = isset($data['rtb015']) ? $data['rtb015'] : null;
-        $this->container['rtb016'] = isset($data['rtb016']) ? $data['rtb016'] : null;
-        $this->container['rtb017'] = isset($data['rtb017']) ? $data['rtb017'] : null;
-        $this->container['rtb018'] = isset($data['rtb018']) ? $data['rtb018'] : null;
-        $this->container['rtb020'] = isset($data['rtb020']) ? $data['rtb020'] : null;
-        $this->container['rtb021'] = isset($data['rtb021']) ? $data['rtb021'] : null;
-        $this->container['rtb022'] = isset($data['rtb022']) ? $data['rtb022'] : null;
-        $this->container['rtb023'] = isset($data['rtb023']) ? $data['rtb023'] : null;
-        $this->container['rtb024'] = isset($data['rtb024']) ? $data['rtb024'] : null;
-        $this->container['rtb025'] = isset($data['rtb025']) ? $data['rtb025'] : null;
-        $this->container['rtb026'] = isset($data['rtb026']) ? $data['rtb026'] : null;
-        $this->container['rtb027'] = isset($data['rtb027']) ? $data['rtb027'] : null;
-        $this->container['rtb028'] = isset($data['rtb028']) ? $data['rtb028'] : null;
-        $this->container['rtb029'] = isset($data['rtb029']) ? $data['rtb029'] : null;
-        $this->container['rtb030'] = isset($data['rtb030']) ? $data['rtb030'] : null;
-        $this->container['rtb031'] = isset($data['rtb031']) ? $data['rtb031'] : null;
-        $this->container['rtb032'] = isset($data['rtb032']) ? $data['rtb032'] : null;
-        $this->container['rtb033'] = isset($data['rtb033']) ? $data['rtb033'] : null;
-        $this->container['rtb034'] = isset($data['rtb034']) ? $data['rtb034'] : null;
-        $this->container['rtb035'] = isset($data['rtb035']) ? $data['rtb035'] : null;
-        $this->container['rtc036'] = isset($data['rtc036']) ? $data['rtc036'] : null;
-        $this->container['rtc037'] = isset($data['rtc037']) ? $data['rtc037'] : null;
-        $this->container['rtc038'] = isset($data['rtc038']) ? $data['rtc038'] : null;
-        $this->container['rtc039'] = isset($data['rtc039']) ? $data['rtc039'] : null;
-        $this->container['rtc040'] = isset($data['rtc040']) ? $data['rtc040'] : null;
-        $this->container['rtc041'] = isset($data['rtc041']) ? $data['rtc041'] : null;
-        $this->container['rtc042'] = isset($data['rtc042']) ? $data['rtc042'] : null;
-        $this->container['rtc043'] = isset($data['rtc043']) ? $data['rtc043'] : null;
-        $this->container['rtc044'] = isset($data['rtc044']) ? $data['rtc044'] : null;
-        $this->container['rtc045'] = isset($data['rtc045']) ? $data['rtc045'] : null;
-        $this->container['rtc046'] = isset($data['rtc046']) ? $data['rtc046'] : null;
-        $this->container['rtc047'] = isset($data['rtc047']) ? $data['rtc047'] : null;
-        $this->container['rtc049'] = isset($data['rtc049']) ? $data['rtc049'] : null;
-        $this->container['rtc050'] = isset($data['rtc050']) ? $data['rtc050'] : null;
-        $this->container['rtc051'] = isset($data['rtc051']) ? $data['rtc051'] : null;
-        $this->container['rtc052'] = isset($data['rtc052']) ? $data['rtc052'] : null;
-        $this->container['rtc053'] = isset($data['rtc053']) ? $data['rtc053'] : null;
-        $this->container['rtc054'] = isset($data['rtc054']) ? $data['rtc054'] : null;
-        $this->container['rtd059'] = isset($data['rtd059']) ? $data['rtd059'] : null;
-        $this->container['rtd060'] = isset($data['rtd060']) ? $data['rtd060'] : null;
-        $this->container['rtd061'] = isset($data['rtd061']) ? $data['rtd061'] : null;
-        $this->container['rtd062'] = isset($data['rtd062']) ? $data['rtd062'] : null;
-        $this->container['rtd063'] = isset($data['rtd063']) ? $data['rtd063'] : null;
-        $this->container['rtd064'] = isset($data['rtd064']) ? $data['rtd064'] : null;
-        $this->container['rtd065'] = isset($data['rtd065']) ? $data['rtd065'] : null;
-        $this->container['rtd067'] = isset($data['rtd067']) ? $data['rtd067'] : null;
-        $this->container['rtd068'] = isset($data['rtd068']) ? $data['rtd068'] : null;
-        $this->container['rtd069'] = isset($data['rtd069']) ? $data['rtd069'] : null;
-        $this->container['rtd070'] = isset($data['rtd070']) ? $data['rtd070'] : null;
-        $this->container['rtd071'] = isset($data['rtd071']) ? $data['rtd071'] : null;
-        $this->container['rtd072'] = isset($data['rtd072']) ? $data['rtd072'] : null;
-        $this->container['rto077'] = isset($data['rto077']) ? $data['rto077'] : null;
-        $this->container['rto079'] = isset($data['rto079']) ? $data['rto079'] : null;
-        $this->container['rtp081'] = isset($data['rtp081']) ? $data['rtp081'] : null;
-        $this->container['rtp082'] = isset($data['rtp082']) ? $data['rtp082'] : null;
-        $this->container['rtp083'] = isset($data['rtp083']) ? $data['rtp083'] : null;
-        $this->container['rtp086'] = isset($data['rtp086']) ? $data['rtp086'] : null;
-        $this->container['ttb001'] = isset($data['ttb001']) ? $data['ttb001'] : null;
-        $this->container['ttb002'] = isset($data['ttb002']) ? $data['ttb002'] : null;
-        $this->container['ttb003'] = isset($data['ttb003']) ? $data['ttb003'] : null;
-        $this->container['ttb004'] = isset($data['ttb004']) ? $data['ttb004'] : null;
-        $this->container['ttb005'] = isset($data['ttb005']) ? $data['ttb005'] : null;
-        $this->container['ttb006'] = isset($data['ttb006']) ? $data['ttb006'] : null;
-        $this->container['ttb007'] = isset($data['ttb007']) ? $data['ttb007'] : null;
-        $this->container['ttb008'] = isset($data['ttb008']) ? $data['ttb008'] : null;
-        $this->container['ttb009'] = isset($data['ttb009']) ? $data['ttb009'] : null;
-        $this->container['ttb010'] = isset($data['ttb010']) ? $data['ttb010'] : null;
-        $this->container['ttb011'] = isset($data['ttb011']) ? $data['ttb011'] : null;
-        $this->container['ttb012'] = isset($data['ttb012']) ? $data['ttb012'] : null;
-        $this->container['ttb013'] = isset($data['ttb013']) ? $data['ttb013'] : null;
-        $this->container['ttb014'] = isset($data['ttb014']) ? $data['ttb014'] : null;
-        $this->container['ttb015'] = isset($data['ttb015']) ? $data['ttb015'] : null;
-        $this->container['ttb016'] = isset($data['ttb016']) ? $data['ttb016'] : null;
-        $this->container['ttb017'] = isset($data['ttb017']) ? $data['ttb017'] : null;
-        $this->container['ttb018'] = isset($data['ttb018']) ? $data['ttb018'] : null;
-        $this->container['ttb019'] = isset($data['ttb019']) ? $data['ttb019'] : null;
-        $this->container['ttb020'] = isset($data['ttb020']) ? $data['ttb020'] : null;
-        $this->container['ttb023'] = isset($data['ttb023']) ? $data['ttb023'] : null;
-        $this->container['ttb024'] = isset($data['ttb024']) ? $data['ttb024'] : null;
-        $this->container['ttb025'] = isset($data['ttb025']) ? $data['ttb025'] : null;
-        $this->container['ttb026'] = isset($data['ttb026']) ? $data['ttb026'] : null;
-        $this->container['ttb027'] = isset($data['ttb027']) ? $data['ttb027'] : null;
-        $this->container['ttb033'] = isset($data['ttb033']) ? $data['ttb033'] : null;
-        $this->container['ttc035'] = isset($data['ttc035']) ? $data['ttc035'] : null;
-        $this->container['ttc036'] = isset($data['ttc036']) ? $data['ttc036'] : null;
-        $this->container['ttc037'] = isset($data['ttc037']) ? $data['ttc037'] : null;
-        $this->container['ttc038'] = isset($data['ttc038']) ? $data['ttc038'] : null;
-        $this->container['ttc039'] = isset($data['ttc039']) ? $data['ttc039'] : null;
-        $this->container['ttc040'] = isset($data['ttc040']) ? $data['ttc040'] : null;
-        $this->container['ttc041'] = isset($data['ttc041']) ? $data['ttc041'] : null;
-        $this->container['ttc042'] = isset($data['ttc042']) ? $data['ttc042'] : null;
-        $this->container['ttc043'] = isset($data['ttc043']) ? $data['ttc043'] : null;
-        $this->container['ttc044'] = isset($data['ttc044']) ? $data['ttc044'] : null;
-        $this->container['ttc045'] = isset($data['ttc045']) ? $data['ttc045'] : null;
-        $this->container['ttc046'] = isset($data['ttc046']) ? $data['ttc046'] : null;
-        $this->container['ttc047'] = isset($data['ttc047']) ? $data['ttc047'] : null;
-        $this->container['ttc048'] = isset($data['ttc048']) ? $data['ttc048'] : null;
-        $this->container['ttc049'] = isset($data['ttc049']) ? $data['ttc049'] : null;
-        $this->container['ttc051'] = isset($data['ttc051']) ? $data['ttc051'] : null;
-        $this->container['ttc052'] = isset($data['ttc052']) ? $data['ttc052'] : null;
-        $this->container['ttc053'] = isset($data['ttc053']) ? $data['ttc053'] : null;
-        $this->container['ttc054'] = isset($data['ttc054']) ? $data['ttc054'] : null;
-        $this->container['ttc055'] = isset($data['ttc055']) ? $data['ttc055'] : null;
-        $this->container['ttc056'] = isset($data['ttc056']) ? $data['ttc056'] : null;
-        $this->container['ttc057'] = isset($data['ttc057']) ? $data['ttc057'] : null;
-        $this->container['ttc058'] = isset($data['ttc058']) ? $data['ttc058'] : null;
-        $this->container['ttc059'] = isset($data['ttc059']) ? $data['ttc059'] : null;
-        $this->container['ttc060'] = isset($data['ttc060']) ? $data['ttc060'] : null;
-        $this->container['ttc061'] = isset($data['ttc061']) ? $data['ttc061'] : null;
-        $this->container['ttc063'] = isset($data['ttc063']) ? $data['ttc063'] : null;
-        $this->container['ttc064'] = isset($data['ttc064']) ? $data['ttc064'] : null;
-        $this->container['ttc065'] = isset($data['ttc065']) ? $data['ttc065'] : null;
-        $this->container['ttc066'] = isset($data['ttc066']) ? $data['ttc066'] : null;
-        $this->container['ttc067'] = isset($data['ttc067']) ? $data['ttc067'] : null;
-        $this->container['ttc068'] = isset($data['ttc068']) ? $data['ttc068'] : null;
-        $this->container['ttc069'] = isset($data['ttc069']) ? $data['ttc069'] : null;
-        $this->container['ttc070'] = isset($data['ttc070']) ? $data['ttc070'] : null;
-        $this->container['tto074'] = isset($data['tto074']) ? $data['tto074'] : null;
-        $this->container['tto075'] = isset($data['tto075']) ? $data['tto075'] : null;
-        $this->container['tto076'] = isset($data['tto076']) ? $data['tto076'] : null;
-        $this->container['tto077'] = isset($data['tto077']) ? $data['tto077'] : null;
-        $this->container['ttp079'] = isset($data['ttp079']) ? $data['ttp079'] : null;
-        $this->container['ttp080'] = isset($data['ttp080']) ? $data['ttp080'] : null;
-        $this->container['ttp084'] = isset($data['ttp084']) ? $data['ttp084'] : null;
-        $this->container['txb001'] = isset($data['txb001']) ? $data['txb001'] : null;
-        $this->container['txb002'] = isset($data['txb002']) ? $data['txb002'] : null;
-        $this->container['txb003'] = isset($data['txb003']) ? $data['txb003'] : null;
-        $this->container['txb004'] = isset($data['txb004']) ? $data['txb004'] : null;
-        $this->container['txb006'] = isset($data['txb006']) ? $data['txb006'] : null;
-        $this->container['txc007'] = isset($data['txc007']) ? $data['txc007'] : null;
-        $this->container['txc009'] = isset($data['txc009']) ? $data['txc009'] : null;
-        $this->container['txc010'] = isset($data['txc010']) ? $data['txc010'] : null;
-        $this->container['txc011'] = isset($data['txc011']) ? $data['txc011'] : null;
-        $this->container['txc012'] = isset($data['txc012']) ? $data['txc012'] : null;
-        $this->container['txo013'] = isset($data['txo013']) ? $data['txo013'] : null;
-        $this->container['txo014'] = isset($data['txo014']) ? $data['txo014'] : null;
-        $this->container['txp015'] = isset($data['txp015']) ? $data['txp015'] : null;
-        $this->container['txp016'] = isset($data['txp016']) ? $data['txp016'] : null;
-        $this->container['txp017'] = isset($data['txp017']) ? $data['txp017'] : null;
-        $this->container['ucc001'] = isset($data['ucc001']) ? $data['ucc001'] : null;
-        $this->container['ucc002'] = isset($data['ucc002']) ? $data['ucc002'] : null;
-        $this->container['ucc003'] = isset($data['ucc003']) ? $data['ucc003'] : null;
-        $this->container['ucc004'] = isset($data['ucc004']) ? $data['ucc004'] : null;
-        $this->container['ucc005'] = isset($data['ucc005']) ? $data['ucc005'] : null;
-        $this->container['ucc006'] = isset($data['ucc006']) ? $data['ucc006'] : null;
-        $this->container['ucc007'] = isset($data['ucc007']) ? $data['ucc007'] : null;
-        $this->container['ucc008'] = isset($data['ucc008']) ? $data['ucc008'] : null;
-        $this->container['ucc009'] = isset($data['ucc009']) ? $data['ucc009'] : null;
-        $this->container['ucc010'] = isset($data['ucc010']) ? $data['ucc010'] : null;
-        $this->container['ucc011'] = isset($data['ucc011']) ? $data['ucc011'] : null;
-        $this->container['ucc012'] = isset($data['ucc012']) ? $data['ucc012'] : null;
-        $this->container['ucc013'] = isset($data['ucc013']) ? $data['ucc013'] : null;
-        $this->container['ucc014'] = isset($data['ucc014']) ? $data['ucc014'] : null;
-        $this->container['ucc015'] = isset($data['ucc015']) ? $data['ucc015'] : null;
-        $this->container['ucc016'] = isset($data['ucc016']) ? $data['ucc016'] : null;
-        $this->container['dmo004'] = isset($data['dmo004']) ? $data['dmo004'] : null;
-        $this->container['dmo014'] = isset($data['dmo014']) ? $data['dmo014'] : null;
+        $this->setIfExists('atc039', $data ?? [], null);
+        $this->setIfExists('ctb019', $data ?? [], null);
+        $this->setIfExists('jdc008', $data ?? [], null);
+        $this->setIfExists('ntb019', $data ?? [], null);
+        $this->setIfExists('ntc032', $data ?? [], null);
+        $this->setIfExists('otb001', $data ?? [], null);
+        $this->setIfExists('otc006', $data ?? [], null);
+        $this->setIfExists('rtb019', $data ?? [], null);
+        $this->setIfExists('rtc048', $data ?? [], null);
+        $this->setIfExists('ttb021', $data ?? [], null);
+        $this->setIfExists('ttb022', $data ?? [], null);
+        $this->setIfExists('ttb028', $data ?? [], null);
+        $this->setIfExists('ttb029', $data ?? [], null);
+        $this->setIfExists('ttb030', $data ?? [], null);
+        $this->setIfExists('ttb031', $data ?? [], null);
+        $this->setIfExists('ttb032', $data ?? [], null);
+        $this->setIfExists('ttc050', $data ?? [], null);
+        $this->setIfExists('ttp085', $data ?? [], null);
+        $this->setIfExists('ttp086', $data ?? [], null);
+        $this->setIfExists('txb005', $data ?? [], null);
+        $this->setIfExists('txc008', $data ?? [], null);
+        $this->setIfExists('acc001', $data ?? [], null);
+        $this->setIfExists('acc002', $data ?? [], null);
+        $this->setIfExists('acc003', $data ?? [], null);
+        $this->setIfExists('acc004', $data ?? [], null);
+        $this->setIfExists('acc005', $data ?? [], null);
+        $this->setIfExists('acc006', $data ?? [], null);
+        $this->setIfExists('acc007', $data ?? [], null);
+        $this->setIfExists('acc008', $data ?? [], null);
+        $this->setIfExists('atb001', $data ?? [], null);
+        $this->setIfExists('atb002', $data ?? [], null);
+        $this->setIfExists('atb003', $data ?? [], null);
+        $this->setIfExists('atb004', $data ?? [], null);
+        $this->setIfExists('atb005', $data ?? [], null);
+        $this->setIfExists('atb006', $data ?? [], null);
+        $this->setIfExists('atb007', $data ?? [], null);
+        $this->setIfExists('atb008', $data ?? [], null);
+        $this->setIfExists('atb009', $data ?? [], null);
+        $this->setIfExists('atb010', $data ?? [], null);
+        $this->setIfExists('atb011', $data ?? [], null);
+        $this->setIfExists('atb012', $data ?? [], null);
+        $this->setIfExists('atb013', $data ?? [], null);
+        $this->setIfExists('atb014', $data ?? [], null);
+        $this->setIfExists('atb015', $data ?? [], null);
+        $this->setIfExists('atb016', $data ?? [], null);
+        $this->setIfExists('atb017', $data ?? [], null);
+        $this->setIfExists('atb018', $data ?? [], null);
+        $this->setIfExists('atb019', $data ?? [], null);
+        $this->setIfExists('atc020', $data ?? [], null);
+        $this->setIfExists('atc021', $data ?? [], null);
+        $this->setIfExists('atc022', $data ?? [], null);
+        $this->setIfExists('atc023', $data ?? [], null);
+        $this->setIfExists('atc024', $data ?? [], null);
+        $this->setIfExists('atc025', $data ?? [], null);
+        $this->setIfExists('atc026', $data ?? [], null);
+        $this->setIfExists('atc027', $data ?? [], null);
+        $this->setIfExists('atc028', $data ?? [], null);
+        $this->setIfExists('atc029', $data ?? [], null);
+        $this->setIfExists('atc030', $data ?? [], null);
+        $this->setIfExists('atc031', $data ?? [], null);
+        $this->setIfExists('atc032', $data ?? [], null);
+        $this->setIfExists('atd034', $data ?? [], null);
+        $this->setIfExists('atd035', $data ?? [], null);
+        $this->setIfExists('atp036', $data ?? [], null);
+        $this->setIfExists('atp037', $data ?? [], null);
+        $this->setIfExists('atp038', $data ?? [], null);
+        $this->setIfExists('bkb001', $data ?? [], null);
+        $this->setIfExists('bkb002', $data ?? [], null);
+        $this->setIfExists('bkb003', $data ?? [], null);
+        $this->setIfExists('bkc004', $data ?? [], null);
+        $this->setIfExists('bkc005', $data ?? [], null);
+        $this->setIfExists('bkc006', $data ?? [], null);
+        $this->setIfExists('bkc007', $data ?? [], null);
+        $this->setIfExists('bkc008', $data ?? [], null);
+        $this->setIfExists('bko009', $data ?? [], null);
+        $this->setIfExists('bko010', $data ?? [], null);
+        $this->setIfExists('bko011', $data ?? [], null);
+        $this->setIfExists('brb001', $data ?? [], null);
+        $this->setIfExists('brb002', $data ?? [], null);
+        $this->setIfExists('brb003', $data ?? [], null);
+        $this->setIfExists('brb004', $data ?? [], null);
+        $this->setIfExists('brb005', $data ?? [], null);
+        $this->setIfExists('brb006', $data ?? [], null);
+        $this->setIfExists('brb007', $data ?? [], null);
+        $this->setIfExists('brc008', $data ?? [], null);
+        $this->setIfExists('brc009', $data ?? [], null);
+        $this->setIfExists('brc010', $data ?? [], null);
+        $this->setIfExists('brc011', $data ?? [], null);
+        $this->setIfExists('brc012', $data ?? [], null);
+        $this->setIfExists('brc013', $data ?? [], null);
+        $this->setIfExists('brc014', $data ?? [], null);
+        $this->setIfExists('bro015', $data ?? [], null);
+        $this->setIfExists('bro016', $data ?? [], null);
+        $this->setIfExists('bro017', $data ?? [], null);
+        $this->setIfExists('brp018', $data ?? [], null);
+        $this->setIfExists('brp019', $data ?? [], null);
+        $this->setIfExists('brp020', $data ?? [], null);
+        $this->setIfExists('brp021', $data ?? [], null);
+        $this->setIfExists('brp022', $data ?? [], null);
+        $this->setIfExists('brp023', $data ?? [], null);
+        $this->setIfExists('clb001', $data ?? [], null);
+        $this->setIfExists('clb002', $data ?? [], null);
+        $this->setIfExists('clb003', $data ?? [], null);
+        $this->setIfExists('clb004', $data ?? [], null);
+        $this->setIfExists('clb005', $data ?? [], null);
+        $this->setIfExists('clc006', $data ?? [], null);
+        $this->setIfExists('clc007', $data ?? [], null);
+        $this->setIfExists('clc008', $data ?? [], null);
+        $this->setIfExists('clc009', $data ?? [], null);
+        $this->setIfExists('clc010', $data ?? [], null);
+        $this->setIfExists('clc011', $data ?? [], null);
+        $this->setIfExists('clc012', $data ?? [], null);
+        $this->setIfExists('clc013', $data ?? [], null);
+        $this->setIfExists('clo014', $data ?? [], null);
+        $this->setIfExists('clo015', $data ?? [], null);
+        $this->setIfExists('clp016', $data ?? [], null);
+        $this->setIfExists('clp017', $data ?? [], null);
+        $this->setIfExists('clp018', $data ?? [], null);
+        $this->setIfExists('clp019', $data ?? [], null);
+        $this->setIfExists('ctb001', $data ?? [], null);
+        $this->setIfExists('ctb002', $data ?? [], null);
+        $this->setIfExists('ctb003', $data ?? [], null);
+        $this->setIfExists('ctb004', $data ?? [], null);
+        $this->setIfExists('ctb005', $data ?? [], null);
+        $this->setIfExists('ctb006', $data ?? [], null);
+        $this->setIfExists('ctb007', $data ?? [], null);
+        $this->setIfExists('ctb008', $data ?? [], null);
+        $this->setIfExists('ctb009', $data ?? [], null);
+        $this->setIfExists('ctb010', $data ?? [], null);
+        $this->setIfExists('ctb011', $data ?? [], null);
+        $this->setIfExists('ctb012', $data ?? [], null);
+        $this->setIfExists('ctb013', $data ?? [], null);
+        $this->setIfExists('ctb014', $data ?? [], null);
+        $this->setIfExists('ctb015', $data ?? [], null);
+        $this->setIfExists('ctb016', $data ?? [], null);
+        $this->setIfExists('ctb017', $data ?? [], null);
+        $this->setIfExists('ctb018', $data ?? [], null);
+        $this->setIfExists('ctc021', $data ?? [], null);
+        $this->setIfExists('ctc022', $data ?? [], null);
+        $this->setIfExists('ctc023', $data ?? [], null);
+        $this->setIfExists('ctc024', $data ?? [], null);
+        $this->setIfExists('ctc025', $data ?? [], null);
+        $this->setIfExists('ctc026', $data ?? [], null);
+        $this->setIfExists('ctc027', $data ?? [], null);
+        $this->setIfExists('ctc028', $data ?? [], null);
+        $this->setIfExists('ctc029', $data ?? [], null);
+        $this->setIfExists('ctc030', $data ?? [], null);
+        $this->setIfExists('ctc031', $data ?? [], null);
+        $this->setIfExists('ctc032', $data ?? [], null);
+        $this->setIfExists('ctc033', $data ?? [], null);
+        $this->setIfExists('ctc034', $data ?? [], null);
+        $this->setIfExists('ctc035', $data ?? [], null);
+        $this->setIfExists('ctc036', $data ?? [], null);
+        $this->setIfExists('ctd038', $data ?? [], null);
+        $this->setIfExists('ctp039', $data ?? [], null);
+        $this->setIfExists('ctp040', $data ?? [], null);
+        $this->setIfExists('ctp041', $data ?? [], null);
+        $this->setIfExists('dmo003', $data ?? [], null);
+        $this->setIfExists('dmo009', $data ?? [], null);
+        $this->setIfExists('dmo013', $data ?? [], null);
+        $this->setIfExists('iqc001', $data ?? [], null);
+        $this->setIfExists('iqc002', $data ?? [], null);
+        $this->setIfExists('iqc003', $data ?? [], null);
+        $this->setIfExists('jdb001', $data ?? [], null);
+        $this->setIfExists('jdb002', $data ?? [], null);
+        $this->setIfExists('jdb003', $data ?? [], null);
+        $this->setIfExists('jdb004', $data ?? [], null);
+        $this->setIfExists('jdb005', $data ?? [], null);
+        $this->setIfExists('jdb006', $data ?? [], null);
+        $this->setIfExists('jdc007', $data ?? [], null);
+        $this->setIfExists('jdc009', $data ?? [], null);
+        $this->setIfExists('jdc010', $data ?? [], null);
+        $this->setIfExists('jdc011', $data ?? [], null);
+        $this->setIfExists('jdc012', $data ?? [], null);
+        $this->setIfExists('jdo013', $data ?? [], null);
+        $this->setIfExists('jdo014', $data ?? [], null);
+        $this->setIfExists('jdp015', $data ?? [], null);
+        $this->setIfExists('jdp016', $data ?? [], null);
+        $this->setIfExists('jdp017', $data ?? [], null);
+        $this->setIfExists('lgc002', $data ?? [], null);
+        $this->setIfExists('lgc003', $data ?? [], null);
+        $this->setIfExists('lgc004', $data ?? [], null);
+        $this->setIfExists('lsb001', $data ?? [], null);
+        $this->setIfExists('lsb002', $data ?? [], null);
+        $this->setIfExists('lsb003', $data ?? [], null);
+        $this->setIfExists('lsb004', $data ?? [], null);
+        $this->setIfExists('lsb005', $data ?? [], null);
+        $this->setIfExists('lsb006', $data ?? [], null);
+        $this->setIfExists('lsb007', $data ?? [], null);
+        $this->setIfExists('lsb008', $data ?? [], null);
+        $this->setIfExists('lsb009', $data ?? [], null);
+        $this->setIfExists('lsc010', $data ?? [], null);
+        $this->setIfExists('lsc011', $data ?? [], null);
+        $this->setIfExists('lsc012', $data ?? [], null);
+        $this->setIfExists('lsc013', $data ?? [], null);
+        $this->setIfExists('lsc014', $data ?? [], null);
+        $this->setIfExists('lsc015', $data ?? [], null);
+        $this->setIfExists('lsc016', $data ?? [], null);
+        $this->setIfExists('lsc017', $data ?? [], null);
+        $this->setIfExists('lsc018', $data ?? [], null);
+        $this->setIfExists('lsc019', $data ?? [], null);
+        $this->setIfExists('lsc020', $data ?? [], null);
+        $this->setIfExists('lsc021', $data ?? [], null);
+        $this->setIfExists('lsc022', $data ?? [], null);
+        $this->setIfExists('lsc023', $data ?? [], null);
+        $this->setIfExists('lsc024', $data ?? [], null);
+        $this->setIfExists('lsc025', $data ?? [], null);
+        $this->setIfExists('lsc026', $data ?? [], null);
+        $this->setIfExists('lsc027', $data ?? [], null);
+        $this->setIfExists('lsc028', $data ?? [], null);
+        $this->setIfExists('lsc029', $data ?? [], null);
+        $this->setIfExists('lsc030', $data ?? [], null);
+        $this->setIfExists('lsc031', $data ?? [], null);
+        $this->setIfExists('lsc032', $data ?? [], null);
+        $this->setIfExists('lsc033', $data ?? [], null);
+        $this->setIfExists('lsp034', $data ?? [], null);
+        $this->setIfExists('lsp035', $data ?? [], null);
+        $this->setIfExists('ntb001', $data ?? [], null);
+        $this->setIfExists('ntb002', $data ?? [], null);
+        $this->setIfExists('ntb003', $data ?? [], null);
+        $this->setIfExists('ntb004', $data ?? [], null);
+        $this->setIfExists('ntb005', $data ?? [], null);
+        $this->setIfExists('ntb006', $data ?? [], null);
+        $this->setIfExists('ntb007', $data ?? [], null);
+        $this->setIfExists('ntb008', $data ?? [], null);
+        $this->setIfExists('ntb009', $data ?? [], null);
+        $this->setIfExists('ntb010', $data ?? [], null);
+        $this->setIfExists('ntb011', $data ?? [], null);
+        $this->setIfExists('ntb012', $data ?? [], null);
+        $this->setIfExists('ntb013', $data ?? [], null);
+        $this->setIfExists('ntb014', $data ?? [], null);
+        $this->setIfExists('ntb015', $data ?? [], null);
+        $this->setIfExists('ntb016', $data ?? [], null);
+        $this->setIfExists('ntb017', $data ?? [], null);
+        $this->setIfExists('ntb018', $data ?? [], null);
+        $this->setIfExists('ntc020', $data ?? [], null);
+        $this->setIfExists('ntc021', $data ?? [], null);
+        $this->setIfExists('ntc022', $data ?? [], null);
+        $this->setIfExists('ntc023', $data ?? [], null);
+        $this->setIfExists('ntc024', $data ?? [], null);
+        $this->setIfExists('ntc025', $data ?? [], null);
+        $this->setIfExists('ntc026', $data ?? [], null);
+        $this->setIfExists('ntc027', $data ?? [], null);
+        $this->setIfExists('ntc028', $data ?? [], null);
+        $this->setIfExists('ntc029', $data ?? [], null);
+        $this->setIfExists('ntc030', $data ?? [], null);
+        $this->setIfExists('ntc031', $data ?? [], null);
+        $this->setIfExists('ntd034', $data ?? [], null);
+        $this->setIfExists('ntd035', $data ?? [], null);
+        $this->setIfExists('ntp036', $data ?? [], null);
+        $this->setIfExists('ntp037', $data ?? [], null);
+        $this->setIfExists('ntp038', $data ?? [], null);
+        $this->setIfExists('ntp039', $data ?? [], null);
+        $this->setIfExists('otb002', $data ?? [], null);
+        $this->setIfExists('otb003', $data ?? [], null);
+        $this->setIfExists('otb004', $data ?? [], null);
+        $this->setIfExists('otb005', $data ?? [], null);
+        $this->setIfExists('otc007', $data ?? [], null);
+        $this->setIfExists('otc008', $data ?? [], null);
+        $this->setIfExists('otc009', $data ?? [], null);
+        $this->setIfExists('otc010', $data ?? [], null);
+        $this->setIfExists('otc011', $data ?? [], null);
+        $this->setIfExists('otd012', $data ?? [], null);
+        $this->setIfExists('otd013', $data ?? [], null);
+        $this->setIfExists('otp014', $data ?? [], null);
+        $this->setIfExists('otp015', $data ?? [], null);
+        $this->setIfExists('otp016', $data ?? [], null);
+        $this->setIfExists('otp017', $data ?? [], null);
+        $this->setIfExists('otp018', $data ?? [], null);
+        $this->setIfExists('otp019', $data ?? [], null);
+        $this->setIfExists('otp020', $data ?? [], null);
+        $this->setIfExists('otp021', $data ?? [], null);
+        $this->setIfExists('pro001', $data ?? [], null);
+        $this->setIfExists('pro002', $data ?? [], null);
+        $this->setIfExists('pro003', $data ?? [], null);
+        $this->setIfExists('rtb001', $data ?? [], null);
+        $this->setIfExists('rtb002', $data ?? [], null);
+        $this->setIfExists('rtb003', $data ?? [], null);
+        $this->setIfExists('rtb004', $data ?? [], null);
+        $this->setIfExists('rtb005', $data ?? [], null);
+        $this->setIfExists('rtb006', $data ?? [], null);
+        $this->setIfExists('rtb007', $data ?? [], null);
+        $this->setIfExists('rtb008', $data ?? [], null);
+        $this->setIfExists('rtb009', $data ?? [], null);
+        $this->setIfExists('rtb010', $data ?? [], null);
+        $this->setIfExists('rtb011', $data ?? [], null);
+        $this->setIfExists('rtb012', $data ?? [], null);
+        $this->setIfExists('rtb013', $data ?? [], null);
+        $this->setIfExists('rtb014', $data ?? [], null);
+        $this->setIfExists('rtb015', $data ?? [], null);
+        $this->setIfExists('rtb016', $data ?? [], null);
+        $this->setIfExists('rtb017', $data ?? [], null);
+        $this->setIfExists('rtb018', $data ?? [], null);
+        $this->setIfExists('rtb020', $data ?? [], null);
+        $this->setIfExists('rtb021', $data ?? [], null);
+        $this->setIfExists('rtb022', $data ?? [], null);
+        $this->setIfExists('rtb023', $data ?? [], null);
+        $this->setIfExists('rtb024', $data ?? [], null);
+        $this->setIfExists('rtb025', $data ?? [], null);
+        $this->setIfExists('rtb026', $data ?? [], null);
+        $this->setIfExists('rtb027', $data ?? [], null);
+        $this->setIfExists('rtb028', $data ?? [], null);
+        $this->setIfExists('rtb029', $data ?? [], null);
+        $this->setIfExists('rtb030', $data ?? [], null);
+        $this->setIfExists('rtb031', $data ?? [], null);
+        $this->setIfExists('rtb032', $data ?? [], null);
+        $this->setIfExists('rtb033', $data ?? [], null);
+        $this->setIfExists('rtb034', $data ?? [], null);
+        $this->setIfExists('rtb035', $data ?? [], null);
+        $this->setIfExists('rtc036', $data ?? [], null);
+        $this->setIfExists('rtc037', $data ?? [], null);
+        $this->setIfExists('rtc038', $data ?? [], null);
+        $this->setIfExists('rtc039', $data ?? [], null);
+        $this->setIfExists('rtc040', $data ?? [], null);
+        $this->setIfExists('rtc041', $data ?? [], null);
+        $this->setIfExists('rtc042', $data ?? [], null);
+        $this->setIfExists('rtc043', $data ?? [], null);
+        $this->setIfExists('rtc044', $data ?? [], null);
+        $this->setIfExists('rtc045', $data ?? [], null);
+        $this->setIfExists('rtc046', $data ?? [], null);
+        $this->setIfExists('rtc047', $data ?? [], null);
+        $this->setIfExists('rtc049', $data ?? [], null);
+        $this->setIfExists('rtc050', $data ?? [], null);
+        $this->setIfExists('rtc051', $data ?? [], null);
+        $this->setIfExists('rtc052', $data ?? [], null);
+        $this->setIfExists('rtc053', $data ?? [], null);
+        $this->setIfExists('rtc054', $data ?? [], null);
+        $this->setIfExists('rtd059', $data ?? [], null);
+        $this->setIfExists('rtd060', $data ?? [], null);
+        $this->setIfExists('rtd061', $data ?? [], null);
+        $this->setIfExists('rtd062', $data ?? [], null);
+        $this->setIfExists('rtd063', $data ?? [], null);
+        $this->setIfExists('rtd064', $data ?? [], null);
+        $this->setIfExists('rtd065', $data ?? [], null);
+        $this->setIfExists('rtd067', $data ?? [], null);
+        $this->setIfExists('rtd068', $data ?? [], null);
+        $this->setIfExists('rtd069', $data ?? [], null);
+        $this->setIfExists('rtd070', $data ?? [], null);
+        $this->setIfExists('rtd071', $data ?? [], null);
+        $this->setIfExists('rtd072', $data ?? [], null);
+        $this->setIfExists('rto077', $data ?? [], null);
+        $this->setIfExists('rto079', $data ?? [], null);
+        $this->setIfExists('rtp081', $data ?? [], null);
+        $this->setIfExists('rtp082', $data ?? [], null);
+        $this->setIfExists('rtp083', $data ?? [], null);
+        $this->setIfExists('rtp086', $data ?? [], null);
+        $this->setIfExists('ttb001', $data ?? [], null);
+        $this->setIfExists('ttb002', $data ?? [], null);
+        $this->setIfExists('ttb003', $data ?? [], null);
+        $this->setIfExists('ttb004', $data ?? [], null);
+        $this->setIfExists('ttb005', $data ?? [], null);
+        $this->setIfExists('ttb006', $data ?? [], null);
+        $this->setIfExists('ttb007', $data ?? [], null);
+        $this->setIfExists('ttb008', $data ?? [], null);
+        $this->setIfExists('ttb009', $data ?? [], null);
+        $this->setIfExists('ttb010', $data ?? [], null);
+        $this->setIfExists('ttb011', $data ?? [], null);
+        $this->setIfExists('ttb012', $data ?? [], null);
+        $this->setIfExists('ttb013', $data ?? [], null);
+        $this->setIfExists('ttb014', $data ?? [], null);
+        $this->setIfExists('ttb015', $data ?? [], null);
+        $this->setIfExists('ttb016', $data ?? [], null);
+        $this->setIfExists('ttb017', $data ?? [], null);
+        $this->setIfExists('ttb018', $data ?? [], null);
+        $this->setIfExists('ttb019', $data ?? [], null);
+        $this->setIfExists('ttb020', $data ?? [], null);
+        $this->setIfExists('ttb023', $data ?? [], null);
+        $this->setIfExists('ttb024', $data ?? [], null);
+        $this->setIfExists('ttb025', $data ?? [], null);
+        $this->setIfExists('ttb026', $data ?? [], null);
+        $this->setIfExists('ttb027', $data ?? [], null);
+        $this->setIfExists('ttb033', $data ?? [], null);
+        $this->setIfExists('ttc035', $data ?? [], null);
+        $this->setIfExists('ttc036', $data ?? [], null);
+        $this->setIfExists('ttc037', $data ?? [], null);
+        $this->setIfExists('ttc038', $data ?? [], null);
+        $this->setIfExists('ttc039', $data ?? [], null);
+        $this->setIfExists('ttc040', $data ?? [], null);
+        $this->setIfExists('ttc041', $data ?? [], null);
+        $this->setIfExists('ttc042', $data ?? [], null);
+        $this->setIfExists('ttc043', $data ?? [], null);
+        $this->setIfExists('ttc044', $data ?? [], null);
+        $this->setIfExists('ttc045', $data ?? [], null);
+        $this->setIfExists('ttc046', $data ?? [], null);
+        $this->setIfExists('ttc047', $data ?? [], null);
+        $this->setIfExists('ttc048', $data ?? [], null);
+        $this->setIfExists('ttc049', $data ?? [], null);
+        $this->setIfExists('ttc051', $data ?? [], null);
+        $this->setIfExists('ttc052', $data ?? [], null);
+        $this->setIfExists('ttc053', $data ?? [], null);
+        $this->setIfExists('ttc054', $data ?? [], null);
+        $this->setIfExists('ttc055', $data ?? [], null);
+        $this->setIfExists('ttc056', $data ?? [], null);
+        $this->setIfExists('ttc057', $data ?? [], null);
+        $this->setIfExists('ttc058', $data ?? [], null);
+        $this->setIfExists('ttc059', $data ?? [], null);
+        $this->setIfExists('ttc060', $data ?? [], null);
+        $this->setIfExists('ttc061', $data ?? [], null);
+        $this->setIfExists('ttc063', $data ?? [], null);
+        $this->setIfExists('ttc064', $data ?? [], null);
+        $this->setIfExists('ttc065', $data ?? [], null);
+        $this->setIfExists('ttc066', $data ?? [], null);
+        $this->setIfExists('ttc067', $data ?? [], null);
+        $this->setIfExists('ttc068', $data ?? [], null);
+        $this->setIfExists('ttc069', $data ?? [], null);
+        $this->setIfExists('ttc070', $data ?? [], null);
+        $this->setIfExists('tto074', $data ?? [], null);
+        $this->setIfExists('tto075', $data ?? [], null);
+        $this->setIfExists('tto076', $data ?? [], null);
+        $this->setIfExists('tto077', $data ?? [], null);
+        $this->setIfExists('ttp079', $data ?? [], null);
+        $this->setIfExists('ttp080', $data ?? [], null);
+        $this->setIfExists('ttp084', $data ?? [], null);
+        $this->setIfExists('txb001', $data ?? [], null);
+        $this->setIfExists('txb002', $data ?? [], null);
+        $this->setIfExists('txb003', $data ?? [], null);
+        $this->setIfExists('txb004', $data ?? [], null);
+        $this->setIfExists('txb006', $data ?? [], null);
+        $this->setIfExists('txc007', $data ?? [], null);
+        $this->setIfExists('txc009', $data ?? [], null);
+        $this->setIfExists('txc010', $data ?? [], null);
+        $this->setIfExists('txc011', $data ?? [], null);
+        $this->setIfExists('txc012', $data ?? [], null);
+        $this->setIfExists('txo013', $data ?? [], null);
+        $this->setIfExists('txo014', $data ?? [], null);
+        $this->setIfExists('txp015', $data ?? [], null);
+        $this->setIfExists('txp016', $data ?? [], null);
+        $this->setIfExists('txp017', $data ?? [], null);
+        $this->setIfExists('ucc001', $data ?? [], null);
+        $this->setIfExists('ucc002', $data ?? [], null);
+        $this->setIfExists('ucc003', $data ?? [], null);
+        $this->setIfExists('ucc004', $data ?? [], null);
+        $this->setIfExists('ucc005', $data ?? [], null);
+        $this->setIfExists('ucc006', $data ?? [], null);
+        $this->setIfExists('ucc007', $data ?? [], null);
+        $this->setIfExists('ucc008', $data ?? [], null);
+        $this->setIfExists('ucc009', $data ?? [], null);
+        $this->setIfExists('ucc010', $data ?? [], null);
+        $this->setIfExists('ucc011', $data ?? [], null);
+        $this->setIfExists('ucc012', $data ?? [], null);
+        $this->setIfExists('ucc013', $data ?? [], null);
+        $this->setIfExists('ucc014', $data ?? [], null);
+        $this->setIfExists('ucc015', $data ?? [], null);
+        $this->setIfExists('ucc016', $data ?? [], null);
+        $this->setIfExists('dmo004', $data ?? [], null);
+        $this->setIfExists('dmo014', $data ?? [], null);
+    }
+
+    /**
+    * Sets $this->container[$variableName] to the given data or to the given default Value; if $variableName
+    * is nullable and its value is set to null in the $fields array, then mark it as "set to null" in the
+    * $this->openAPINullablesSetToNull array
+    *
+    * @param string $variableName
+    * @param array  $fields
+    * @param mixed  $defaultValue
+    */
+    private function setIfExists(string $variableName, array $fields, $defaultValue): void
+    {
+        if (self::isNullable($variableName) && array_key_exists($variableName, $fields) && is_null($fields[$variableName])) {
+            $this->openAPINullablesSetToNull[] = $variableName;
+        }
+
+        $this->container[$variableName] = $fields[$variableName] ?? $defaultValue;
     }
 
     /**
@@ -2859,6 +3389,22 @@ class BizAggregates implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+
+        if (!is_null($this->container['dmo003']) && (mb_strlen($this->container['dmo003']) > 1)) {
+            $invalidProperties[] = "invalid value for 'dmo003', the character length must be smaller than or equal to 1.";
+        }
+
+        if (!is_null($this->container['dmo009']) && (mb_strlen($this->container['dmo009']) > 10)) {
+            $invalidProperties[] = "invalid value for 'dmo009', the character length must be smaller than or equal to 10.";
+        }
+
+        if (!is_null($this->container['dmo013']) && (mb_strlen($this->container['dmo013']) > 4)) {
+            $invalidProperties[] = "invalid value for 'dmo013', the character length must be smaller than or equal to 4.";
+        }
+
+        if (!is_null($this->container['dmo004']) && (mb_strlen($this->container['dmo004']) > 1)) {
+            $invalidProperties[] = "invalid value for 'dmo004', the character length must be smaller than or equal to 1.";
+        }
 
         if (!is_null($this->container['dmo014']) && (mb_strlen($this->container['dmo014']) > 1)) {
             $invalidProperties[] = "invalid value for 'dmo014', the character length must be smaller than or equal to 1.";
@@ -2882,7 +3428,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atc039
      *
-     * @return float
+     * @return float|null
      */
     public function getAtc039()
     {
@@ -2892,12 +3438,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atc039
      *
-     * @param float $atc039 Total number of aged trades
+     * @param float|null $atc039 Total number of aged trades
      *
-     * @return $this
+     * @return self
      */
     public function setAtc039($atc039)
     {
+        if (is_null($atc039)) {
+            throw new \InvalidArgumentException('non-nullable atc039 cannot be null');
+        }
         $this->container['atc039'] = $atc039;
 
         return $this;
@@ -2906,7 +3455,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctb019
      *
-     * @return float
+     * @return float|null
      */
     public function getCtb019()
     {
@@ -2916,12 +3465,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctb019
      *
-     * @param float $ctb019 Total account balance for combined (newly and continuously reported) trades
+     * @param float|null $ctb019 Total account balance for combined (newly and continuously reported) trades
      *
-     * @return $this
+     * @return self
      */
     public function setCtb019($ctb019)
     {
+        if (is_null($ctb019)) {
+            throw new \InvalidArgumentException('non-nullable ctb019 cannot be null');
+        }
         $this->container['ctb019'] = $ctb019;
 
         return $this;
@@ -2930,7 +3482,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets jdc008
      *
-     * @return float
+     * @return float|null
      */
     public function getJdc008()
     {
@@ -2940,12 +3492,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets jdc008
      *
-     * @param float $jdc008 Total number of judgments filed within 24 months of profile date (excluding Released, Satisfied, Abstract, or Vacated)
+     * @param float|null $jdc008 Total number of judgments filed within 24 months of profile date (excluding Released, Satisfied, Abstract, or Vacated)
      *
-     * @return $this
+     * @return self
      */
     public function setJdc008($jdc008)
     {
+        if (is_null($jdc008)) {
+            throw new \InvalidArgumentException('non-nullable jdc008 cannot be null');
+        }
         $this->container['jdc008'] = $jdc008;
 
         return $this;
@@ -2954,7 +3509,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntb019
      *
-     * @return float
+     * @return float|null
      */
     public function getNtb019()
     {
@@ -2964,12 +3519,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntb019
      *
-     * @param float $ntb019 Total account balance for newly reported trades
+     * @param float|null $ntb019 Total account balance for newly reported trades
      *
-     * @return $this
+     * @return self
      */
     public function setNtb019($ntb019)
     {
+        if (is_null($ntb019)) {
+            throw new \InvalidArgumentException('non-nullable ntb019 cannot be null');
+        }
         $this->container['ntb019'] = $ntb019;
 
         return $this;
@@ -2978,7 +3536,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntc032
      *
-     * @return float
+     * @return float|null
      */
     public function getNtc032()
     {
@@ -2988,12 +3546,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntc032
      *
-     * @param float $ntc032 Total number of newly reported trades
+     * @param float|null $ntc032 Total number of newly reported trades
      *
-     * @return $this
+     * @return self
      */
     public function setNtc032($ntc032)
     {
+        if (is_null($ntc032)) {
+            throw new \InvalidArgumentException('non-nullable ntc032 cannot be null');
+        }
         $this->container['ntc032'] = $ntc032;
 
         return $this;
@@ -3002,7 +3563,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets otb001
      *
-     * @return float
+     * @return float|null
      */
     public function getOtb001()
     {
@@ -3012,12 +3573,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets otb001
      *
-     * @param float $otb001 Total balance of other trades classified as Finance
+     * @param float|null $otb001 Total balance of other trades classified as Finance
      *
-     * @return $this
+     * @return self
      */
     public function setOtb001($otb001)
     {
+        if (is_null($otb001)) {
+            throw new \InvalidArgumentException('non-nullable otb001 cannot be null');
+        }
         $this->container['otb001'] = $otb001;
 
         return $this;
@@ -3026,7 +3590,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets otc006
      *
-     * @return float
+     * @return float|null
      */
     public function getOtc006()
     {
@@ -3036,12 +3600,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets otc006
      *
-     * @param float $otc006 Total number of other trades classified as Finance
+     * @param float|null $otc006 Total number of other trades classified as Finance
      *
-     * @return $this
+     * @return self
      */
     public function setOtc006($otc006)
     {
+        if (is_null($otc006)) {
+            throw new \InvalidArgumentException('non-nullable otc006 cannot be null');
+        }
         $this->container['otc006'] = $otc006;
 
         return $this;
@@ -3050,7 +3617,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtb019
      *
-     * @return float
+     * @return float|null
      */
     public function getRtb019()
     {
@@ -3060,12 +3627,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtb019
      *
-     * @param float $rtb019 Total sum of account balance for regular trades
+     * @param float|null $rtb019 Total sum of account balance for regular trades
      *
-     * @return $this
+     * @return self
      */
     public function setRtb019($rtb019)
     {
+        if (is_null($rtb019)) {
+            throw new \InvalidArgumentException('non-nullable rtb019 cannot be null');
+        }
         $this->container['rtb019'] = $rtb019;
 
         return $this;
@@ -3074,7 +3644,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtc048
      *
-     * @return float
+     * @return float|null
      */
     public function getRtc048()
     {
@@ -3084,12 +3654,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtc048
      *
-     * @param float $rtc048 Total number of regular trades
+     * @param float|null $rtc048 Total number of regular trades
      *
-     * @return $this
+     * @return self
      */
     public function setRtc048($rtc048)
     {
+        if (is_null($rtc048)) {
+            throw new \InvalidArgumentException('non-nullable rtc048 cannot be null');
+        }
         $this->container['rtc048'] = $rtc048;
 
         return $this;
@@ -3098,7 +3671,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttb021
      *
-     * @return float
+     * @return float|null
      */
     public function getTtb021()
     {
@@ -3108,12 +3681,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttb021
      *
-     * @param float $ttb021 Total sum of account balance
+     * @param float|null $ttb021 Total sum of account balance
      *
-     * @return $this
+     * @return self
      */
     public function setTtb021($ttb021)
     {
+        if (is_null($ttb021)) {
+            throw new \InvalidArgumentException('non-nullable ttb021 cannot be null');
+        }
         $this->container['ttb021'] = $ttb021;
 
         return $this;
@@ -3122,7 +3698,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttb022
      *
-     * @return float
+     * @return float|null
      */
     public function getTtb022()
     {
@@ -3132,12 +3708,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttb022
      *
-     * @param float $ttb022 Total sum of high credit balance
+     * @param float|null $ttb022 Total sum of high credit balance
      *
-     * @return $this
+     * @return self
      */
     public function setTtb022($ttb022)
     {
+        if (is_null($ttb022)) {
+            throw new \InvalidArgumentException('non-nullable ttb022 cannot be null');
+        }
         $this->container['ttb022'] = $ttb022;
 
         return $this;
@@ -3146,7 +3725,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttb028
      *
-     * @return float
+     * @return float|null
      */
     public function getTtb028()
     {
@@ -3156,12 +3735,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttb028
      *
-     * @param float $ttb028 Total account balance that is current across all trades
+     * @param float|null $ttb028 Total account balance that is current across all trades
      *
-     * @return $this
+     * @return self
      */
     public function setTtb028($ttb028)
     {
+        if (is_null($ttb028)) {
+            throw new \InvalidArgumentException('non-nullable ttb028 cannot be null');
+        }
         $this->container['ttb028'] = $ttb028;
 
         return $this;
@@ -3170,7 +3752,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttb029
      *
-     * @return float
+     * @return float|null
      */
     public function getTtb029()
     {
@@ -3180,12 +3762,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttb029
      *
-     * @param float $ttb029 Total account balance that is 1-30 DBT across all trades
+     * @param float|null $ttb029 Total account balance that is 1-30 DBT across all trades
      *
-     * @return $this
+     * @return self
      */
     public function setTtb029($ttb029)
     {
+        if (is_null($ttb029)) {
+            throw new \InvalidArgumentException('non-nullable ttb029 cannot be null');
+        }
         $this->container['ttb029'] = $ttb029;
 
         return $this;
@@ -3194,7 +3779,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttb030
      *
-     * @return float
+     * @return float|null
      */
     public function getTtb030()
     {
@@ -3204,12 +3789,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttb030
      *
-     * @param float $ttb030 Total Sum of account balance that is 31-60 across all trades
+     * @param float|null $ttb030 Total Sum of account balance that is 31-60 across all trades
      *
-     * @return $this
+     * @return self
      */
     public function setTtb030($ttb030)
     {
+        if (is_null($ttb030)) {
+            throw new \InvalidArgumentException('non-nullable ttb030 cannot be null');
+        }
         $this->container['ttb030'] = $ttb030;
 
         return $this;
@@ -3218,7 +3806,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttb031
      *
-     * @return float
+     * @return float|null
      */
     public function getTtb031()
     {
@@ -3228,12 +3816,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttb031
      *
-     * @param float $ttb031 Total Sum of account balance that is 61-90 across all trades
+     * @param float|null $ttb031 Total Sum of account balance that is 61-90 across all trades
      *
-     * @return $this
+     * @return self
      */
     public function setTtb031($ttb031)
     {
+        if (is_null($ttb031)) {
+            throw new \InvalidArgumentException('non-nullable ttb031 cannot be null');
+        }
         $this->container['ttb031'] = $ttb031;
 
         return $this;
@@ -3242,7 +3833,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttb032
      *
-     * @return float
+     * @return float|null
      */
     public function getTtb032()
     {
@@ -3252,12 +3843,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttb032
      *
-     * @param float $ttb032 Total Sum of account balance that is 91+ across all trades
+     * @param float|null $ttb032 Total Sum of account balance that is 91+ across all trades
      *
-     * @return $this
+     * @return self
      */
     public function setTtb032($ttb032)
     {
+        if (is_null($ttb032)) {
+            throw new \InvalidArgumentException('non-nullable ttb032 cannot be null');
+        }
         $this->container['ttb032'] = $ttb032;
 
         return $this;
@@ -3266,7 +3860,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttc050
      *
-     * @return float
+     * @return float|null
      */
     public function getTtc050()
     {
@@ -3276,12 +3870,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttc050
      *
-     * @param float $ttc050 Total number of trades
+     * @param float|null $ttc050 Total number of trades
      *
-     * @return $this
+     * @return self
      */
     public function setTtc050($ttc050)
     {
+        if (is_null($ttc050)) {
+            throw new \InvalidArgumentException('non-nullable ttc050 cannot be null');
+        }
         $this->container['ttc050'] = $ttc050;
 
         return $this;
@@ -3290,7 +3887,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttp085
      *
-     * @return float
+     * @return float|null
      */
     public function getTtp085()
     {
@@ -3300,12 +3897,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttp085
      *
-     * @param float $ttp085 Percent of Total trades balance to Total Balance
+     * @param float|null $ttp085 Percent of Total trades balance to Total Balance
      *
-     * @return $this
+     * @return self
      */
     public function setTtp085($ttp085)
     {
+        if (is_null($ttp085)) {
+            throw new \InvalidArgumentException('non-nullable ttp085 cannot be null');
+        }
         $this->container['ttp085'] = $ttp085;
 
         return $this;
@@ -3314,7 +3914,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttp086
      *
-     * @return float
+     * @return float|null
      */
     public function getTtp086()
     {
@@ -3324,12 +3924,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttp086
      *
-     * @param float $ttp086 Percent of Total number of trades to Total number of trades
+     * @param float|null $ttp086 Percent of Total number of trades to Total number of trades
      *
-     * @return $this
+     * @return self
      */
     public function setTtp086($ttp086)
     {
+        if (is_null($ttp086)) {
+            throw new \InvalidArgumentException('non-nullable ttp086 cannot be null');
+        }
         $this->container['ttp086'] = $ttp086;
 
         return $this;
@@ -3338,7 +3941,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets txb005
      *
-     * @return float
+     * @return float|null
      */
     public function getTxb005()
     {
@@ -3348,12 +3951,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets txb005
      *
-     * @param float $txb005 Total liability amount for tax liens filed within t 24 months of profile date
+     * @param float|null $txb005 Total liability amount for tax liens filed within t 24 months of profile date
      *
-     * @return $this
+     * @return self
      */
     public function setTxb005($txb005)
     {
+        if (is_null($txb005)) {
+            throw new \InvalidArgumentException('non-nullable txb005 cannot be null');
+        }
         $this->container['txb005'] = $txb005;
 
         return $this;
@@ -3362,7 +3968,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets txc008
      *
-     * @return float
+     * @return float|null
      */
     public function getTxc008()
     {
@@ -3372,12 +3978,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets txc008
      *
-     * @param float $txc008 Total number of tax liens filed within 24 months of profile date
+     * @param float|null $txc008 Total number of tax liens filed within 24 months of profile date
      *
-     * @return $this
+     * @return self
      */
     public function setTxc008($txc008)
     {
+        if (is_null($txc008)) {
+            throw new \InvalidArgumentException('non-nullable txc008 cannot be null');
+        }
         $this->container['txc008'] = $txc008;
 
         return $this;
@@ -3386,7 +3995,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets acc001
      *
-     * @return float
+     * @return float|null
      */
     public function getAcc001()
     {
@@ -3396,12 +4005,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets acc001
      *
-     * @param float $acc001 Total number of active Trades within the last 12 months
+     * @param float|null $acc001 Total number of active Trades within the last 12 months
      *
-     * @return $this
+     * @return self
      */
     public function setAcc001($acc001)
     {
+        if (is_null($acc001)) {
+            throw new \InvalidArgumentException('non-nullable acc001 cannot be null');
+        }
         $this->container['acc001'] = $acc001;
 
         return $this;
@@ -3410,7 +4022,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets acc002
      *
-     * @return float
+     * @return float|null
      */
     public function getAcc002()
     {
@@ -3420,12 +4032,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets acc002
      *
-     * @param float $acc002 Total number of active Trades within the last 6 months
+     * @param float|null $acc002 Total number of active Trades within the last 6 months
      *
-     * @return $this
+     * @return self
      */
     public function setAcc002($acc002)
     {
+        if (is_null($acc002)) {
+            throw new \InvalidArgumentException('non-nullable acc002 cannot be null');
+        }
         $this->container['acc002'] = $acc002;
 
         return $this;
@@ -3434,7 +4049,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets acc003
      *
-     * @return float
+     * @return float|null
      */
     public function getAcc003()
     {
@@ -3444,12 +4059,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets acc003
      *
-     * @param float $acc003 Total number of active trades with a payment indicator equal to 1 (the DBT is unknown, compared to the average DBT for that business category)
+     * @param float|null $acc003 Total number of active trades with a payment indicator equal to 1 (the DBT is unknown, compared to the average DBT for that business category)
      *
-     * @return $this
+     * @return self
      */
     public function setAcc003($acc003)
     {
+        if (is_null($acc003)) {
+            throw new \InvalidArgumentException('non-nullable acc003 cannot be null');
+        }
         $this->container['acc003'] = $acc003;
 
         return $this;
@@ -3458,7 +4076,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets acc004
      *
-     * @return float
+     * @return float|null
      */
     public function getAcc004()
     {
@@ -3468,12 +4086,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets acc004
      *
-     * @param float $acc004 Total number of active trades with a payment indicator equal to (the DBT is five days lower than the average DBT for that business category), excluding inactive trades
+     * @param float|null $acc004 Total number of active trades with a payment indicator equal to (the DBT is five days lower than the average DBT for that business category), excluding inactive trades
      *
-     * @return $this
+     * @return self
      */
     public function setAcc004($acc004)
     {
+        if (is_null($acc004)) {
+            throw new \InvalidArgumentException('non-nullable acc004 cannot be null');
+        }
         $this->container['acc004'] = $acc004;
 
         return $this;
@@ -3482,7 +4103,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets acc005
      *
-     * @return float
+     * @return float|null
      */
     public function getAcc005()
     {
@@ -3492,12 +4113,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets acc005
      *
-     * @param float $acc005 Total number of active trades with a payment indicator equal to (the DBT is higher than the average DBT for that business category)
+     * @param float|null $acc005 Total number of active trades with a payment indicator equal to (the DBT is higher than the average DBT for that business category)
      *
-     * @return $this
+     * @return self
      */
     public function setAcc005($acc005)
     {
+        if (is_null($acc005)) {
+            throw new \InvalidArgumentException('non-nullable acc005 cannot be null');
+        }
         $this->container['acc005'] = $acc005;
 
         return $this;
@@ -3506,7 +4130,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets acc006
      *
-     * @return float
+     * @return float|null
      */
     public function getAcc006()
     {
@@ -3516,12 +4140,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets acc006
      *
-     * @param float $acc006 Total number of active trades with a payment indicator equal to (the DBT is about the same as the average DBT for that business category)
+     * @param float|null $acc006 Total number of active trades with a payment indicator equal to (the DBT is about the same as the average DBT for that business category)
      *
-     * @return $this
+     * @return self
      */
     public function setAcc006($acc006)
     {
+        if (is_null($acc006)) {
+            throw new \InvalidArgumentException('non-nullable acc006 cannot be null');
+        }
         $this->container['acc006'] = $acc006;
 
         return $this;
@@ -3530,7 +4157,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets acc007
      *
-     * @return float
+     * @return float|null
      */
     public function getAcc007()
     {
@@ -3540,12 +4167,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets acc007
      *
-     * @param float $acc007 Total number of active trades with zero balance
+     * @param float|null $acc007 Total number of active trades with zero balance
      *
-     * @return $this
+     * @return self
      */
     public function setAcc007($acc007)
     {
+        if (is_null($acc007)) {
+            throw new \InvalidArgumentException('non-nullable acc007 cannot be null');
+        }
         $this->container['acc007'] = $acc007;
 
         return $this;
@@ -3554,7 +4184,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets acc008
      *
-     * @return float
+     * @return float|null
      */
     public function getAcc008()
     {
@@ -3564,12 +4194,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets acc008
      *
-     * @param float $acc008 Total number of Total trades with zero balance
+     * @param float|null $acc008 Total number of Total trades with zero balance
      *
-     * @return $this
+     * @return self
      */
     public function setAcc008($acc008)
     {
+        if (is_null($acc008)) {
+            throw new \InvalidArgumentException('non-nullable acc008 cannot be null');
+        }
         $this->container['acc008'] = $acc008;
 
         return $this;
@@ -3578,7 +4211,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atb001
      *
-     * @return float
+     * @return float|null
      */
     public function getAtb001()
     {
@@ -3588,12 +4221,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atb001
      *
-     * @param float $atb001 Total balance of aged trades
+     * @param float|null $atb001 Total balance of aged trades
      *
-     * @return $this
+     * @return self
      */
     public function setAtb001($atb001)
     {
+        if (is_null($atb001)) {
+            throw new \InvalidArgumentException('non-nullable atb001 cannot be null');
+        }
         $this->container['atb001'] = $atb001;
 
         return $this;
@@ -3602,7 +4238,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atb002
      *
-     * @return float
+     * @return float|null
      */
     public function getAtb002()
     {
@@ -3612,12 +4248,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atb002
      *
-     * @param float $atb002 Total balance of aged trades that is 1-30 days delinquent
+     * @param float|null $atb002 Total balance of aged trades that is 1-30 days delinquent
      *
-     * @return $this
+     * @return self
      */
     public function setAtb002($atb002)
     {
+        if (is_null($atb002)) {
+            throw new \InvalidArgumentException('non-nullable atb002 cannot be null');
+        }
         $this->container['atb002'] = $atb002;
 
         return $this;
@@ -3626,7 +4265,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atb003
      *
-     * @return float
+     * @return float|null
      */
     public function getAtb003()
     {
@@ -3636,12 +4275,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atb003
      *
-     * @param float $atb003 Total balance of aged trades that is 31-60 days delinquent
+     * @param float|null $atb003 Total balance of aged trades that is 31-60 days delinquent
      *
-     * @return $this
+     * @return self
      */
     public function setAtb003($atb003)
     {
+        if (is_null($atb003)) {
+            throw new \InvalidArgumentException('non-nullable atb003 cannot be null');
+        }
         $this->container['atb003'] = $atb003;
 
         return $this;
@@ -3650,7 +4292,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atb004
      *
-     * @return float
+     * @return float|null
      */
     public function getAtb004()
     {
@@ -3660,12 +4302,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atb004
      *
-     * @param float $atb004 Total balance of aged trades that is 61-90 days delinquent
+     * @param float|null $atb004 Total balance of aged trades that is 61-90 days delinquent
      *
-     * @return $this
+     * @return self
      */
     public function setAtb004($atb004)
     {
+        if (is_null($atb004)) {
+            throw new \InvalidArgumentException('non-nullable atb004 cannot be null');
+        }
         $this->container['atb004'] = $atb004;
 
         return $this;
@@ -3674,7 +4319,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atb005
      *
-     * @return float
+     * @return float|null
      */
     public function getAtb005()
     {
@@ -3684,12 +4329,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atb005
      *
-     * @param float $atb005 Total balance of aged trades that is 91+ days delinquent
+     * @param float|null $atb005 Total balance of aged trades that is 91+ days delinquent
      *
-     * @return $this
+     * @return self
      */
     public function setAtb005($atb005)
     {
+        if (is_null($atb005)) {
+            throw new \InvalidArgumentException('non-nullable atb005 cannot be null');
+        }
         $this->container['atb005'] = $atb005;
 
         return $this;
@@ -3698,7 +4346,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atb006
      *
-     * @return float
+     * @return float|null
      */
     public function getAtb006()
     {
@@ -3708,12 +4356,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atb006
      *
-     * @param float $atb006 Total balance of aged trades that is current
+     * @param float|null $atb006 Total balance of aged trades that is current
      *
-     * @return $this
+     * @return self
      */
     public function setAtb006($atb006)
     {
+        if (is_null($atb006)) {
+            throw new \InvalidArgumentException('non-nullable atb006 cannot be null');
+        }
         $this->container['atb006'] = $atb006;
 
         return $this;
@@ -3722,7 +4373,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atb007
      *
-     * @return float
+     * @return float|null
      */
     public function getAtb007()
     {
@@ -3732,12 +4383,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atb007
      *
-     * @param float $atb007 Total balance across all aged trades with trade's worst delinquency status = current
+     * @param float|null $atb007 Total balance across all aged trades with trade's worst delinquency status = current
      *
-     * @return $this
+     * @return self
      */
     public function setAtb007($atb007)
     {
+        if (is_null($atb007)) {
+            throw new \InvalidArgumentException('non-nullable atb007 cannot be null');
+        }
         $this->container['atb007'] = $atb007;
 
         return $this;
@@ -3746,7 +4400,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atb008
      *
-     * @return float
+     * @return float|null
      */
     public function getAtb008()
     {
@@ -3756,12 +4410,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atb008
      *
-     * @param float $atb008 Total balance across all aged trades with trade's worst delinquency status = 1-30 days past due
+     * @param float|null $atb008 Total balance across all aged trades with trade's worst delinquency status = 1-30 days past due
      *
-     * @return $this
+     * @return self
      */
     public function setAtb008($atb008)
     {
+        if (is_null($atb008)) {
+            throw new \InvalidArgumentException('non-nullable atb008 cannot be null');
+        }
         $this->container['atb008'] = $atb008;
 
         return $this;
@@ -3770,7 +4427,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atb009
      *
-     * @return float
+     * @return float|null
      */
     public function getAtb009()
     {
@@ -3780,12 +4437,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atb009
      *
-     * @param float $atb009 Total balance across all aged trades with trade's worst delinquency status = 31-60 days past due
+     * @param float|null $atb009 Total balance across all aged trades with trade's worst delinquency status = 31-60 days past due
      *
-     * @return $this
+     * @return self
      */
     public function setAtb009($atb009)
     {
+        if (is_null($atb009)) {
+            throw new \InvalidArgumentException('non-nullable atb009 cannot be null');
+        }
         $this->container['atb009'] = $atb009;
 
         return $this;
@@ -3794,7 +4454,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atb010
      *
-     * @return float
+     * @return float|null
      */
     public function getAtb010()
     {
@@ -3804,12 +4464,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atb010
      *
-     * @param float $atb010 Total balance across all aged trades with trade's worst delinquency status = 61-90 days past due
+     * @param float|null $atb010 Total balance across all aged trades with trade's worst delinquency status = 61-90 days past due
      *
-     * @return $this
+     * @return self
      */
     public function setAtb010($atb010)
     {
+        if (is_null($atb010)) {
+            throw new \InvalidArgumentException('non-nullable atb010 cannot be null');
+        }
         $this->container['atb010'] = $atb010;
 
         return $this;
@@ -3818,7 +4481,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atb011
      *
-     * @return float
+     * @return float|null
      */
     public function getAtb011()
     {
@@ -3828,12 +4491,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atb011
      *
-     * @param float $atb011 Total balance across all aged trades with trade's worst delinquency status = 91+ days past due
+     * @param float|null $atb011 Total balance across all aged trades with trade's worst delinquency status = 91+ days past due
      *
-     * @return $this
+     * @return self
      */
     public function setAtb011($atb011)
     {
+        if (is_null($atb011)) {
+            throw new \InvalidArgumentException('non-nullable atb011 cannot be null');
+        }
         $this->container['atb011'] = $atb011;
 
         return $this;
@@ -3842,7 +4508,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atb012
      *
-     * @return float
+     * @return float|null
      */
     public function getAtb012()
     {
@@ -3852,12 +4518,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atb012
      *
-     * @param float $atb012 Total balance across all aged trades with trade worst status = current
+     * @param float|null $atb012 Total balance across all aged trades with trade worst status = current
      *
-     * @return $this
+     * @return self
      */
     public function setAtb012($atb012)
     {
+        if (is_null($atb012)) {
+            throw new \InvalidArgumentException('non-nullable atb012 cannot be null');
+        }
         $this->container['atb012'] = $atb012;
 
         return $this;
@@ -3866,7 +4535,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atb013
      *
-     * @return float
+     * @return float|null
      */
     public function getAtb013()
     {
@@ -3876,12 +4545,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atb013
      *
-     * @param float $atb013 Total balance across all aged trades with trade worst status = 1-30 days past due
+     * @param float|null $atb013 Total balance across all aged trades with trade worst status = 1-30 days past due
      *
-     * @return $this
+     * @return self
      */
     public function setAtb013($atb013)
     {
+        if (is_null($atb013)) {
+            throw new \InvalidArgumentException('non-nullable atb013 cannot be null');
+        }
         $this->container['atb013'] = $atb013;
 
         return $this;
@@ -3890,7 +4562,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atb014
      *
-     * @return float
+     * @return float|null
      */
     public function getAtb014()
     {
@@ -3900,12 +4572,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atb014
      *
-     * @param float $atb014 Total balance across all aged trades with trade's worst status is a derogatory comment (bankrupcy, judgment, lien etc)
+     * @param float|null $atb014 Total balance across all aged trades with trade's worst status is a derogatory comment (bankrupcy, judgment, lien etc)
      *
-     * @return $this
+     * @return self
      */
     public function setAtb014($atb014)
     {
+        if (is_null($atb014)) {
+            throw new \InvalidArgumentException('non-nullable atb014 cannot be null');
+        }
         $this->container['atb014'] = $atb014;
 
         return $this;
@@ -3914,7 +4589,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atb015
      *
-     * @return float
+     * @return float|null
      */
     public function getAtb015()
     {
@@ -3924,12 +4599,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atb015
      *
-     * @param float $atb015 Total balance across all aged trades with trade's worst status = 31-60 days past due
+     * @param float|null $atb015 Total balance across all aged trades with trade's worst status = 31-60 days past due
      *
-     * @return $this
+     * @return self
      */
     public function setAtb015($atb015)
     {
+        if (is_null($atb015)) {
+            throw new \InvalidArgumentException('non-nullable atb015 cannot be null');
+        }
         $this->container['atb015'] = $atb015;
 
         return $this;
@@ -3938,7 +4616,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atb016
      *
-     * @return float
+     * @return float|null
      */
     public function getAtb016()
     {
@@ -3948,12 +4626,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atb016
      *
-     * @param float $atb016 Total balance across all aged trades with trade's worst status = 61-90 days past due
+     * @param float|null $atb016 Total balance across all aged trades with trade's worst status = 61-90 days past due
      *
-     * @return $this
+     * @return self
      */
     public function setAtb016($atb016)
     {
+        if (is_null($atb016)) {
+            throw new \InvalidArgumentException('non-nullable atb016 cannot be null');
+        }
         $this->container['atb016'] = $atb016;
 
         return $this;
@@ -3962,7 +4643,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atb017
      *
-     * @return float
+     * @return float|null
      */
     public function getAtb017()
     {
@@ -3972,12 +4653,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atb017
      *
-     * @param float $atb017 Total balance across all aged trades with trade's worst status = 91+ days past due
+     * @param float|null $atb017 Total balance across all aged trades with trade's worst status = 91+ days past due
      *
-     * @return $this
+     * @return self
      */
     public function setAtb017($atb017)
     {
+        if (is_null($atb017)) {
+            throw new \InvalidArgumentException('non-nullable atb017 cannot be null');
+        }
         $this->container['atb017'] = $atb017;
 
         return $this;
@@ -3986,7 +4670,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atb018
      *
-     * @return float
+     * @return float|null
      */
     public function getAtb018()
     {
@@ -3996,12 +4680,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atb018
      *
-     * @param float $atb018 Total highest balance in past 12 months across all aged trades
+     * @param float|null $atb018 Total highest balance in past 12 months across all aged trades
      *
-     * @return $this
+     * @return self
      */
     public function setAtb018($atb018)
     {
+        if (is_null($atb018)) {
+            throw new \InvalidArgumentException('non-nullable atb018 cannot be null');
+        }
         $this->container['atb018'] = $atb018;
 
         return $this;
@@ -4010,7 +4697,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atb019
      *
-     * @return float
+     * @return float|null
      */
     public function getAtb019()
     {
@@ -4020,12 +4707,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atb019
      *
-     * @param float $atb019 Total balance for aged trades with no reported information within 4 months of the profile date
+     * @param float|null $atb019 Total balance for aged trades with no reported information within 4 months of the profile date
      *
-     * @return $this
+     * @return self
      */
     public function setAtb019($atb019)
     {
+        if (is_null($atb019)) {
+            throw new \InvalidArgumentException('non-nullable atb019 cannot be null');
+        }
         $this->container['atb019'] = $atb019;
 
         return $this;
@@ -4034,7 +4724,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atc020
      *
-     * @return float
+     * @return float|null
      */
     public function getAtc020()
     {
@@ -4044,12 +4734,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atc020
      *
-     * @param float $atc020 Total number of aged trades
+     * @param float|null $atc020 Total number of aged trades
      *
-     * @return $this
+     * @return self
      */
     public function setAtc020($atc020)
     {
+        if (is_null($atc020)) {
+            throw new \InvalidArgumentException('non-nullable atc020 cannot be null');
+        }
         $this->container['atc020'] = $atc020;
 
         return $this;
@@ -4058,7 +4751,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atc021
      *
-     * @return float
+     * @return float|null
      */
     public function getAtc021()
     {
@@ -4068,12 +4761,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atc021
      *
-     * @param float $atc021 Total number of aged trades with trade's worst delinquency status = current
+     * @param float|null $atc021 Total number of aged trades with trade's worst delinquency status = current
      *
-     * @return $this
+     * @return self
      */
     public function setAtc021($atc021)
     {
+        if (is_null($atc021)) {
+            throw new \InvalidArgumentException('non-nullable atc021 cannot be null');
+        }
         $this->container['atc021'] = $atc021;
 
         return $this;
@@ -4082,7 +4778,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atc022
      *
-     * @return float
+     * @return float|null
      */
     public function getAtc022()
     {
@@ -4092,12 +4788,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atc022
      *
-     * @param float $atc022 Total number of aged trades with trade's worst delinquency status = 1-30 days past due
+     * @param float|null $atc022 Total number of aged trades with trade's worst delinquency status = 1-30 days past due
      *
-     * @return $this
+     * @return self
      */
     public function setAtc022($atc022)
     {
+        if (is_null($atc022)) {
+            throw new \InvalidArgumentException('non-nullable atc022 cannot be null');
+        }
         $this->container['atc022'] = $atc022;
 
         return $this;
@@ -4106,7 +4805,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atc023
      *
-     * @return float
+     * @return float|null
      */
     public function getAtc023()
     {
@@ -4116,12 +4815,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atc023
      *
-     * @param float $atc023 Total number of aged trades with trade's worst delinquency status = 31-60 days past due
+     * @param float|null $atc023 Total number of aged trades with trade's worst delinquency status = 31-60 days past due
      *
-     * @return $this
+     * @return self
      */
     public function setAtc023($atc023)
     {
+        if (is_null($atc023)) {
+            throw new \InvalidArgumentException('non-nullable atc023 cannot be null');
+        }
         $this->container['atc023'] = $atc023;
 
         return $this;
@@ -4130,7 +4832,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atc024
      *
-     * @return float
+     * @return float|null
      */
     public function getAtc024()
     {
@@ -4140,12 +4842,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atc024
      *
-     * @param float $atc024 Total number of aged trades with trade's worst delinquency status = 61-90 days past due
+     * @param float|null $atc024 Total number of aged trades with trade's worst delinquency status = 61-90 days past due
      *
-     * @return $this
+     * @return self
      */
     public function setAtc024($atc024)
     {
+        if (is_null($atc024)) {
+            throw new \InvalidArgumentException('non-nullable atc024 cannot be null');
+        }
         $this->container['atc024'] = $atc024;
 
         return $this;
@@ -4154,7 +4859,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atc025
      *
-     * @return float
+     * @return float|null
      */
     public function getAtc025()
     {
@@ -4164,12 +4869,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atc025
      *
-     * @param float $atc025 Total number of aged trades with trade's worst delinquency status = 91+ days past due
+     * @param float|null $atc025 Total number of aged trades with trade's worst delinquency status = 91+ days past due
      *
-     * @return $this
+     * @return self
      */
     public function setAtc025($atc025)
     {
+        if (is_null($atc025)) {
+            throw new \InvalidArgumentException('non-nullable atc025 cannot be null');
+        }
         $this->container['atc025'] = $atc025;
 
         return $this;
@@ -4178,7 +4886,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atc026
      *
-     * @return float
+     * @return float|null
      */
     public function getAtc026()
     {
@@ -4188,12 +4896,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atc026
      *
-     * @param float $atc026 Total number of aged trades across all aged trades with trade's worst status = current
+     * @param float|null $atc026 Total number of aged trades across all aged trades with trade's worst status = current
      *
-     * @return $this
+     * @return self
      */
     public function setAtc026($atc026)
     {
+        if (is_null($atc026)) {
+            throw new \InvalidArgumentException('non-nullable atc026 cannot be null');
+        }
         $this->container['atc026'] = $atc026;
 
         return $this;
@@ -4202,7 +4913,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atc027
      *
-     * @return float
+     * @return float|null
      */
     public function getAtc027()
     {
@@ -4212,12 +4923,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atc027
      *
-     * @param float $atc027 Total number of aged trades across all aged trades with trade's worst status = 1-30 days past due
+     * @param float|null $atc027 Total number of aged trades across all aged trades with trade's worst status = 1-30 days past due
      *
-     * @return $this
+     * @return self
      */
     public function setAtc027($atc027)
     {
+        if (is_null($atc027)) {
+            throw new \InvalidArgumentException('non-nullable atc027 cannot be null');
+        }
         $this->container['atc027'] = $atc027;
 
         return $this;
@@ -4226,7 +4940,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atc028
      *
-     * @return float
+     * @return float|null
      */
     public function getAtc028()
     {
@@ -4236,12 +4950,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atc028
      *
-     * @param float $atc028 Total number of aged trades across all aged trades with trade's worst status is a derogatory comment (bankrupcy, judgment, lien etc)
+     * @param float|null $atc028 Total number of aged trades across all aged trades with trade's worst status is a derogatory comment (bankrupcy, judgment, lien etc)
      *
-     * @return $this
+     * @return self
      */
     public function setAtc028($atc028)
     {
+        if (is_null($atc028)) {
+            throw new \InvalidArgumentException('non-nullable atc028 cannot be null');
+        }
         $this->container['atc028'] = $atc028;
 
         return $this;
@@ -4250,7 +4967,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atc029
      *
-     * @return float
+     * @return float|null
      */
     public function getAtc029()
     {
@@ -4260,12 +4977,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atc029
      *
-     * @param float $atc029 Total number of aged trades across all aged trades with trade's worst status = 31-60 days past due
+     * @param float|null $atc029 Total number of aged trades across all aged trades with trade's worst status = 31-60 days past due
      *
-     * @return $this
+     * @return self
      */
     public function setAtc029($atc029)
     {
+        if (is_null($atc029)) {
+            throw new \InvalidArgumentException('non-nullable atc029 cannot be null');
+        }
         $this->container['atc029'] = $atc029;
 
         return $this;
@@ -4274,7 +4994,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atc030
      *
-     * @return float
+     * @return float|null
      */
     public function getAtc030()
     {
@@ -4284,12 +5004,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atc030
      *
-     * @param float $atc030 Total number of aged trades across all aged trades with trade's worst status = 61-90 days past due
+     * @param float|null $atc030 Total number of aged trades across all aged trades with trade's worst status = 61-90 days past due
      *
-     * @return $this
+     * @return self
      */
     public function setAtc030($atc030)
     {
+        if (is_null($atc030)) {
+            throw new \InvalidArgumentException('non-nullable atc030 cannot be null');
+        }
         $this->container['atc030'] = $atc030;
 
         return $this;
@@ -4298,7 +5021,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atc031
      *
-     * @return float
+     * @return float|null
      */
     public function getAtc031()
     {
@@ -4308,12 +5031,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atc031
      *
-     * @param float $atc031 Total number of aged trades across all aged trades with trade's worst status = 91+ days past due
+     * @param float|null $atc031 Total number of aged trades across all aged trades with trade's worst status = 91+ days past due
      *
-     * @return $this
+     * @return self
      */
     public function setAtc031($atc031)
     {
+        if (is_null($atc031)) {
+            throw new \InvalidArgumentException('non-nullable atc031 cannot be null');
+        }
         $this->container['atc031'] = $atc031;
 
         return $this;
@@ -4322,7 +5048,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atc032
      *
-     * @return float
+     * @return float|null
      */
     public function getAtc032()
     {
@@ -4332,12 +5058,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atc032
      *
-     * @param float $atc032 Total number of aged trades with no reported information within 4 months of the profile date
+     * @param float|null $atc032 Total number of aged trades with no reported information within 4 months of the profile date
      *
-     * @return $this
+     * @return self
      */
     public function setAtc032($atc032)
     {
+        if (is_null($atc032)) {
+            throw new \InvalidArgumentException('non-nullable atc032 cannot be null');
+        }
         $this->container['atc032'] = $atc032;
 
         return $this;
@@ -4346,7 +5075,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atd034
      *
-     * @return float
+     * @return float|null
      */
     public function getAtd034()
     {
@@ -4356,12 +5085,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atd034
      *
-     * @param float $atd034 Weighted average DBT of aged trades with no reported information within 4 months of the profile date
+     * @param float|null $atd034 Weighted average DBT of aged trades with no reported information within 4 months of the profile date
      *
-     * @return $this
+     * @return self
      */
     public function setAtd034($atd034)
     {
+        if (is_null($atd034)) {
+            throw new \InvalidArgumentException('non-nullable atd034 cannot be null');
+        }
         $this->container['atd034'] = $atd034;
 
         return $this;
@@ -4370,7 +5102,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atd035
      *
-     * @return float
+     * @return float|null
      */
     public function getAtd035()
     {
@@ -4380,12 +5112,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atd035
      *
-     * @param float $atd035 Maximum DBT of aged trades with no reported information within 4 months of the profile date
+     * @param float|null $atd035 Maximum DBT of aged trades with no reported information within 4 months of the profile date
      *
-     * @return $this
+     * @return self
      */
     public function setAtd035($atd035)
     {
+        if (is_null($atd035)) {
+            throw new \InvalidArgumentException('non-nullable atd035 cannot be null');
+        }
         $this->container['atd035'] = $atd035;
 
         return $this;
@@ -4394,7 +5129,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atp036
      *
-     * @return float
+     * @return float|null
      */
     public function getAtp036()
     {
@@ -4404,12 +5139,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atp036
      *
-     * @param float $atp036 Percent of Total trade balance to Total highest balance in past 12 months across all aged trades
+     * @param float|null $atp036 Percent of Total trade balance to Total highest balance in past 12 months across all aged trades
      *
-     * @return $this
+     * @return self
      */
     public function setAtp036($atp036)
     {
+        if (is_null($atp036)) {
+            throw new \InvalidArgumentException('non-nullable atp036 cannot be null');
+        }
         $this->container['atp036'] = $atp036;
 
         return $this;
@@ -4418,7 +5156,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atp037
      *
-     * @return float
+     * @return float|null
      */
     public function getAtp037()
     {
@@ -4428,12 +5166,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atp037
      *
-     * @param float $atp037 Percent of Total balance of all aged trades to Total balance of Total Trades
+     * @param float|null $atp037 Percent of Total balance of all aged trades to Total balance of Total Trades
      *
-     * @return $this
+     * @return self
      */
     public function setAtp037($atp037)
     {
+        if (is_null($atp037)) {
+            throw new \InvalidArgumentException('non-nullable atp037 cannot be null');
+        }
         $this->container['atp037'] = $atp037;
 
         return $this;
@@ -4442,7 +5183,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets atp038
      *
-     * @return float
+     * @return float|null
      */
     public function getAtp038()
     {
@@ -4452,12 +5193,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets atp038
      *
-     * @param float $atp038 Percent of Total number of aged trades to Total number of Total Trades
+     * @param float|null $atp038 Percent of Total number of aged trades to Total number of Total Trades
      *
-     * @return $this
+     * @return self
      */
     public function setAtp038($atp038)
     {
+        if (is_null($atp038)) {
+            throw new \InvalidArgumentException('non-nullable atp038 cannot be null');
+        }
         $this->container['atp038'] = $atp038;
 
         return $this;
@@ -4466,7 +5210,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets bkb001
      *
-     * @return float
+     * @return float|null
      */
     public function getBkb001()
     {
@@ -4476,12 +5220,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets bkb001
      *
-     * @param float $bkb001 Total liability balance for bankruptcy filings
+     * @param float|null $bkb001 Total liability balance for bankruptcy filings
      *
-     * @return $this
+     * @return self
      */
     public function setBkb001($bkb001)
     {
+        if (is_null($bkb001)) {
+            throw new \InvalidArgumentException('non-nullable bkb001 cannot be null');
+        }
         $this->container['bkb001'] = $bkb001;
 
         return $this;
@@ -4490,7 +5237,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets bkb002
      *
-     * @return float
+     * @return float|null
      */
     public function getBkb002()
     {
@@ -4500,12 +5247,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets bkb002
      *
-     * @param float $bkb002 Total liability balance for bankruptcies filed within 24 months of the profile date
+     * @param float|null $bkb002 Total liability balance for bankruptcies filed within 24 months of the profile date
      *
-     * @return $this
+     * @return self
      */
     public function setBkb002($bkb002)
     {
+        if (is_null($bkb002)) {
+            throw new \InvalidArgumentException('non-nullable bkb002 cannot be null');
+        }
         $this->container['bkb002'] = $bkb002;
 
         return $this;
@@ -4514,7 +5264,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets bkb003
      *
-     * @return float
+     * @return float|null
      */
     public function getBkb003()
     {
@@ -4524,12 +5274,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets bkb003
      *
-     * @param float $bkb003 Total liability balance for non-filed bankruptcy actions
+     * @param float|null $bkb003 Total liability balance for non-filed bankruptcy actions
      *
-     * @return $this
+     * @return self
      */
     public function setBkb003($bkb003)
     {
+        if (is_null($bkb003)) {
+            throw new \InvalidArgumentException('non-nullable bkb003 cannot be null');
+        }
         $this->container['bkb003'] = $bkb003;
 
         return $this;
@@ -4538,7 +5291,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets bkc004
      *
-     * @return float
+     * @return float|null
      */
     public function getBkc004()
     {
@@ -4548,12 +5301,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets bkc004
      *
-     * @param float $bkc004 Total number of bankruptcies filed within 12 months of the profile date
+     * @param float|null $bkc004 Total number of bankruptcies filed within 12 months of the profile date
      *
-     * @return $this
+     * @return self
      */
     public function setBkc004($bkc004)
     {
+        if (is_null($bkc004)) {
+            throw new \InvalidArgumentException('non-nullable bkc004 cannot be null');
+        }
         $this->container['bkc004'] = $bkc004;
 
         return $this;
@@ -4562,7 +5318,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets bkc005
      *
-     * @return float
+     * @return float|null
      */
     public function getBkc005()
     {
@@ -4572,12 +5328,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets bkc005
      *
-     * @param float $bkc005 Total number of bankruptcies filed within 6 months of the profile date
+     * @param float|null $bkc005 Total number of bankruptcies filed within 6 months of the profile date
      *
-     * @return $this
+     * @return self
      */
     public function setBkc005($bkc005)
     {
+        if (is_null($bkc005)) {
+            throw new \InvalidArgumentException('non-nullable bkc005 cannot be null');
+        }
         $this->container['bkc005'] = $bkc005;
 
         return $this;
@@ -4586,7 +5345,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets bkc006
      *
-     * @return float
+     * @return float|null
      */
     public function getBkc006()
     {
@@ -4596,12 +5355,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets bkc006
      *
-     * @param float $bkc006 Total number of bankruptcy filings
+     * @param float|null $bkc006 Total number of bankruptcy filings
      *
-     * @return $this
+     * @return self
      */
     public function setBkc006($bkc006)
     {
+        if (is_null($bkc006)) {
+            throw new \InvalidArgumentException('non-nullable bkc006 cannot be null');
+        }
         $this->container['bkc006'] = $bkc006;
 
         return $this;
@@ -4610,7 +5372,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets bkc007
      *
-     * @return float
+     * @return float|null
      */
     public function getBkc007()
     {
@@ -4620,12 +5382,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets bkc007
      *
-     * @param float $bkc007 Total number of bankruptcies filed within 24 months of the profile date
+     * @param float|null $bkc007 Total number of bankruptcies filed within 24 months of the profile date
      *
-     * @return $this
+     * @return self
      */
     public function setBkc007($bkc007)
     {
+        if (is_null($bkc007)) {
+            throw new \InvalidArgumentException('non-nullable bkc007 cannot be null');
+        }
         $this->container['bkc007'] = $bkc007;
 
         return $this;
@@ -4634,7 +5399,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets bkc008
      *
-     * @return float
+     * @return float|null
      */
     public function getBkc008()
     {
@@ -4644,12 +5409,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets bkc008
      *
-     * @param float $bkc008 Total number of non-filed bankruptcy actions
+     * @param float|null $bkc008 Total number of non-filed bankruptcy actions
      *
-     * @return $this
+     * @return self
      */
     public function setBkc008($bkc008)
     {
+        if (is_null($bkc008)) {
+            throw new \InvalidArgumentException('non-nullable bkc008 cannot be null');
+        }
         $this->container['bkc008'] = $bkc008;
 
         return $this;
@@ -4658,7 +5426,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets bko009
      *
-     * @return float
+     * @return float|null
      */
     public function getBko009()
     {
@@ -4668,12 +5436,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets bko009
      *
-     * @param float $bko009 Presence of bankruptcies not satisfied, terminated nor released within 24 months of the profile date
+     * @param float|null $bko009 Presence of bankruptcies not satisfied, terminated nor released within 24 months of the profile date
      *
-     * @return $this
+     * @return self
      */
     public function setBko009($bko009)
     {
+        if (is_null($bko009)) {
+            throw new \InvalidArgumentException('non-nullable bko009 cannot be null');
+        }
         $this->container['bko009'] = $bko009;
 
         return $this;
@@ -4682,7 +5453,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets bko010
      *
-     * @return float
+     * @return float|null
      */
     public function getBko010()
     {
@@ -4692,12 +5463,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets bko010
      *
-     * @param float $bko010 Age in months of most recent bankruptcy filing
+     * @param float|null $bko010 Age in months of most recent bankruptcy filing
      *
-     * @return $this
+     * @return self
      */
     public function setBko010($bko010)
     {
+        if (is_null($bko010)) {
+            throw new \InvalidArgumentException('non-nullable bko010 cannot be null');
+        }
         $this->container['bko010'] = $bko010;
 
         return $this;
@@ -4706,7 +5480,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets bko011
      *
-     * @return float
+     * @return float|null
      */
     public function getBko011()
     {
@@ -4716,12 +5490,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets bko011
      *
-     * @param float $bko011 Age in months of most recent non-filed bankruptcy action
+     * @param float|null $bko011 Age in months of most recent non-filed bankruptcy action
      *
-     * @return $this
+     * @return self
      */
     public function setBko011($bko011)
     {
+        if (is_null($bko011)) {
+            throw new \InvalidArgumentException('non-nullable bko011 cannot be null');
+        }
         $this->container['bko011'] = $bko011;
 
         return $this;
@@ -4730,7 +5507,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets brb001
      *
-     * @return float
+     * @return float|null
      */
     public function getBrb001()
     {
@@ -4740,12 +5517,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets brb001
      *
-     * @param float $brb001 Total asset balance of commercial banking relationships
+     * @param float|null $brb001 Total asset balance of commercial banking relationships
      *
-     * @return $this
+     * @return self
      */
     public function setBrb001($brb001)
     {
+        if (is_null($brb001)) {
+            throw new \InvalidArgumentException('non-nullable brb001 cannot be null');
+        }
         $this->container['brb001'] = $brb001;
 
         return $this;
@@ -4754,7 +5534,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets brb002
      *
-     * @return float
+     * @return float|null
      */
     public function getBrb002()
     {
@@ -4764,12 +5544,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets brb002
      *
-     * @param float $brb002 Maximum balance of bank asset relationship within last 6 months
+     * @param float|null $brb002 Maximum balance of bank asset relationship within last 6 months
      *
-     * @return $this
+     * @return self
      */
     public function setBrb002($brb002)
     {
+        if (is_null($brb002)) {
+            throw new \InvalidArgumentException('non-nullable brb002 cannot be null');
+        }
         $this->container['brb002'] = $brb002;
 
         return $this;
@@ -4778,7 +5561,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets brb003
      *
-     * @return float
+     * @return float|null
      */
     public function getBrb003()
     {
@@ -4788,12 +5571,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets brb003
      *
-     * @param float $brb003 Total liability balance of commercial banking relationships
+     * @param float|null $brb003 Total liability balance of commercial banking relationships
      *
-     * @return $this
+     * @return self
      */
     public function setBrb003($brb003)
     {
+        if (is_null($brb003)) {
+            throw new \InvalidArgumentException('non-nullable brb003 cannot be null');
+        }
         $this->container['brb003'] = $brb003;
 
         return $this;
@@ -4802,7 +5588,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets brb004
      *
-     * @return float
+     * @return float|null
      */
     public function getBrb004()
     {
@@ -4812,12 +5598,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets brb004
      *
-     * @param float $brb004 Maximum balance of bank liability relationship within last 6 months
+     * @param float|null $brb004 Maximum balance of bank liability relationship within last 6 months
      *
-     * @return $this
+     * @return self
      */
     public function setBrb004($brb004)
     {
+        if (is_null($brb004)) {
+            throw new \InvalidArgumentException('non-nullable brb004 cannot be null');
+        }
         $this->container['brb004'] = $brb004;
 
         return $this;
@@ -4826,7 +5615,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets brb005
      *
-     * @return float
+     * @return float|null
      */
     public function getBrb005()
     {
@@ -4836,12 +5625,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets brb005
      *
-     * @param float $brb005 Total account balance for commercial banking relationships
+     * @param float|null $brb005 Total account balance for commercial banking relationships
      *
-     * @return $this
+     * @return self
      */
     public function setBrb005($brb005)
     {
+        if (is_null($brb005)) {
+            throw new \InvalidArgumentException('non-nullable brb005 cannot be null');
+        }
         $this->container['brb005'] = $brb005;
 
         return $this;
@@ -4850,7 +5642,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets brb006
      *
-     * @return float
+     * @return float|null
      */
     public function getBrb006()
     {
@@ -4860,12 +5652,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets brb006
      *
-     * @param float $brb006 Total account balance for commercial banking relationships reported in the past six months
+     * @param float|null $brb006 Total account balance for commercial banking relationships reported in the past six months
      *
-     * @return $this
+     * @return self
      */
     public function setBrb006($brb006)
     {
+        if (is_null($brb006)) {
+            throw new \InvalidArgumentException('non-nullable brb006 cannot be null');
+        }
         $this->container['brb006'] = $brb006;
 
         return $this;
@@ -4874,7 +5669,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets brb007
      *
-     * @return float
+     * @return float|null
      */
     public function getBrb007()
     {
@@ -4884,12 +5679,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets brb007
      *
-     * @param float $brb007 Total account balance for commercial banking relationships reported in the past twelve months
+     * @param float|null $brb007 Total account balance for commercial banking relationships reported in the past twelve months
      *
-     * @return $this
+     * @return self
      */
     public function setBrb007($brb007)
     {
+        if (is_null($brb007)) {
+            throw new \InvalidArgumentException('non-nullable brb007 cannot be null');
+        }
         $this->container['brb007'] = $brb007;
 
         return $this;
@@ -4898,7 +5696,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets brc008
      *
-     * @return float
+     * @return float|null
      */
     public function getBrc008()
     {
@@ -4908,12 +5706,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets brc008
      *
-     * @param float $brc008 Total number of banking asset relationship (checking/saving/currency exchange)
+     * @param float|null $brc008 Total number of banking asset relationship (checking/saving/currency exchange)
      *
-     * @return $this
+     * @return self
      */
     public function setBrc008($brc008)
     {
+        if (is_null($brc008)) {
+            throw new \InvalidArgumentException('non-nullable brc008 cannot be null');
+        }
         $this->container['brc008'] = $brc008;
 
         return $this;
@@ -4922,7 +5723,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets brc009
      *
-     * @return float
+     * @return float|null
      */
     public function getBrc009()
     {
@@ -4932,12 +5733,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets brc009
      *
-     * @param float $brc009 Total number of banking liability relationship
+     * @param float|null $brc009 Total number of banking liability relationship
      *
-     * @return $this
+     * @return self
      */
     public function setBrc009($brc009)
     {
+        if (is_null($brc009)) {
+            throw new \InvalidArgumentException('non-nullable brc009 cannot be null');
+        }
         $this->container['brc009'] = $brc009;
 
         return $this;
@@ -4946,7 +5750,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets brc010
      *
-     * @return float
+     * @return float|null
      */
     public function getBrc010()
     {
@@ -4956,12 +5760,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets brc010
      *
-     * @param float $brc010 Total number of commercial banking relationships
+     * @param float|null $brc010 Total number of commercial banking relationships
      *
-     * @return $this
+     * @return self
      */
     public function setBrc010($brc010)
     {
+        if (is_null($brc010)) {
+            throw new \InvalidArgumentException('non-nullable brc010 cannot be null');
+        }
         $this->container['brc010'] = $brc010;
 
         return $this;
@@ -4970,7 +5777,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets brc011
      *
-     * @return float
+     * @return float|null
      */
     public function getBrc011()
     {
@@ -4980,12 +5787,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets brc011
      *
-     * @param float $brc011 Total number of commercial banking relationships reported in the past six months
+     * @param float|null $brc011 Total number of commercial banking relationships reported in the past six months
      *
-     * @return $this
+     * @return self
      */
     public function setBrc011($brc011)
     {
+        if (is_null($brc011)) {
+            throw new \InvalidArgumentException('non-nullable brc011 cannot be null');
+        }
         $this->container['brc011'] = $brc011;
 
         return $this;
@@ -4994,7 +5804,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets brc012
      *
-     * @return float
+     * @return float|null
      */
     public function getBrc012()
     {
@@ -5004,12 +5814,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets brc012
      *
-     * @param float $brc012 Total number of commercial banking relationships reported in the past twelve months
+     * @param float|null $brc012 Total number of commercial banking relationships reported in the past twelve months
      *
-     * @return $this
+     * @return self
      */
     public function setBrc012($brc012)
     {
+        if (is_null($brc012)) {
+            throw new \InvalidArgumentException('non-nullable brc012 cannot be null');
+        }
         $this->container['brc012'] = $brc012;
 
         return $this;
@@ -5018,7 +5831,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets brc013
      *
-     * @return float
+     * @return float|null
      */
     public function getBrc013()
     {
@@ -5028,12 +5841,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets brc013
      *
-     * @param float $brc013 Total number of asset-based commercial banking relationships Includes checking accounts, savings accounts, merchant bank cards, and currency exchange
+     * @param float|null $brc013 Total number of asset-based commercial banking relationships Includes checking accounts, savings accounts, merchant bank cards, and currency exchange
      *
-     * @return $this
+     * @return self
      */
     public function setBrc013($brc013)
     {
+        if (is_null($brc013)) {
+            throw new \InvalidArgumentException('non-nullable brc013 cannot be null');
+        }
         $this->container['brc013'] = $brc013;
 
         return $this;
@@ -5042,7 +5858,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets brc014
      *
-     * @return float
+     * @return float|null
      */
     public function getBrc014()
     {
@@ -5052,12 +5868,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets brc014
      *
-     * @param float $brc014 Total number of bank loan relationships Includes borrower, line of credit, SBA loan, asset based loan, private loan, retail loan, receivables financing
+     * @param float|null $brc014 Total number of bank loan relationships Includes borrower, line of credit, SBA loan, asset based loan, private loan, retail loan, receivables financing
      *
-     * @return $this
+     * @return self
      */
     public function setBrc014($brc014)
     {
+        if (is_null($brc014)) {
+            throw new \InvalidArgumentException('non-nullable brc014 cannot be null');
+        }
         $this->container['brc014'] = $brc014;
 
         return $this;
@@ -5066,7 +5885,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets bro015
      *
-     * @return float
+     * @return float|null
      */
     public function getBro015()
     {
@@ -5076,12 +5895,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets bro015
      *
-     * @param float $bro015 Age in months of newest commercial banking relationship
+     * @param float|null $bro015 Age in months of newest commercial banking relationship
      *
-     * @return $this
+     * @return self
      */
     public function setBro015($bro015)
     {
+        if (is_null($bro015)) {
+            throw new \InvalidArgumentException('non-nullable bro015 cannot be null');
+        }
         $this->container['bro015'] = $bro015;
 
         return $this;
@@ -5090,7 +5912,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets bro016
      *
-     * @return float
+     * @return float|null
      */
     public function getBro016()
     {
@@ -5100,12 +5922,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets bro016
      *
-     * @param float $bro016 Age in months of oldest commercial banking relationship
+     * @param float|null $bro016 Age in months of oldest commercial banking relationship
      *
-     * @return $this
+     * @return self
      */
     public function setBro016($bro016)
     {
+        if (is_null($bro016)) {
+            throw new \InvalidArgumentException('non-nullable bro016 cannot be null');
+        }
         $this->container['bro016'] = $bro016;
 
         return $this;
@@ -5114,7 +5939,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets bro017
      *
-     * @return float
+     * @return float|null
      */
     public function getBro017()
     {
@@ -5124,12 +5949,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets bro017
      *
-     * @param float $bro017 Average age in months of commercial banking relationships
+     * @param float|null $bro017 Average age in months of commercial banking relationships
      *
-     * @return $this
+     * @return self
      */
     public function setBro017($bro017)
     {
+        if (is_null($bro017)) {
+            throw new \InvalidArgumentException('non-nullable bro017 cannot be null');
+        }
         $this->container['bro017'] = $bro017;
 
         return $this;
@@ -5138,7 +5966,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets brp018
      *
-     * @return float
+     * @return float|null
      */
     public function getBrp018()
     {
@@ -5148,12 +5976,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets brp018
      *
-     * @param float $brp018 Percentage of Total asset balance of commercial banking relationships to Total trade balance
+     * @param float|null $brp018 Percentage of Total asset balance of commercial banking relationships to Total trade balance
      *
-     * @return $this
+     * @return self
      */
     public function setBrp018($brp018)
     {
+        if (is_null($brp018)) {
+            throw new \InvalidArgumentException('non-nullable brp018 cannot be null');
+        }
         $this->container['brp018'] = $brp018;
 
         return $this;
@@ -5162,7 +5993,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets brp019
      *
-     * @return float
+     * @return float|null
      */
     public function getBrp019()
     {
@@ -5172,12 +6003,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets brp019
      *
-     * @param float $brp019 Percentage of Total liability balance of commercial banking relationships to Total trade balance
+     * @param float|null $brp019 Percentage of Total liability balance of commercial banking relationships to Total trade balance
      *
-     * @return $this
+     * @return self
      */
     public function setBrp019($brp019)
     {
+        if (is_null($brp019)) {
+            throw new \InvalidArgumentException('non-nullable brp019 cannot be null');
+        }
         $this->container['brp019'] = $brp019;
 
         return $this;
@@ -5186,7 +6020,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets brp020
      *
-     * @return float
+     * @return float|null
      */
     public function getBrp020()
     {
@@ -5196,12 +6030,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets brp020
      *
-     * @param float $brp020 Percentage of Total balance of commercial banking relationships to Total balance of trades
+     * @param float|null $brp020 Percentage of Total balance of commercial banking relationships to Total balance of trades
      *
-     * @return $this
+     * @return self
      */
     public function setBrp020($brp020)
     {
+        if (is_null($brp020)) {
+            throw new \InvalidArgumentException('non-nullable brp020 cannot be null');
+        }
         $this->container['brp020'] = $brp020;
 
         return $this;
@@ -5210,7 +6047,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets brp021
      *
-     * @return float
+     * @return float|null
      */
     public function getBrp021()
     {
@@ -5220,12 +6057,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets brp021
      *
-     * @param float $brp021 Percentage of Total number of commercial banking asset relationships to Total number of trades
+     * @param float|null $brp021 Percentage of Total number of commercial banking asset relationships to Total number of trades
      *
-     * @return $this
+     * @return self
      */
     public function setBrp021($brp021)
     {
+        if (is_null($brp021)) {
+            throw new \InvalidArgumentException('non-nullable brp021 cannot be null');
+        }
         $this->container['brp021'] = $brp021;
 
         return $this;
@@ -5234,7 +6074,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets brp022
      *
-     * @return float
+     * @return float|null
      */
     public function getBrp022()
     {
@@ -5244,12 +6084,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets brp022
      *
-     * @param float $brp022 Percentage of Total number of commercial banking liability relationships to Total number of trades
+     * @param float|null $brp022 Percentage of Total number of commercial banking liability relationships to Total number of trades
      *
-     * @return $this
+     * @return self
      */
     public function setBrp022($brp022)
     {
+        if (is_null($brp022)) {
+            throw new \InvalidArgumentException('non-nullable brp022 cannot be null');
+        }
         $this->container['brp022'] = $brp022;
 
         return $this;
@@ -5258,7 +6101,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets brp023
      *
-     * @return float
+     * @return float|null
      */
     public function getBrp023()
     {
@@ -5268,12 +6111,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets brp023
      *
-     * @param float $brp023 Percentage of Total number of commercial banking relationships to Total number of trades
+     * @param float|null $brp023 Percentage of Total number of commercial banking relationships to Total number of trades
      *
-     * @return $this
+     * @return self
      */
     public function setBrp023($brp023)
     {
+        if (is_null($brp023)) {
+            throw new \InvalidArgumentException('non-nullable brp023 cannot be null');
+        }
         $this->container['brp023'] = $brp023;
 
         return $this;
@@ -5282,7 +6128,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets clb001
      *
-     * @return float
+     * @return float|null
      */
     public function getClb001()
     {
@@ -5292,12 +6138,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets clb001
      *
-     * @param float $clb001 Total amount placed for open and closed unpaid collections
+     * @param float|null $clb001 Total amount placed for open and closed unpaid collections
      *
-     * @return $this
+     * @return self
      */
     public function setClb001($clb001)
     {
+        if (is_null($clb001)) {
+            throw new \InvalidArgumentException('non-nullable clb001 cannot be null');
+        }
         $this->container['clb001'] = $clb001;
 
         return $this;
@@ -5306,7 +6155,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets clb002
      *
-     * @return float
+     * @return float|null
      */
     public function getClb002()
     {
@@ -5316,12 +6165,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets clb002
      *
-     * @param float $clb002 Total amount placed for open and closed collection trades
+     * @param float|null $clb002 Total amount placed for open and closed collection trades
      *
-     * @return $this
+     * @return self
      */
     public function setClb002($clb002)
     {
+        if (is_null($clb002)) {
+            throw new \InvalidArgumentException('non-nullable clb002 cannot be null');
+        }
         $this->container['clb002'] = $clb002;
 
         return $this;
@@ -5330,7 +6182,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets clb003
      *
-     * @return float
+     * @return float|null
      */
     public function getClb003()
     {
@@ -5340,12 +6192,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets clb003
      *
-     * @param float $clb003 Total amount collected for open and closed collection trades
+     * @param float|null $clb003 Total amount collected for open and closed collection trades
      *
-     * @return $this
+     * @return self
      */
     public function setClb003($clb003)
     {
+        if (is_null($clb003)) {
+            throw new \InvalidArgumentException('non-nullable clb003 cannot be null');
+        }
         $this->container['clb003'] = $clb003;
 
         return $this;
@@ -5354,7 +6209,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets clb004
      *
-     * @return float
+     * @return float|null
      */
     public function getClb004()
     {
@@ -5364,12 +6219,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets clb004
      *
-     * @param float $clb004 Total amount collected for open collection trades
+     * @param float|null $clb004 Total amount collected for open collection trades
      *
-     * @return $this
+     * @return self
      */
     public function setClb004($clb004)
     {
+        if (is_null($clb004)) {
+            throw new \InvalidArgumentException('non-nullable clb004 cannot be null');
+        }
         $this->container['clb004'] = $clb004;
 
         return $this;
@@ -5378,7 +6236,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets clb005
      *
-     * @return float
+     * @return float|null
      */
     public function getClb005()
     {
@@ -5388,12 +6246,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets clb005
      *
-     * @param float $clb005 Maximum amount collected on any collection trade
+     * @param float|null $clb005 Maximum amount collected on any collection trade
      *
-     * @return $this
+     * @return self
      */
     public function setClb005($clb005)
     {
+        if (is_null($clb005)) {
+            throw new \InvalidArgumentException('non-nullable clb005 cannot be null');
+        }
         $this->container['clb005'] = $clb005;
 
         return $this;
@@ -5402,7 +6263,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets clc006
      *
-     * @return float
+     * @return float|null
      */
     public function getClc006()
     {
@@ -5412,12 +6273,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets clc006
      *
-     * @param float $clc006 Total number of open or closed unpaid collection trades
+     * @param float|null $clc006 Total number of open or closed unpaid collection trades
      *
-     * @return $this
+     * @return self
      */
     public function setClc006($clc006)
     {
+        if (is_null($clc006)) {
+            throw new \InvalidArgumentException('non-nullable clc006 cannot be null');
+        }
         $this->container['clc006'] = $clc006;
 
         return $this;
@@ -5426,7 +6290,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets clc007
      *
-     * @return float
+     * @return float|null
      */
     public function getClc007()
     {
@@ -5436,12 +6300,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets clc007
      *
-     * @param float $clc007 Total number of open collections placed within 12 months of profile date
+     * @param float|null $clc007 Total number of open collections placed within 12 months of profile date
      *
-     * @return $this
+     * @return self
      */
     public function setClc007($clc007)
     {
+        if (is_null($clc007)) {
+            throw new \InvalidArgumentException('non-nullable clc007 cannot be null');
+        }
         $this->container['clc007'] = $clc007;
 
         return $this;
@@ -5450,7 +6317,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets clc008
      *
-     * @return float
+     * @return float|null
      */
     public function getClc008()
     {
@@ -5460,12 +6327,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets clc008
      *
-     * @param float $clc008 Total number of open collections placed within 6 months of profile date
+     * @param float|null $clc008 Total number of open collections placed within 6 months of profile date
      *
-     * @return $this
+     * @return self
      */
     public function setClc008($clc008)
     {
+        if (is_null($clc008)) {
+            throw new \InvalidArgumentException('non-nullable clc008 cannot be null');
+        }
         $this->container['clc008'] = $clc008;
 
         return $this;
@@ -5474,7 +6344,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets clc009
      *
-     * @return float
+     * @return float|null
      */
     public function getClc009()
     {
@@ -5484,12 +6354,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets clc009
      *
-     * @param float $clc009 Total number of open and closed collections placed within 6 months of profile date
+     * @param float|null $clc009 Total number of open and closed collections placed within 6 months of profile date
      *
-     * @return $this
+     * @return self
      */
     public function setClc009($clc009)
     {
+        if (is_null($clc009)) {
+            throw new \InvalidArgumentException('non-nullable clc009 cannot be null');
+        }
         $this->container['clc009'] = $clc009;
 
         return $this;
@@ -5498,7 +6371,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets clc010
      *
-     * @return float
+     * @return float|null
      */
     public function getClc010()
     {
@@ -5508,12 +6381,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets clc010
      *
-     * @param float $clc010 Total number of open and closed collection trades
+     * @param float|null $clc010 Total number of open and closed collection trades
      *
-     * @return $this
+     * @return self
      */
     public function setClc010($clc010)
     {
+        if (is_null($clc010)) {
+            throw new \InvalidArgumentException('non-nullable clc010 cannot be null');
+        }
         $this->container['clc010'] = $clc010;
 
         return $this;
@@ -5522,7 +6398,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets clc011
      *
-     * @return float
+     * @return float|null
      */
     public function getClc011()
     {
@@ -5532,12 +6408,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets clc011
      *
-     * @param float $clc011 Total number of open and closed collection trades placed within 12 months of the profile date
+     * @param float|null $clc011 Total number of open and closed collection trades placed within 12 months of the profile date
      *
-     * @return $this
+     * @return self
      */
     public function setClc011($clc011)
     {
+        if (is_null($clc011)) {
+            throw new \InvalidArgumentException('non-nullable clc011 cannot be null');
+        }
         $this->container['clc011'] = $clc011;
 
         return $this;
@@ -5546,7 +6425,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets clc012
      *
-     * @return float
+     * @return float|null
      */
     public function getClc012()
     {
@@ -5556,12 +6435,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets clc012
      *
-     * @param float $clc012 Total number of open and closed collection trades placed within the last 24 months of the profile date
+     * @param float|null $clc012 Total number of open and closed collection trades placed within the last 24 months of the profile date
      *
-     * @return $this
+     * @return self
      */
     public function setClc012($clc012)
     {
+        if (is_null($clc012)) {
+            throw new \InvalidArgumentException('non-nullable clc012 cannot be null');
+        }
         $this->container['clc012'] = $clc012;
 
         return $this;
@@ -5570,7 +6452,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets clc013
      *
-     * @return float
+     * @return float|null
      */
     public function getClc013()
     {
@@ -5580,12 +6462,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets clc013
      *
-     * @param float $clc013 Total number of open collection trades
+     * @param float|null $clc013 Total number of open collection trades
      *
-     * @return $this
+     * @return self
      */
     public function setClc013($clc013)
     {
+        if (is_null($clc013)) {
+            throw new \InvalidArgumentException('non-nullable clc013 cannot be null');
+        }
         $this->container['clc013'] = $clc013;
 
         return $this;
@@ -5594,7 +6479,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets clo014
      *
-     * @return float
+     * @return float|null
      */
     public function getClo014()
     {
@@ -5604,12 +6489,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets clo014
      *
-     * @param float $clo014 Age in months of most recent collection trade
+     * @param float|null $clo014 Age in months of most recent collection trade
      *
-     * @return $this
+     * @return self
      */
     public function setClo014($clo014)
     {
+        if (is_null($clo014)) {
+            throw new \InvalidArgumentException('non-nullable clo014 cannot be null');
+        }
         $this->container['clo014'] = $clo014;
 
         return $this;
@@ -5618,7 +6506,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets clo015
      *
-     * @return float
+     * @return float|null
      */
     public function getClo015()
     {
@@ -5628,12 +6516,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets clo015
      *
-     * @param float $clo015 Age in months of most recent open collection trade
+     * @param float|null $clo015 Age in months of most recent open collection trade
      *
-     * @return $this
+     * @return self
      */
     public function setClo015($clo015)
     {
+        if (is_null($clo015)) {
+            throw new \InvalidArgumentException('non-nullable clo015 cannot be null');
+        }
         $this->container['clo015'] = $clo015;
 
         return $this;
@@ -5642,7 +6533,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets clp016
      *
-     * @return float
+     * @return float|null
      */
     public function getClp016()
     {
@@ -5652,12 +6543,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets clp016
      *
-     * @param float $clp016 Ratio of Total amount placed for unpaid collections to Total trade balance
+     * @param float|null $clp016 Ratio of Total amount placed for unpaid collections to Total trade balance
      *
-     * @return $this
+     * @return self
      */
     public function setClp016($clp016)
     {
+        if (is_null($clp016)) {
+            throw new \InvalidArgumentException('non-nullable clp016 cannot be null');
+        }
         $this->container['clp016'] = $clp016;
 
         return $this;
@@ -5666,7 +6560,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets clp017
      *
-     * @return float
+     * @return float|null
      */
     public function getClp017()
     {
@@ -5676,12 +6570,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets clp017
      *
-     * @param float $clp017 Percentage of Total number of open collections to Total number of collections
+     * @param float|null $clp017 Percentage of Total number of open collections to Total number of collections
      *
-     * @return $this
+     * @return self
      */
     public function setClp017($clp017)
     {
+        if (is_null($clp017)) {
+            throw new \InvalidArgumentException('non-nullable clp017 cannot be null');
+        }
         $this->container['clp017'] = $clp017;
 
         return $this;
@@ -5690,7 +6587,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets clp018
      *
-     * @return float
+     * @return float|null
      */
     public function getClp018()
     {
@@ -5700,12 +6597,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets clp018
      *
-     * @param float $clp018 Ratio of Total number of open collections to Total number of trades
+     * @param float|null $clp018 Ratio of Total number of open collections to Total number of trades
      *
-     * @return $this
+     * @return self
      */
     public function setClp018($clp018)
     {
+        if (is_null($clp018)) {
+            throw new \InvalidArgumentException('non-nullable clp018 cannot be null');
+        }
         $this->container['clp018'] = $clp018;
 
         return $this;
@@ -5714,7 +6614,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets clp019
      *
-     * @return float
+     * @return float|null
      */
     public function getClp019()
     {
@@ -5724,12 +6624,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets clp019
      *
-     * @param float $clp019 Percentage of Total number of open or closed unpaid collections to Total number of collections
+     * @param float|null $clp019 Percentage of Total number of open or closed unpaid collections to Total number of collections
      *
-     * @return $this
+     * @return self
      */
     public function setClp019($clp019)
     {
+        if (is_null($clp019)) {
+            throw new \InvalidArgumentException('non-nullable clp019 cannot be null');
+        }
         $this->container['clp019'] = $clp019;
 
         return $this;
@@ -5738,7 +6641,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctb001
      *
-     * @return float
+     * @return float|null
      */
     public function getCtb001()
     {
@@ -5748,12 +6651,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctb001
      *
-     * @param float $ctb001 Total balance of combined trades
+     * @param float|null $ctb001 Total balance of combined trades
      *
-     * @return $this
+     * @return self
      */
     public function setCtb001($ctb001)
     {
+        if (is_null($ctb001)) {
+            throw new \InvalidArgumentException('non-nullable ctb001 cannot be null');
+        }
         $this->container['ctb001'] = $ctb001;
 
         return $this;
@@ -5762,7 +6668,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctb002
      *
-     * @return float
+     * @return float|null
      */
     public function getCtb002()
     {
@@ -5772,12 +6678,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctb002
      *
-     * @param float $ctb002 Total balance of combined trades that is 1-30 days delinquent
+     * @param float|null $ctb002 Total balance of combined trades that is 1-30 days delinquent
      *
-     * @return $this
+     * @return self
      */
     public function setCtb002($ctb002)
     {
+        if (is_null($ctb002)) {
+            throw new \InvalidArgumentException('non-nullable ctb002 cannot be null');
+        }
         $this->container['ctb002'] = $ctb002;
 
         return $this;
@@ -5786,7 +6695,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctb003
      *
-     * @return float
+     * @return float|null
      */
     public function getCtb003()
     {
@@ -5796,12 +6705,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctb003
      *
-     * @param float $ctb003 Total balance of combined trades that is 31-60 days delinquent
+     * @param float|null $ctb003 Total balance of combined trades that is 31-60 days delinquent
      *
-     * @return $this
+     * @return self
      */
     public function setCtb003($ctb003)
     {
+        if (is_null($ctb003)) {
+            throw new \InvalidArgumentException('non-nullable ctb003 cannot be null');
+        }
         $this->container['ctb003'] = $ctb003;
 
         return $this;
@@ -5810,7 +6722,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctb004
      *
-     * @return float
+     * @return float|null
      */
     public function getCtb004()
     {
@@ -5820,12 +6732,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctb004
      *
-     * @param float $ctb004 Total balance of combined trades that is 61-90 days delinquent
+     * @param float|null $ctb004 Total balance of combined trades that is 61-90 days delinquent
      *
-     * @return $this
+     * @return self
      */
     public function setCtb004($ctb004)
     {
+        if (is_null($ctb004)) {
+            throw new \InvalidArgumentException('non-nullable ctb004 cannot be null');
+        }
         $this->container['ctb004'] = $ctb004;
 
         return $this;
@@ -5834,7 +6749,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctb005
      *
-     * @return float
+     * @return float|null
      */
     public function getCtb005()
     {
@@ -5844,12 +6759,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctb005
      *
-     * @param float $ctb005 Total balance of combined trades that is 91+ days delinquent
+     * @param float|null $ctb005 Total balance of combined trades that is 91+ days delinquent
      *
-     * @return $this
+     * @return self
      */
     public function setCtb005($ctb005)
     {
+        if (is_null($ctb005)) {
+            throw new \InvalidArgumentException('non-nullable ctb005 cannot be null');
+        }
         $this->container['ctb005'] = $ctb005;
 
         return $this;
@@ -5858,7 +6776,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctb006
      *
-     * @return float
+     * @return float|null
      */
     public function getCtb006()
     {
@@ -5868,12 +6786,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctb006
      *
-     * @param float $ctb006 Total balance of combined trades that is current
+     * @param float|null $ctb006 Total balance of combined trades that is current
      *
-     * @return $this
+     * @return self
      */
     public function setCtb006($ctb006)
     {
+        if (is_null($ctb006)) {
+            throw new \InvalidArgumentException('non-nullable ctb006 cannot be null');
+        }
         $this->container['ctb006'] = $ctb006;
 
         return $this;
@@ -5882,7 +6803,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctb007
      *
-     * @return float
+     * @return float|null
      */
     public function getCtb007()
     {
@@ -5892,12 +6813,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctb007
      *
-     * @param float $ctb007 Total balance of combined trades where worst delinquency = current
+     * @param float|null $ctb007 Total balance of combined trades where worst delinquency = current
      *
-     * @return $this
+     * @return self
      */
     public function setCtb007($ctb007)
     {
+        if (is_null($ctb007)) {
+            throw new \InvalidArgumentException('non-nullable ctb007 cannot be null');
+        }
         $this->container['ctb007'] = $ctb007;
 
         return $this;
@@ -5906,7 +6830,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctb008
      *
-     * @return float
+     * @return float|null
      */
     public function getCtb008()
     {
@@ -5916,12 +6840,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctb008
      *
-     * @param float $ctb008 Total balance of combined trades where worst delinquency = 1-30 days
+     * @param float|null $ctb008 Total balance of combined trades where worst delinquency = 1-30 days
      *
-     * @return $this
+     * @return self
      */
     public function setCtb008($ctb008)
     {
+        if (is_null($ctb008)) {
+            throw new \InvalidArgumentException('non-nullable ctb008 cannot be null');
+        }
         $this->container['ctb008'] = $ctb008;
 
         return $this;
@@ -5930,7 +6857,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctb009
      *
-     * @return float
+     * @return float|null
      */
     public function getCtb009()
     {
@@ -5940,12 +6867,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctb009
      *
-     * @param float $ctb009 Total balance of combined trades where worst delinquency = 31-60 days
+     * @param float|null $ctb009 Total balance of combined trades where worst delinquency = 31-60 days
      *
-     * @return $this
+     * @return self
      */
     public function setCtb009($ctb009)
     {
+        if (is_null($ctb009)) {
+            throw new \InvalidArgumentException('non-nullable ctb009 cannot be null');
+        }
         $this->container['ctb009'] = $ctb009;
 
         return $this;
@@ -5954,7 +6884,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctb010
      *
-     * @return float
+     * @return float|null
      */
     public function getCtb010()
     {
@@ -5964,12 +6894,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctb010
      *
-     * @param float $ctb010 Total balance of combined trades where worst delinquency = 61-90 days
+     * @param float|null $ctb010 Total balance of combined trades where worst delinquency = 61-90 days
      *
-     * @return $this
+     * @return self
      */
     public function setCtb010($ctb010)
     {
+        if (is_null($ctb010)) {
+            throw new \InvalidArgumentException('non-nullable ctb010 cannot be null');
+        }
         $this->container['ctb010'] = $ctb010;
 
         return $this;
@@ -5978,7 +6911,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctb011
      *
-     * @return float
+     * @return float|null
      */
     public function getCtb011()
     {
@@ -5988,12 +6921,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctb011
      *
-     * @param float $ctb011 Total balance of combined trades where worst delinquency = 91+ days
+     * @param float|null $ctb011 Total balance of combined trades where worst delinquency = 91+ days
      *
-     * @return $this
+     * @return self
      */
     public function setCtb011($ctb011)
     {
+        if (is_null($ctb011)) {
+            throw new \InvalidArgumentException('non-nullable ctb011 cannot be null');
+        }
         $this->container['ctb011'] = $ctb011;
 
         return $this;
@@ -6002,7 +6938,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctb012
      *
-     * @return float
+     * @return float|null
      */
     public function getCtb012()
     {
@@ -6012,12 +6948,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctb012
      *
-     * @param float $ctb012 Total balance of combined trades where worst status = current
+     * @param float|null $ctb012 Total balance of combined trades where worst status = current
      *
-     * @return $this
+     * @return self
      */
     public function setCtb012($ctb012)
     {
+        if (is_null($ctb012)) {
+            throw new \InvalidArgumentException('non-nullable ctb012 cannot be null');
+        }
         $this->container['ctb012'] = $ctb012;
 
         return $this;
@@ -6026,7 +6965,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctb013
      *
-     * @return float
+     * @return float|null
      */
     public function getCtb013()
     {
@@ -6036,12 +6975,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctb013
      *
-     * @param float $ctb013 Total balance of combined trades where worst status = 1-30 days
+     * @param float|null $ctb013 Total balance of combined trades where worst status = 1-30 days
      *
-     * @return $this
+     * @return self
      */
     public function setCtb013($ctb013)
     {
+        if (is_null($ctb013)) {
+            throw new \InvalidArgumentException('non-nullable ctb013 cannot be null');
+        }
         $this->container['ctb013'] = $ctb013;
 
         return $this;
@@ -6050,7 +6992,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctb014
      *
-     * @return float
+     * @return float|null
      */
     public function getCtb014()
     {
@@ -6060,12 +7002,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctb014
      *
-     * @param float $ctb014 Total balance of combined trades where worst status is a derogatory comment (bankrupcy, judgment, lien, etc)
+     * @param float|null $ctb014 Total balance of combined trades where worst status is a derogatory comment (bankrupcy, judgment, lien, etc)
      *
-     * @return $this
+     * @return self
      */
     public function setCtb014($ctb014)
     {
+        if (is_null($ctb014)) {
+            throw new \InvalidArgumentException('non-nullable ctb014 cannot be null');
+        }
         $this->container['ctb014'] = $ctb014;
 
         return $this;
@@ -6074,7 +7019,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctb015
      *
-     * @return float
+     * @return float|null
      */
     public function getCtb015()
     {
@@ -6084,12 +7029,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctb015
      *
-     * @param float $ctb015 Total balance of combined trades where worst status = 31-60 days
+     * @param float|null $ctb015 Total balance of combined trades where worst status = 31-60 days
      *
-     * @return $this
+     * @return self
      */
     public function setCtb015($ctb015)
     {
+        if (is_null($ctb015)) {
+            throw new \InvalidArgumentException('non-nullable ctb015 cannot be null');
+        }
         $this->container['ctb015'] = $ctb015;
 
         return $this;
@@ -6098,7 +7046,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctb016
      *
-     * @return float
+     * @return float|null
      */
     public function getCtb016()
     {
@@ -6108,12 +7056,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctb016
      *
-     * @param float $ctb016 Total balance of combined trades where worst status = 61-90 days
+     * @param float|null $ctb016 Total balance of combined trades where worst status = 61-90 days
      *
-     * @return $this
+     * @return self
      */
     public function setCtb016($ctb016)
     {
+        if (is_null($ctb016)) {
+            throw new \InvalidArgumentException('non-nullable ctb016 cannot be null');
+        }
         $this->container['ctb016'] = $ctb016;
 
         return $this;
@@ -6122,7 +7073,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctb017
      *
-     * @return float
+     * @return float|null
      */
     public function getCtb017()
     {
@@ -6132,12 +7083,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctb017
      *
-     * @param float $ctb017 Total balance of combined trades where worst status = 91+ days
+     * @param float|null $ctb017 Total balance of combined trades where worst status = 91+ days
      *
-     * @return $this
+     * @return self
      */
     public function setCtb017($ctb017)
     {
+        if (is_null($ctb017)) {
+            throw new \InvalidArgumentException('non-nullable ctb017 cannot be null');
+        }
         $this->container['ctb017'] = $ctb017;
 
         return $this;
@@ -6146,7 +7100,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctb018
      *
-     * @return float
+     * @return float|null
      */
     public function getCtb018()
     {
@@ -6156,12 +7110,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctb018
      *
-     * @param float $ctb018 Total highest balance in past 12 months across all combined trades
+     * @param float|null $ctb018 Total highest balance in past 12 months across all combined trades
      *
-     * @return $this
+     * @return self
      */
     public function setCtb018($ctb018)
     {
+        if (is_null($ctb018)) {
+            throw new \InvalidArgumentException('non-nullable ctb018 cannot be null');
+        }
         $this->container['ctb018'] = $ctb018;
 
         return $this;
@@ -6170,7 +7127,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctc021
      *
-     * @return float
+     * @return float|null
      */
     public function getCtc021()
     {
@@ -6180,12 +7137,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctc021
      *
-     * @param float $ctc021 Total number of combined trades
+     * @param float|null $ctc021 Total number of combined trades
      *
-     * @return $this
+     * @return self
      */
     public function setCtc021($ctc021)
     {
+        if (is_null($ctc021)) {
+            throw new \InvalidArgumentException('non-nullable ctc021 cannot be null');
+        }
         $this->container['ctc021'] = $ctc021;
 
         return $this;
@@ -6194,7 +7154,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctc022
      *
-     * @return float
+     * @return float|null
      */
     public function getCtc022()
     {
@@ -6204,12 +7164,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctc022
      *
-     * @param float $ctc022 Total number of combined trades where worst delinquency = current
+     * @param float|null $ctc022 Total number of combined trades where worst delinquency = current
      *
-     * @return $this
+     * @return self
      */
     public function setCtc022($ctc022)
     {
+        if (is_null($ctc022)) {
+            throw new \InvalidArgumentException('non-nullable ctc022 cannot be null');
+        }
         $this->container['ctc022'] = $ctc022;
 
         return $this;
@@ -6218,7 +7181,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctc023
      *
-     * @return float
+     * @return float|null
      */
     public function getCtc023()
     {
@@ -6228,12 +7191,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctc023
      *
-     * @param float $ctc023 Total number of combined trades where worst delinquency = 1-30 days
+     * @param float|null $ctc023 Total number of combined trades where worst delinquency = 1-30 days
      *
-     * @return $this
+     * @return self
      */
     public function setCtc023($ctc023)
     {
+        if (is_null($ctc023)) {
+            throw new \InvalidArgumentException('non-nullable ctc023 cannot be null');
+        }
         $this->container['ctc023'] = $ctc023;
 
         return $this;
@@ -6242,7 +7208,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctc024
      *
-     * @return float
+     * @return float|null
      */
     public function getCtc024()
     {
@@ -6252,12 +7218,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctc024
      *
-     * @param float $ctc024 Total number of combined trades where worst delinquency = 31-60 days
+     * @param float|null $ctc024 Total number of combined trades where worst delinquency = 31-60 days
      *
-     * @return $this
+     * @return self
      */
     public function setCtc024($ctc024)
     {
+        if (is_null($ctc024)) {
+            throw new \InvalidArgumentException('non-nullable ctc024 cannot be null');
+        }
         $this->container['ctc024'] = $ctc024;
 
         return $this;
@@ -6266,7 +7235,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctc025
      *
-     * @return float
+     * @return float|null
      */
     public function getCtc025()
     {
@@ -6276,12 +7245,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctc025
      *
-     * @param float $ctc025 Total number of combined trades where worst delinquency = 61-90 days
+     * @param float|null $ctc025 Total number of combined trades where worst delinquency = 61-90 days
      *
-     * @return $this
+     * @return self
      */
     public function setCtc025($ctc025)
     {
+        if (is_null($ctc025)) {
+            throw new \InvalidArgumentException('non-nullable ctc025 cannot be null');
+        }
         $this->container['ctc025'] = $ctc025;
 
         return $this;
@@ -6290,7 +7262,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctc026
      *
-     * @return float
+     * @return float|null
      */
     public function getCtc026()
     {
@@ -6300,12 +7272,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctc026
      *
-     * @param float $ctc026 Total number of combined trades where worst delinquency = 91+ days
+     * @param float|null $ctc026 Total number of combined trades where worst delinquency = 91+ days
      *
-     * @return $this
+     * @return self
      */
     public function setCtc026($ctc026)
     {
+        if (is_null($ctc026)) {
+            throw new \InvalidArgumentException('non-nullable ctc026 cannot be null');
+        }
         $this->container['ctc026'] = $ctc026;
 
         return $this;
@@ -6314,7 +7289,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctc027
      *
-     * @return float
+     * @return float|null
      */
     public function getCtc027()
     {
@@ -6324,12 +7299,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctc027
      *
-     * @param float $ctc027 Total number of combined trades where worst status = current
+     * @param float|null $ctc027 Total number of combined trades where worst status = current
      *
-     * @return $this
+     * @return self
      */
     public function setCtc027($ctc027)
     {
+        if (is_null($ctc027)) {
+            throw new \InvalidArgumentException('non-nullable ctc027 cannot be null');
+        }
         $this->container['ctc027'] = $ctc027;
 
         return $this;
@@ -6338,7 +7316,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctc028
      *
-     * @return float
+     * @return float|null
      */
     public function getCtc028()
     {
@@ -6348,12 +7326,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctc028
      *
-     * @param float $ctc028 Total number of combined trades where worst status = 1-30 days
+     * @param float|null $ctc028 Total number of combined trades where worst status = 1-30 days
      *
-     * @return $this
+     * @return self
      */
     public function setCtc028($ctc028)
     {
+        if (is_null($ctc028)) {
+            throw new \InvalidArgumentException('non-nullable ctc028 cannot be null');
+        }
         $this->container['ctc028'] = $ctc028;
 
         return $this;
@@ -6362,7 +7343,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctc029
      *
-     * @return float
+     * @return float|null
      */
     public function getCtc029()
     {
@@ -6372,12 +7353,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctc029
      *
-     * @param float $ctc029 Total number of combined trades where worst status is a derogatory comment (bankrupcy, judgment, lien etc)
+     * @param float|null $ctc029 Total number of combined trades where worst status is a derogatory comment (bankrupcy, judgment, lien etc)
      *
-     * @return $this
+     * @return self
      */
     public function setCtc029($ctc029)
     {
+        if (is_null($ctc029)) {
+            throw new \InvalidArgumentException('non-nullable ctc029 cannot be null');
+        }
         $this->container['ctc029'] = $ctc029;
 
         return $this;
@@ -6386,7 +7370,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctc030
      *
-     * @return float
+     * @return float|null
      */
     public function getCtc030()
     {
@@ -6396,12 +7380,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctc030
      *
-     * @param float $ctc030 Total number of combined trades where worst status = 31-60 days
+     * @param float|null $ctc030 Total number of combined trades where worst status = 31-60 days
      *
-     * @return $this
+     * @return self
      */
     public function setCtc030($ctc030)
     {
+        if (is_null($ctc030)) {
+            throw new \InvalidArgumentException('non-nullable ctc030 cannot be null');
+        }
         $this->container['ctc030'] = $ctc030;
 
         return $this;
@@ -6410,7 +7397,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctc031
      *
-     * @return float
+     * @return float|null
      */
     public function getCtc031()
     {
@@ -6420,12 +7407,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctc031
      *
-     * @param float $ctc031 Total number of combined trades where worst status = 61-90 days
+     * @param float|null $ctc031 Total number of combined trades where worst status = 61-90 days
      *
-     * @return $this
+     * @return self
      */
     public function setCtc031($ctc031)
     {
+        if (is_null($ctc031)) {
+            throw new \InvalidArgumentException('non-nullable ctc031 cannot be null');
+        }
         $this->container['ctc031'] = $ctc031;
 
         return $this;
@@ -6434,7 +7424,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctc032
      *
-     * @return float
+     * @return float|null
      */
     public function getCtc032()
     {
@@ -6444,12 +7434,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctc032
      *
-     * @param float $ctc032 Total number of combined trades where worst status = 91+ days
+     * @param float|null $ctc032 Total number of combined trades where worst status = 91+ days
      *
-     * @return $this
+     * @return self
      */
     public function setCtc032($ctc032)
     {
+        if (is_null($ctc032)) {
+            throw new \InvalidArgumentException('non-nullable ctc032 cannot be null');
+        }
         $this->container['ctc032'] = $ctc032;
 
         return $this;
@@ -6458,7 +7451,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctc033
      *
-     * @return float
+     * @return float|null
      */
     public function getCtc033()
     {
@@ -6468,12 +7461,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctc033
      *
-     * @param float $ctc033 Total number of combined trades with DBT greater than 0
+     * @param float|null $ctc033 Total number of combined trades with DBT greater than 0
      *
-     * @return $this
+     * @return self
      */
     public function setCtc033($ctc033)
     {
+        if (is_null($ctc033)) {
+            throw new \InvalidArgumentException('non-nullable ctc033 cannot be null');
+        }
         $this->container['ctc033'] = $ctc033;
 
         return $this;
@@ -6482,7 +7478,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctc034
      *
-     * @return float
+     * @return float|null
      */
     public function getCtc034()
     {
@@ -6492,12 +7488,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctc034
      *
-     * @param float $ctc034 Total number of combined trades with DBT greater than 30
+     * @param float|null $ctc034 Total number of combined trades with DBT greater than 30
      *
-     * @return $this
+     * @return self
      */
     public function setCtc034($ctc034)
     {
+        if (is_null($ctc034)) {
+            throw new \InvalidArgumentException('non-nullable ctc034 cannot be null');
+        }
         $this->container['ctc034'] = $ctc034;
 
         return $this;
@@ -6506,7 +7505,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctc035
      *
-     * @return float
+     * @return float|null
      */
     public function getCtc035()
     {
@@ -6516,12 +7515,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctc035
      *
-     * @param float $ctc035 Total number of combined trades with DBT greater than 60
+     * @param float|null $ctc035 Total number of combined trades with DBT greater than 60
      *
-     * @return $this
+     * @return self
      */
     public function setCtc035($ctc035)
     {
+        if (is_null($ctc035)) {
+            throw new \InvalidArgumentException('non-nullable ctc035 cannot be null');
+        }
         $this->container['ctc035'] = $ctc035;
 
         return $this;
@@ -6530,7 +7532,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctc036
      *
-     * @return float
+     * @return float|null
      */
     public function getCtc036()
     {
@@ -6540,12 +7542,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctc036
      *
-     * @param float $ctc036 Total number of combined trades with DBT greater than 90
+     * @param float|null $ctc036 Total number of combined trades with DBT greater than 90
      *
-     * @return $this
+     * @return self
      */
     public function setCtc036($ctc036)
     {
+        if (is_null($ctc036)) {
+            throw new \InvalidArgumentException('non-nullable ctc036 cannot be null');
+        }
         $this->container['ctc036'] = $ctc036;
 
         return $this;
@@ -6554,7 +7559,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctd038
      *
-     * @return float
+     * @return float|null
      */
     public function getCtd038()
     {
@@ -6564,12 +7569,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctd038
      *
-     * @param float $ctd038 DBT of combined trades
+     * @param float|null $ctd038 DBT of combined trades
      *
-     * @return $this
+     * @return self
      */
     public function setCtd038($ctd038)
     {
+        if (is_null($ctd038)) {
+            throw new \InvalidArgumentException('non-nullable ctd038 cannot be null');
+        }
         $this->container['ctd038'] = $ctd038;
 
         return $this;
@@ -6578,7 +7586,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctp039
      *
-     * @return float
+     * @return float|null
      */
     public function getCtp039()
     {
@@ -6588,12 +7596,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctp039
      *
-     * @param float $ctp039 Percentage of Total combined balance to combined trades Total highest balance in past 12 months
+     * @param float|null $ctp039 Percentage of Total combined balance to combined trades Total highest balance in past 12 months
      *
-     * @return $this
+     * @return self
      */
     public function setCtp039($ctp039)
     {
+        if (is_null($ctp039)) {
+            throw new \InvalidArgumentException('non-nullable ctp039 cannot be null');
+        }
         $this->container['ctp039'] = $ctp039;
 
         return $this;
@@ -6602,7 +7613,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctp040
      *
-     * @return float
+     * @return float|null
      */
     public function getCtp040()
     {
@@ -6612,12 +7623,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctp040
      *
-     * @param float $ctp040 Percentage of Total balance of combined trades to Total trade balance
+     * @param float|null $ctp040 Percentage of Total balance of combined trades to Total trade balance
      *
-     * @return $this
+     * @return self
      */
     public function setCtp040($ctp040)
     {
+        if (is_null($ctp040)) {
+            throw new \InvalidArgumentException('non-nullable ctp040 cannot be null');
+        }
         $this->container['ctp040'] = $ctp040;
 
         return $this;
@@ -6626,7 +7640,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ctp041
      *
-     * @return float
+     * @return float|null
      */
     public function getCtp041()
     {
@@ -6636,12 +7650,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ctp041
      *
-     * @param float $ctp041 Percentage of Total number of combined trades to Total number of trades
+     * @param float|null $ctp041 Percentage of Total number of combined trades to Total number of trades
      *
-     * @return $this
+     * @return self
      */
     public function setCtp041($ctp041)
     {
+        if (is_null($ctp041)) {
+            throw new \InvalidArgumentException('non-nullable ctp041 cannot be null');
+        }
         $this->container['ctp041'] = $ctp041;
 
         return $this;
@@ -6650,7 +7667,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets dmo003
      *
-     * @return string
+     * @return string|null
      */
     public function getDmo003()
     {
@@ -6660,12 +7677,19 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets dmo003
      *
-     * @param string $dmo003 Business type code: C = Corporation, F = Fortune 1000, H = Chain Store, I = Institutions, N = Non-Profit, P = Partnership, R = Residential (Cottage), S = Sole Proprietor, X = S Corporation, Y = Corporation, Blank = Not Available
+     * @param string|null $dmo003 Business type code: C = Corporation, F = Fortune 1000, H = Chain Store, I = Institutions, N = Non-Profit, P = Partnership, R = Residential (Cottage), S = Sole Proprietor, X = S Corporation, Y = Corporation, Blank = Not Available
      *
-     * @return $this
+     * @return self
      */
     public function setDmo003($dmo003)
     {
+        if (is_null($dmo003)) {
+            throw new \InvalidArgumentException('non-nullable dmo003 cannot be null');
+        }
+        if ((mb_strlen($dmo003) > 1)) {
+            throw new \InvalidArgumentException('invalid length for $dmo003 when calling BizAggregates., must be smaller than or equal to 1.');
+        }
+
         $this->container['dmo003'] = $dmo003;
 
         return $this;
@@ -6674,7 +7698,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets dmo009
      *
-     * @return string
+     * @return string|null
      */
     public function getDmo009()
     {
@@ -6684,12 +7708,19 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets dmo009
      *
-     * @param string $dmo009 Date the first trade lines were contributed and the file was created within Experian's database
+     * @param string|null $dmo009 Date the first trade lines were contributed and the file was created within Experian's database
      *
-     * @return $this
+     * @return self
      */
     public function setDmo009($dmo009)
     {
+        if (is_null($dmo009)) {
+            throw new \InvalidArgumentException('non-nullable dmo009 cannot be null');
+        }
+        if ((mb_strlen($dmo009) > 10)) {
+            throw new \InvalidArgumentException('invalid length for $dmo009 when calling BizAggregates., must be smaller than or equal to 10.');
+        }
+
         $this->container['dmo009'] = $dmo009;
 
         return $this;
@@ -6698,7 +7729,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets dmo013
      *
-     * @return string
+     * @return string|null
      */
     public function getDmo013()
     {
@@ -6708,12 +7739,19 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets dmo013
      *
-     * @param string $dmo013 SIC (Standard industrial classification) code assigned by the government for a company's primary business activity
+     * @param string|null $dmo013 SIC (Standard industrial classification) code assigned by the government for a company's primary business activity
      *
-     * @return $this
+     * @return self
      */
     public function setDmo013($dmo013)
     {
+        if (is_null($dmo013)) {
+            throw new \InvalidArgumentException('non-nullable dmo013 cannot be null');
+        }
+        if ((mb_strlen($dmo013) > 4)) {
+            throw new \InvalidArgumentException('invalid length for $dmo013 when calling BizAggregates., must be smaller than or equal to 4.');
+        }
+
         $this->container['dmo013'] = $dmo013;
 
         return $this;
@@ -6722,7 +7760,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets iqc001
      *
-     * @return float
+     * @return float|null
      */
     public function getIqc001()
     {
@@ -6732,12 +7770,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets iqc001
      *
-     * @param float $iqc001 Total number of inquiries in the last nine full months
+     * @param float|null $iqc001 Total number of inquiries in the last nine full months
      *
-     * @return $this
+     * @return self
      */
     public function setIqc001($iqc001)
     {
+        if (is_null($iqc001)) {
+            throw new \InvalidArgumentException('non-nullable iqc001 cannot be null');
+        }
         $this->container['iqc001'] = $iqc001;
 
         return $this;
@@ -6746,7 +7787,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets iqc002
      *
-     * @return float
+     * @return float|null
      */
     public function getIqc002()
     {
@@ -6756,12 +7797,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets iqc002
      *
-     * @param float $iqc002 Total number of inquiries in the last six full months
+     * @param float|null $iqc002 Total number of inquiries in the last six full months
      *
-     * @return $this
+     * @return self
      */
     public function setIqc002($iqc002)
     {
+        if (is_null($iqc002)) {
+            throw new \InvalidArgumentException('non-nullable iqc002 cannot be null');
+        }
         $this->container['iqc002'] = $iqc002;
 
         return $this;
@@ -6770,7 +7814,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets iqc003
      *
-     * @return float
+     * @return float|null
      */
     public function getIqc003()
     {
@@ -6780,12 +7824,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets iqc003
      *
-     * @param float $iqc003 Total number of inquiries in the last three full months
+     * @param float|null $iqc003 Total number of inquiries in the last three full months
      *
-     * @return $this
+     * @return self
      */
     public function setIqc003($iqc003)
     {
+        if (is_null($iqc003)) {
+            throw new \InvalidArgumentException('non-nullable iqc003 cannot be null');
+        }
         $this->container['iqc003'] = $iqc003;
 
         return $this;
@@ -6794,7 +7841,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets jdb001
      *
-     * @return float
+     * @return float|null
      */
     public function getJdb001()
     {
@@ -6804,12 +7851,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets jdb001
      *
-     * @param float $jdb001 Total amount of judgments filed within 12 months of profile date (Excluding Release, Satisfied, Abstract, or Vacate)
+     * @param float|null $jdb001 Total amount of judgments filed within 12 months of profile date (Excluding Release, Satisfied, Abstract, or Vacate)
      *
-     * @return $this
+     * @return self
      */
     public function setJdb001($jdb001)
     {
+        if (is_null($jdb001)) {
+            throw new \InvalidArgumentException('non-nullable jdb001 cannot be null');
+        }
         $this->container['jdb001'] = $jdb001;
 
         return $this;
@@ -6818,7 +7868,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets jdb002
      *
-     * @return float
+     * @return float|null
      */
     public function getJdb002()
     {
@@ -6828,12 +7878,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets jdb002
      *
-     * @param float $jdb002 Total amount of judgments filed within 24 months of profile date (Excluding Release, Satisfied, Abstract, or Vacate)
+     * @param float|null $jdb002 Total amount of judgments filed within 24 months of profile date (Excluding Release, Satisfied, Abstract, or Vacate)
      *
-     * @return $this
+     * @return self
      */
     public function setJdb002($jdb002)
     {
+        if (is_null($jdb002)) {
+            throw new \InvalidArgumentException('non-nullable jdb002 cannot be null');
+        }
         $this->container['jdb002'] = $jdb002;
 
         return $this;
@@ -6842,7 +7895,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets jdb003
      *
-     * @return float
+     * @return float|null
      */
     public function getJdb003()
     {
@@ -6852,12 +7905,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets jdb003
      *
-     * @param float $jdb003 Total amount of judgments filed within 6 months of profile date (Excluding Release, Satisfied, Abstract, or Vacate)
+     * @param float|null $jdb003 Total amount of judgments filed within 6 months of profile date (Excluding Release, Satisfied, Abstract, or Vacate)
      *
-     * @return $this
+     * @return self
      */
     public function setJdb003($jdb003)
     {
+        if (is_null($jdb003)) {
+            throw new \InvalidArgumentException('non-nullable jdb003 cannot be null');
+        }
         $this->container['jdb003'] = $jdb003;
 
         return $this;
@@ -6866,7 +7922,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets jdb004
      *
-     * @return float
+     * @return float|null
      */
     public function getJdb004()
     {
@@ -6876,12 +7932,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets jdb004
      *
-     * @param float $jdb004 Total liability amount for original judgments filed
+     * @param float|null $jdb004 Total liability amount for original judgments filed
      *
-     * @return $this
+     * @return self
      */
     public function setJdb004($jdb004)
     {
+        if (is_null($jdb004)) {
+            throw new \InvalidArgumentException('non-nullable jdb004 cannot be null');
+        }
         $this->container['jdb004'] = $jdb004;
 
         return $this;
@@ -6890,7 +7949,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets jdb005
      *
-     * @return float
+     * @return float|null
      */
     public function getJdb005()
     {
@@ -6900,12 +7959,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets jdb005
      *
-     * @param float $jdb005 Total liability amount for judgments (including satisfied, released, etc) filed within the last 24 months of profile date
+     * @param float|null $jdb005 Total liability amount for judgments (including satisfied, released, etc) filed within the last 24 months of profile date
      *
-     * @return $this
+     * @return self
      */
     public function setJdb005($jdb005)
     {
+        if (is_null($jdb005)) {
+            throw new \InvalidArgumentException('non-nullable jdb005 cannot be null');
+        }
         $this->container['jdb005'] = $jdb005;
 
         return $this;
@@ -6914,7 +7976,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets jdb006
      *
-     * @return float
+     * @return float|null
      */
     public function getJdb006()
     {
@@ -6924,12 +7986,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets jdb006
      *
-     * @param float $jdb006 Total liability amount for non-filed judgment actions
+     * @param float|null $jdb006 Total liability amount for non-filed judgment actions
      *
-     * @return $this
+     * @return self
      */
     public function setJdb006($jdb006)
     {
+        if (is_null($jdb006)) {
+            throw new \InvalidArgumentException('non-nullable jdb006 cannot be null');
+        }
         $this->container['jdb006'] = $jdb006;
 
         return $this;
@@ -6938,7 +8003,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets jdc007
      *
-     * @return float
+     * @return float|null
      */
     public function getJdc007()
     {
@@ -6948,12 +8013,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets jdc007
      *
-     * @param float $jdc007 Total number of judgment filed within 12 months of profile date (Excluding Release, Satisfied, Abstract, or Vacate)
+     * @param float|null $jdc007 Total number of judgment filed within 12 months of profile date (Excluding Release, Satisfied, Abstract, or Vacate)
      *
-     * @return $this
+     * @return self
      */
     public function setJdc007($jdc007)
     {
+        if (is_null($jdc007)) {
+            throw new \InvalidArgumentException('non-nullable jdc007 cannot be null');
+        }
         $this->container['jdc007'] = $jdc007;
 
         return $this;
@@ -6962,7 +8030,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets jdc009
      *
-     * @return float
+     * @return float|null
      */
     public function getJdc009()
     {
@@ -6972,12 +8040,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets jdc009
      *
-     * @param float $jdc009 Total number of judgment filed within 6 months of profile date (Excluding Release, Satisfied, Abstract, or Vacate)
+     * @param float|null $jdc009 Total number of judgment filed within 6 months of profile date (Excluding Release, Satisfied, Abstract, or Vacate)
      *
-     * @return $this
+     * @return self
      */
     public function setJdc009($jdc009)
     {
+        if (is_null($jdc009)) {
+            throw new \InvalidArgumentException('non-nullable jdc009 cannot be null');
+        }
         $this->container['jdc009'] = $jdc009;
 
         return $this;
@@ -6986,7 +8057,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets jdc010
      *
-     * @return float
+     * @return float|null
      */
     public function getJdc010()
     {
@@ -6996,12 +8067,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets jdc010
      *
-     * @param float $jdc010 Total number of original judgments filed
+     * @param float|null $jdc010 Total number of original judgments filed
      *
-     * @return $this
+     * @return self
      */
     public function setJdc010($jdc010)
     {
+        if (is_null($jdc010)) {
+            throw new \InvalidArgumentException('non-nullable jdc010 cannot be null');
+        }
         $this->container['jdc010'] = $jdc010;
 
         return $this;
@@ -7010,7 +8084,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets jdc011
      *
-     * @return float
+     * @return float|null
      */
     public function getJdc011()
     {
@@ -7020,12 +8094,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets jdc011
      *
-     * @param float $jdc011 Total number of judgments (including satisfied, released, etc) filed within 24 months of profile date
+     * @param float|null $jdc011 Total number of judgments (including satisfied, released, etc) filed within 24 months of profile date
      *
-     * @return $this
+     * @return self
      */
     public function setJdc011($jdc011)
     {
+        if (is_null($jdc011)) {
+            throw new \InvalidArgumentException('non-nullable jdc011 cannot be null');
+        }
         $this->container['jdc011'] = $jdc011;
 
         return $this;
@@ -7034,7 +8111,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets jdc012
      *
-     * @return float
+     * @return float|null
      */
     public function getJdc012()
     {
@@ -7044,12 +8121,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets jdc012
      *
-     * @param float $jdc012 Total number of non-filed judgment actions
+     * @param float|null $jdc012 Total number of non-filed judgment actions
      *
-     * @return $this
+     * @return self
      */
     public function setJdc012($jdc012)
     {
+        if (is_null($jdc012)) {
+            throw new \InvalidArgumentException('non-nullable jdc012 cannot be null');
+        }
         $this->container['jdc012'] = $jdc012;
 
         return $this;
@@ -7058,7 +8138,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets jdo013
      *
-     * @return float
+     * @return float|null
      */
     public function getJdo013()
     {
@@ -7068,12 +8148,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets jdo013
      *
-     * @param float $jdo013 Age in months of most recent filed judgment
+     * @param float|null $jdo013 Age in months of most recent filed judgment
      *
-     * @return $this
+     * @return self
      */
     public function setJdo013($jdo013)
     {
+        if (is_null($jdo013)) {
+            throw new \InvalidArgumentException('non-nullable jdo013 cannot be null');
+        }
         $this->container['jdo013'] = $jdo013;
 
         return $this;
@@ -7082,7 +8165,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets jdo014
      *
-     * @return float
+     * @return float|null
      */
     public function getJdo014()
     {
@@ -7092,12 +8175,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets jdo014
      *
-     * @param float $jdo014 Age in months of most recent non-filed judgment action
+     * @param float|null $jdo014 Age in months of most recent non-filed judgment action
      *
-     * @return $this
+     * @return self
      */
     public function setJdo014($jdo014)
     {
+        if (is_null($jdo014)) {
+            throw new \InvalidArgumentException('non-nullable jdo014 cannot be null');
+        }
         $this->container['jdo014'] = $jdo014;
 
         return $this;
@@ -7106,7 +8192,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets jdp015
      *
-     * @return float
+     * @return float|null
      */
     public function getJdp015()
     {
@@ -7116,12 +8202,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets jdp015
      *
-     * @param float $jdp015 Percentage of Total judgment amount filed with 12 months to Total balance
+     * @param float|null $jdp015 Percentage of Total judgment amount filed with 12 months to Total balance
      *
-     * @return $this
+     * @return self
      */
     public function setJdp015($jdp015)
     {
+        if (is_null($jdp015)) {
+            throw new \InvalidArgumentException('non-nullable jdp015 cannot be null');
+        }
         $this->container['jdp015'] = $jdp015;
 
         return $this;
@@ -7130,7 +8219,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets jdp016
      *
-     * @return float
+     * @return float|null
      */
     public function getJdp016()
     {
@@ -7140,12 +8229,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets jdp016
      *
-     * @param float $jdp016 Percentage of Total judgment amount filed with 24 months to Total balance
+     * @param float|null $jdp016 Percentage of Total judgment amount filed with 24 months to Total balance
      *
-     * @return $this
+     * @return self
      */
     public function setJdp016($jdp016)
     {
+        if (is_null($jdp016)) {
+            throw new \InvalidArgumentException('non-nullable jdp016 cannot be null');
+        }
         $this->container['jdp016'] = $jdp016;
 
         return $this;
@@ -7154,7 +8246,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets jdp017
      *
-     * @return float
+     * @return float|null
      */
     public function getJdp017()
     {
@@ -7164,12 +8256,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets jdp017
      *
-     * @param float $jdp017 Percentage of Total judgment amount filed with 6 months to Total balance
+     * @param float|null $jdp017 Percentage of Total judgment amount filed with 6 months to Total balance
      *
-     * @return $this
+     * @return self
      */
     public function setJdp017($jdp017)
     {
+        if (is_null($jdp017)) {
+            throw new \InvalidArgumentException('non-nullable jdp017 cannot be null');
+        }
         $this->container['jdp017'] = $jdp017;
 
         return $this;
@@ -7178,7 +8273,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lgc002
      *
-     * @return float
+     * @return float|null
      */
     public function getLgc002()
     {
@@ -7188,12 +8283,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lgc002
      *
-     * @param float $lgc002 Total number of legal filings (bankruptcies, tax liens, and judgments) in past 12 months
+     * @param float|null $lgc002 Total number of legal filings (bankruptcies, tax liens, and judgments) in past 12 months
      *
-     * @return $this
+     * @return self
      */
     public function setLgc002($lgc002)
     {
+        if (is_null($lgc002)) {
+            throw new \InvalidArgumentException('non-nullable lgc002 cannot be null');
+        }
         $this->container['lgc002'] = $lgc002;
 
         return $this;
@@ -7202,7 +8300,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lgc003
      *
-     * @return float
+     * @return float|null
      */
     public function getLgc003()
     {
@@ -7212,12 +8310,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lgc003
      *
-     * @param float $lgc003 Total number of legal filings (bankruptcies, tax liens, and judgments) in past 6 months
+     * @param float|null $lgc003 Total number of legal filings (bankruptcies, tax liens, and judgments) in past 6 months
      *
-     * @return $this
+     * @return self
      */
     public function setLgc003($lgc003)
     {
+        if (is_null($lgc003)) {
+            throw new \InvalidArgumentException('non-nullable lgc003 cannot be null');
+        }
         $this->container['lgc003'] = $lgc003;
 
         return $this;
@@ -7226,7 +8327,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lgc004
      *
-     * @return float
+     * @return float|null
      */
     public function getLgc004()
     {
@@ -7236,12 +8337,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lgc004
      *
-     * @param float $lgc004 Total number of legal filings Includes bankruptcies, tax liens, and judgments
+     * @param float|null $lgc004 Total number of legal filings Includes bankruptcies, tax liens, and judgments
      *
-     * @return $this
+     * @return self
      */
     public function setLgc004($lgc004)
     {
+        if (is_null($lgc004)) {
+            throw new \InvalidArgumentException('non-nullable lgc004 cannot be null');
+        }
         $this->container['lgc004'] = $lgc004;
 
         return $this;
@@ -7250,7 +8354,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lsb001
      *
-     * @return float
+     * @return float|null
      */
     public function getLsb001()
     {
@@ -7260,12 +8364,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lsb001
      *
-     * @param float $lsb001 Total original amount for all leasing trades
+     * @param float|null $lsb001 Total original amount for all leasing trades
      *
-     * @return $this
+     * @return self
      */
     public function setLsb001($lsb001)
     {
+        if (is_null($lsb001)) {
+            throw new \InvalidArgumentException('non-nullable lsb001 cannot be null');
+        }
         $this->container['lsb001'] = $lsb001;
 
         return $this;
@@ -7274,7 +8381,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lsb002
      *
-     * @return float
+     * @return float|null
      */
     public function getLsb002()
     {
@@ -7284,12 +8391,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lsb002
      *
-     * @param float $lsb002 Total amount due on next scheduled payment (excluding late payments & charges) for leasing trades with a scheduled amount due
+     * @param float|null $lsb002 Total amount due on next scheduled payment (excluding late payments & charges) for leasing trades with a scheduled amount due
      *
-     * @return $this
+     * @return self
      */
     public function setLsb002($lsb002)
     {
+        if (is_null($lsb002)) {
+            throw new \InvalidArgumentException('non-nullable lsb002 cannot be null');
+        }
         $this->container['lsb002'] = $lsb002;
 
         return $this;
@@ -7298,7 +8408,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lsb003
      *
-     * @return float
+     * @return float|null
      */
     public function getLsb003()
     {
@@ -7308,12 +8418,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lsb003
      *
-     * @param float $lsb003 Total amount due on next scheduled payment (including late payments & charges) for leasing trades with a scheduled amount due
+     * @param float|null $lsb003 Total amount due on next scheduled payment (including late payments & charges) for leasing trades with a scheduled amount due
      *
-     * @return $this
+     * @return self
      */
     public function setLsb003($lsb003)
     {
+        if (is_null($lsb003)) {
+            throw new \InvalidArgumentException('non-nullable lsb003 cannot be null');
+        }
         $this->container['lsb003'] = $lsb003;
 
         return $this;
@@ -7322,7 +8435,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lsb004
      *
-     * @return float
+     * @return float|null
      */
     public function getLsb004()
     {
@@ -7332,12 +8445,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lsb004
      *
-     * @param float $lsb004 Total amount past due for leasing trades that have an amount outstanding which has exceeded the final due date by at least 1 day
+     * @param float|null $lsb004 Total amount past due for leasing trades that have an amount outstanding which has exceeded the final due date by at least 1 day
      *
-     * @return $this
+     * @return self
      */
     public function setLsb004($lsb004)
     {
+        if (is_null($lsb004)) {
+            throw new \InvalidArgumentException('non-nullable lsb004 cannot be null');
+        }
         $this->container['lsb004'] = $lsb004;
 
         return $this;
@@ -7346,7 +8462,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lsb005
      *
-     * @return float
+     * @return float|null
      */
     public function getLsb005()
     {
@@ -7356,12 +8472,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lsb005
      *
-     * @param float $lsb005 Total remaining balance due for leasing trades with a remaining balance due (including interest)
+     * @param float|null $lsb005 Total remaining balance due for leasing trades with a remaining balance due (including interest)
      *
-     * @return $this
+     * @return self
      */
     public function setLsb005($lsb005)
     {
+        if (is_null($lsb005)) {
+            throw new \InvalidArgumentException('non-nullable lsb005 cannot be null');
+        }
         $this->container['lsb005'] = $lsb005;
 
         return $this;
@@ -7370,7 +8489,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lsb006
      *
-     * @return float
+     * @return float|null
      */
     public function getLsb006()
     {
@@ -7380,12 +8499,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lsb006
      *
-     * @param float $lsb006 Maximum original amount for a leasing trade
+     * @param float|null $lsb006 Maximum original amount for a leasing trade
      *
-     * @return $this
+     * @return self
      */
     public function setLsb006($lsb006)
     {
+        if (is_null($lsb006)) {
+            throw new \InvalidArgumentException('non-nullable lsb006 cannot be null');
+        }
         $this->container['lsb006'] = $lsb006;
 
         return $this;
@@ -7394,7 +8516,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lsb007
      *
-     * @return float
+     * @return float|null
      */
     public function getLsb007()
     {
@@ -7404,12 +8526,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lsb007
      *
-     * @param float $lsb007 Maximum amount due on next scheduled payment (excluding late payments & charges) for leasing trades with a scheduled amount due
+     * @param float|null $lsb007 Maximum amount due on next scheduled payment (excluding late payments & charges) for leasing trades with a scheduled amount due
      *
-     * @return $this
+     * @return self
      */
     public function setLsb007($lsb007)
     {
+        if (is_null($lsb007)) {
+            throw new \InvalidArgumentException('non-nullable lsb007 cannot be null');
+        }
         $this->container['lsb007'] = $lsb007;
 
         return $this;
@@ -7418,7 +8543,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lsb008
      *
-     * @return float
+     * @return float|null
      */
     public function getLsb008()
     {
@@ -7428,12 +8553,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lsb008
      *
-     * @param float $lsb008 Maximum amount due on next scheduled payment (including late payments & charges) for leasing trades with a scheduled amount due
+     * @param float|null $lsb008 Maximum amount due on next scheduled payment (including late payments & charges) for leasing trades with a scheduled amount due
      *
-     * @return $this
+     * @return self
      */
     public function setLsb008($lsb008)
     {
+        if (is_null($lsb008)) {
+            throw new \InvalidArgumentException('non-nullable lsb008 cannot be null');
+        }
         $this->container['lsb008'] = $lsb008;
 
         return $this;
@@ -7442,7 +8570,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lsb009
      *
-     * @return float
+     * @return float|null
      */
     public function getLsb009()
     {
@@ -7452,12 +8580,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lsb009
      *
-     * @param float $lsb009 Maximum remaining balance due for leasing trades with a remaining balance due (including interest)
+     * @param float|null $lsb009 Maximum remaining balance due for leasing trades with a remaining balance due (including interest)
      *
-     * @return $this
+     * @return self
      */
     public function setLsb009($lsb009)
     {
+        if (is_null($lsb009)) {
+            throw new \InvalidArgumentException('non-nullable lsb009 cannot be null');
+        }
         $this->container['lsb009'] = $lsb009;
 
         return $this;
@@ -7466,7 +8597,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lsc010
      *
-     * @return float
+     * @return float|null
      */
     public function getLsc010()
     {
@@ -7476,12 +8607,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lsc010
      *
-     * @param float $lsc010 Total number of leasing trades
+     * @param float|null $lsc010 Total number of leasing trades
      *
-     * @return $this
+     * @return self
      */
     public function setLsc010($lsc010)
     {
+        if (is_null($lsc010)) {
+            throw new \InvalidArgumentException('non-nullable lsc010 cannot be null');
+        }
         $this->container['lsc010'] = $lsc010;
 
         return $this;
@@ -7490,7 +8624,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lsc011
      *
-     * @return float
+     * @return float|null
      */
     public function getLsc011()
     {
@@ -7500,12 +8634,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lsc011
      *
-     * @param float $lsc011 Total number of leasing trades with variable terms
+     * @param float|null $lsc011 Total number of leasing trades with variable terms
      *
-     * @return $this
+     * @return self
      */
     public function setLsc011($lsc011)
     {
+        if (is_null($lsc011)) {
+            throw new \InvalidArgumentException('non-nullable lsc011 cannot be null');
+        }
         $this->container['lsc011'] = $lsc011;
 
         return $this;
@@ -7514,7 +8651,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lsc012
      *
-     * @return float
+     * @return float|null
      */
     public function getLsc012()
     {
@@ -7524,12 +8661,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lsc012
      *
-     * @param float $lsc012 Total number of leasing trades with quarterly, semi-annual, or annual payments
+     * @param float|null $lsc012 Total number of leasing trades with quarterly, semi-annual, or annual payments
      *
-     * @return $this
+     * @return self
      */
     public function setLsc012($lsc012)
     {
+        if (is_null($lsc012)) {
+            throw new \InvalidArgumentException('non-nullable lsc012 cannot be null');
+        }
         $this->container['lsc012'] = $lsc012;
 
         return $this;
@@ -7538,7 +8678,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lsc013
      *
-     * @return float
+     * @return float|null
      */
     public function getLsc013()
     {
@@ -7548,12 +8688,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lsc013
      *
-     * @param float $lsc013 Total number of leasing trades with satisfactory payment
+     * @param float|null $lsc013 Total number of leasing trades with satisfactory payment
      *
-     * @return $this
+     * @return self
      */
     public function setLsc013($lsc013)
     {
+        if (is_null($lsc013)) {
+            throw new \InvalidArgumentException('non-nullable lsc013 cannot be null');
+        }
         $this->container['lsc013'] = $lsc013;
 
         return $this;
@@ -7562,7 +8705,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lsc014
      *
-     * @return float
+     * @return float|null
      */
     public function getLsc014()
     {
@@ -7572,12 +8715,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lsc014
      *
-     * @param float $lsc014 Total number of leasing trades with slow pay or derogatory comment codes
+     * @param float|null $lsc014 Total number of leasing trades with slow pay or derogatory comment codes
      *
-     * @return $this
+     * @return self
      */
     public function setLsc014($lsc014)
     {
+        if (is_null($lsc014)) {
+            throw new \InvalidArgumentException('non-nullable lsc014 cannot be null');
+        }
         $this->container['lsc014'] = $lsc014;
 
         return $this;
@@ -7586,7 +8732,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lsc015
      *
-     * @return float
+     * @return float|null
      */
     public function getLsc015()
     {
@@ -7596,12 +8742,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lsc015
      *
-     * @param float $lsc015 Total number of vehicle leasing trades
+     * @param float|null $lsc015 Total number of vehicle leasing trades
      *
-     * @return $this
+     * @return self
      */
     public function setLsc015($lsc015)
     {
+        if (is_null($lsc015)) {
+            throw new \InvalidArgumentException('non-nullable lsc015 cannot be null');
+        }
         $this->container['lsc015'] = $lsc015;
 
         return $this;
@@ -7610,7 +8759,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lsc016
      *
-     * @return float
+     * @return float|null
      */
     public function getLsc016()
     {
@@ -7620,12 +8769,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lsc016
      *
-     * @param float $lsc016 Total number of office equipment leasing trades
+     * @param float|null $lsc016 Total number of office equipment leasing trades
      *
-     * @return $this
+     * @return self
      */
     public function setLsc016($lsc016)
     {
+        if (is_null($lsc016)) {
+            throw new \InvalidArgumentException('non-nullable lsc016 cannot be null');
+        }
         $this->container['lsc016'] = $lsc016;
 
         return $this;
@@ -7634,7 +8786,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lsc017
      *
-     * @return float
+     * @return float|null
      */
     public function getLsc017()
     {
@@ -7644,12 +8796,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lsc017
      *
-     * @param float $lsc017 Total number of capital, operating, or finance leasing trades
+     * @param float|null $lsc017 Total number of capital, operating, or finance leasing trades
      *
-     * @return $this
+     * @return self
      */
     public function setLsc017($lsc017)
     {
+        if (is_null($lsc017)) {
+            throw new \InvalidArgumentException('non-nullable lsc017 cannot be null');
+        }
         $this->container['lsc017'] = $lsc017;
 
         return $this;
@@ -7658,7 +8813,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lsc018
      *
-     * @return float
+     * @return float|null
      */
     public function getLsc018()
     {
@@ -7668,12 +8823,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lsc018
      *
-     * @param float $lsc018 Total number of leasing trades with a term between 1 and 12 months
+     * @param float|null $lsc018 Total number of leasing trades with a term between 1 and 12 months
      *
-     * @return $this
+     * @return self
      */
     public function setLsc018($lsc018)
     {
+        if (is_null($lsc018)) {
+            throw new \InvalidArgumentException('non-nullable lsc018 cannot be null');
+        }
         $this->container['lsc018'] = $lsc018;
 
         return $this;
@@ -7682,7 +8840,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lsc019
      *
-     * @return float
+     * @return float|null
      */
     public function getLsc019()
     {
@@ -7692,12 +8850,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lsc019
      *
-     * @param float $lsc019 Total number of leasing trades with a term between 13 and 24 months
+     * @param float|null $lsc019 Total number of leasing trades with a term between 13 and 24 months
      *
-     * @return $this
+     * @return self
      */
     public function setLsc019($lsc019)
     {
+        if (is_null($lsc019)) {
+            throw new \InvalidArgumentException('non-nullable lsc019 cannot be null');
+        }
         $this->container['lsc019'] = $lsc019;
 
         return $this;
@@ -7706,7 +8867,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lsc020
      *
-     * @return float
+     * @return float|null
      */
     public function getLsc020()
     {
@@ -7716,12 +8877,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lsc020
      *
-     * @param float $lsc020 Total number of leasing trades with a term between 15 and 60 months
+     * @param float|null $lsc020 Total number of leasing trades with a term between 15 and 60 months
      *
-     * @return $this
+     * @return self
      */
     public function setLsc020($lsc020)
     {
+        if (is_null($lsc020)) {
+            throw new \InvalidArgumentException('non-nullable lsc020 cannot be null');
+        }
         $this->container['lsc020'] = $lsc020;
 
         return $this;
@@ -7730,7 +8894,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lsc021
      *
-     * @return float
+     * @return float|null
      */
     public function getLsc021()
     {
@@ -7740,12 +8904,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lsc021
      *
-     * @param float $lsc021 Total number of leasing trades with a term greater than 60 months
+     * @param float|null $lsc021 Total number of leasing trades with a term greater than 60 months
      *
-     * @return $this
+     * @return self
      */
     public function setLsc021($lsc021)
     {
+        if (is_null($lsc021)) {
+            throw new \InvalidArgumentException('non-nullable lsc021 cannot be null');
+        }
         $this->container['lsc021'] = $lsc021;
 
         return $this;
@@ -7754,7 +8921,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lsc022
      *
-     * @return float
+     * @return float|null
      */
     public function getLsc022()
     {
@@ -7764,12 +8931,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lsc022
      *
-     * @param float $lsc022 Total number of leasing trades with a current scheduled amount due (excluding late payments & charges)
+     * @param float|null $lsc022 Total number of leasing trades with a current scheduled amount due (excluding late payments & charges)
      *
-     * @return $this
+     * @return self
      */
     public function setLsc022($lsc022)
     {
+        if (is_null($lsc022)) {
+            throw new \InvalidArgumentException('non-nullable lsc022 cannot be null');
+        }
         $this->container['lsc022'] = $lsc022;
 
         return $this;
@@ -7778,7 +8948,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lsc023
      *
-     * @return float
+     * @return float|null
      */
     public function getLsc023()
     {
@@ -7788,12 +8958,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lsc023
      *
-     * @param float $lsc023 Total number of leasing trades with a current scheduled amount due (including late payments & charges)
+     * @param float|null $lsc023 Total number of leasing trades with a current scheduled amount due (including late payments & charges)
      *
-     * @return $this
+     * @return self
      */
     public function setLsc023($lsc023)
     {
+        if (is_null($lsc023)) {
+            throw new \InvalidArgumentException('non-nullable lsc023 cannot be null');
+        }
         $this->container['lsc023'] = $lsc023;
 
         return $this;
@@ -7802,7 +8975,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lsc024
      *
-     * @return float
+     * @return float|null
      */
     public function getLsc024()
     {
@@ -7812,12 +8985,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lsc024
      *
-     * @param float $lsc024 Total number of leasing trades that have an amount outstanding which has exceeded the final due date by at least 1 day
+     * @param float|null $lsc024 Total number of leasing trades that have an amount outstanding which has exceeded the final due date by at least 1 day
      *
-     * @return $this
+     * @return self
      */
     public function setLsc024($lsc024)
     {
+        if (is_null($lsc024)) {
+            throw new \InvalidArgumentException('non-nullable lsc024 cannot be null');
+        }
         $this->container['lsc024'] = $lsc024;
 
         return $this;
@@ -7826,7 +9002,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lsc025
      *
-     * @return float
+     * @return float|null
      */
     public function getLsc025()
     {
@@ -7836,12 +9012,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lsc025
      *
-     * @param float $lsc025 Total number of leasing trades with a remaining balance due (including interest)
+     * @param float|null $lsc025 Total number of leasing trades with a remaining balance due (including interest)
      *
-     * @return $this
+     * @return self
      */
     public function setLsc025($lsc025)
     {
+        if (is_null($lsc025)) {
+            throw new \InvalidArgumentException('non-nullable lsc025 cannot be null');
+        }
         $this->container['lsc025'] = $lsc025;
 
         return $this;
@@ -7850,7 +9029,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lsc026
      *
-     * @return float
+     * @return float|null
      */
     public function getLsc026()
     {
@@ -7860,12 +9039,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lsc026
      *
-     * @param float $lsc026 Total number of leasing trades with one or more payments that are current during the lease term to date
+     * @param float|null $lsc026 Total number of leasing trades with one or more payments that are current during the lease term to date
      *
-     * @return $this
+     * @return self
      */
     public function setLsc026($lsc026)
     {
+        if (is_null($lsc026)) {
+            throw new \InvalidArgumentException('non-nullable lsc026 cannot be null');
+        }
         $this->container['lsc026'] = $lsc026;
 
         return $this;
@@ -7874,7 +9056,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lsc027
      *
-     * @return float
+     * @return float|null
      */
     public function getLsc027()
     {
@@ -7884,12 +9066,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lsc027
      *
-     * @param float $lsc027 Total number of leasing trades with one or more payments made 1-30 days late during the lease term to date
+     * @param float|null $lsc027 Total number of leasing trades with one or more payments made 1-30 days late during the lease term to date
      *
-     * @return $this
+     * @return self
      */
     public function setLsc027($lsc027)
     {
+        if (is_null($lsc027)) {
+            throw new \InvalidArgumentException('non-nullable lsc027 cannot be null');
+        }
         $this->container['lsc027'] = $lsc027;
 
         return $this;
@@ -7898,7 +9083,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lsc028
      *
-     * @return float
+     * @return float|null
      */
     public function getLsc028()
     {
@@ -7908,12 +9093,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lsc028
      *
-     * @param float $lsc028 Total number of leasing trades with one or more payments made 31-60 days late during the lease term to date
+     * @param float|null $lsc028 Total number of leasing trades with one or more payments made 31-60 days late during the lease term to date
      *
-     * @return $this
+     * @return self
      */
     public function setLsc028($lsc028)
     {
+        if (is_null($lsc028)) {
+            throw new \InvalidArgumentException('non-nullable lsc028 cannot be null');
+        }
         $this->container['lsc028'] = $lsc028;
 
         return $this;
@@ -7922,7 +9110,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lsc029
      *
-     * @return float
+     * @return float|null
      */
     public function getLsc029()
     {
@@ -7932,12 +9120,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lsc029
      *
-     * @param float $lsc029 Total number of leasing trades with one or more payments made 61-90 days late during the lease term to date
+     * @param float|null $lsc029 Total number of leasing trades with one or more payments made 61-90 days late during the lease term to date
      *
-     * @return $this
+     * @return self
      */
     public function setLsc029($lsc029)
     {
+        if (is_null($lsc029)) {
+            throw new \InvalidArgumentException('non-nullable lsc029 cannot be null');
+        }
         $this->container['lsc029'] = $lsc029;
 
         return $this;
@@ -7946,7 +9137,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lsc030
      *
-     * @return float
+     * @return float|null
      */
     public function getLsc030()
     {
@@ -7956,12 +9147,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lsc030
      *
-     * @param float $lsc030 Total number of leasing trades with one or more payments 91+ days late during the lease term to date
+     * @param float|null $lsc030 Total number of leasing trades with one or more payments 91+ days late during the lease term to date
      *
-     * @return $this
+     * @return self
      */
     public function setLsc030($lsc030)
     {
+        if (is_null($lsc030)) {
+            throw new \InvalidArgumentException('non-nullable lsc030 cannot be null');
+        }
         $this->container['lsc030'] = $lsc030;
 
         return $this;
@@ -7970,7 +9164,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lsc031
      *
-     * @return float
+     * @return float|null
      */
     public function getLsc031()
     {
@@ -7980,12 +9174,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lsc031
      *
-     * @param float $lsc031 Total number of late payments for leasing trades extracted within the last 6 months of the profile date
+     * @param float|null $lsc031 Total number of late payments for leasing trades extracted within the last 6 months of the profile date
      *
-     * @return $this
+     * @return self
      */
     public function setLsc031($lsc031)
     {
+        if (is_null($lsc031)) {
+            throw new \InvalidArgumentException('non-nullable lsc031 cannot be null');
+        }
         $this->container['lsc031'] = $lsc031;
 
         return $this;
@@ -7994,7 +9191,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lsc032
      *
-     * @return float
+     * @return float|null
      */
     public function getLsc032()
     {
@@ -8004,12 +9201,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lsc032
      *
-     * @param float $lsc032 Total number of current payments for leasing trades extracted within the last 6 months of the profile date
+     * @param float|null $lsc032 Total number of current payments for leasing trades extracted within the last 6 months of the profile date
      *
-     * @return $this
+     * @return self
      */
     public function setLsc032($lsc032)
     {
+        if (is_null($lsc032)) {
+            throw new \InvalidArgumentException('non-nullable lsc032 cannot be null');
+        }
         $this->container['lsc032'] = $lsc032;
 
         return $this;
@@ -8018,7 +9218,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lsc033
      *
-     * @return float
+     * @return float|null
      */
     public function getLsc033()
     {
@@ -8028,12 +9228,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lsc033
      *
-     * @param float $lsc033 Total number of outstanding payments, overdue by at least one day, for leasing trades extracted within the last 6 months of the profile date
+     * @param float|null $lsc033 Total number of outstanding payments, overdue by at least one day, for leasing trades extracted within the last 6 months of the profile date
      *
-     * @return $this
+     * @return self
      */
     public function setLsc033($lsc033)
     {
+        if (is_null($lsc033)) {
+            throw new \InvalidArgumentException('non-nullable lsc033 cannot be null');
+        }
         $this->container['lsc033'] = $lsc033;
 
         return $this;
@@ -8042,7 +9245,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lsp034
      *
-     * @return float
+     * @return float|null
      */
     public function getLsp034()
     {
@@ -8052,12 +9255,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lsp034
      *
-     * @param float $lsp034 Percentage of Total Amount of Leasing trades to Total balance of trades
+     * @param float|null $lsp034 Percentage of Total Amount of Leasing trades to Total balance of trades
      *
-     * @return $this
+     * @return self
      */
     public function setLsp034($lsp034)
     {
+        if (is_null($lsp034)) {
+            throw new \InvalidArgumentException('non-nullable lsp034 cannot be null');
+        }
         $this->container['lsp034'] = $lsp034;
 
         return $this;
@@ -8066,7 +9272,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets lsp035
      *
-     * @return float
+     * @return float|null
      */
     public function getLsp035()
     {
@@ -8076,12 +9282,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets lsp035
      *
-     * @param float $lsp035 Percentage of Total number of Leasing trades to Total number of trades
+     * @param float|null $lsp035 Percentage of Total number of Leasing trades to Total number of trades
      *
-     * @return $this
+     * @return self
      */
     public function setLsp035($lsp035)
     {
+        if (is_null($lsp035)) {
+            throw new \InvalidArgumentException('non-nullable lsp035 cannot be null');
+        }
         $this->container['lsp035'] = $lsp035;
 
         return $this;
@@ -8090,7 +9299,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntb001
      *
-     * @return float
+     * @return float|null
      */
     public function getNtb001()
     {
@@ -8100,12 +9309,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntb001
      *
-     * @param float $ntb001 Total balance of new trades
+     * @param float|null $ntb001 Total balance of new trades
      *
-     * @return $this
+     * @return self
      */
     public function setNtb001($ntb001)
     {
+        if (is_null($ntb001)) {
+            throw new \InvalidArgumentException('non-nullable ntb001 cannot be null');
+        }
         $this->container['ntb001'] = $ntb001;
 
         return $this;
@@ -8114,7 +9326,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntb002
      *
-     * @return float
+     * @return float|null
      */
     public function getNtb002()
     {
@@ -8124,12 +9336,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntb002
      *
-     * @param float $ntb002 Total balance of new trades that is 1-30 days delinquent
+     * @param float|null $ntb002 Total balance of new trades that is 1-30 days delinquent
      *
-     * @return $this
+     * @return self
      */
     public function setNtb002($ntb002)
     {
+        if (is_null($ntb002)) {
+            throw new \InvalidArgumentException('non-nullable ntb002 cannot be null');
+        }
         $this->container['ntb002'] = $ntb002;
 
         return $this;
@@ -8138,7 +9353,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntb003
      *
-     * @return float
+     * @return float|null
      */
     public function getNtb003()
     {
@@ -8148,12 +9363,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntb003
      *
-     * @param float $ntb003 Total balance of new trades that is 31-60 days delinquent
+     * @param float|null $ntb003 Total balance of new trades that is 31-60 days delinquent
      *
-     * @return $this
+     * @return self
      */
     public function setNtb003($ntb003)
     {
+        if (is_null($ntb003)) {
+            throw new \InvalidArgumentException('non-nullable ntb003 cannot be null');
+        }
         $this->container['ntb003'] = $ntb003;
 
         return $this;
@@ -8162,7 +9380,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntb004
      *
-     * @return float
+     * @return float|null
      */
     public function getNtb004()
     {
@@ -8172,12 +9390,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntb004
      *
-     * @param float $ntb004 Total balance of new trades that is 61-90 days delinquent
+     * @param float|null $ntb004 Total balance of new trades that is 61-90 days delinquent
      *
-     * @return $this
+     * @return self
      */
     public function setNtb004($ntb004)
     {
+        if (is_null($ntb004)) {
+            throw new \InvalidArgumentException('non-nullable ntb004 cannot be null');
+        }
         $this->container['ntb004'] = $ntb004;
 
         return $this;
@@ -8186,7 +9407,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntb005
      *
-     * @return float
+     * @return float|null
      */
     public function getNtb005()
     {
@@ -8196,12 +9417,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntb005
      *
-     * @param float $ntb005 Total balance of new trades that is 91+ days delinquent
+     * @param float|null $ntb005 Total balance of new trades that is 91+ days delinquent
      *
-     * @return $this
+     * @return self
      */
     public function setNtb005($ntb005)
     {
+        if (is_null($ntb005)) {
+            throw new \InvalidArgumentException('non-nullable ntb005 cannot be null');
+        }
         $this->container['ntb005'] = $ntb005;
 
         return $this;
@@ -8210,7 +9434,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntb006
      *
-     * @return float
+     * @return float|null
      */
     public function getNtb006()
     {
@@ -8220,12 +9444,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntb006
      *
-     * @param float $ntb006 Total balance of new trades that is current
+     * @param float|null $ntb006 Total balance of new trades that is current
      *
-     * @return $this
+     * @return self
      */
     public function setNtb006($ntb006)
     {
+        if (is_null($ntb006)) {
+            throw new \InvalidArgumentException('non-nullable ntb006 cannot be null');
+        }
         $this->container['ntb006'] = $ntb006;
 
         return $this;
@@ -8234,7 +9461,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntb007
      *
-     * @return float
+     * @return float|null
      */
     public function getNtb007()
     {
@@ -8244,12 +9471,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntb007
      *
-     * @param float $ntb007 Total balance of new trades where worst delinquency = current
+     * @param float|null $ntb007 Total balance of new trades where worst delinquency = current
      *
-     * @return $this
+     * @return self
      */
     public function setNtb007($ntb007)
     {
+        if (is_null($ntb007)) {
+            throw new \InvalidArgumentException('non-nullable ntb007 cannot be null');
+        }
         $this->container['ntb007'] = $ntb007;
 
         return $this;
@@ -8258,7 +9488,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntb008
      *
-     * @return float
+     * @return float|null
      */
     public function getNtb008()
     {
@@ -8268,12 +9498,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntb008
      *
-     * @param float $ntb008 Total balance of new trades where worst delinquency = 1-30 days
+     * @param float|null $ntb008 Total balance of new trades where worst delinquency = 1-30 days
      *
-     * @return $this
+     * @return self
      */
     public function setNtb008($ntb008)
     {
+        if (is_null($ntb008)) {
+            throw new \InvalidArgumentException('non-nullable ntb008 cannot be null');
+        }
         $this->container['ntb008'] = $ntb008;
 
         return $this;
@@ -8282,7 +9515,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntb009
      *
-     * @return float
+     * @return float|null
      */
     public function getNtb009()
     {
@@ -8292,12 +9525,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntb009
      *
-     * @param float $ntb009 Total balance of new trades where worst delinquency = 31-60 days
+     * @param float|null $ntb009 Total balance of new trades where worst delinquency = 31-60 days
      *
-     * @return $this
+     * @return self
      */
     public function setNtb009($ntb009)
     {
+        if (is_null($ntb009)) {
+            throw new \InvalidArgumentException('non-nullable ntb009 cannot be null');
+        }
         $this->container['ntb009'] = $ntb009;
 
         return $this;
@@ -8306,7 +9542,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntb010
      *
-     * @return float
+     * @return float|null
      */
     public function getNtb010()
     {
@@ -8316,12 +9552,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntb010
      *
-     * @param float $ntb010 Total balance of new trades where worst delinquency = 61-90 days
+     * @param float|null $ntb010 Total balance of new trades where worst delinquency = 61-90 days
      *
-     * @return $this
+     * @return self
      */
     public function setNtb010($ntb010)
     {
+        if (is_null($ntb010)) {
+            throw new \InvalidArgumentException('non-nullable ntb010 cannot be null');
+        }
         $this->container['ntb010'] = $ntb010;
 
         return $this;
@@ -8330,7 +9569,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntb011
      *
-     * @return float
+     * @return float|null
      */
     public function getNtb011()
     {
@@ -8340,12 +9579,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntb011
      *
-     * @param float $ntb011 Total balance of new trades where worst delinquency = 91+ days
+     * @param float|null $ntb011 Total balance of new trades where worst delinquency = 91+ days
      *
-     * @return $this
+     * @return self
      */
     public function setNtb011($ntb011)
     {
+        if (is_null($ntb011)) {
+            throw new \InvalidArgumentException('non-nullable ntb011 cannot be null');
+        }
         $this->container['ntb011'] = $ntb011;
 
         return $this;
@@ -8354,7 +9596,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntb012
      *
-     * @return float
+     * @return float|null
      */
     public function getNtb012()
     {
@@ -8364,12 +9606,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntb012
      *
-     * @param float $ntb012 Total balance of new trades where worst status = current
+     * @param float|null $ntb012 Total balance of new trades where worst status = current
      *
-     * @return $this
+     * @return self
      */
     public function setNtb012($ntb012)
     {
+        if (is_null($ntb012)) {
+            throw new \InvalidArgumentException('non-nullable ntb012 cannot be null');
+        }
         $this->container['ntb012'] = $ntb012;
 
         return $this;
@@ -8378,7 +9623,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntb013
      *
-     * @return float
+     * @return float|null
      */
     public function getNtb013()
     {
@@ -8388,12 +9633,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntb013
      *
-     * @param float $ntb013 Total balance of new trades where worst status = 1-30 days
+     * @param float|null $ntb013 Total balance of new trades where worst status = 1-30 days
      *
-     * @return $this
+     * @return self
      */
     public function setNtb013($ntb013)
     {
+        if (is_null($ntb013)) {
+            throw new \InvalidArgumentException('non-nullable ntb013 cannot be null');
+        }
         $this->container['ntb013'] = $ntb013;
 
         return $this;
@@ -8402,7 +9650,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntb014
      *
-     * @return float
+     * @return float|null
      */
     public function getNtb014()
     {
@@ -8412,12 +9660,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntb014
      *
-     * @param float $ntb014 Total balance of new trades where worst status is a derogatory comment (bankrupcy, judgment, lien etc)
+     * @param float|null $ntb014 Total balance of new trades where worst status is a derogatory comment (bankrupcy, judgment, lien etc)
      *
-     * @return $this
+     * @return self
      */
     public function setNtb014($ntb014)
     {
+        if (is_null($ntb014)) {
+            throw new \InvalidArgumentException('non-nullable ntb014 cannot be null');
+        }
         $this->container['ntb014'] = $ntb014;
 
         return $this;
@@ -8426,7 +9677,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntb015
      *
-     * @return float
+     * @return float|null
      */
     public function getNtb015()
     {
@@ -8436,12 +9687,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntb015
      *
-     * @param float $ntb015 Total balance of new trades where worst status = 31-60 days
+     * @param float|null $ntb015 Total balance of new trades where worst status = 31-60 days
      *
-     * @return $this
+     * @return self
      */
     public function setNtb015($ntb015)
     {
+        if (is_null($ntb015)) {
+            throw new \InvalidArgumentException('non-nullable ntb015 cannot be null');
+        }
         $this->container['ntb015'] = $ntb015;
 
         return $this;
@@ -8450,7 +9704,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntb016
      *
-     * @return float
+     * @return float|null
      */
     public function getNtb016()
     {
@@ -8460,12 +9714,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntb016
      *
-     * @param float $ntb016 Total balance of new trades where worst status = 61-90 days
+     * @param float|null $ntb016 Total balance of new trades where worst status = 61-90 days
      *
-     * @return $this
+     * @return self
      */
     public function setNtb016($ntb016)
     {
+        if (is_null($ntb016)) {
+            throw new \InvalidArgumentException('non-nullable ntb016 cannot be null');
+        }
         $this->container['ntb016'] = $ntb016;
 
         return $this;
@@ -8474,7 +9731,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntb017
      *
-     * @return float
+     * @return float|null
      */
     public function getNtb017()
     {
@@ -8484,12 +9741,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntb017
      *
-     * @param float $ntb017 Total balance of new trades where worst status = 91+ days
+     * @param float|null $ntb017 Total balance of new trades where worst status = 91+ days
      *
-     * @return $this
+     * @return self
      */
     public function setNtb017($ntb017)
     {
+        if (is_null($ntb017)) {
+            throw new \InvalidArgumentException('non-nullable ntb017 cannot be null');
+        }
         $this->container['ntb017'] = $ntb017;
 
         return $this;
@@ -8498,7 +9758,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntb018
      *
-     * @return float
+     * @return float|null
      */
     public function getNtb018()
     {
@@ -8508,12 +9768,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntb018
      *
-     * @param float $ntb018 Total highest balance in past 12 months across all new trades (Note: for trades reported by new contributors, highest balance reported by contributor may go back 12 months)
+     * @param float|null $ntb018 Total highest balance in past 12 months across all new trades (Note: for trades reported by new contributors, highest balance reported by contributor may go back 12 months)
      *
-     * @return $this
+     * @return self
      */
     public function setNtb018($ntb018)
     {
+        if (is_null($ntb018)) {
+            throw new \InvalidArgumentException('non-nullable ntb018 cannot be null');
+        }
         $this->container['ntb018'] = $ntb018;
 
         return $this;
@@ -8522,7 +9785,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntc020
      *
-     * @return float
+     * @return float|null
      */
     public function getNtc020()
     {
@@ -8532,12 +9795,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntc020
      *
-     * @param float $ntc020 Total number of new trades
+     * @param float|null $ntc020 Total number of new trades
      *
-     * @return $this
+     * @return self
      */
     public function setNtc020($ntc020)
     {
+        if (is_null($ntc020)) {
+            throw new \InvalidArgumentException('non-nullable ntc020 cannot be null');
+        }
         $this->container['ntc020'] = $ntc020;
 
         return $this;
@@ -8546,7 +9812,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntc021
      *
-     * @return float
+     * @return float|null
      */
     public function getNtc021()
     {
@@ -8556,12 +9822,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntc021
      *
-     * @param float $ntc021 Total number of new trades where worst delinquency = current
+     * @param float|null $ntc021 Total number of new trades where worst delinquency = current
      *
-     * @return $this
+     * @return self
      */
     public function setNtc021($ntc021)
     {
+        if (is_null($ntc021)) {
+            throw new \InvalidArgumentException('non-nullable ntc021 cannot be null');
+        }
         $this->container['ntc021'] = $ntc021;
 
         return $this;
@@ -8570,7 +9839,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntc022
      *
-     * @return float
+     * @return float|null
      */
     public function getNtc022()
     {
@@ -8580,12 +9849,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntc022
      *
-     * @param float $ntc022 Total number of new trades where worst delinquency = 1-30 days
+     * @param float|null $ntc022 Total number of new trades where worst delinquency = 1-30 days
      *
-     * @return $this
+     * @return self
      */
     public function setNtc022($ntc022)
     {
+        if (is_null($ntc022)) {
+            throw new \InvalidArgumentException('non-nullable ntc022 cannot be null');
+        }
         $this->container['ntc022'] = $ntc022;
 
         return $this;
@@ -8594,7 +9866,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntc023
      *
-     * @return float
+     * @return float|null
      */
     public function getNtc023()
     {
@@ -8604,12 +9876,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntc023
      *
-     * @param float $ntc023 Total number of new trades where worst delinquency = 31-60 days
+     * @param float|null $ntc023 Total number of new trades where worst delinquency = 31-60 days
      *
-     * @return $this
+     * @return self
      */
     public function setNtc023($ntc023)
     {
+        if (is_null($ntc023)) {
+            throw new \InvalidArgumentException('non-nullable ntc023 cannot be null');
+        }
         $this->container['ntc023'] = $ntc023;
 
         return $this;
@@ -8618,7 +9893,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntc024
      *
-     * @return float
+     * @return float|null
      */
     public function getNtc024()
     {
@@ -8628,12 +9903,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntc024
      *
-     * @param float $ntc024 Total number of new trades where worst delinquency = 61-90 days
+     * @param float|null $ntc024 Total number of new trades where worst delinquency = 61-90 days
      *
-     * @return $this
+     * @return self
      */
     public function setNtc024($ntc024)
     {
+        if (is_null($ntc024)) {
+            throw new \InvalidArgumentException('non-nullable ntc024 cannot be null');
+        }
         $this->container['ntc024'] = $ntc024;
 
         return $this;
@@ -8642,7 +9920,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntc025
      *
-     * @return float
+     * @return float|null
      */
     public function getNtc025()
     {
@@ -8652,12 +9930,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntc025
      *
-     * @param float $ntc025 Total number of new trades where worst delinquency = 91+ days
+     * @param float|null $ntc025 Total number of new trades where worst delinquency = 91+ days
      *
-     * @return $this
+     * @return self
      */
     public function setNtc025($ntc025)
     {
+        if (is_null($ntc025)) {
+            throw new \InvalidArgumentException('non-nullable ntc025 cannot be null');
+        }
         $this->container['ntc025'] = $ntc025;
 
         return $this;
@@ -8666,7 +9947,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntc026
      *
-     * @return float
+     * @return float|null
      */
     public function getNtc026()
     {
@@ -8676,12 +9957,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntc026
      *
-     * @param float $ntc026 Total number of new trades where worst status = current
+     * @param float|null $ntc026 Total number of new trades where worst status = current
      *
-     * @return $this
+     * @return self
      */
     public function setNtc026($ntc026)
     {
+        if (is_null($ntc026)) {
+            throw new \InvalidArgumentException('non-nullable ntc026 cannot be null');
+        }
         $this->container['ntc026'] = $ntc026;
 
         return $this;
@@ -8690,7 +9974,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntc027
      *
-     * @return float
+     * @return float|null
      */
     public function getNtc027()
     {
@@ -8700,12 +9984,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntc027
      *
-     * @param float $ntc027 Total number of new trades where worst status = 1-30 days
+     * @param float|null $ntc027 Total number of new trades where worst status = 1-30 days
      *
-     * @return $this
+     * @return self
      */
     public function setNtc027($ntc027)
     {
+        if (is_null($ntc027)) {
+            throw new \InvalidArgumentException('non-nullable ntc027 cannot be null');
+        }
         $this->container['ntc027'] = $ntc027;
 
         return $this;
@@ -8714,7 +10001,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntc028
      *
-     * @return float
+     * @return float|null
      */
     public function getNtc028()
     {
@@ -8724,12 +10011,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntc028
      *
-     * @param float $ntc028 Total number of new trades where worst status is a derogatory comment (bankrupcy, judgment, lien etc)
+     * @param float|null $ntc028 Total number of new trades where worst status is a derogatory comment (bankrupcy, judgment, lien etc)
      *
-     * @return $this
+     * @return self
      */
     public function setNtc028($ntc028)
     {
+        if (is_null($ntc028)) {
+            throw new \InvalidArgumentException('non-nullable ntc028 cannot be null');
+        }
         $this->container['ntc028'] = $ntc028;
 
         return $this;
@@ -8738,7 +10028,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntc029
      *
-     * @return float
+     * @return float|null
      */
     public function getNtc029()
     {
@@ -8748,12 +10038,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntc029
      *
-     * @param float $ntc029 Total number of new trades where worst status = 31-60 days
+     * @param float|null $ntc029 Total number of new trades where worst status = 31-60 days
      *
-     * @return $this
+     * @return self
      */
     public function setNtc029($ntc029)
     {
+        if (is_null($ntc029)) {
+            throw new \InvalidArgumentException('non-nullable ntc029 cannot be null');
+        }
         $this->container['ntc029'] = $ntc029;
 
         return $this;
@@ -8762,7 +10055,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntc030
      *
-     * @return float
+     * @return float|null
      */
     public function getNtc030()
     {
@@ -8772,12 +10065,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntc030
      *
-     * @param float $ntc030 Total number of new trades where worst status = 61-90 days
+     * @param float|null $ntc030 Total number of new trades where worst status = 61-90 days
      *
-     * @return $this
+     * @return self
      */
     public function setNtc030($ntc030)
     {
+        if (is_null($ntc030)) {
+            throw new \InvalidArgumentException('non-nullable ntc030 cannot be null');
+        }
         $this->container['ntc030'] = $ntc030;
 
         return $this;
@@ -8786,7 +10082,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntc031
      *
-     * @return float
+     * @return float|null
      */
     public function getNtc031()
     {
@@ -8796,12 +10092,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntc031
      *
-     * @param float $ntc031 Total number of new trades where worst status = 91+ days
+     * @param float|null $ntc031 Total number of new trades where worst status = 91+ days
      *
-     * @return $this
+     * @return self
      */
     public function setNtc031($ntc031)
     {
+        if (is_null($ntc031)) {
+            throw new \InvalidArgumentException('non-nullable ntc031 cannot be null');
+        }
         $this->container['ntc031'] = $ntc031;
 
         return $this;
@@ -8810,7 +10109,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntd034
      *
-     * @return float
+     * @return float|null
      */
     public function getNtd034()
     {
@@ -8820,12 +10119,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntd034
      *
-     * @param float $ntd034 DBT of new trades
+     * @param float|null $ntd034 DBT of new trades
      *
-     * @return $this
+     * @return self
      */
     public function setNtd034($ntd034)
     {
+        if (is_null($ntd034)) {
+            throw new \InvalidArgumentException('non-nullable ntd034 cannot be null');
+        }
         $this->container['ntd034'] = $ntd034;
 
         return $this;
@@ -8834,7 +10136,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntd035
      *
-     * @return float
+     * @return float|null
      */
     public function getNtd035()
     {
@@ -8844,12 +10146,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntd035
      *
-     * @param float $ntd035 Maximum DBT of any new trade
+     * @param float|null $ntd035 Maximum DBT of any new trade
      *
-     * @return $this
+     * @return self
      */
     public function setNtd035($ntd035)
     {
+        if (is_null($ntd035)) {
+            throw new \InvalidArgumentException('non-nullable ntd035 cannot be null');
+        }
         $this->container['ntd035'] = $ntd035;
 
         return $this;
@@ -8858,7 +10163,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntp036
      *
-     * @return float
+     * @return float|null
      */
     public function getNtp036()
     {
@@ -8868,12 +10173,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntp036
      *
-     * @param float $ntp036 Percentage of the Total balance of new trades to the Total highest balance of new trades in the past 12 months  (Note: for trades reported by new contributors, highest balance reported by contributor may go back 12 months)
+     * @param float|null $ntp036 Percentage of the Total balance of new trades to the Total highest balance of new trades in the past 12 months  (Note: for trades reported by new contributors, highest balance reported by contributor may go back 12 months)
      *
-     * @return $this
+     * @return self
      */
     public function setNtp036($ntp036)
     {
+        if (is_null($ntp036)) {
+            throw new \InvalidArgumentException('non-nullable ntp036 cannot be null');
+        }
         $this->container['ntp036'] = $ntp036;
 
         return $this;
@@ -8882,7 +10190,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntp037
      *
-     * @return float
+     * @return float|null
      */
     public function getNtp037()
     {
@@ -8892,12 +10200,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntp037
      *
-     * @param float $ntp037 Percentage of Total balance of new trades to Total trade balance
+     * @param float|null $ntp037 Percentage of Total balance of new trades to Total trade balance
      *
-     * @return $this
+     * @return self
      */
     public function setNtp037($ntp037)
     {
+        if (is_null($ntp037)) {
+            throw new \InvalidArgumentException('non-nullable ntp037 cannot be null');
+        }
         $this->container['ntp037'] = $ntp037;
 
         return $this;
@@ -8906,7 +10217,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntp038
      *
-     * @return float
+     * @return float|null
      */
     public function getNtp038()
     {
@@ -8916,12 +10227,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntp038
      *
-     * @param float $ntp038 Percentage of Total number of new trades to Total number of trades
+     * @param float|null $ntp038 Percentage of Total number of new trades to Total number of trades
      *
-     * @return $this
+     * @return self
      */
     public function setNtp038($ntp038)
     {
+        if (is_null($ntp038)) {
+            throw new \InvalidArgumentException('non-nullable ntp038 cannot be null');
+        }
         $this->container['ntp038'] = $ntp038;
 
         return $this;
@@ -8930,7 +10244,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ntp039
      *
-     * @return float
+     * @return float|null
      */
     public function getNtp039()
     {
@@ -8940,12 +10254,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ntp039
      *
-     * @param float $ntp039 Ratio of Total acct bal to Total highest acct bal prior 12 mos, new trades rptd within 6 mos of profile date
+     * @param float|null $ntp039 Ratio of Total acct bal to Total highest acct bal prior 12 mos, new trades rptd within 6 mos of profile date
      *
-     * @return $this
+     * @return self
      */
     public function setNtp039($ntp039)
     {
+        if (is_null($ntp039)) {
+            throw new \InvalidArgumentException('non-nullable ntp039 cannot be null');
+        }
         $this->container['ntp039'] = $ntp039;
 
         return $this;
@@ -8954,7 +10271,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets otb002
      *
-     * @return float
+     * @return float|null
      */
     public function getOtb002()
     {
@@ -8964,12 +10281,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets otb002
      *
-     * @param float $otb002 Total balance of other trades classified as Leasing
+     * @param float|null $otb002 Total balance of other trades classified as Leasing
      *
-     * @return $this
+     * @return self
      */
     public function setOtb002($otb002)
     {
+        if (is_null($otb002)) {
+            throw new \InvalidArgumentException('non-nullable otb002 cannot be null');
+        }
         $this->container['otb002'] = $otb002;
 
         return $this;
@@ -8978,7 +10298,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets otb003
      *
-     * @return float
+     * @return float|null
      */
     public function getOtb003()
     {
@@ -8988,12 +10308,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets otb003
      *
-     * @param float $otb003 Total balance of other trades classified as Supplemental
+     * @param float|null $otb003 Total balance of other trades classified as Supplemental
      *
-     * @return $this
+     * @return self
      */
     public function setOtb003($otb003)
     {
+        if (is_null($otb003)) {
+            throw new \InvalidArgumentException('non-nullable otb003 cannot be null');
+        }
         $this->container['otb003'] = $otb003;
 
         return $this;
@@ -9002,7 +10325,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets otb004
      *
-     * @return float
+     * @return float|null
      */
     public function getOtb004()
     {
@@ -9012,12 +10335,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets otb004
      *
-     * @param float $otb004 Total balance of other trades classified as Telecom
+     * @param float|null $otb004 Total balance of other trades classified as Telecom
      *
-     * @return $this
+     * @return self
      */
     public function setOtb004($otb004)
     {
+        if (is_null($otb004)) {
+            throw new \InvalidArgumentException('non-nullable otb004 cannot be null');
+        }
         $this->container['otb004'] = $otb004;
 
         return $this;
@@ -9026,7 +10352,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets otb005
      *
-     * @return float
+     * @return float|null
      */
     public function getOtb005()
     {
@@ -9036,12 +10362,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets otb005
      *
-     * @param float $otb005 Total balance for additional trades (leasing, supplemental, telecomm and unknown, etc) reported within the last 4 months of the profile date
+     * @param float|null $otb005 Total balance for additional trades (leasing, supplemental, telecomm and unknown, etc) reported within the last 4 months of the profile date
      *
-     * @return $this
+     * @return self
      */
     public function setOtb005($otb005)
     {
+        if (is_null($otb005)) {
+            throw new \InvalidArgumentException('non-nullable otb005 cannot be null');
+        }
         $this->container['otb005'] = $otb005;
 
         return $this;
@@ -9050,7 +10379,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets otc007
      *
-     * @return float
+     * @return float|null
      */
     public function getOtc007()
     {
@@ -9060,12 +10389,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets otc007
      *
-     * @param float $otc007 Total number of other trades classified as Leasing
+     * @param float|null $otc007 Total number of other trades classified as Leasing
      *
-     * @return $this
+     * @return self
      */
     public function setOtc007($otc007)
     {
+        if (is_null($otc007)) {
+            throw new \InvalidArgumentException('non-nullable otc007 cannot be null');
+        }
         $this->container['otc007'] = $otc007;
 
         return $this;
@@ -9074,7 +10406,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets otc008
      *
-     * @return float
+     * @return float|null
      */
     public function getOtc008()
     {
@@ -9084,12 +10416,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets otc008
      *
-     * @param float $otc008 Total number of other trades classified as Supplemental
+     * @param float|null $otc008 Total number of other trades classified as Supplemental
      *
-     * @return $this
+     * @return self
      */
     public function setOtc008($otc008)
     {
+        if (is_null($otc008)) {
+            throw new \InvalidArgumentException('non-nullable otc008 cannot be null');
+        }
         $this->container['otc008'] = $otc008;
 
         return $this;
@@ -9098,7 +10433,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets otc009
      *
-     * @return float
+     * @return float|null
      */
     public function getOtc009()
     {
@@ -9108,12 +10443,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets otc009
      *
-     * @param float $otc009 Total number of other trades classified as Telecom
+     * @param float|null $otc009 Total number of other trades classified as Telecom
      *
-     * @return $this
+     * @return self
      */
     public function setOtc009($otc009)
     {
+        if (is_null($otc009)) {
+            throw new \InvalidArgumentException('non-nullable otc009 cannot be null');
+        }
         $this->container['otc009'] = $otc009;
 
         return $this;
@@ -9122,7 +10460,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets otc010
      *
-     * @return float
+     * @return float|null
      */
     public function getOtc010()
     {
@@ -9132,12 +10470,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets otc010
      *
-     * @param float $otc010 Total number of other trades (leasing, supplemental, telecomm and unknown)
+     * @param float|null $otc010 Total number of other trades (leasing, supplemental, telecomm and unknown)
      *
-     * @return $this
+     * @return self
      */
     public function setOtc010($otc010)
     {
+        if (is_null($otc010)) {
+            throw new \InvalidArgumentException('non-nullable otc010 cannot be null');
+        }
         $this->container['otc010'] = $otc010;
 
         return $this;
@@ -9146,7 +10487,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets otc011
      *
-     * @return float
+     * @return float|null
      */
     public function getOtc011()
     {
@@ -9156,12 +10497,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets otc011
      *
-     * @param float $otc011 Total number of additional trades (leasing, supplemental, telecomm and unknown, etc) reported within 4 months of the profile date
+     * @param float|null $otc011 Total number of additional trades (leasing, supplemental, telecomm and unknown, etc) reported within 4 months of the profile date
      *
-     * @return $this
+     * @return self
      */
     public function setOtc011($otc011)
     {
+        if (is_null($otc011)) {
+            throw new \InvalidArgumentException('non-nullable otc011 cannot be null');
+        }
         $this->container['otc011'] = $otc011;
 
         return $this;
@@ -9170,7 +10514,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets otd012
      *
-     * @return float
+     * @return float|null
      */
     public function getOtd012()
     {
@@ -9180,12 +10524,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets otd012
      *
-     * @param float $otd012 Weighted average DBT of additional trades (leasing, supplemental, telecomm and unknown, etc) reported within the last 4 months of the profile date
+     * @param float|null $otd012 Weighted average DBT of additional trades (leasing, supplemental, telecomm and unknown, etc) reported within the last 4 months of the profile date
      *
-     * @return $this
+     * @return self
      */
     public function setOtd012($otd012)
     {
+        if (is_null($otd012)) {
+            throw new \InvalidArgumentException('non-nullable otd012 cannot be null');
+        }
         $this->container['otd012'] = $otd012;
 
         return $this;
@@ -9194,7 +10541,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets otd013
      *
-     * @return float
+     * @return float|null
      */
     public function getOtd013()
     {
@@ -9204,12 +10551,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets otd013
      *
-     * @param float $otd013 Maximum DBT of additional trades (leasing, supplemental, telecomm and unknown, etc) reported within the last 4 months of the profile date
+     * @param float|null $otd013 Maximum DBT of additional trades (leasing, supplemental, telecomm and unknown, etc) reported within the last 4 months of the profile date
      *
-     * @return $this
+     * @return self
      */
     public function setOtd013($otd013)
     {
+        if (is_null($otd013)) {
+            throw new \InvalidArgumentException('non-nullable otd013 cannot be null');
+        }
         $this->container['otd013'] = $otd013;
 
         return $this;
@@ -9218,7 +10568,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets otp014
      *
-     * @return float
+     * @return float|null
      */
     public function getOtp014()
     {
@@ -9228,12 +10578,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets otp014
      *
-     * @param float $otp014 Percentage of Total balance of other trades classified as Finance to Total balance of Total Trades
+     * @param float|null $otp014 Percentage of Total balance of other trades classified as Finance to Total balance of Total Trades
      *
-     * @return $this
+     * @return self
      */
     public function setOtp014($otp014)
     {
+        if (is_null($otp014)) {
+            throw new \InvalidArgumentException('non-nullable otp014 cannot be null');
+        }
         $this->container['otp014'] = $otp014;
 
         return $this;
@@ -9242,7 +10595,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets otp015
      *
-     * @return float
+     * @return float|null
      */
     public function getOtp015()
     {
@@ -9252,12 +10605,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets otp015
      *
-     * @param float $otp015 Percentage of Total number of other trades classified as Finance to Total number of trades
+     * @param float|null $otp015 Percentage of Total number of other trades classified as Finance to Total number of trades
      *
-     * @return $this
+     * @return self
      */
     public function setOtp015($otp015)
     {
+        if (is_null($otp015)) {
+            throw new \InvalidArgumentException('non-nullable otp015 cannot be null');
+        }
         $this->container['otp015'] = $otp015;
 
         return $this;
@@ -9266,7 +10622,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets otp016
      *
-     * @return float
+     * @return float|null
      */
     public function getOtp016()
     {
@@ -9276,12 +10632,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets otp016
      *
-     * @param float $otp016 Percentage of Total balance of other trades classified as Leasing to Total balance of Total Trades
+     * @param float|null $otp016 Percentage of Total balance of other trades classified as Leasing to Total balance of Total Trades
      *
-     * @return $this
+     * @return self
      */
     public function setOtp016($otp016)
     {
+        if (is_null($otp016)) {
+            throw new \InvalidArgumentException('non-nullable otp016 cannot be null');
+        }
         $this->container['otp016'] = $otp016;
 
         return $this;
@@ -9290,7 +10649,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets otp017
      *
-     * @return float
+     * @return float|null
      */
     public function getOtp017()
     {
@@ -9300,12 +10659,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets otp017
      *
-     * @param float $otp017 Percentage of Total number of other trades classified as Leasing to Total number of trades
+     * @param float|null $otp017 Percentage of Total number of other trades classified as Leasing to Total number of trades
      *
-     * @return $this
+     * @return self
      */
     public function setOtp017($otp017)
     {
+        if (is_null($otp017)) {
+            throw new \InvalidArgumentException('non-nullable otp017 cannot be null');
+        }
         $this->container['otp017'] = $otp017;
 
         return $this;
@@ -9314,7 +10676,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets otp018
      *
-     * @return float
+     * @return float|null
      */
     public function getOtp018()
     {
@@ -9324,12 +10686,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets otp018
      *
-     * @param float $otp018 Percentage of Total balance of other trades classified as Supplemental to Total balance of Total Trades
+     * @param float|null $otp018 Percentage of Total balance of other trades classified as Supplemental to Total balance of Total Trades
      *
-     * @return $this
+     * @return self
      */
     public function setOtp018($otp018)
     {
+        if (is_null($otp018)) {
+            throw new \InvalidArgumentException('non-nullable otp018 cannot be null');
+        }
         $this->container['otp018'] = $otp018;
 
         return $this;
@@ -9338,7 +10703,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets otp019
      *
-     * @return float
+     * @return float|null
      */
     public function getOtp019()
     {
@@ -9348,12 +10713,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets otp019
      *
-     * @param float $otp019 Percentage of Total number of other trades classified as Supplemental to Total number of trades
+     * @param float|null $otp019 Percentage of Total number of other trades classified as Supplemental to Total number of trades
      *
-     * @return $this
+     * @return self
      */
     public function setOtp019($otp019)
     {
+        if (is_null($otp019)) {
+            throw new \InvalidArgumentException('non-nullable otp019 cannot be null');
+        }
         $this->container['otp019'] = $otp019;
 
         return $this;
@@ -9362,7 +10730,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets otp020
      *
-     * @return float
+     * @return float|null
      */
     public function getOtp020()
     {
@@ -9372,12 +10740,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets otp020
      *
-     * @param float $otp020 Percentage of Total balance of other trades classified as Telecom to Total balance of Total Trades
+     * @param float|null $otp020 Percentage of Total balance of other trades classified as Telecom to Total balance of Total Trades
      *
-     * @return $this
+     * @return self
      */
     public function setOtp020($otp020)
     {
+        if (is_null($otp020)) {
+            throw new \InvalidArgumentException('non-nullable otp020 cannot be null');
+        }
         $this->container['otp020'] = $otp020;
 
         return $this;
@@ -9386,7 +10757,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets otp021
      *
-     * @return float
+     * @return float|null
      */
     public function getOtp021()
     {
@@ -9396,12 +10767,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets otp021
      *
-     * @param float $otp021 Percentage of Total number of other trades classified as Telecom to Total number of trades
+     * @param float|null $otp021 Percentage of Total number of other trades classified as Telecom to Total number of trades
      *
-     * @return $this
+     * @return self
      */
     public function setOtp021($otp021)
     {
+        if (is_null($otp021)) {
+            throw new \InvalidArgumentException('non-nullable otp021 cannot be null');
+        }
         $this->container['otp021'] = $otp021;
 
         return $this;
@@ -9410,7 +10784,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets pro001
      *
-     * @return float
+     * @return float|null
      */
     public function getPro001()
     {
@@ -9420,12 +10794,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets pro001
      *
-     * @param float $pro001 Age in months of most recent public record filed within the last 24 months of profile date
+     * @param float|null $pro001 Age in months of most recent public record filed within the last 24 months of profile date
      *
-     * @return $this
+     * @return self
      */
     public function setPro001($pro001)
     {
+        if (is_null($pro001)) {
+            throw new \InvalidArgumentException('non-nullable pro001 cannot be null');
+        }
         $this->container['pro001'] = $pro001;
 
         return $this;
@@ -9434,7 +10811,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets pro002
      *
-     * @return float
+     * @return float|null
      */
     public function getPro002()
     {
@@ -9444,12 +10821,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets pro002
      *
-     * @param float $pro002 Age in months of oldest public record filed with the last 24 months of profile date
+     * @param float|null $pro002 Age in months of oldest public record filed with the last 24 months of profile date
      *
-     * @return $this
+     * @return self
      */
     public function setPro002($pro002)
     {
+        if (is_null($pro002)) {
+            throw new \InvalidArgumentException('non-nullable pro002 cannot be null');
+        }
         $this->container['pro002'] = $pro002;
 
         return $this;
@@ -9458,7 +10838,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets pro003
      *
-     * @return float
+     * @return float|null
      */
     public function getPro003()
     {
@@ -9468,12 +10848,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets pro003
      *
-     * @param float $pro003 Average age in months of public records filed within the last 24 months of profile date
+     * @param float|null $pro003 Average age in months of public records filed within the last 24 months of profile date
      *
-     * @return $this
+     * @return self
      */
     public function setPro003($pro003)
     {
+        if (is_null($pro003)) {
+            throw new \InvalidArgumentException('non-nullable pro003 cannot be null');
+        }
         $this->container['pro003'] = $pro003;
 
         return $this;
@@ -9482,7 +10865,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtb001
      *
-     * @return float
+     * @return float|null
      */
     public function getRtb001()
     {
@@ -9492,12 +10875,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtb001
      *
-     * @param float $rtb001 Total balance of continuous trades
+     * @param float|null $rtb001 Total balance of continuous trades
      *
-     * @return $this
+     * @return self
      */
     public function setRtb001($rtb001)
     {
+        if (is_null($rtb001)) {
+            throw new \InvalidArgumentException('non-nullable rtb001 cannot be null');
+        }
         $this->container['rtb001'] = $rtb001;
 
         return $this;
@@ -9506,7 +10892,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtb002
      *
-     * @return float
+     * @return float|null
      */
     public function getRtb002()
     {
@@ -9516,12 +10902,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtb002
      *
-     * @param float $rtb002 Total balance of continuous trades that is 1-30 days delinquent
+     * @param float|null $rtb002 Total balance of continuous trades that is 1-30 days delinquent
      *
-     * @return $this
+     * @return self
      */
     public function setRtb002($rtb002)
     {
+        if (is_null($rtb002)) {
+            throw new \InvalidArgumentException('non-nullable rtb002 cannot be null');
+        }
         $this->container['rtb002'] = $rtb002;
 
         return $this;
@@ -9530,7 +10919,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtb003
      *
-     * @return float
+     * @return float|null
      */
     public function getRtb003()
     {
@@ -9540,12 +10929,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtb003
      *
-     * @param float $rtb003 Total balance of continuous trades that is 31-60 days delinquent
+     * @param float|null $rtb003 Total balance of continuous trades that is 31-60 days delinquent
      *
-     * @return $this
+     * @return self
      */
     public function setRtb003($rtb003)
     {
+        if (is_null($rtb003)) {
+            throw new \InvalidArgumentException('non-nullable rtb003 cannot be null');
+        }
         $this->container['rtb003'] = $rtb003;
 
         return $this;
@@ -9554,7 +10946,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtb004
      *
-     * @return float
+     * @return float|null
      */
     public function getRtb004()
     {
@@ -9564,12 +10956,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtb004
      *
-     * @param float $rtb004 Total balance of continuous trades that is 61-90 days delinquent
+     * @param float|null $rtb004 Total balance of continuous trades that is 61-90 days delinquent
      *
-     * @return $this
+     * @return self
      */
     public function setRtb004($rtb004)
     {
+        if (is_null($rtb004)) {
+            throw new \InvalidArgumentException('non-nullable rtb004 cannot be null');
+        }
         $this->container['rtb004'] = $rtb004;
 
         return $this;
@@ -9578,7 +10973,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtb005
      *
-     * @return float
+     * @return float|null
      */
     public function getRtb005()
     {
@@ -9588,12 +10983,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtb005
      *
-     * @param float $rtb005 Total balance of continuous trades that is 91+ days delinquent
+     * @param float|null $rtb005 Total balance of continuous trades that is 91+ days delinquent
      *
-     * @return $this
+     * @return self
      */
     public function setRtb005($rtb005)
     {
+        if (is_null($rtb005)) {
+            throw new \InvalidArgumentException('non-nullable rtb005 cannot be null');
+        }
         $this->container['rtb005'] = $rtb005;
 
         return $this;
@@ -9602,7 +11000,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtb006
      *
-     * @return float
+     * @return float|null
      */
     public function getRtb006()
     {
@@ -9612,12 +11010,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtb006
      *
-     * @param float $rtb006 Total balance of continuous trades that is current
+     * @param float|null $rtb006 Total balance of continuous trades that is current
      *
-     * @return $this
+     * @return self
      */
     public function setRtb006($rtb006)
     {
+        if (is_null($rtb006)) {
+            throw new \InvalidArgumentException('non-nullable rtb006 cannot be null');
+        }
         $this->container['rtb006'] = $rtb006;
 
         return $this;
@@ -9626,7 +11027,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtb007
      *
-     * @return float
+     * @return float|null
      */
     public function getRtb007()
     {
@@ -9636,12 +11037,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtb007
      *
-     * @param float $rtb007 Total balance of continuous trades where worst delinquency = current
+     * @param float|null $rtb007 Total balance of continuous trades where worst delinquency = current
      *
-     * @return $this
+     * @return self
      */
     public function setRtb007($rtb007)
     {
+        if (is_null($rtb007)) {
+            throw new \InvalidArgumentException('non-nullable rtb007 cannot be null');
+        }
         $this->container['rtb007'] = $rtb007;
 
         return $this;
@@ -9650,7 +11054,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtb008
      *
-     * @return float
+     * @return float|null
      */
     public function getRtb008()
     {
@@ -9660,12 +11064,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtb008
      *
-     * @param float $rtb008 Total balance of continuous trades where worst delinquency = 1-30 days
+     * @param float|null $rtb008 Total balance of continuous trades where worst delinquency = 1-30 days
      *
-     * @return $this
+     * @return self
      */
     public function setRtb008($rtb008)
     {
+        if (is_null($rtb008)) {
+            throw new \InvalidArgumentException('non-nullable rtb008 cannot be null');
+        }
         $this->container['rtb008'] = $rtb008;
 
         return $this;
@@ -9674,7 +11081,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtb009
      *
-     * @return float
+     * @return float|null
      */
     public function getRtb009()
     {
@@ -9684,12 +11091,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtb009
      *
-     * @param float $rtb009 Total balance of continuous trades where worst delinquency = 31-60 days
+     * @param float|null $rtb009 Total balance of continuous trades where worst delinquency = 31-60 days
      *
-     * @return $this
+     * @return self
      */
     public function setRtb009($rtb009)
     {
+        if (is_null($rtb009)) {
+            throw new \InvalidArgumentException('non-nullable rtb009 cannot be null');
+        }
         $this->container['rtb009'] = $rtb009;
 
         return $this;
@@ -9698,7 +11108,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtb010
      *
-     * @return float
+     * @return float|null
      */
     public function getRtb010()
     {
@@ -9708,12 +11118,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtb010
      *
-     * @param float $rtb010 Total balance of continuous trades where worst delinquency = 61-90 days
+     * @param float|null $rtb010 Total balance of continuous trades where worst delinquency = 61-90 days
      *
-     * @return $this
+     * @return self
      */
     public function setRtb010($rtb010)
     {
+        if (is_null($rtb010)) {
+            throw new \InvalidArgumentException('non-nullable rtb010 cannot be null');
+        }
         $this->container['rtb010'] = $rtb010;
 
         return $this;
@@ -9722,7 +11135,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtb011
      *
-     * @return float
+     * @return float|null
      */
     public function getRtb011()
     {
@@ -9732,12 +11145,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtb011
      *
-     * @param float $rtb011 Total balance of continuous trades where worst delinquency = 91+ days
+     * @param float|null $rtb011 Total balance of continuous trades where worst delinquency = 91+ days
      *
-     * @return $this
+     * @return self
      */
     public function setRtb011($rtb011)
     {
+        if (is_null($rtb011)) {
+            throw new \InvalidArgumentException('non-nullable rtb011 cannot be null');
+        }
         $this->container['rtb011'] = $rtb011;
 
         return $this;
@@ -9746,7 +11162,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtb012
      *
-     * @return float
+     * @return float|null
      */
     public function getRtb012()
     {
@@ -9756,12 +11172,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtb012
      *
-     * @param float $rtb012 Total balance of continuous trades where worst status = current
+     * @param float|null $rtb012 Total balance of continuous trades where worst status = current
      *
-     * @return $this
+     * @return self
      */
     public function setRtb012($rtb012)
     {
+        if (is_null($rtb012)) {
+            throw new \InvalidArgumentException('non-nullable rtb012 cannot be null');
+        }
         $this->container['rtb012'] = $rtb012;
 
         return $this;
@@ -9770,7 +11189,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtb013
      *
-     * @return float
+     * @return float|null
      */
     public function getRtb013()
     {
@@ -9780,12 +11199,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtb013
      *
-     * @param float $rtb013 Total balance of continuous trades where worst status = 1-30 days
+     * @param float|null $rtb013 Total balance of continuous trades where worst status = 1-30 days
      *
-     * @return $this
+     * @return self
      */
     public function setRtb013($rtb013)
     {
+        if (is_null($rtb013)) {
+            throw new \InvalidArgumentException('non-nullable rtb013 cannot be null');
+        }
         $this->container['rtb013'] = $rtb013;
 
         return $this;
@@ -9794,7 +11216,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtb014
      *
-     * @return float
+     * @return float|null
      */
     public function getRtb014()
     {
@@ -9804,12 +11226,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtb014
      *
-     * @param float $rtb014 Total balance of continuous trades where worst status is a derogatory comment (bankrupcy, judgment, lien etc)
+     * @param float|null $rtb014 Total balance of continuous trades where worst status is a derogatory comment (bankrupcy, judgment, lien etc)
      *
-     * @return $this
+     * @return self
      */
     public function setRtb014($rtb014)
     {
+        if (is_null($rtb014)) {
+            throw new \InvalidArgumentException('non-nullable rtb014 cannot be null');
+        }
         $this->container['rtb014'] = $rtb014;
 
         return $this;
@@ -9818,7 +11243,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtb015
      *
-     * @return float
+     * @return float|null
      */
     public function getRtb015()
     {
@@ -9828,12 +11253,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtb015
      *
-     * @param float $rtb015 Total balance of continuous trades where worst status = 31-60 days
+     * @param float|null $rtb015 Total balance of continuous trades where worst status = 31-60 days
      *
-     * @return $this
+     * @return self
      */
     public function setRtb015($rtb015)
     {
+        if (is_null($rtb015)) {
+            throw new \InvalidArgumentException('non-nullable rtb015 cannot be null');
+        }
         $this->container['rtb015'] = $rtb015;
 
         return $this;
@@ -9842,7 +11270,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtb016
      *
-     * @return float
+     * @return float|null
      */
     public function getRtb016()
     {
@@ -9852,12 +11280,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtb016
      *
-     * @param float $rtb016 Total balance of continuous trades where worst status = 61-90 days
+     * @param float|null $rtb016 Total balance of continuous trades where worst status = 61-90 days
      *
-     * @return $this
+     * @return self
      */
     public function setRtb016($rtb016)
     {
+        if (is_null($rtb016)) {
+            throw new \InvalidArgumentException('non-nullable rtb016 cannot be null');
+        }
         $this->container['rtb016'] = $rtb016;
 
         return $this;
@@ -9866,7 +11297,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtb017
      *
-     * @return float
+     * @return float|null
      */
     public function getRtb017()
     {
@@ -9876,12 +11307,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtb017
      *
-     * @param float $rtb017 Total balance of continuous trades where worst status = 91+ days
+     * @param float|null $rtb017 Total balance of continuous trades where worst status = 91+ days
      *
-     * @return $this
+     * @return self
      */
     public function setRtb017($rtb017)
     {
+        if (is_null($rtb017)) {
+            throw new \InvalidArgumentException('non-nullable rtb017 cannot be null');
+        }
         $this->container['rtb017'] = $rtb017;
 
         return $this;
@@ -9890,7 +11324,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtb018
      *
-     * @return float
+     * @return float|null
      */
     public function getRtb018()
     {
@@ -9900,12 +11334,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtb018
      *
-     * @param float $rtb018 Total highest balance in past 12 months across all continuous trades
+     * @param float|null $rtb018 Total highest balance in past 12 months across all continuous trades
      *
-     * @return $this
+     * @return self
      */
     public function setRtb018($rtb018)
     {
+        if (is_null($rtb018)) {
+            throw new \InvalidArgumentException('non-nullable rtb018 cannot be null');
+        }
         $this->container['rtb018'] = $rtb018;
 
         return $this;
@@ -9914,7 +11351,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtb020
      *
-     * @return float
+     * @return float|null
      */
     public function getRtb020()
     {
@@ -9924,12 +11361,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtb020
      *
-     * @param float $rtb020 Total balance for continuous trades, current month
+     * @param float|null $rtb020 Total balance for continuous trades, current month
      *
-     * @return $this
+     * @return self
      */
     public function setRtb020($rtb020)
     {
+        if (is_null($rtb020)) {
+            throw new \InvalidArgumentException('non-nullable rtb020 cannot be null');
+        }
         $this->container['rtb020'] = $rtb020;
 
         return $this;
@@ -9938,7 +11378,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtb021
      *
-     * @return float
+     * @return float|null
      */
     public function getRtb021()
     {
@@ -9948,12 +11388,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtb021
      *
-     * @param float $rtb021 Total balance for trades that were continuous 1 month prior to profile date
+     * @param float|null $rtb021 Total balance for trades that were continuous 1 month prior to profile date
      *
-     * @return $this
+     * @return self
      */
     public function setRtb021($rtb021)
     {
+        if (is_null($rtb021)) {
+            throw new \InvalidArgumentException('non-nullable rtb021 cannot be null');
+        }
         $this->container['rtb021'] = $rtb021;
 
         return $this;
@@ -9962,7 +11405,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtb022
      *
-     * @return float
+     * @return float|null
      */
     public function getRtb022()
     {
@@ -9972,12 +11415,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtb022
      *
-     * @param float $rtb022 Total balance for trades that were continuous 2 months prior to profile date
+     * @param float|null $rtb022 Total balance for trades that were continuous 2 months prior to profile date
      *
-     * @return $this
+     * @return self
      */
     public function setRtb022($rtb022)
     {
+        if (is_null($rtb022)) {
+            throw new \InvalidArgumentException('non-nullable rtb022 cannot be null');
+        }
         $this->container['rtb022'] = $rtb022;
 
         return $this;
@@ -9986,7 +11432,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtb023
      *
-     * @return float
+     * @return float|null
      */
     public function getRtb023()
     {
@@ -9996,12 +11442,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtb023
      *
-     * @param float $rtb023 Total balance for trades that were continuous 3 months prior to profile date
+     * @param float|null $rtb023 Total balance for trades that were continuous 3 months prior to profile date
      *
-     * @return $this
+     * @return self
      */
     public function setRtb023($rtb023)
     {
+        if (is_null($rtb023)) {
+            throw new \InvalidArgumentException('non-nullable rtb023 cannot be null');
+        }
         $this->container['rtb023'] = $rtb023;
 
         return $this;
@@ -10010,7 +11459,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtb024
      *
-     * @return float
+     * @return float|null
      */
     public function getRtb024()
     {
@@ -10020,12 +11469,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtb024
      *
-     * @param float $rtb024 Total balance for trades that were continuous 4 months prior to profile date
+     * @param float|null $rtb024 Total balance for trades that were continuous 4 months prior to profile date
      *
-     * @return $this
+     * @return self
      */
     public function setRtb024($rtb024)
     {
+        if (is_null($rtb024)) {
+            throw new \InvalidArgumentException('non-nullable rtb024 cannot be null');
+        }
         $this->container['rtb024'] = $rtb024;
 
         return $this;
@@ -10034,7 +11486,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtb025
      *
-     * @return float
+     * @return float|null
      */
     public function getRtb025()
     {
@@ -10044,12 +11496,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtb025
      *
-     * @param float $rtb025 Total balance for trades that were continuous 5 months prior to profile date
+     * @param float|null $rtb025 Total balance for trades that were continuous 5 months prior to profile date
      *
-     * @return $this
+     * @return self
      */
     public function setRtb025($rtb025)
     {
+        if (is_null($rtb025)) {
+            throw new \InvalidArgumentException('non-nullable rtb025 cannot be null');
+        }
         $this->container['rtb025'] = $rtb025;
 
         return $this;
@@ -10058,7 +11513,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtb026
      *
-     * @return float
+     * @return float|null
      */
     public function getRtb026()
     {
@@ -10068,12 +11523,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtb026
      *
-     * @param float $rtb026 Average balance that is current over the past 6 months for continuous trades
+     * @param float|null $rtb026 Average balance that is current over the past 6 months for continuous trades
      *
-     * @return $this
+     * @return self
      */
     public function setRtb026($rtb026)
     {
+        if (is_null($rtb026)) {
+            throw new \InvalidArgumentException('non-nullable rtb026 cannot be null');
+        }
         $this->container['rtb026'] = $rtb026;
 
         return $this;
@@ -10082,7 +11540,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtb027
      *
-     * @return float
+     * @return float|null
      */
     public function getRtb027()
     {
@@ -10092,12 +11550,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtb027
      *
-     * @param float $rtb027 Average balance that is 1-30 days delinquent over the past 6 months for continuous trades
+     * @param float|null $rtb027 Average balance that is 1-30 days delinquent over the past 6 months for continuous trades
      *
-     * @return $this
+     * @return self
      */
     public function setRtb027($rtb027)
     {
+        if (is_null($rtb027)) {
+            throw new \InvalidArgumentException('non-nullable rtb027 cannot be null');
+        }
         $this->container['rtb027'] = $rtb027;
 
         return $this;
@@ -10106,7 +11567,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtb028
      *
-     * @return float
+     * @return float|null
      */
     public function getRtb028()
     {
@@ -10116,12 +11577,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtb028
      *
-     * @param float $rtb028 Average balance that is 31-60 days delinquent over the past 6 months for continuous trades
+     * @param float|null $rtb028 Average balance that is 31-60 days delinquent over the past 6 months for continuous trades
      *
-     * @return $this
+     * @return self
      */
     public function setRtb028($rtb028)
     {
+        if (is_null($rtb028)) {
+            throw new \InvalidArgumentException('non-nullable rtb028 cannot be null');
+        }
         $this->container['rtb028'] = $rtb028;
 
         return $this;
@@ -10130,7 +11594,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtb029
      *
-     * @return float
+     * @return float|null
      */
     public function getRtb029()
     {
@@ -10140,12 +11604,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtb029
      *
-     * @param float $rtb029 Average balance that is 61-90 days delinquent over the past 6 months for continuous trades
+     * @param float|null $rtb029 Average balance that is 61-90 days delinquent over the past 6 months for continuous trades
      *
-     * @return $this
+     * @return self
      */
     public function setRtb029($rtb029)
     {
+        if (is_null($rtb029)) {
+            throw new \InvalidArgumentException('non-nullable rtb029 cannot be null');
+        }
         $this->container['rtb029'] = $rtb029;
 
         return $this;
@@ -10154,7 +11621,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtb030
      *
-     * @return float
+     * @return float|null
      */
     public function getRtb030()
     {
@@ -10164,12 +11631,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtb030
      *
-     * @param float $rtb030 Average balance that is 91+ days delinquent over the past 6 months for continuous trades
+     * @param float|null $rtb030 Average balance that is 91+ days delinquent over the past 6 months for continuous trades
      *
-     * @return $this
+     * @return self
      */
     public function setRtb030($rtb030)
     {
+        if (is_null($rtb030)) {
+            throw new \InvalidArgumentException('non-nullable rtb030 cannot be null');
+        }
         $this->container['rtb030'] = $rtb030;
 
         return $this;
@@ -10178,7 +11648,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtb031
      *
-     * @return float
+     * @return float|null
      */
     public function getRtb031()
     {
@@ -10188,12 +11658,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtb031
      *
-     * @param float $rtb031 Total balance for continuous trades for current quarter
+     * @param float|null $rtb031 Total balance for continuous trades for current quarter
      *
-     * @return $this
+     * @return self
      */
     public function setRtb031($rtb031)
     {
+        if (is_null($rtb031)) {
+            throw new \InvalidArgumentException('non-nullable rtb031 cannot be null');
+        }
         $this->container['rtb031'] = $rtb031;
 
         return $this;
@@ -10202,7 +11675,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtb032
      *
-     * @return float
+     * @return float|null
      */
     public function getRtb032()
     {
@@ -10212,12 +11685,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtb032
      *
-     * @param float $rtb032 Total balance for trades that were continuous 1 quarter prior to profile date
+     * @param float|null $rtb032 Total balance for trades that were continuous 1 quarter prior to profile date
      *
-     * @return $this
+     * @return self
      */
     public function setRtb032($rtb032)
     {
+        if (is_null($rtb032)) {
+            throw new \InvalidArgumentException('non-nullable rtb032 cannot be null');
+        }
         $this->container['rtb032'] = $rtb032;
 
         return $this;
@@ -10226,7 +11702,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtb033
      *
-     * @return float
+     * @return float|null
      */
     public function getRtb033()
     {
@@ -10236,12 +11712,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtb033
      *
-     * @param float $rtb033 Total balance for trades that were continuous 2 quarters prior to profile date
+     * @param float|null $rtb033 Total balance for trades that were continuous 2 quarters prior to profile date
      *
-     * @return $this
+     * @return self
      */
     public function setRtb033($rtb033)
     {
+        if (is_null($rtb033)) {
+            throw new \InvalidArgumentException('non-nullable rtb033 cannot be null');
+        }
         $this->container['rtb033'] = $rtb033;
 
         return $this;
@@ -10250,7 +11729,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtb034
      *
-     * @return float
+     * @return float|null
      */
     public function getRtb034()
     {
@@ -10260,12 +11739,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtb034
      *
-     * @param float $rtb034 Total balance for trades that were continuous 3 quarters prior to profile date
+     * @param float|null $rtb034 Total balance for trades that were continuous 3 quarters prior to profile date
      *
-     * @return $this
+     * @return self
      */
     public function setRtb034($rtb034)
     {
+        if (is_null($rtb034)) {
+            throw new \InvalidArgumentException('non-nullable rtb034 cannot be null');
+        }
         $this->container['rtb034'] = $rtb034;
 
         return $this;
@@ -10274,7 +11756,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtb035
      *
-     * @return float
+     * @return float|null
      */
     public function getRtb035()
     {
@@ -10284,12 +11766,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtb035
      *
-     * @param float $rtb035 Total balance for trades that were continuous 4 quarters prior to profile date
+     * @param float|null $rtb035 Total balance for trades that were continuous 4 quarters prior to profile date
      *
-     * @return $this
+     * @return self
      */
     public function setRtb035($rtb035)
     {
+        if (is_null($rtb035)) {
+            throw new \InvalidArgumentException('non-nullable rtb035 cannot be null');
+        }
         $this->container['rtb035'] = $rtb035;
 
         return $this;
@@ -10298,7 +11783,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtc036
      *
-     * @return float
+     * @return float|null
      */
     public function getRtc036()
     {
@@ -10308,12 +11793,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtc036
      *
-     * @param float $rtc036 Total number of continuous trades
+     * @param float|null $rtc036 Total number of continuous trades
      *
-     * @return $this
+     * @return self
      */
     public function setRtc036($rtc036)
     {
+        if (is_null($rtc036)) {
+            throw new \InvalidArgumentException('non-nullable rtc036 cannot be null');
+        }
         $this->container['rtc036'] = $rtc036;
 
         return $this;
@@ -10322,7 +11810,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtc037
      *
-     * @return float
+     * @return float|null
      */
     public function getRtc037()
     {
@@ -10332,12 +11820,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtc037
      *
-     * @param float $rtc037 Total number of continuous trades where worst delinquency = current
+     * @param float|null $rtc037 Total number of continuous trades where worst delinquency = current
      *
-     * @return $this
+     * @return self
      */
     public function setRtc037($rtc037)
     {
+        if (is_null($rtc037)) {
+            throw new \InvalidArgumentException('non-nullable rtc037 cannot be null');
+        }
         $this->container['rtc037'] = $rtc037;
 
         return $this;
@@ -10346,7 +11837,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtc038
      *
-     * @return float
+     * @return float|null
      */
     public function getRtc038()
     {
@@ -10356,12 +11847,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtc038
      *
-     * @param float $rtc038 Total number of continuous trades where worst delinquency = 1-30 days
+     * @param float|null $rtc038 Total number of continuous trades where worst delinquency = 1-30 days
      *
-     * @return $this
+     * @return self
      */
     public function setRtc038($rtc038)
     {
+        if (is_null($rtc038)) {
+            throw new \InvalidArgumentException('non-nullable rtc038 cannot be null');
+        }
         $this->container['rtc038'] = $rtc038;
 
         return $this;
@@ -10370,7 +11864,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtc039
      *
-     * @return float
+     * @return float|null
      */
     public function getRtc039()
     {
@@ -10380,12 +11874,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtc039
      *
-     * @param float $rtc039 Total number of continuous trades where worst delinquency = 31-60 days
+     * @param float|null $rtc039 Total number of continuous trades where worst delinquency = 31-60 days
      *
-     * @return $this
+     * @return self
      */
     public function setRtc039($rtc039)
     {
+        if (is_null($rtc039)) {
+            throw new \InvalidArgumentException('non-nullable rtc039 cannot be null');
+        }
         $this->container['rtc039'] = $rtc039;
 
         return $this;
@@ -10394,7 +11891,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtc040
      *
-     * @return float
+     * @return float|null
      */
     public function getRtc040()
     {
@@ -10404,12 +11901,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtc040
      *
-     * @param float $rtc040 Total number of continuous trades where worst delinquency = 61-90 days
+     * @param float|null $rtc040 Total number of continuous trades where worst delinquency = 61-90 days
      *
-     * @return $this
+     * @return self
      */
     public function setRtc040($rtc040)
     {
+        if (is_null($rtc040)) {
+            throw new \InvalidArgumentException('non-nullable rtc040 cannot be null');
+        }
         $this->container['rtc040'] = $rtc040;
 
         return $this;
@@ -10418,7 +11918,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtc041
      *
-     * @return float
+     * @return float|null
      */
     public function getRtc041()
     {
@@ -10428,12 +11928,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtc041
      *
-     * @param float $rtc041 Total number of continuous trades where worst delinquency = 91+ days
+     * @param float|null $rtc041 Total number of continuous trades where worst delinquency = 91+ days
      *
-     * @return $this
+     * @return self
      */
     public function setRtc041($rtc041)
     {
+        if (is_null($rtc041)) {
+            throw new \InvalidArgumentException('non-nullable rtc041 cannot be null');
+        }
         $this->container['rtc041'] = $rtc041;
 
         return $this;
@@ -10442,7 +11945,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtc042
      *
-     * @return float
+     * @return float|null
      */
     public function getRtc042()
     {
@@ -10452,12 +11955,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtc042
      *
-     * @param float $rtc042 Total number of continuous trades where worst status = current
+     * @param float|null $rtc042 Total number of continuous trades where worst status = current
      *
-     * @return $this
+     * @return self
      */
     public function setRtc042($rtc042)
     {
+        if (is_null($rtc042)) {
+            throw new \InvalidArgumentException('non-nullable rtc042 cannot be null');
+        }
         $this->container['rtc042'] = $rtc042;
 
         return $this;
@@ -10466,7 +11972,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtc043
      *
-     * @return float
+     * @return float|null
      */
     public function getRtc043()
     {
@@ -10476,12 +11982,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtc043
      *
-     * @param float $rtc043 Total number of continuous trades where worst status = 1-30 days
+     * @param float|null $rtc043 Total number of continuous trades where worst status = 1-30 days
      *
-     * @return $this
+     * @return self
      */
     public function setRtc043($rtc043)
     {
+        if (is_null($rtc043)) {
+            throw new \InvalidArgumentException('non-nullable rtc043 cannot be null');
+        }
         $this->container['rtc043'] = $rtc043;
 
         return $this;
@@ -10490,7 +11999,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtc044
      *
-     * @return float
+     * @return float|null
      */
     public function getRtc044()
     {
@@ -10500,12 +12009,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtc044
      *
-     * @param float $rtc044 Total number of continuous trades where worst status is a derogatory comment (bankrupcy, judgment, lien etc)
+     * @param float|null $rtc044 Total number of continuous trades where worst status is a derogatory comment (bankrupcy, judgment, lien etc)
      *
-     * @return $this
+     * @return self
      */
     public function setRtc044($rtc044)
     {
+        if (is_null($rtc044)) {
+            throw new \InvalidArgumentException('non-nullable rtc044 cannot be null');
+        }
         $this->container['rtc044'] = $rtc044;
 
         return $this;
@@ -10514,7 +12026,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtc045
      *
-     * @return float
+     * @return float|null
      */
     public function getRtc045()
     {
@@ -10524,12 +12036,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtc045
      *
-     * @param float $rtc045 Total number of continuous trades where worst status = 31-60 days
+     * @param float|null $rtc045 Total number of continuous trades where worst status = 31-60 days
      *
-     * @return $this
+     * @return self
      */
     public function setRtc045($rtc045)
     {
+        if (is_null($rtc045)) {
+            throw new \InvalidArgumentException('non-nullable rtc045 cannot be null');
+        }
         $this->container['rtc045'] = $rtc045;
 
         return $this;
@@ -10538,7 +12053,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtc046
      *
-     * @return float
+     * @return float|null
      */
     public function getRtc046()
     {
@@ -10548,12 +12063,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtc046
      *
-     * @param float $rtc046 Total number of continuous trades where worst status = 61-90 days
+     * @param float|null $rtc046 Total number of continuous trades where worst status = 61-90 days
      *
-     * @return $this
+     * @return self
      */
     public function setRtc046($rtc046)
     {
+        if (is_null($rtc046)) {
+            throw new \InvalidArgumentException('non-nullable rtc046 cannot be null');
+        }
         $this->container['rtc046'] = $rtc046;
 
         return $this;
@@ -10562,7 +12080,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtc047
      *
-     * @return float
+     * @return float|null
      */
     public function getRtc047()
     {
@@ -10572,12 +12090,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtc047
      *
-     * @param float $rtc047 Total number of continuous trades where worst status = 91+ days
+     * @param float|null $rtc047 Total number of continuous trades where worst status = 91+ days
      *
-     * @return $this
+     * @return self
      */
     public function setRtc047($rtc047)
     {
+        if (is_null($rtc047)) {
+            throw new \InvalidArgumentException('non-nullable rtc047 cannot be null');
+        }
         $this->container['rtc047'] = $rtc047;
 
         return $this;
@@ -10586,7 +12107,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtc049
      *
-     * @return float
+     * @return float|null
      */
     public function getRtc049()
     {
@@ -10596,12 +12117,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtc049
      *
-     * @param float $rtc049 Total number of continuous trades with current DBT's
+     * @param float|null $rtc049 Total number of continuous trades with current DBT's
      *
-     * @return $this
+     * @return self
      */
     public function setRtc049($rtc049)
     {
+        if (is_null($rtc049)) {
+            throw new \InvalidArgumentException('non-nullable rtc049 cannot be null');
+        }
         $this->container['rtc049'] = $rtc049;
 
         return $this;
@@ -10610,7 +12134,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtc050
      *
-     * @return float
+     * @return float|null
      */
     public function getRtc050()
     {
@@ -10620,12 +12144,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtc050
      *
-     * @param float $rtc050 Total number of continuous trades with DBT's 1-30 days
+     * @param float|null $rtc050 Total number of continuous trades with DBT's 1-30 days
      *
-     * @return $this
+     * @return self
      */
     public function setRtc050($rtc050)
     {
+        if (is_null($rtc050)) {
+            throw new \InvalidArgumentException('non-nullable rtc050 cannot be null');
+        }
         $this->container['rtc050'] = $rtc050;
 
         return $this;
@@ -10634,7 +12161,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtc051
      *
-     * @return float
+     * @return float|null
      */
     public function getRtc051()
     {
@@ -10644,12 +12171,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtc051
      *
-     * @param float $rtc051 Total number of continuous trades with DBT's 31-60 days
+     * @param float|null $rtc051 Total number of continuous trades with DBT's 31-60 days
      *
-     * @return $this
+     * @return self
      */
     public function setRtc051($rtc051)
     {
+        if (is_null($rtc051)) {
+            throw new \InvalidArgumentException('non-nullable rtc051 cannot be null');
+        }
         $this->container['rtc051'] = $rtc051;
 
         return $this;
@@ -10658,7 +12188,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtc052
      *
-     * @return float
+     * @return float|null
      */
     public function getRtc052()
     {
@@ -10668,12 +12198,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtc052
      *
-     * @param float $rtc052 Total number of continuous trades with DBT's 61-90 days
+     * @param float|null $rtc052 Total number of continuous trades with DBT's 61-90 days
      *
-     * @return $this
+     * @return self
      */
     public function setRtc052($rtc052)
     {
+        if (is_null($rtc052)) {
+            throw new \InvalidArgumentException('non-nullable rtc052 cannot be null');
+        }
         $this->container['rtc052'] = $rtc052;
 
         return $this;
@@ -10682,7 +12215,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtc053
      *
-     * @return float
+     * @return float|null
      */
     public function getRtc053()
     {
@@ -10692,12 +12225,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtc053
      *
-     * @param float $rtc053 Total number of continuous trades with DBT's 91+ days
+     * @param float|null $rtc053 Total number of continuous trades with DBT's 91+ days
      *
-     * @return $this
+     * @return self
      */
     public function setRtc053($rtc053)
     {
+        if (is_null($rtc053)) {
+            throw new \InvalidArgumentException('non-nullable rtc053 cannot be null');
+        }
         $this->container['rtc053'] = $rtc053;
 
         return $this;
@@ -10706,7 +12242,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtc054
      *
-     * @return float
+     * @return float|null
      */
     public function getRtc054()
     {
@@ -10716,12 +12252,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtc054
      *
-     * @param float $rtc054 Total number of continuous trades with derogatory comments
+     * @param float|null $rtc054 Total number of continuous trades with derogatory comments
      *
-     * @return $this
+     * @return self
      */
     public function setRtc054($rtc054)
     {
+        if (is_null($rtc054)) {
+            throw new \InvalidArgumentException('non-nullable rtc054 cannot be null');
+        }
         $this->container['rtc054'] = $rtc054;
 
         return $this;
@@ -10730,7 +12269,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtd059
      *
-     * @return float
+     * @return float|null
      */
     public function getRtd059()
     {
@@ -10740,12 +12279,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtd059
      *
-     * @param float $rtd059 DBT of continuous trades
+     * @param float|null $rtd059 DBT of continuous trades
      *
-     * @return $this
+     * @return self
      */
     public function setRtd059($rtd059)
     {
+        if (is_null($rtd059)) {
+            throw new \InvalidArgumentException('non-nullable rtd059 cannot be null');
+        }
         $this->container['rtd059'] = $rtd059;
 
         return $this;
@@ -10754,7 +12296,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtd060
      *
-     * @return float
+     * @return float|null
      */
     public function getRtd060()
     {
@@ -10764,12 +12306,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtd060
      *
-     * @param float $rtd060 DBT of continuous trades, current month
+     * @param float|null $rtd060 DBT of continuous trades, current month
      *
-     * @return $this
+     * @return self
      */
     public function setRtd060($rtd060)
     {
+        if (is_null($rtd060)) {
+            throw new \InvalidArgumentException('non-nullable rtd060 cannot be null');
+        }
         $this->container['rtd060'] = $rtd060;
 
         return $this;
@@ -10778,7 +12323,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtd061
      *
-     * @return float
+     * @return float|null
      */
     public function getRtd061()
     {
@@ -10788,12 +12333,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtd061
      *
-     * @param float $rtd061 DBT of trades that were continuous 1 month prior to profile date
+     * @param float|null $rtd061 DBT of trades that were continuous 1 month prior to profile date
      *
-     * @return $this
+     * @return self
      */
     public function setRtd061($rtd061)
     {
+        if (is_null($rtd061)) {
+            throw new \InvalidArgumentException('non-nullable rtd061 cannot be null');
+        }
         $this->container['rtd061'] = $rtd061;
 
         return $this;
@@ -10802,7 +12350,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtd062
      *
-     * @return float
+     * @return float|null
      */
     public function getRtd062()
     {
@@ -10812,12 +12360,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtd062
      *
-     * @param float $rtd062 DBT of trades that were continuous 2 months prior to profile date
+     * @param float|null $rtd062 DBT of trades that were continuous 2 months prior to profile date
      *
-     * @return $this
+     * @return self
      */
     public function setRtd062($rtd062)
     {
+        if (is_null($rtd062)) {
+            throw new \InvalidArgumentException('non-nullable rtd062 cannot be null');
+        }
         $this->container['rtd062'] = $rtd062;
 
         return $this;
@@ -10826,7 +12377,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtd063
      *
-     * @return float
+     * @return float|null
      */
     public function getRtd063()
     {
@@ -10836,12 +12387,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtd063
      *
-     * @param float $rtd063 DBT of trades that were continuous 3 months prior to profile date
+     * @param float|null $rtd063 DBT of trades that were continuous 3 months prior to profile date
      *
-     * @return $this
+     * @return self
      */
     public function setRtd063($rtd063)
     {
+        if (is_null($rtd063)) {
+            throw new \InvalidArgumentException('non-nullable rtd063 cannot be null');
+        }
         $this->container['rtd063'] = $rtd063;
 
         return $this;
@@ -10850,7 +12404,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtd064
      *
-     * @return float
+     * @return float|null
      */
     public function getRtd064()
     {
@@ -10860,12 +12414,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtd064
      *
-     * @param float $rtd064 DBT of trades that were continuous 4 months prior to profile date
+     * @param float|null $rtd064 DBT of trades that were continuous 4 months prior to profile date
      *
-     * @return $this
+     * @return self
      */
     public function setRtd064($rtd064)
     {
+        if (is_null($rtd064)) {
+            throw new \InvalidArgumentException('non-nullable rtd064 cannot be null');
+        }
         $this->container['rtd064'] = $rtd064;
 
         return $this;
@@ -10874,7 +12431,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtd065
      *
-     * @return float
+     * @return float|null
      */
     public function getRtd065()
     {
@@ -10884,12 +12441,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtd065
      *
-     * @param float $rtd065 DBT of trades that were continuous 5 months prior to profile date
+     * @param float|null $rtd065 DBT of trades that were continuous 5 months prior to profile date
      *
-     * @return $this
+     * @return self
      */
     public function setRtd065($rtd065)
     {
+        if (is_null($rtd065)) {
+            throw new \InvalidArgumentException('non-nullable rtd065 cannot be null');
+        }
         $this->container['rtd065'] = $rtd065;
 
         return $this;
@@ -10898,7 +12458,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtd067
      *
-     * @return float
+     * @return float|null
      */
     public function getRtd067()
     {
@@ -10908,12 +12468,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtd067
      *
-     * @param float $rtd067 Maximum DBT of any continuous trade
+     * @param float|null $rtd067 Maximum DBT of any continuous trade
      *
-     * @return $this
+     * @return self
      */
     public function setRtd067($rtd067)
     {
+        if (is_null($rtd067)) {
+            throw new \InvalidArgumentException('non-nullable rtd067 cannot be null');
+        }
         $this->container['rtd067'] = $rtd067;
 
         return $this;
@@ -10922,7 +12485,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtd068
      *
-     * @return float
+     * @return float|null
      */
     public function getRtd068()
     {
@@ -10932,12 +12495,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtd068
      *
-     * @param float $rtd068 DBT of continuous trades, current quarter
+     * @param float|null $rtd068 DBT of continuous trades, current quarter
      *
-     * @return $this
+     * @return self
      */
     public function setRtd068($rtd068)
     {
+        if (is_null($rtd068)) {
+            throw new \InvalidArgumentException('non-nullable rtd068 cannot be null');
+        }
         $this->container['rtd068'] = $rtd068;
 
         return $this;
@@ -10946,7 +12512,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtd069
      *
-     * @return float
+     * @return float|null
      */
     public function getRtd069()
     {
@@ -10956,12 +12522,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtd069
      *
-     * @param float $rtd069 DBT of trades that were continuous 1 quarter prior to profile date
+     * @param float|null $rtd069 DBT of trades that were continuous 1 quarter prior to profile date
      *
-     * @return $this
+     * @return self
      */
     public function setRtd069($rtd069)
     {
+        if (is_null($rtd069)) {
+            throw new \InvalidArgumentException('non-nullable rtd069 cannot be null');
+        }
         $this->container['rtd069'] = $rtd069;
 
         return $this;
@@ -10970,7 +12539,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtd070
      *
-     * @return float
+     * @return float|null
      */
     public function getRtd070()
     {
@@ -10980,12 +12549,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtd070
      *
-     * @param float $rtd070 DBT of trades that were continuous 2 quarters prior to profile date
+     * @param float|null $rtd070 DBT of trades that were continuous 2 quarters prior to profile date
      *
-     * @return $this
+     * @return self
      */
     public function setRtd070($rtd070)
     {
+        if (is_null($rtd070)) {
+            throw new \InvalidArgumentException('non-nullable rtd070 cannot be null');
+        }
         $this->container['rtd070'] = $rtd070;
 
         return $this;
@@ -10994,7 +12566,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtd071
      *
-     * @return float
+     * @return float|null
      */
     public function getRtd071()
     {
@@ -11004,12 +12576,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtd071
      *
-     * @param float $rtd071 DBT of trades that were continuous 3 quarters prior to profile date
+     * @param float|null $rtd071 DBT of trades that were continuous 3 quarters prior to profile date
      *
-     * @return $this
+     * @return self
      */
     public function setRtd071($rtd071)
     {
+        if (is_null($rtd071)) {
+            throw new \InvalidArgumentException('non-nullable rtd071 cannot be null');
+        }
         $this->container['rtd071'] = $rtd071;
 
         return $this;
@@ -11018,7 +12593,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtd072
      *
-     * @return float
+     * @return float|null
      */
     public function getRtd072()
     {
@@ -11028,12 +12603,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtd072
      *
-     * @param float $rtd072 DBT of trades that were continuous 4 quarters prior to profile date
+     * @param float|null $rtd072 DBT of trades that were continuous 4 quarters prior to profile date
      *
-     * @return $this
+     * @return self
      */
     public function setRtd072($rtd072)
     {
+        if (is_null($rtd072)) {
+            throw new \InvalidArgumentException('non-nullable rtd072 cannot be null');
+        }
         $this->container['rtd072'] = $rtd072;
 
         return $this;
@@ -11042,7 +12620,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rto077
      *
-     * @return float
+     * @return float|null
      */
     public function getRto077()
     {
@@ -11052,12 +12630,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rto077
      *
-     * @param float $rto077 Average monthly change in DBT for continuous trades over the six months prior to the profile date
+     * @param float|null $rto077 Average monthly change in DBT for continuous trades over the six months prior to the profile date
      *
-     * @return $this
+     * @return self
      */
     public function setRto077($rto077)
     {
+        if (is_null($rto077)) {
+            throw new \InvalidArgumentException('non-nullable rto077 cannot be null');
+        }
         $this->container['rto077'] = $rto077;
 
         return $this;
@@ -11066,7 +12647,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rto079
      *
-     * @return float
+     * @return float|null
      */
     public function getRto079()
     {
@@ -11076,12 +12657,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rto079
      *
-     * @param float $rto079 Average quarterly change in DBT for continuous trades over the five quarters prior to the profile date
+     * @param float|null $rto079 Average quarterly change in DBT for continuous trades over the five quarters prior to the profile date
      *
-     * @return $this
+     * @return self
      */
     public function setRto079($rto079)
     {
+        if (is_null($rto079)) {
+            throw new \InvalidArgumentException('non-nullable rto079 cannot be null');
+        }
         $this->container['rto079'] = $rto079;
 
         return $this;
@@ -11090,7 +12674,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtp081
      *
-     * @return float
+     * @return float|null
      */
     public function getRtp081()
     {
@@ -11100,12 +12684,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtp081
      *
-     * @param float $rtp081 Percentage of Total continuous trades balance to continuous trades Total highest balance in past 12 months
+     * @param float|null $rtp081 Percentage of Total continuous trades balance to continuous trades Total highest balance in past 12 months
      *
-     * @return $this
+     * @return self
      */
     public function setRtp081($rtp081)
     {
+        if (is_null($rtp081)) {
+            throw new \InvalidArgumentException('non-nullable rtp081 cannot be null');
+        }
         $this->container['rtp081'] = $rtp081;
 
         return $this;
@@ -11114,7 +12701,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtp082
      *
-     * @return float
+     * @return float|null
      */
     public function getRtp082()
     {
@@ -11124,12 +12711,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtp082
      *
-     * @param float $rtp082 Percentage of Total balance of continuous trades to Total trade balance
+     * @param float|null $rtp082 Percentage of Total balance of continuous trades to Total trade balance
      *
-     * @return $this
+     * @return self
      */
     public function setRtp082($rtp082)
     {
+        if (is_null($rtp082)) {
+            throw new \InvalidArgumentException('non-nullable rtp082 cannot be null');
+        }
         $this->container['rtp082'] = $rtp082;
 
         return $this;
@@ -11138,7 +12728,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtp083
      *
-     * @return float
+     * @return float|null
      */
     public function getRtp083()
     {
@@ -11148,12 +12738,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtp083
      *
-     * @param float $rtp083 Percentage of Total number of continuous trades to Total number of trades
+     * @param float|null $rtp083 Percentage of Total number of continuous trades to Total number of trades
      *
-     * @return $this
+     * @return self
      */
     public function setRtp083($rtp083)
     {
+        if (is_null($rtp083)) {
+            throw new \InvalidArgumentException('non-nullable rtp083 cannot be null');
+        }
         $this->container['rtp083'] = $rtp083;
 
         return $this;
@@ -11162,7 +12755,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets rtp086
      *
-     * @return float
+     * @return float|null
      */
     public function getRtp086()
     {
@@ -11172,12 +12765,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets rtp086
      *
-     * @param float $rtp086 Ratio of Total account balance to Total highest account balance ever, for continuous trades that are newly reported within six months of the profile date
+     * @param float|null $rtp086 Ratio of Total account balance to Total highest account balance ever, for continuous trades that are newly reported within six months of the profile date
      *
-     * @return $this
+     * @return self
      */
     public function setRtp086($rtp086)
     {
+        if (is_null($rtp086)) {
+            throw new \InvalidArgumentException('non-nullable rtp086 cannot be null');
+        }
         $this->container['rtp086'] = $rtp086;
 
         return $this;
@@ -11186,7 +12782,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttb001
      *
-     * @return float
+     * @return float|null
      */
     public function getTtb001()
     {
@@ -11196,12 +12792,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttb001
      *
-     * @param float $ttb001 Total balance for bad trades
+     * @param float|null $ttb001 Total balance for bad trades
      *
-     * @return $this
+     * @return self
      */
     public function setTtb001($ttb001)
     {
+        if (is_null($ttb001)) {
+            throw new \InvalidArgumentException('non-nullable ttb001 cannot be null');
+        }
         $this->container['ttb001'] = $ttb001;
 
         return $this;
@@ -11210,7 +12809,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttb002
      *
-     * @return float
+     * @return float|null
      */
     public function getTtb002()
     {
@@ -11220,12 +12819,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttb002
      *
-     * @param float $ttb002 Total balance for good trades
+     * @param float|null $ttb002 Total balance for good trades
      *
-     * @return $this
+     * @return self
      */
     public function setTtb002($ttb002)
     {
+        if (is_null($ttb002)) {
+            throw new \InvalidArgumentException('non-nullable ttb002 cannot be null');
+        }
         $this->container['ttb002'] = $ttb002;
 
         return $this;
@@ -11234,7 +12836,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttb003
      *
-     * @return float
+     * @return float|null
      */
     public function getTtb003()
     {
@@ -11244,12 +12846,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttb003
      *
-     * @param float $ttb003 Total balance of Total trades
+     * @param float|null $ttb003 Total balance of Total trades
      *
-     * @return $this
+     * @return self
      */
     public function setTtb003($ttb003)
     {
+        if (is_null($ttb003)) {
+            throw new \InvalidArgumentException('non-nullable ttb003 cannot be null');
+        }
         $this->container['ttb003'] = $ttb003;
 
         return $this;
@@ -11258,7 +12863,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttb004
      *
-     * @return float
+     * @return float|null
      */
     public function getTtb004()
     {
@@ -11268,12 +12873,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttb004
      *
-     * @param float $ttb004 Total balance of Total trades that is 1-30 days delinquent
+     * @param float|null $ttb004 Total balance of Total trades that is 1-30 days delinquent
      *
-     * @return $this
+     * @return self
      */
     public function setTtb004($ttb004)
     {
+        if (is_null($ttb004)) {
+            throw new \InvalidArgumentException('non-nullable ttb004 cannot be null');
+        }
         $this->container['ttb004'] = $ttb004;
 
         return $this;
@@ -11282,7 +12890,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttb005
      *
-     * @return float
+     * @return float|null
      */
     public function getTtb005()
     {
@@ -11292,12 +12900,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttb005
      *
-     * @param float $ttb005 Total balance of Total trades that is 31-60 days delinquent
+     * @param float|null $ttb005 Total balance of Total trades that is 31-60 days delinquent
      *
-     * @return $this
+     * @return self
      */
     public function setTtb005($ttb005)
     {
+        if (is_null($ttb005)) {
+            throw new \InvalidArgumentException('non-nullable ttb005 cannot be null');
+        }
         $this->container['ttb005'] = $ttb005;
 
         return $this;
@@ -11306,7 +12917,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttb006
      *
-     * @return float
+     * @return float|null
      */
     public function getTtb006()
     {
@@ -11316,12 +12927,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttb006
      *
-     * @param float $ttb006 Total balance of Total trades that is 61-90 days delinquent
+     * @param float|null $ttb006 Total balance of Total trades that is 61-90 days delinquent
      *
-     * @return $this
+     * @return self
      */
     public function setTtb006($ttb006)
     {
+        if (is_null($ttb006)) {
+            throw new \InvalidArgumentException('non-nullable ttb006 cannot be null');
+        }
         $this->container['ttb006'] = $ttb006;
 
         return $this;
@@ -11330,7 +12944,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttb007
      *
-     * @return float
+     * @return float|null
      */
     public function getTtb007()
     {
@@ -11340,12 +12954,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttb007
      *
-     * @param float $ttb007 Total balance of Total trades that is 91+ days delinquent
+     * @param float|null $ttb007 Total balance of Total trades that is 91+ days delinquent
      *
-     * @return $this
+     * @return self
      */
     public function setTtb007($ttb007)
     {
+        if (is_null($ttb007)) {
+            throw new \InvalidArgumentException('non-nullable ttb007 cannot be null');
+        }
         $this->container['ttb007'] = $ttb007;
 
         return $this;
@@ -11354,7 +12971,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttb008
      *
-     * @return float
+     * @return float|null
      */
     public function getTtb008()
     {
@@ -11364,12 +12981,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttb008
      *
-     * @param float $ttb008 Total balance of Total trades that is current
+     * @param float|null $ttb008 Total balance of Total trades that is current
      *
-     * @return $this
+     * @return self
      */
     public function setTtb008($ttb008)
     {
+        if (is_null($ttb008)) {
+            throw new \InvalidArgumentException('non-nullable ttb008 cannot be null');
+        }
         $this->container['ttb008'] = $ttb008;
 
         return $this;
@@ -11378,7 +12998,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttb009
      *
-     * @return float
+     * @return float|null
      */
     public function getTtb009()
     {
@@ -11388,12 +13008,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttb009
      *
-     * @param float $ttb009 Total balance of Total trades where worst delinquency = current
+     * @param float|null $ttb009 Total balance of Total trades where worst delinquency = current
      *
-     * @return $this
+     * @return self
      */
     public function setTtb009($ttb009)
     {
+        if (is_null($ttb009)) {
+            throw new \InvalidArgumentException('non-nullable ttb009 cannot be null');
+        }
         $this->container['ttb009'] = $ttb009;
 
         return $this;
@@ -11402,7 +13025,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttb010
      *
-     * @return float
+     * @return float|null
      */
     public function getTtb010()
     {
@@ -11412,12 +13035,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttb010
      *
-     * @param float $ttb010 Total balance of Total trades where worst delinquency = 1-30 days
+     * @param float|null $ttb010 Total balance of Total trades where worst delinquency = 1-30 days
      *
-     * @return $this
+     * @return self
      */
     public function setTtb010($ttb010)
     {
+        if (is_null($ttb010)) {
+            throw new \InvalidArgumentException('non-nullable ttb010 cannot be null');
+        }
         $this->container['ttb010'] = $ttb010;
 
         return $this;
@@ -11426,7 +13052,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttb011
      *
-     * @return float
+     * @return float|null
      */
     public function getTtb011()
     {
@@ -11436,12 +13062,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttb011
      *
-     * @param float $ttb011 Total balance of Total trades where worst delinquency = 31-60 days
+     * @param float|null $ttb011 Total balance of Total trades where worst delinquency = 31-60 days
      *
-     * @return $this
+     * @return self
      */
     public function setTtb011($ttb011)
     {
+        if (is_null($ttb011)) {
+            throw new \InvalidArgumentException('non-nullable ttb011 cannot be null');
+        }
         $this->container['ttb011'] = $ttb011;
 
         return $this;
@@ -11450,7 +13079,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttb012
      *
-     * @return float
+     * @return float|null
      */
     public function getTtb012()
     {
@@ -11460,12 +13089,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttb012
      *
-     * @param float $ttb012 Total balance of Total trades where worst delinquency = 61-90 days
+     * @param float|null $ttb012 Total balance of Total trades where worst delinquency = 61-90 days
      *
-     * @return $this
+     * @return self
      */
     public function setTtb012($ttb012)
     {
+        if (is_null($ttb012)) {
+            throw new \InvalidArgumentException('non-nullable ttb012 cannot be null');
+        }
         $this->container['ttb012'] = $ttb012;
 
         return $this;
@@ -11474,7 +13106,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttb013
      *
-     * @return float
+     * @return float|null
      */
     public function getTtb013()
     {
@@ -11484,12 +13116,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttb013
      *
-     * @param float $ttb013 Total balance of Total trades where worst delinquency = 91+ days
+     * @param float|null $ttb013 Total balance of Total trades where worst delinquency = 91+ days
      *
-     * @return $this
+     * @return self
      */
     public function setTtb013($ttb013)
     {
+        if (is_null($ttb013)) {
+            throw new \InvalidArgumentException('non-nullable ttb013 cannot be null');
+        }
         $this->container['ttb013'] = $ttb013;
 
         return $this;
@@ -11498,7 +13133,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttb014
      *
-     * @return float
+     * @return float|null
      */
     public function getTtb014()
     {
@@ -11508,12 +13143,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttb014
      *
-     * @param float $ttb014 Total balance of Total trades where worst status = current
+     * @param float|null $ttb014 Total balance of Total trades where worst status = current
      *
-     * @return $this
+     * @return self
      */
     public function setTtb014($ttb014)
     {
+        if (is_null($ttb014)) {
+            throw new \InvalidArgumentException('non-nullable ttb014 cannot be null');
+        }
         $this->container['ttb014'] = $ttb014;
 
         return $this;
@@ -11522,7 +13160,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttb015
      *
-     * @return float
+     * @return float|null
      */
     public function getTtb015()
     {
@@ -11532,12 +13170,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttb015
      *
-     * @param float $ttb015 Total balance of Total trades where worst status = 1-30 days
+     * @param float|null $ttb015 Total balance of Total trades where worst status = 1-30 days
      *
-     * @return $this
+     * @return self
      */
     public function setTtb015($ttb015)
     {
+        if (is_null($ttb015)) {
+            throw new \InvalidArgumentException('non-nullable ttb015 cannot be null');
+        }
         $this->container['ttb015'] = $ttb015;
 
         return $this;
@@ -11546,7 +13187,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttb016
      *
-     * @return float
+     * @return float|null
      */
     public function getTtb016()
     {
@@ -11556,12 +13197,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttb016
      *
-     * @param float $ttb016 Total balance of Total trades where worst status is a derogatory comment (bankrupcy, judgment, lien etc)
+     * @param float|null $ttb016 Total balance of Total trades where worst status is a derogatory comment (bankrupcy, judgment, lien etc)
      *
-     * @return $this
+     * @return self
      */
     public function setTtb016($ttb016)
     {
+        if (is_null($ttb016)) {
+            throw new \InvalidArgumentException('non-nullable ttb016 cannot be null');
+        }
         $this->container['ttb016'] = $ttb016;
 
         return $this;
@@ -11570,7 +13214,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttb017
      *
-     * @return float
+     * @return float|null
      */
     public function getTtb017()
     {
@@ -11580,12 +13224,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttb017
      *
-     * @param float $ttb017 Total balance of Total trades where worst status = 31-60 days
+     * @param float|null $ttb017 Total balance of Total trades where worst status = 31-60 days
      *
-     * @return $this
+     * @return self
      */
     public function setTtb017($ttb017)
     {
+        if (is_null($ttb017)) {
+            throw new \InvalidArgumentException('non-nullable ttb017 cannot be null');
+        }
         $this->container['ttb017'] = $ttb017;
 
         return $this;
@@ -11594,7 +13241,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttb018
      *
-     * @return float
+     * @return float|null
      */
     public function getTtb018()
     {
@@ -11604,12 +13251,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttb018
      *
-     * @param float $ttb018 Total balance of Total trades where worst status = 61-90 days
+     * @param float|null $ttb018 Total balance of Total trades where worst status = 61-90 days
      *
-     * @return $this
+     * @return self
      */
     public function setTtb018($ttb018)
     {
+        if (is_null($ttb018)) {
+            throw new \InvalidArgumentException('non-nullable ttb018 cannot be null');
+        }
         $this->container['ttb018'] = $ttb018;
 
         return $this;
@@ -11618,7 +13268,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttb019
      *
-     * @return float
+     * @return float|null
      */
     public function getTtb019()
     {
@@ -11628,12 +13278,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttb019
      *
-     * @param float $ttb019 Total balance of Total trades where worst status = 91+ days
+     * @param float|null $ttb019 Total balance of Total trades where worst status = 91+ days
      *
-     * @return $this
+     * @return self
      */
     public function setTtb019($ttb019)
     {
+        if (is_null($ttb019)) {
+            throw new \InvalidArgumentException('non-nullable ttb019 cannot be null');
+        }
         $this->container['ttb019'] = $ttb019;
 
         return $this;
@@ -11642,7 +13295,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttb020
      *
-     * @return float
+     * @return float|null
      */
     public function getTtb020()
     {
@@ -11652,12 +13305,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttb020
      *
-     * @param float $ttb020 Total highest balance in past 12 months across all Total Trades
+     * @param float|null $ttb020 Total highest balance in past 12 months across all Total Trades
      *
-     * @return $this
+     * @return self
      */
     public function setTtb020($ttb020)
     {
+        if (is_null($ttb020)) {
+            throw new \InvalidArgumentException('non-nullable ttb020 cannot be null');
+        }
         $this->container['ttb020'] = $ttb020;
 
         return $this;
@@ -11666,7 +13322,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttb023
      *
-     * @return float
+     * @return float|null
      */
     public function getTtb023()
     {
@@ -11676,12 +13332,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttb023
      *
-     * @param float $ttb023 Maximum account balance that is current across all trades
+     * @param float|null $ttb023 Maximum account balance that is current across all trades
      *
-     * @return $this
+     * @return self
      */
     public function setTtb023($ttb023)
     {
+        if (is_null($ttb023)) {
+            throw new \InvalidArgumentException('non-nullable ttb023 cannot be null');
+        }
         $this->container['ttb023'] = $ttb023;
 
         return $this;
@@ -11690,7 +13349,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttb024
      *
-     * @return float
+     * @return float|null
      */
     public function getTtb024()
     {
@@ -11700,12 +13359,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttb024
      *
-     * @param float $ttb024 Maximum account balance that is 1-30 days delinquent across all trades
+     * @param float|null $ttb024 Maximum account balance that is 1-30 days delinquent across all trades
      *
-     * @return $this
+     * @return self
      */
     public function setTtb024($ttb024)
     {
+        if (is_null($ttb024)) {
+            throw new \InvalidArgumentException('non-nullable ttb024 cannot be null');
+        }
         $this->container['ttb024'] = $ttb024;
 
         return $this;
@@ -11714,7 +13376,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttb025
      *
-     * @return float
+     * @return float|null
      */
     public function getTtb025()
     {
@@ -11724,12 +13386,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttb025
      *
-     * @param float $ttb025 Maximum account balance that is 31-60 days delinquent across all trades
+     * @param float|null $ttb025 Maximum account balance that is 31-60 days delinquent across all trades
      *
-     * @return $this
+     * @return self
      */
     public function setTtb025($ttb025)
     {
+        if (is_null($ttb025)) {
+            throw new \InvalidArgumentException('non-nullable ttb025 cannot be null');
+        }
         $this->container['ttb025'] = $ttb025;
 
         return $this;
@@ -11738,7 +13403,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttb026
      *
-     * @return float
+     * @return float|null
      */
     public function getTtb026()
     {
@@ -11748,12 +13413,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttb026
      *
-     * @param float $ttb026 Maximum account balance that is 61-90 days delinquent across all trades
+     * @param float|null $ttb026 Maximum account balance that is 61-90 days delinquent across all trades
      *
-     * @return $this
+     * @return self
      */
     public function setTtb026($ttb026)
     {
+        if (is_null($ttb026)) {
+            throw new \InvalidArgumentException('non-nullable ttb026 cannot be null');
+        }
         $this->container['ttb026'] = $ttb026;
 
         return $this;
@@ -11762,7 +13430,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttb027
      *
-     * @return float
+     * @return float|null
      */
     public function getTtb027()
     {
@@ -11772,12 +13440,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttb027
      *
-     * @param float $ttb027 Maximum account balance that is 91+ days delinquent across all trades
+     * @param float|null $ttb027 Maximum account balance that is 91+ days delinquent across all trades
      *
-     * @return $this
+     * @return self
      */
     public function setTtb027($ttb027)
     {
+        if (is_null($ttb027)) {
+            throw new \InvalidArgumentException('non-nullable ttb027 cannot be null');
+        }
         $this->container['ttb027'] = $ttb027;
 
         return $this;
@@ -11786,7 +13457,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttb033
      *
-     * @return float
+     * @return float|null
      */
     public function getTtb033()
     {
@@ -11796,12 +13467,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttb033
      *
-     * @param float $ttb033 Maximum balance of any account in the past 12 months
+     * @param float|null $ttb033 Maximum balance of any account in the past 12 months
      *
-     * @return $this
+     * @return self
      */
     public function setTtb033($ttb033)
     {
+        if (is_null($ttb033)) {
+            throw new \InvalidArgumentException('non-nullable ttb033 cannot be null');
+        }
         $this->container['ttb033'] = $ttb033;
 
         return $this;
@@ -11810,7 +13484,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttc035
      *
-     * @return float
+     * @return float|null
      */
     public function getTtc035()
     {
@@ -11820,12 +13494,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttc035
      *
-     * @param float $ttc035 Total number of bad trades
+     * @param float|null $ttc035 Total number of bad trades
      *
-     * @return $this
+     * @return self
      */
     public function setTtc035($ttc035)
     {
+        if (is_null($ttc035)) {
+            throw new \InvalidArgumentException('non-nullable ttc035 cannot be null');
+        }
         $this->container['ttc035'] = $ttc035;
 
         return $this;
@@ -11834,7 +13511,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttc036
      *
-     * @return float
+     * @return float|null
      */
     public function getTtc036()
     {
@@ -11844,12 +13521,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttc036
      *
-     * @param float $ttc036 Total number of good trades
+     * @param float|null $ttc036 Total number of good trades
      *
-     * @return $this
+     * @return self
      */
     public function setTtc036($ttc036)
     {
+        if (is_null($ttc036)) {
+            throw new \InvalidArgumentException('non-nullable ttc036 cannot be null');
+        }
         $this->container['ttc036'] = $ttc036;
 
         return $this;
@@ -11858,7 +13538,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttc037
      *
-     * @return float
+     * @return float|null
      */
     public function getTtc037()
     {
@@ -11868,12 +13548,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttc037
      *
-     * @param float $ttc037 Total number of indeterminate trades
+     * @param float|null $ttc037 Total number of indeterminate trades
      *
-     * @return $this
+     * @return self
      */
     public function setTtc037($ttc037)
     {
+        if (is_null($ttc037)) {
+            throw new \InvalidArgumentException('non-nullable ttc037 cannot be null');
+        }
         $this->container['ttc037'] = $ttc037;
 
         return $this;
@@ -11882,7 +13565,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttc038
      *
-     * @return float
+     * @return float|null
      */
     public function getTtc038()
     {
@@ -11892,12 +13575,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttc038
      *
-     * @param float $ttc038 Total number of Total Trades
+     * @param float|null $ttc038 Total number of Total Trades
      *
-     * @return $this
+     * @return self
      */
     public function setTtc038($ttc038)
     {
+        if (is_null($ttc038)) {
+            throw new \InvalidArgumentException('non-nullable ttc038 cannot be null');
+        }
         $this->container['ttc038'] = $ttc038;
 
         return $this;
@@ -11906,7 +13592,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttc039
      *
-     * @return float
+     * @return float|null
      */
     public function getTtc039()
     {
@@ -11916,12 +13602,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttc039
      *
-     * @param float $ttc039 Total number of Total trades where worst delinquency = current
+     * @param float|null $ttc039 Total number of Total trades where worst delinquency = current
      *
-     * @return $this
+     * @return self
      */
     public function setTtc039($ttc039)
     {
+        if (is_null($ttc039)) {
+            throw new \InvalidArgumentException('non-nullable ttc039 cannot be null');
+        }
         $this->container['ttc039'] = $ttc039;
 
         return $this;
@@ -11930,7 +13619,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttc040
      *
-     * @return float
+     * @return float|null
      */
     public function getTtc040()
     {
@@ -11940,12 +13629,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttc040
      *
-     * @param float $ttc040 Total number of Total trades where worst delinquency = 1-30 days
+     * @param float|null $ttc040 Total number of Total trades where worst delinquency = 1-30 days
      *
-     * @return $this
+     * @return self
      */
     public function setTtc040($ttc040)
     {
+        if (is_null($ttc040)) {
+            throw new \InvalidArgumentException('non-nullable ttc040 cannot be null');
+        }
         $this->container['ttc040'] = $ttc040;
 
         return $this;
@@ -11954,7 +13646,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttc041
      *
-     * @return float
+     * @return float|null
      */
     public function getTtc041()
     {
@@ -11964,12 +13656,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttc041
      *
-     * @param float $ttc041 Total number of Total trades where worst delinquency = 31-60 days
+     * @param float|null $ttc041 Total number of Total trades where worst delinquency = 31-60 days
      *
-     * @return $this
+     * @return self
      */
     public function setTtc041($ttc041)
     {
+        if (is_null($ttc041)) {
+            throw new \InvalidArgumentException('non-nullable ttc041 cannot be null');
+        }
         $this->container['ttc041'] = $ttc041;
 
         return $this;
@@ -11978,7 +13673,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttc042
      *
-     * @return float
+     * @return float|null
      */
     public function getTtc042()
     {
@@ -11988,12 +13683,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttc042
      *
-     * @param float $ttc042 Total number of Total trades where worst delinquency = 61-90 days
+     * @param float|null $ttc042 Total number of Total trades where worst delinquency = 61-90 days
      *
-     * @return $this
+     * @return self
      */
     public function setTtc042($ttc042)
     {
+        if (is_null($ttc042)) {
+            throw new \InvalidArgumentException('non-nullable ttc042 cannot be null');
+        }
         $this->container['ttc042'] = $ttc042;
 
         return $this;
@@ -12002,7 +13700,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttc043
      *
-     * @return float
+     * @return float|null
      */
     public function getTtc043()
     {
@@ -12012,12 +13710,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttc043
      *
-     * @param float $ttc043 Total number of Total trades where worst delinquency = 91+ days
+     * @param float|null $ttc043 Total number of Total trades where worst delinquency = 91+ days
      *
-     * @return $this
+     * @return self
      */
     public function setTtc043($ttc043)
     {
+        if (is_null($ttc043)) {
+            throw new \InvalidArgumentException('non-nullable ttc043 cannot be null');
+        }
         $this->container['ttc043'] = $ttc043;
 
         return $this;
@@ -12026,7 +13727,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttc044
      *
-     * @return float
+     * @return float|null
      */
     public function getTtc044()
     {
@@ -12036,12 +13737,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttc044
      *
-     * @param float $ttc044 Total number of Total trades where worst status = current
+     * @param float|null $ttc044 Total number of Total trades where worst status = current
      *
-     * @return $this
+     * @return self
      */
     public function setTtc044($ttc044)
     {
+        if (is_null($ttc044)) {
+            throw new \InvalidArgumentException('non-nullable ttc044 cannot be null');
+        }
         $this->container['ttc044'] = $ttc044;
 
         return $this;
@@ -12050,7 +13754,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttc045
      *
-     * @return float
+     * @return float|null
      */
     public function getTtc045()
     {
@@ -12060,12 +13764,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttc045
      *
-     * @param float $ttc045 Total number of Total trades where worst status = 1-30 days
+     * @param float|null $ttc045 Total number of Total trades where worst status = 1-30 days
      *
-     * @return $this
+     * @return self
      */
     public function setTtc045($ttc045)
     {
+        if (is_null($ttc045)) {
+            throw new \InvalidArgumentException('non-nullable ttc045 cannot be null');
+        }
         $this->container['ttc045'] = $ttc045;
 
         return $this;
@@ -12074,7 +13781,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttc046
      *
-     * @return float
+     * @return float|null
      */
     public function getTtc046()
     {
@@ -12084,12 +13791,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttc046
      *
-     * @param float $ttc046 Total number of Total trades where worst status is a derogatory comment (bankrupcy, judgment, lien etc)
+     * @param float|null $ttc046 Total number of Total trades where worst status is a derogatory comment (bankrupcy, judgment, lien etc)
      *
-     * @return $this
+     * @return self
      */
     public function setTtc046($ttc046)
     {
+        if (is_null($ttc046)) {
+            throw new \InvalidArgumentException('non-nullable ttc046 cannot be null');
+        }
         $this->container['ttc046'] = $ttc046;
 
         return $this;
@@ -12098,7 +13808,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttc047
      *
-     * @return float
+     * @return float|null
      */
     public function getTtc047()
     {
@@ -12108,12 +13818,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttc047
      *
-     * @param float $ttc047 Total number of Total trades where worst status = 31-60 days
+     * @param float|null $ttc047 Total number of Total trades where worst status = 31-60 days
      *
-     * @return $this
+     * @return self
      */
     public function setTtc047($ttc047)
     {
+        if (is_null($ttc047)) {
+            throw new \InvalidArgumentException('non-nullable ttc047 cannot be null');
+        }
         $this->container['ttc047'] = $ttc047;
 
         return $this;
@@ -12122,7 +13835,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttc048
      *
-     * @return float
+     * @return float|null
      */
     public function getTtc048()
     {
@@ -12132,12 +13845,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttc048
      *
-     * @param float $ttc048 Total number of Total trades where worst status = 61-90 days
+     * @param float|null $ttc048 Total number of Total trades where worst status = 61-90 days
      *
-     * @return $this
+     * @return self
      */
     public function setTtc048($ttc048)
     {
+        if (is_null($ttc048)) {
+            throw new \InvalidArgumentException('non-nullable ttc048 cannot be null');
+        }
         $this->container['ttc048'] = $ttc048;
 
         return $this;
@@ -12146,7 +13862,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttc049
      *
-     * @return float
+     * @return float|null
      */
     public function getTtc049()
     {
@@ -12156,12 +13872,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttc049
      *
-     * @param float $ttc049 Total number of Total trades where worst status = 91+ days
+     * @param float|null $ttc049 Total number of Total trades where worst status = 91+ days
      *
-     * @return $this
+     * @return self
      */
     public function setTtc049($ttc049)
     {
+        if (is_null($ttc049)) {
+            throw new \InvalidArgumentException('non-nullable ttc049 cannot be null');
+        }
         $this->container['ttc049'] = $ttc049;
 
         return $this;
@@ -12170,7 +13889,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttc051
      *
-     * @return float
+     * @return float|null
      */
     public function getTtc051()
     {
@@ -12180,12 +13899,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttc051
      *
-     * @param float $ttc051 Total number of active trades
+     * @param float|null $ttc051 Total number of active trades
      *
-     * @return $this
+     * @return self
      */
     public function setTtc051($ttc051)
     {
+        if (is_null($ttc051)) {
+            throw new \InvalidArgumentException('non-nullable ttc051 cannot be null');
+        }
         $this->container['ttc051'] = $ttc051;
 
         return $this;
@@ -12194,7 +13916,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttc052
      *
-     * @return float
+     * @return float|null
      */
     public function getTtc052()
     {
@@ -12204,12 +13926,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttc052
      *
-     * @param float $ttc052 Total number of trades reported within 6 months of profile date with balance >=70 percent of highest balance in past 12 months
+     * @param float|null $ttc052 Total number of trades reported within 6 months of profile date with balance >=70 percent of highest balance in past 12 months
      *
-     * @return $this
+     * @return self
      */
     public function setTtc052($ttc052)
     {
+        if (is_null($ttc052)) {
+            throw new \InvalidArgumentException('non-nullable ttc052 cannot be null');
+        }
         $this->container['ttc052'] = $ttc052;
 
         return $this;
@@ -12218,7 +13943,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttc053
      *
-     * @return float
+     * @return float|null
      */
     public function getTtc053()
     {
@@ -12228,12 +13953,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttc053
      *
-     * @param float $ttc053 Total number of trades reported within 6 months of the profile date
+     * @param float|null $ttc053 Total number of trades reported within 6 months of the profile date
      *
-     * @return $this
+     * @return self
      */
     public function setTtc053($ttc053)
     {
+        if (is_null($ttc053)) {
+            throw new \InvalidArgumentException('non-nullable ttc053 cannot be null');
+        }
         $this->container['ttc053'] = $ttc053;
 
         return $this;
@@ -12242,7 +13970,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttc054
      *
-     * @return float
+     * @return float|null
      */
     public function getTtc054()
     {
@@ -12252,12 +13980,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttc054
      *
-     * @param float $ttc054 Total number of trades reported within 12 months of the profile date
+     * @param float|null $ttc054 Total number of trades reported within 12 months of the profile date
      *
-     * @return $this
+     * @return self
      */
     public function setTtc054($ttc054)
     {
+        if (is_null($ttc054)) {
+            throw new \InvalidArgumentException('non-nullable ttc054 cannot be null');
+        }
         $this->container['ttc054'] = $ttc054;
 
         return $this;
@@ -12266,7 +13997,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttc055
      *
-     * @return float
+     * @return float|null
      */
     public function getTtc055()
     {
@@ -12276,12 +14007,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttc055
      *
-     * @param float $ttc055 Total number of trades with last activity within 6 months of profile date
+     * @param float|null $ttc055 Total number of trades with last activity within 6 months of profile date
      *
-     * @return $this
+     * @return self
      */
     public function setTtc055($ttc055)
     {
+        if (is_null($ttc055)) {
+            throw new \InvalidArgumentException('non-nullable ttc055 cannot be null');
+        }
         $this->container['ttc055'] = $ttc055;
 
         return $this;
@@ -12290,7 +14024,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttc056
      *
-     * @return float
+     * @return float|null
      */
     public function getTtc056()
     {
@@ -12300,12 +14034,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttc056
      *
-     * @param float $ttc056 Total number of trades with last activity within 12 months of profile date
+     * @param float|null $ttc056 Total number of trades with last activity within 12 months of profile date
      *
-     * @return $this
+     * @return self
      */
     public function setTtc056($ttc056)
     {
+        if (is_null($ttc056)) {
+            throw new \InvalidArgumentException('non-nullable ttc056 cannot be null');
+        }
         $this->container['ttc056'] = $ttc056;
 
         return $this;
@@ -12314,7 +14051,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttc057
      *
-     * @return float
+     * @return float|null
      */
     public function getTtc057()
     {
@@ -12324,12 +14061,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttc057
      *
-     * @param float $ttc057 Total number of trades with DBT greater than 0
+     * @param float|null $ttc057 Total number of trades with DBT greater than 0
      *
-     * @return $this
+     * @return self
      */
     public function setTtc057($ttc057)
     {
+        if (is_null($ttc057)) {
+            throw new \InvalidArgumentException('non-nullable ttc057 cannot be null');
+        }
         $this->container['ttc057'] = $ttc057;
 
         return $this;
@@ -12338,7 +14078,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttc058
      *
-     * @return float
+     * @return float|null
      */
     public function getTtc058()
     {
@@ -12348,12 +14088,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttc058
      *
-     * @param float $ttc058 Total number of trades with DBT greater than 30
+     * @param float|null $ttc058 Total number of trades with DBT greater than 30
      *
-     * @return $this
+     * @return self
      */
     public function setTtc058($ttc058)
     {
+        if (is_null($ttc058)) {
+            throw new \InvalidArgumentException('non-nullable ttc058 cannot be null');
+        }
         $this->container['ttc058'] = $ttc058;
 
         return $this;
@@ -12362,7 +14105,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttc059
      *
-     * @return float
+     * @return float|null
      */
     public function getTtc059()
     {
@@ -12372,12 +14115,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttc059
      *
-     * @param float $ttc059 Total number of trades with DBT greater than 60
+     * @param float|null $ttc059 Total number of trades with DBT greater than 60
      *
-     * @return $this
+     * @return self
      */
     public function setTtc059($ttc059)
     {
+        if (is_null($ttc059)) {
+            throw new \InvalidArgumentException('non-nullable ttc059 cannot be null');
+        }
         $this->container['ttc059'] = $ttc059;
 
         return $this;
@@ -12386,7 +14132,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttc060
      *
-     * @return float
+     * @return float|null
      */
     public function getTtc060()
     {
@@ -12396,12 +14142,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttc060
      *
-     * @param float $ttc060 Total number of trades with DBT greater than 90
+     * @param float|null $ttc060 Total number of trades with DBT greater than 90
      *
-     * @return $this
+     * @return self
      */
     public function setTtc060($ttc060)
     {
+        if (is_null($ttc060)) {
+            throw new \InvalidArgumentException('non-nullable ttc060 cannot be null');
+        }
         $this->container['ttc060'] = $ttc060;
 
         return $this;
@@ -12410,7 +14159,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttc061
      *
-     * @return float
+     * @return float|null
      */
     public function getTtc061()
     {
@@ -12420,12 +14169,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttc061
      *
-     * @param float $ttc061 Total number of trades with trade balance equal to or greater than highest balance in past 12 months
+     * @param float|null $ttc061 Total number of trades with trade balance equal to or greater than highest balance in past 12 months
      *
-     * @return $this
+     * @return self
      */
     public function setTtc061($ttc061)
     {
+        if (is_null($ttc061)) {
+            throw new \InvalidArgumentException('non-nullable ttc061 cannot be null');
+        }
         $this->container['ttc061'] = $ttc061;
 
         return $this;
@@ -12434,7 +14186,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttc063
      *
-     * @return float
+     * @return float|null
      */
     public function getTtc063()
     {
@@ -12444,12 +14196,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttc063
      *
-     * @param float $ttc063 Total number of trades with net 30 terms
+     * @param float|null $ttc063 Total number of trades with net 30 terms
      *
-     * @return $this
+     * @return self
      */
     public function setTtc063($ttc063)
     {
+        if (is_null($ttc063)) {
+            throw new \InvalidArgumentException('non-nullable ttc063 cannot be null');
+        }
         $this->container['ttc063'] = $ttc063;
 
         return $this;
@@ -12458,7 +14213,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttc064
      *
-     * @return float
+     * @return float|null
      */
     public function getTtc064()
     {
@@ -12468,12 +14223,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttc064
      *
-     * @param float $ttc064 Total number of trades with net 60 terms
+     * @param float|null $ttc064 Total number of trades with net 60 terms
      *
-     * @return $this
+     * @return self
      */
     public function setTtc064($ttc064)
     {
+        if (is_null($ttc064)) {
+            throw new \InvalidArgumentException('non-nullable ttc064 cannot be null');
+        }
         $this->container['ttc064'] = $ttc064;
 
         return $this;
@@ -12482,7 +14240,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttc065
      *
-     * @return float
+     * @return float|null
      */
     public function getTtc065()
     {
@@ -12492,12 +14250,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttc065
      *
-     * @param float $ttc065 Total number of trades with net 61+ terms
+     * @param float|null $ttc065 Total number of trades with net 61+ terms
      *
-     * @return $this
+     * @return self
      */
     public function setTtc065($ttc065)
     {
+        if (is_null($ttc065)) {
+            throw new \InvalidArgumentException('non-nullable ttc065 cannot be null');
+        }
         $this->container['ttc065'] = $ttc065;
 
         return $this;
@@ -12506,7 +14267,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttc066
      *
-     * @return float
+     * @return float|null
      */
     public function getTtc066()
     {
@@ -12516,12 +14277,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttc066
      *
-     * @param float $ttc066 Total number of trades with cash terms
+     * @param float|null $ttc066 Total number of trades with cash terms
      *
-     * @return $this
+     * @return self
      */
     public function setTtc066($ttc066)
     {
+        if (is_null($ttc066)) {
+            throw new \InvalidArgumentException('non-nullable ttc066 cannot be null');
+        }
         $this->container['ttc066'] = $ttc066;
 
         return $this;
@@ -12530,7 +14294,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttc067
      *
-     * @return float
+     * @return float|null
      */
     public function getTtc067()
     {
@@ -12540,12 +14304,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttc067
      *
-     * @param float $ttc067 Total number of trades with contract terms
+     * @param float|null $ttc067 Total number of trades with contract terms
      *
-     * @return $this
+     * @return self
      */
     public function setTtc067($ttc067)
     {
+        if (is_null($ttc067)) {
+            throw new \InvalidArgumentException('non-nullable ttc067 cannot be null');
+        }
         $this->container['ttc067'] = $ttc067;
 
         return $this;
@@ -12554,7 +14321,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttc068
      *
-     * @return float
+     * @return float|null
      */
     public function getTtc068()
     {
@@ -12564,12 +14331,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttc068
      *
-     * @param float $ttc068 Total number of trades with revolving credit terms
+     * @param float|null $ttc068 Total number of trades with revolving credit terms
      *
-     * @return $this
+     * @return self
      */
     public function setTtc068($ttc068)
     {
+        if (is_null($ttc068)) {
+            throw new \InvalidArgumentException('non-nullable ttc068 cannot be null');
+        }
         $this->container['ttc068'] = $ttc068;
 
         return $this;
@@ -12578,7 +14348,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttc069
      *
-     * @return float
+     * @return float|null
      */
     public function getTtc069()
     {
@@ -12588,12 +14358,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttc069
      *
-     * @param float $ttc069 Total number of trades with varied terms
+     * @param float|null $ttc069 Total number of trades with varied terms
      *
-     * @return $this
+     * @return self
      */
     public function setTtc069($ttc069)
     {
+        if (is_null($ttc069)) {
+            throw new \InvalidArgumentException('non-nullable ttc069 cannot be null');
+        }
         $this->container['ttc069'] = $ttc069;
 
         return $this;
@@ -12602,7 +14375,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttc070
      *
-     * @return float
+     * @return float|null
      */
     public function getTtc070()
     {
@@ -12612,12 +14385,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttc070
      *
-     * @param float $ttc070 Total number of trades with other terms
+     * @param float|null $ttc070 Total number of trades with other terms
      *
-     * @return $this
+     * @return self
      */
     public function setTtc070($ttc070)
     {
+        if (is_null($ttc070)) {
+            throw new \InvalidArgumentException('non-nullable ttc070 cannot be null');
+        }
         $this->container['ttc070'] = $ttc070;
 
         return $this;
@@ -12626,7 +14402,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets tto074
      *
-     * @return float
+     * @return float|null
      */
     public function getTto074()
     {
@@ -12636,12 +14412,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets tto074
      *
-     * @param float $tto074 Age in months of the most recently reported trade
+     * @param float|null $tto074 Age in months of the most recently reported trade
      *
-     * @return $this
+     * @return self
      */
     public function setTto074($tto074)
     {
+        if (is_null($tto074)) {
+            throw new \InvalidArgumentException('non-nullable tto074 cannot be null');
+        }
         $this->container['tto074'] = $tto074;
 
         return $this;
@@ -12650,7 +14429,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets tto075
      *
-     * @return float
+     * @return float|null
      */
     public function getTto075()
     {
@@ -12660,12 +14439,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets tto075
      *
-     * @param float $tto075 Age in months of oldest reported trade
+     * @param float|null $tto075 Age in months of oldest reported trade
      *
-     * @return $this
+     * @return self
      */
     public function setTto075($tto075)
     {
+        if (is_null($tto075)) {
+            throw new \InvalidArgumentException('non-nullable tto075 cannot be null');
+        }
         $this->container['tto075'] = $tto075;
 
         return $this;
@@ -12674,7 +14456,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets tto076
      *
-     * @return float
+     * @return float|null
      */
     public function getTto076()
     {
@@ -12684,12 +14466,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets tto076
      *
-     * @param float $tto076 Average age in months of trades
+     * @param float|null $tto076 Average age in months of trades
      *
-     * @return $this
+     * @return self
      */
     public function setTto076($tto076)
     {
+        if (is_null($tto076)) {
+            throw new \InvalidArgumentException('non-nullable tto076 cannot be null');
+        }
         $this->container['tto076'] = $tto076;
 
         return $this;
@@ -12698,7 +14483,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets tto077
      *
-     * @return float
+     * @return float|null
      */
     public function getTto077()
     {
@@ -12708,12 +14493,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets tto077
      *
-     * @param float $tto077 Age in months since business first added to Experian file
+     * @param float|null $tto077 Age in months since business first added to Experian file
      *
-     * @return $this
+     * @return self
      */
     public function setTto077($tto077)
     {
+        if (is_null($tto077)) {
+            throw new \InvalidArgumentException('non-nullable tto077 cannot be null');
+        }
         $this->container['tto077'] = $tto077;
 
         return $this;
@@ -12722,7 +14510,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttp079
      *
-     * @return float
+     * @return float|null
      */
     public function getTtp079()
     {
@@ -12732,12 +14520,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttp079
      *
-     * @param float $ttp079 Ratio of Total account balance to Total highest account balance in prior 12 months, for additional trades (leasing, supplemental, telecomm and unknown, etc) reported with 4 months of the profile date
+     * @param float|null $ttp079 Ratio of Total account balance to Total highest account balance in prior 12 months, for additional trades (leasing, supplemental, telecomm and unknown, etc) reported with 4 months of the profile date
      *
-     * @return $this
+     * @return self
      */
     public function setTtp079($ttp079)
     {
+        if (is_null($ttp079)) {
+            throw new \InvalidArgumentException('non-nullable ttp079 cannot be null');
+        }
         $this->container['ttp079'] = $ttp079;
 
         return $this;
@@ -12746,7 +14537,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttp080
      *
-     * @return float
+     * @return float|null
      */
     public function getTtp080()
     {
@@ -12756,12 +14547,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttp080
      *
-     * @param float $ttp080 Ratio of Total account balance to Total highest account balance in prior 12 months, for continuous, new, and additional trades that are newly reported within six months of the profile date
+     * @param float|null $ttp080 Ratio of Total account balance to Total highest account balance in prior 12 months, for continuous, new, and additional trades that are newly reported within six months of the profile date
      *
-     * @return $this
+     * @return self
      */
     public function setTtp080($ttp080)
     {
+        if (is_null($ttp080)) {
+            throw new \InvalidArgumentException('non-nullable ttp080 cannot be null');
+        }
         $this->container['ttp080'] = $ttp080;
 
         return $this;
@@ -12770,7 +14564,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ttp084
      *
-     * @return float
+     * @return float|null
      */
     public function getTtp084()
     {
@@ -12780,12 +14574,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ttp084
      *
-     * @param float $ttp084 Percentage of Total trades balance to Total trades Total highest balance in past 12 months
+     * @param float|null $ttp084 Percentage of Total trades balance to Total trades Total highest balance in past 12 months
      *
-     * @return $this
+     * @return self
      */
     public function setTtp084($ttp084)
     {
+        if (is_null($ttp084)) {
+            throw new \InvalidArgumentException('non-nullable ttp084 cannot be null');
+        }
         $this->container['ttp084'] = $ttp084;
 
         return $this;
@@ -12794,7 +14591,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets txb001
      *
-     * @return float
+     * @return float|null
      */
     public function getTxb001()
     {
@@ -12804,12 +14601,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets txb001
      *
-     * @param float $txb001 Total amount of tax lien filed within 12 months of profile date
+     * @param float|null $txb001 Total amount of tax lien filed within 12 months of profile date
      *
-     * @return $this
+     * @return self
      */
     public function setTxb001($txb001)
     {
+        if (is_null($txb001)) {
+            throw new \InvalidArgumentException('non-nullable txb001 cannot be null');
+        }
         $this->container['txb001'] = $txb001;
 
         return $this;
@@ -12818,7 +14618,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets txb002
      *
-     * @return float
+     * @return float|null
      */
     public function getTxb002()
     {
@@ -12828,12 +14628,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets txb002
      *
-     * @param float $txb002 Total amount of tax lien filed within 24 months of profile date
+     * @param float|null $txb002 Total amount of tax lien filed within 24 months of profile date
      *
-     * @return $this
+     * @return self
      */
     public function setTxb002($txb002)
     {
+        if (is_null($txb002)) {
+            throw new \InvalidArgumentException('non-nullable txb002 cannot be null');
+        }
         $this->container['txb002'] = $txb002;
 
         return $this;
@@ -12842,7 +14645,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets txb003
      *
-     * @return float
+     * @return float|null
      */
     public function getTxb003()
     {
@@ -12852,12 +14655,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets txb003
      *
-     * @param float $txb003 Total amount of tax lien filed within 6 months of profile date
+     * @param float|null $txb003 Total amount of tax lien filed within 6 months of profile date
      *
-     * @return $this
+     * @return self
      */
     public function setTxb003($txb003)
     {
+        if (is_null($txb003)) {
+            throw new \InvalidArgumentException('non-nullable txb003 cannot be null');
+        }
         $this->container['txb003'] = $txb003;
 
         return $this;
@@ -12866,7 +14672,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets txb004
      *
-     * @return float
+     * @return float|null
      */
     public function getTxb004()
     {
@@ -12876,12 +14682,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets txb004
      *
-     * @param float $txb004 Total liability amount for original tax liens filed
+     * @param float|null $txb004 Total liability amount for original tax liens filed
      *
-     * @return $this
+     * @return self
      */
     public function setTxb004($txb004)
     {
+        if (is_null($txb004)) {
+            throw new \InvalidArgumentException('non-nullable txb004 cannot be null');
+        }
         $this->container['txb004'] = $txb004;
 
         return $this;
@@ -12890,7 +14699,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets txb006
      *
-     * @return float
+     * @return float|null
      */
     public function getTxb006()
     {
@@ -12900,12 +14709,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets txb006
      *
-     * @param float $txb006 Total liability amount for original tax liens non-filed
+     * @param float|null $txb006 Total liability amount for original tax liens non-filed
      *
-     * @return $this
+     * @return self
      */
     public function setTxb006($txb006)
     {
+        if (is_null($txb006)) {
+            throw new \InvalidArgumentException('non-nullable txb006 cannot be null');
+        }
         $this->container['txb006'] = $txb006;
 
         return $this;
@@ -12914,7 +14726,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets txc007
      *
-     * @return float
+     * @return float|null
      */
     public function getTxc007()
     {
@@ -12924,12 +14736,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets txc007
      *
-     * @param float $txc007 Total number of tax lien filed within 12 months of profile date
+     * @param float|null $txc007 Total number of tax lien filed within 12 months of profile date
      *
-     * @return $this
+     * @return self
      */
     public function setTxc007($txc007)
     {
+        if (is_null($txc007)) {
+            throw new \InvalidArgumentException('non-nullable txc007 cannot be null');
+        }
         $this->container['txc007'] = $txc007;
 
         return $this;
@@ -12938,7 +14753,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets txc009
      *
-     * @return float
+     * @return float|null
      */
     public function getTxc009()
     {
@@ -12948,12 +14763,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets txc009
      *
-     * @param float $txc009 Total number of tax lien filed within 6 months of profile date
+     * @param float|null $txc009 Total number of tax lien filed within 6 months of profile date
      *
-     * @return $this
+     * @return self
      */
     public function setTxc009($txc009)
     {
+        if (is_null($txc009)) {
+            throw new \InvalidArgumentException('non-nullable txc009 cannot be null');
+        }
         $this->container['txc009'] = $txc009;
 
         return $this;
@@ -12962,7 +14780,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets txc010
      *
-     * @return float
+     * @return float|null
      */
     public function getTxc010()
     {
@@ -12972,12 +14790,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets txc010
      *
-     * @param float $txc010 Total number of original tax liens filed
+     * @param float|null $txc010 Total number of original tax liens filed
      *
-     * @return $this
+     * @return self
      */
     public function setTxc010($txc010)
     {
+        if (is_null($txc010)) {
+            throw new \InvalidArgumentException('non-nullable txc010 cannot be null');
+        }
         $this->container['txc010'] = $txc010;
 
         return $this;
@@ -12986,7 +14807,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets txc011
      *
-     * @return float
+     * @return float|null
      */
     public function getTxc011()
     {
@@ -12996,12 +14817,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets txc011
      *
-     * @param float $txc011 Total number of tax liens filed within the last 24 months of profile date
+     * @param float|null $txc011 Total number of tax liens filed within the last 24 months of profile date
      *
-     * @return $this
+     * @return self
      */
     public function setTxc011($txc011)
     {
+        if (is_null($txc011)) {
+            throw new \InvalidArgumentException('non-nullable txc011 cannot be null');
+        }
         $this->container['txc011'] = $txc011;
 
         return $this;
@@ -13010,7 +14834,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets txc012
      *
-     * @return float
+     * @return float|null
      */
     public function getTxc012()
     {
@@ -13020,12 +14844,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets txc012
      *
-     * @param float $txc012 Total number of tax liens non-filed
+     * @param float|null $txc012 Total number of tax liens non-filed
      *
-     * @return $this
+     * @return self
      */
     public function setTxc012($txc012)
     {
+        if (is_null($txc012)) {
+            throw new \InvalidArgumentException('non-nullable txc012 cannot be null');
+        }
         $this->container['txc012'] = $txc012;
 
         return $this;
@@ -13034,7 +14861,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets txo013
      *
-     * @return float
+     * @return float|null
      */
     public function getTxo013()
     {
@@ -13044,12 +14871,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets txo013
      *
-     * @param float $txo013 Age in months of most recent tax lien filed
+     * @param float|null $txo013 Age in months of most recent tax lien filed
      *
-     * @return $this
+     * @return self
      */
     public function setTxo013($txo013)
     {
+        if (is_null($txo013)) {
+            throw new \InvalidArgumentException('non-nullable txo013 cannot be null');
+        }
         $this->container['txo013'] = $txo013;
 
         return $this;
@@ -13058,7 +14888,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets txo014
      *
-     * @return float
+     * @return float|null
      */
     public function getTxo014()
     {
@@ -13068,12 +14898,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets txo014
      *
-     * @param float $txo014 Age in months of most recent tax lien non-filed
+     * @param float|null $txo014 Age in months of most recent tax lien non-filed
      *
-     * @return $this
+     * @return self
      */
     public function setTxo014($txo014)
     {
+        if (is_null($txo014)) {
+            throw new \InvalidArgumentException('non-nullable txo014 cannot be null');
+        }
         $this->container['txo014'] = $txo014;
 
         return $this;
@@ -13082,7 +14915,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets txp015
      *
-     * @return float
+     * @return float|null
      */
     public function getTxp015()
     {
@@ -13092,12 +14925,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets txp015
      *
-     * @param float $txp015 Percentage of Total tax lien amount filed with 12 months to Total balance
+     * @param float|null $txp015 Percentage of Total tax lien amount filed with 12 months to Total balance
      *
-     * @return $this
+     * @return self
      */
     public function setTxp015($txp015)
     {
+        if (is_null($txp015)) {
+            throw new \InvalidArgumentException('non-nullable txp015 cannot be null');
+        }
         $this->container['txp015'] = $txp015;
 
         return $this;
@@ -13106,7 +14942,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets txp016
      *
-     * @return float
+     * @return float|null
      */
     public function getTxp016()
     {
@@ -13116,12 +14952,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets txp016
      *
-     * @param float $txp016 Percentage of Total tax lien amount filed with 24 months to Total balance
+     * @param float|null $txp016 Percentage of Total tax lien amount filed with 24 months to Total balance
      *
-     * @return $this
+     * @return self
      */
     public function setTxp016($txp016)
     {
+        if (is_null($txp016)) {
+            throw new \InvalidArgumentException('non-nullable txp016 cannot be null');
+        }
         $this->container['txp016'] = $txp016;
 
         return $this;
@@ -13130,7 +14969,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets txp017
      *
-     * @return float
+     * @return float|null
      */
     public function getTxp017()
     {
@@ -13140,12 +14979,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets txp017
      *
-     * @param float $txp017 Percentage of Total tax lien amount filed with 6 months to Total balance
+     * @param float|null $txp017 Percentage of Total tax lien amount filed with 6 months to Total balance
      *
-     * @return $this
+     * @return self
      */
     public function setTxp017($txp017)
     {
+        if (is_null($txp017)) {
+            throw new \InvalidArgumentException('non-nullable txp017 cannot be null');
+        }
         $this->container['txp017'] = $txp017;
 
         return $this;
@@ -13154,7 +14996,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ucc001
      *
-     * @return float
+     * @return float|null
      */
     public function getUcc001()
     {
@@ -13164,12 +15006,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ucc001
      *
-     * @param float $ucc001 Total number of UCC filings - detail
+     * @param float|null $ucc001 Total number of UCC filings - detail
      *
-     * @return $this
+     * @return self
      */
     public function setUcc001($ucc001)
     {
+        if (is_null($ucc001)) {
+            throw new \InvalidArgumentException('non-nullable ucc001 cannot be null');
+        }
         $this->container['ucc001'] = $ucc001;
 
         return $this;
@@ -13178,7 +15023,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ucc002
      *
-     * @return float
+     * @return float|null
      */
     public function getUcc002()
     {
@@ -13188,12 +15033,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ucc002
      *
-     * @param float $ucc002 Total number of UCC filings - summary
+     * @param float|null $ucc002 Total number of UCC filings - summary
      *
-     * @return $this
+     * @return self
      */
     public function setUcc002($ucc002)
     {
+        if (is_null($ucc002)) {
+            throw new \InvalidArgumentException('non-nullable ucc002 cannot be null');
+        }
         $this->container['ucc002'] = $ucc002;
 
         return $this;
@@ -13202,7 +15050,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ucc003
      *
-     * @return float
+     * @return float|null
      */
     public function getUcc003()
     {
@@ -13212,12 +15060,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ucc003
      *
-     * @param float $ucc003 Total number of unsatisfied UCC filings within the last 24 months of profile date
+     * @param float|null $ucc003 Total number of unsatisfied UCC filings within the last 24 months of profile date
      *
-     * @return $this
+     * @return self
      */
     public function setUcc003($ucc003)
     {
+        if (is_null($ucc003)) {
+            throw new \InvalidArgumentException('non-nullable ucc003 cannot be null');
+        }
         $this->container['ucc003'] = $ucc003;
 
         return $this;
@@ -13226,7 +15077,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ucc004
      *
-     * @return float
+     * @return float|null
      */
     public function getUcc004()
     {
@@ -13236,12 +15087,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ucc004
      *
-     * @param float $ucc004 Total number of UCC original five-year filings within the last 24 months of profile date
+     * @param float|null $ucc004 Total number of UCC original five-year filings within the last 24 months of profile date
      *
-     * @return $this
+     * @return self
      */
     public function setUcc004($ucc004)
     {
+        if (is_null($ucc004)) {
+            throw new \InvalidArgumentException('non-nullable ucc004 cannot be null');
+        }
         $this->container['ucc004'] = $ucc004;
 
         return $this;
@@ -13250,7 +15104,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ucc005
      *
-     * @return float
+     * @return float|null
      */
     public function getUcc005()
     {
@@ -13260,12 +15114,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ucc005
      *
-     * @param float $ucc005 Total number of UCC original filings
+     * @param float|null $ucc005 Total number of UCC original filings
      *
-     * @return $this
+     * @return self
      */
     public function setUcc005($ucc005)
     {
+        if (is_null($ucc005)) {
+            throw new \InvalidArgumentException('non-nullable ucc005 cannot be null');
+        }
         $this->container['ucc005'] = $ucc005;
 
         return $this;
@@ -13274,7 +15131,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ucc006
      *
-     * @return float
+     * @return float|null
      */
     public function getUcc006()
     {
@@ -13284,12 +15141,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ucc006
      *
-     * @param float $ucc006 Total number of UCC original five-year filings
+     * @param float|null $ucc006 Total number of UCC original five-year filings
      *
-     * @return $this
+     * @return self
      */
     public function setUcc006($ucc006)
     {
+        if (is_null($ucc006)) {
+            throw new \InvalidArgumentException('non-nullable ucc006 cannot be null');
+        }
         $this->container['ucc006'] = $ucc006;
 
         return $this;
@@ -13298,7 +15158,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ucc007
      *
-     * @return float
+     * @return float|null
      */
     public function getUcc007()
     {
@@ -13308,12 +15168,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ucc007
      *
-     * @param float $ucc007 Total number of UCC amended filings
+     * @param float|null $ucc007 Total number of UCC amended filings
      *
-     * @return $this
+     * @return self
      */
     public function setUcc007($ucc007)
     {
+        if (is_null($ucc007)) {
+            throw new \InvalidArgumentException('non-nullable ucc007 cannot be null');
+        }
         $this->container['ucc007'] = $ucc007;
 
         return $this;
@@ -13322,7 +15185,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ucc008
      *
-     * @return float
+     * @return float|null
      */
     public function getUcc008()
     {
@@ -13332,12 +15195,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ucc008
      *
-     * @param float $ucc008 Total number of UCC assigned filings
+     * @param float|null $ucc008 Total number of UCC assigned filings
      *
-     * @return $this
+     * @return self
      */
     public function setUcc008($ucc008)
     {
+        if (is_null($ucc008)) {
+            throw new \InvalidArgumentException('non-nullable ucc008 cannot be null');
+        }
         $this->container['ucc008'] = $ucc008;
 
         return $this;
@@ -13346,7 +15212,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ucc009
      *
-     * @return float
+     * @return float|null
      */
     public function getUcc009()
     {
@@ -13356,12 +15222,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ucc009
      *
-     * @param float $ucc009 Total number of UCC partial release filings
+     * @param float|null $ucc009 Total number of UCC partial release filings
      *
-     * @return $this
+     * @return self
      */
     public function setUcc009($ucc009)
     {
+        if (is_null($ucc009)) {
+            throw new \InvalidArgumentException('non-nullable ucc009 cannot be null');
+        }
         $this->container['ucc009'] = $ucc009;
 
         return $this;
@@ -13370,7 +15239,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ucc010
      *
-     * @return float
+     * @return float|null
      */
     public function getUcc010()
     {
@@ -13380,12 +15249,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ucc010
      *
-     * @param float $ucc010 Total number of UCC full release filings
+     * @param float|null $ucc010 Total number of UCC full release filings
      *
-     * @return $this
+     * @return self
      */
     public function setUcc010($ucc010)
     {
+        if (is_null($ucc010)) {
+            throw new \InvalidArgumentException('non-nullable ucc010 cannot be null');
+        }
         $this->container['ucc010'] = $ucc010;
 
         return $this;
@@ -13394,7 +15266,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ucc011
      *
-     * @return float
+     * @return float|null
      */
     public function getUcc011()
     {
@@ -13404,12 +15276,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ucc011
      *
-     * @param float $ucc011 Total number of UCC released filings
+     * @param float|null $ucc011 Total number of UCC released filings
      *
-     * @return $this
+     * @return self
      */
     public function setUcc011($ucc011)
     {
+        if (is_null($ucc011)) {
+            throw new \InvalidArgumentException('non-nullable ucc011 cannot be null');
+        }
         $this->container['ucc011'] = $ucc011;
 
         return $this;
@@ -13418,7 +15293,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ucc012
      *
-     * @return float
+     * @return float|null
      */
     public function getUcc012()
     {
@@ -13428,12 +15303,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ucc012
      *
-     * @param float $ucc012 Total number of UCC terminated filings
+     * @param float|null $ucc012 Total number of UCC terminated filings
      *
-     * @return $this
+     * @return self
      */
     public function setUcc012($ucc012)
     {
+        if (is_null($ucc012)) {
+            throw new \InvalidArgumentException('non-nullable ucc012 cannot be null');
+        }
         $this->container['ucc012'] = $ucc012;
 
         return $this;
@@ -13442,7 +15320,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ucc013
      *
-     * @return float
+     * @return float|null
      */
     public function getUcc013()
     {
@@ -13452,12 +15330,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ucc013
      *
-     * @param float $ucc013 Total number of UCC continued filings
+     * @param float|null $ucc013 Total number of UCC continued filings
      *
-     * @return $this
+     * @return self
      */
     public function setUcc013($ucc013)
     {
+        if (is_null($ucc013)) {
+            throw new \InvalidArgumentException('non-nullable ucc013 cannot be null');
+        }
         $this->container['ucc013'] = $ucc013;
 
         return $this;
@@ -13466,7 +15347,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ucc014
      *
-     * @return float
+     * @return float|null
      */
     public function getUcc014()
     {
@@ -13476,12 +15357,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ucc014
      *
-     * @param float $ucc014 Total number of UCC original ten-year filings
+     * @param float|null $ucc014 Total number of UCC original ten-year filings
      *
-     * @return $this
+     * @return self
      */
     public function setUcc014($ucc014)
     {
+        if (is_null($ucc014)) {
+            throw new \InvalidArgumentException('non-nullable ucc014 cannot be null');
+        }
         $this->container['ucc014'] = $ucc014;
 
         return $this;
@@ -13490,7 +15374,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ucc015
      *
-     * @return float
+     * @return float|null
      */
     public function getUcc015()
     {
@@ -13500,12 +15384,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ucc015
      *
-     * @param float $ucc015 Total number of original UCC filings pledging derogatory collateral
+     * @param float|null $ucc015 Total number of original UCC filings pledging derogatory collateral
      *
-     * @return $this
+     * @return self
      */
     public function setUcc015($ucc015)
     {
+        if (is_null($ucc015)) {
+            throw new \InvalidArgumentException('non-nullable ucc015 cannot be null');
+        }
         $this->container['ucc015'] = $ucc015;
 
         return $this;
@@ -13514,7 +15401,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets ucc016
      *
-     * @return float
+     * @return float|null
      */
     public function getUcc016()
     {
@@ -13524,12 +15411,15 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets ucc016
      *
-     * @param float $ucc016 Total number of original UCC filings pledging derogatory collateral within 24 months of the profile date
+     * @param float|null $ucc016 Total number of original UCC filings pledging derogatory collateral within 24 months of the profile date
      *
-     * @return $this
+     * @return self
      */
     public function setUcc016($ucc016)
     {
+        if (is_null($ucc016)) {
+            throw new \InvalidArgumentException('non-nullable ucc016 cannot be null');
+        }
         $this->container['ucc016'] = $ucc016;
 
         return $this;
@@ -13538,7 +15428,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets dmo004
      *
-     * @return string
+     * @return string|null
      */
     public function getDmo004()
     {
@@ -13548,12 +15438,19 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets dmo004
      *
-     * @param string $dmo004 Employee size code: A= 1-4, B = 5-9, C = 10-19, D = 20-49, E = 50- 99, F = 100-249, G = 250-499, H = 500-999, I = Over 1000
+     * @param string|null $dmo004 Employee size code: A= 1-4, B = 5-9, C = 10-19, D = 20-49, E = 50- 99, F = 100-249, G = 250-499, H = 500-999, I = Over 1000
      *
-     * @return $this
+     * @return self
      */
     public function setDmo004($dmo004)
     {
+        if (is_null($dmo004)) {
+            throw new \InvalidArgumentException('non-nullable dmo004 cannot be null');
+        }
+        if ((mb_strlen($dmo004) > 1)) {
+            throw new \InvalidArgumentException('invalid length for $dmo004 when calling BizAggregates., must be smaller than or equal to 1.');
+        }
+
         $this->container['dmo004'] = $dmo004;
 
         return $this;
@@ -13562,7 +15459,7 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets dmo014
      *
-     * @return string
+     * @return string|null
      */
     public function getDmo014()
     {
@@ -13572,13 +15469,16 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Sets dmo014
      *
-     * @param string $dmo014 The type of ownership under which the business is operating. O = Unknown, 1 = Public, 2 = Private, 3 = Foreign, 4 = Non-Profit, 5 = Public Minority, 6 = Private Minority, 7 = Foreign Minority
+     * @param string|null $dmo014 The type of ownership under which the business is operating. O = Unknown, 1 = Public, 2 = Private, 3 = Foreign, 4 = Non-Profit, 5 = Public Minority, 6 = Private Minority, 7 = Foreign Minority
      *
-     * @return $this
+     * @return self
      */
     public function setDmo014($dmo014)
     {
-        if (!is_null($dmo014) && (mb_strlen($dmo014) > 1)) {
+        if (is_null($dmo014)) {
+            throw new \InvalidArgumentException('non-nullable dmo014 cannot be null');
+        }
+        if ((mb_strlen($dmo014) > 1)) {
             throw new \InvalidArgumentException('invalid length for $dmo014 when calling BizAggregates., must be smaller than or equal to 1.');
         }
 
@@ -13589,12 +15489,11 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Returns true if offset exists. False otherwise.
      *
-     * @param integer $offset Offset
+     * @param integer|string $offset Offset
      *
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -13602,26 +15501,25 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Gets offset.
      *
-     * @param integer $offset Offset
+     * @param integer|string $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     #[\ReturnTypeWillChange]
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
-    #[\ReturnTypeWillChange]
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -13633,14 +15531,26 @@ class BizAggregates implements ModelInterface, ArrayAccess
     /**
      * Unsets offset.
      *
-     * @param integer $offset Offset
+     * @param integer|string $offset Offset
      *
      * @return void
      */
-    #[\ReturnTypeWillChange]
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    #[\ReturnTypeWillChange]
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -13650,13 +15560,19 @@ class BizAggregates implements ModelInterface, ArrayAccess
      */
     public function __toString()
     {
-        if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(
-                ObjectSerializer::sanitizeForSerialization($this),
-                JSON_PRETTY_PRINT
-            );
-        }
+        return json_encode(
+            ObjectSerializer::sanitizeForSerialization($this),
+            JSON_PRETTY_PRINT
+        );
+    }
 
+    /**
+     * Gets a header-safe presentation of the object
+     *
+     * @return string
+     */
+    public function toHeaderValue()
+    {
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }

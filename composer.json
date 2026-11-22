@@ -5,6 +5,7 @@
         "experian",
         "php",
         "sdk",
+        "rest",
         "api"
     ],
     "homepage": "https://logicstudio.nz",
@@ -21,21 +22,21 @@
         }
     ],
     "require": {
-        "php": ">=5.5",
+        "php": "^8.1",
         "ext-curl": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
-        "guzzlehttp/guzzle": "^6.2 | ^7.0"
+        "guzzlehttp/guzzle": "^7.3",
+        "guzzlehttp/psr7": "^1.7 || ^2.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^4.8",
-        "squizlabs/php_codesniffer": "~2.6",
-        "friendsofphp/php-cs-fixer": "~2.12"
+        "phpunit/phpunit": "^8.0 || ^9.0",
+        "friendsofphp/php-cs-fixer": "^3.5"
     },
     "autoload": {
         "psr-4": { "TheLogicStudio\\ExperianBusinessesPHP\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "TheLogicStudio\\ExperianBusinessesPHP\\" : "test/" }
+        "psr-4": { "TheLogicStudio\\ExperianBusinessesPHP\\Test\\" : "test/" }
     }
 }

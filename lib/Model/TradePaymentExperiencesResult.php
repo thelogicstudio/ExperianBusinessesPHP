@@ -2,28 +2,27 @@
 /**
  * TradePaymentExperiencesResult
  *
- * PHP version 5
+ * PHP version 8.1
  *
  * @category Class
  * @package  TheLogicStudio\ExperianBusinessesPHP
- * @author   Swagger Codegen team
- * @link     https://github.com/swagger-api/swagger-codegen
+ * @author   OpenAPI Generator team
+ * @link     https://openapi-generator.tech
  */
 
 /**
  * Businesses
  *
- * <p>Experian's Business Information Services is a leader in providing data and predictive insights to organizations, helping them mitigate risk and improve profitability.  The Businesses API provides integrated access to our business database which provides comprehensive, third-party-verified information on 99.9 percent of all U.S. companies, with the industry's most extensive data on the broad spectrum of small and midsize businesses.</p> <p>&nbsp;</p> <p>The Businesses API provides a la carte access to Experian's commercial credit and  commercial public record information, including commercial scores, trades, corporate linkage, bankruptcies, liens, judgments, and more.</p> <p>&nbsp;</p> <p><strong>It All Starts With a Search</strong></p> <p>The Business Search API allows you to input a business name, address, city, and state to find their Business Identification Number (BIN) - you'll need this to get data from most of the other APIs.  The primary search method is called \"Advanced Search\" and can be used for automated matching using our Match Reliability Code. A secondary search method, called \"QuickSearch\" and is a type-ahead style search that allows a human user to quickly find a business using a smaller amount of data.</p> <p><strong>SBCS Consortium Members</strong> can use the Businesses API search endpoints.</p> <p><strong>SBFE Consortium Members</strong> must use the <a href=\"/products/us/small-business-financial-exchangetm\">SBFE API</a>, using either the List of Similars product option to search for a business, or a Name/Address request for automated matching.</p> <p>&nbsp;</p> <p><strong>Businesses API in the Sandbox</strong></p> <ul> <li><strong>Advanced Search</strong> - The primary way to search for US businesses and return a List of Similars. Designed for both automation and human interaction</li> <li><strong>Quick Search</strong> - The secondary search method. A flexible, type-ahead style search API for US businesses. Designed primarily for human interaction</li> <li><strong>Headers</strong> - Business identity information. Available as stand-alone and included with most API responses</li> <li><strong>Scores</strong> - Commercial Intelliscore Plus and Financial Stability Risk Scores, with scores, score factors, and monthly and quarterly trends</li> <li><strong>Scores Auto Search</strong> - Returns the Scores API, but with a Business Name and Address request input</li> <li><strong>Premier Profiles JSON</strong> - Experian's flagship commercial credit report</li> <li><strong>Premier Profiles HTML</strong> - Renders a styled Premier Profile report using HTML/CSS</li> <li><strong>Premier Profiles PDF</strong> - Provides an encoded Premier Profile PDF report</li> <li><strong>Intelliscore Report JSON</strong> – Our score only report</li> <li><strong>Intelliscore Report HTML</strong> – Our score only report in HTML format</li> <li><strong>Intelliscore Report PDF</strong> – Our score only report in PDF format</li> <li><strong>Business Compliance Insight JSON</strong> – The BCI report helps with client onboarding and Know-Your-Customer investigations</li> <li><strong>Business Compliance Insight HTML</strong> – The BCI Report in HTML format</li> <li><strong>Business Compliance Insight PDF</strong> – The BCI report in PDF format</li> <li><strong>Aggregates</strong> - The BizAggs represent over 400 unique data attributes that represent the building blocks of commercial credit</li> <li><strong>MultiSegments</strong> - MultiSegments allows you to request segments from most Businesses API endpoints in a single API call</li> <li><strong>Risk Dashboards</strong> - Includes commercial and FSR scores, credit limit amount, current DBT</li> <li><strong>Business Facts</strong> - Key operational facts including SIC, NAICS, public status, sales, employees</li> <li><strong>Fraud Shields</strong> - Screens for potential indicators of fraud. Includes possible OFAC match</li> <li><strong>Credit Status</strong> - Key credit facts about the business including tradeline count, balance, DBT</li> <li><strong>Legal Filings and Collections Summaries</strong> - Summary of all legal filings and collections</li> <li><strong>Collections</strong> - Summary and Detail</li> <li><strong>Trades</strong> - Trade summary, payment experiences, payment totals, and trade payment trends</li> <li><strong>Bankruptcies</strong> - Summary and Detail</li> <li><strong>Liens</strong> - Summary and Detail</li> <li><strong>Judgments</strong> - Summary and Detail</li> <li><strong>UCC Filings</strong> - Summary and Trends</li> <li><strong>Corporate Registrations</strong> - Corporate registration info for the business, including filing status</li> <li><strong>Corporate Linkage</strong> - Partial and/or Full Family Tree</li> <li><strong>Business Contacts</strong> - Individual owners, company owners, contacts and titles, and contacts business affiliations</li> <li><strong>Reverse Addresses</strong> - Input an address and find businesses affiliated with that address</li> <li><strong>Reverse Phones</strong> - Input a phone number and find businesses affiliated with that phone number</li> <li><strong>Reverse Tax IDs</strong> - Input a Tax ID (EIN) and find businesses affiliated with that Tax ID</li> <li><strong>Government Details</strong> – Economic diversity and government contract data for the business</li> <li><strong>IST Watch</strong> - Manage OFAC regulatory compliance and watchlist screening with the IST Watch API</li> </ul> <p>&nbsp;</p> <p><strong>Businesses API Environments</strong></p> <ul> <li><strong>Sandbox </strong> - https://sandbox-us-api.experian.com/businessinformation/businesses</li> <li><strong>UAT </strong> - https://uat-us-api.experian.com/businessinformation/businesses</li> <li><strong>Production</strong> - https://us-api.experian.com/businessinformation/businesses</li> </ul> <p>&nbsp;</p> <p>Please note that the Businesses API in the Developer Portal Sandbox is a non-production service that is for testing and demonstration purposes only. Only a limited number of businesses are available in the sandbox test environment. A list of valid Business Identification Numbers  (BINs) can be provided to you upon your request, and valid BINs in the sandbox can  also be obtained using the Business Search API. Please contact your Experian Account Executive to discuss obtaining production access to the Businesses API.</p> <p>&nbsp;</p> <p><strong>IPv3 Sample Subcodes</strong></p> <ul> <li>IPv3 Logistic Regression - 0586286</li> <li>IPv3 Machine Learning - 0586548</li> </ul> <p>&nbsp;</p> <p><strong>Additional Developer Tools</strong></p> <ul> <li><a href=\"https://github.com/experianplc/Experian-BIS-Postman-Collection\"><strong>BIS API Postman Collection</strong></a> - A starter Postman Collection and Environment for many BIS APIs</li> <li><a href=\"https://github.com/experianplc/BIS-HTML-Resources\"><strong>BIS HTML Resources</strong></a> - Images, CSS, and Javsscript files necessary to render BIS HTML API reports</li> </ul>
+ * <p>Experian's Business Information Services is a leader in providing data and predictive insights to organizations, helping them mitigate risk and improve profitability.  The Businesses API provides integrated access to our business database which provides comprehensive, third-party-verified information on 99.9 percent of all U.S. companies, with the industry's most extensive data on the broad spectrum of small and midsize businesses.</p> <p>&nbsp;</p> <p>The Businesses API provides a la carte access to Experian's commercial credit and  commercial public record information, including commercial scores, trades, corporate linkage, bankruptcies, liens, judgments, and more.</p> <p>&nbsp;</p> <p><strong>It All Starts With a Search</strong></p> <p>The Business Search API allows you to input a business name, address, city, and state to find their Business Identification Number (BIN) - you'll need this to get data from most of the other APIs.  The primary search method is called \"Advanced Search\" and can be used for automated matching using our Match Reliability Code.   A secondary search method, called \"QuickSearch\" and is a type-ahead style search that allows a human user to quickly find a business using a smaller amount of data.</p> <p><strong>SBCS Consortium Members</strong> can use the Businesses API search endpoints.</p> <p><strong>SBFE Consortium Members</strong> must use the <a href=\"/products/us/small-business-financial-exchangetm\">SBFE API</a>, using either the  List of Similars product option to search for a business, or a Name/Address request for automated matching.</p>  <p>&nbsp;</p> <p><strong>Businesses API in the Sandbox</strong></p> <ul> <li><strong>Advanced Search</strong> - The primary way to search for US businesses and return a List of Similars. Designed for both automation and human interaction</li> <li><strong>Quick Search</strong> - The secondary search method. A flexible, type-ahead style search API for US businesses. Designed primarily for human interaction</li> <li><strong>Headers</strong> - Business identity information. Available as stand-alone and included with most API responses</li> <li><strong>Scores</strong> - Commercial Intelliscore Plus and Financial Stability Risk Scores, with scores, score factors, and monthly and quarterly trends</li> <li><strong>Scores Auto Search</strong> - Returns the Scores API, but with a Business Name and Address request input</li> <li><strong>Premier Profiles JSON</strong> - Experian's flagship commercial credit report</li> <li><strong>Premier Profiles HTML</strong> - Renders a styled Premier Profile report using HTML/CSS</li> <li><strong>Premier Profiles PDF</strong> - Provides an encoded Premier Profile PDF report</li> <li><strong>Intelliscore Report JSON</strong> – Our score only report</li> <li><strong>Intelliscore Report HTML</strong> – Our score only report in HTML format</li> <li><strong>Intelliscore Report PDF</strong> – Our score only report in PDF format</li> <li><strong>Business Compliance Insight JSON</strong> – The BCI report helps with client onboarding and Know-Your-Customer investigations</li> <li><strong>Business Compliance Insight HTML</strong> – The BCI Report in HTML format</li> <li><strong>Business Compliance Insight PDF</strong> – The BCI report in PDF format</li> <li><strong>Aggregates</strong> - The BizAggs represent over 400 unique data attributes that represent the building blocks of commercial credit</li> <li><strong>MultiSegments</strong> - MultiSegments allows you to request segments from most Businesses API endpoints in a single API call</li> <li><strong>Risk Dashboards</strong> - Includes commercial and FSR scores, credit limit amount, current DBT</li> <li><strong>Business Facts</strong> - Key operational facts including SIC, NAICS, public status, sales, employees</li> <li><strong>Fraud Shields</strong> - Screens for potential indicators of fraud. Includes possible OFAC match</li> <li><strong>Credit Status</strong> - Key credit facts about the business including tradeline count, balance, DBT</li> <li><strong>Legal Filings and Collections Summaries</strong> - Summary of all legal filings and collections</li> <li><strong>Collections</strong> - Summary and Detail</li> <li><strong>Trades</strong> - Trade summary, payment experiences, payment totals, and trade payment trends</li> <li><strong>Bankruptcies</strong> - Summary and Detail</li> <li><strong>Liens</strong> - Summary and Detail</li> <li><strong>Judgments</strong> - Summary and Detail</li> <li><strong>UCC Filings</strong> - Summary and Trends</li> <li><strong>Corporate Registrations</strong> - Corporate registration info for the business, including filing status</li> <li><strong>Corporate Linkage</strong> - Partial and/or Full Family Tree</li> <li><strong>Business Contacts</strong> - Individual owners, company owners, contacts and titles, and contacts business affiliations</li> <li><strong>Reverse Addresses</strong> - Input an address and find businesses affiliated with that address</li> <li><strong>Reverse Phones</strong> - Input a phone number and find businesses affiliated with that phone number</li> <li><strong>Reverse Tax IDs</strong> - Input a Tax ID (EIN) and find businesses affiliated with that Tax ID</li> <li><strong>Government Details</strong> – Economic diversity and government contract data for the business</li> <li><strong>IST Watch</strong> - Manage OFAC regulatory compliance and watchlist screening with the IST Watch API</li> <li><strong>Cyber Risk Score and Attributes</strong> – Identifies employee cyber risk behaviors that indicate risk for a business</li> </ul> <p>&nbsp;</p> <p><strong>Businesses API Environments</strong></p> <ul> <li><strong>Sandbox </strong> - https://sandbox-us-api.experian.com/businessinformation/businesses</li> <li><strong>UAT </strong> - https://uat-us-api.experian.com/businessinformation/businesses</li> <li><strong>Production</strong> - https://us-api.experian.com/businessinformation/businesses</li> </ul> <p>&nbsp;</p> <p>Please note that the Businesses API in the Developer Portal Sandbox is a non-production service that is for testing and demonstration purposes only. Only a limited number of businesses are available in the sandbox test environment. A list of valid Business Identification Numbers  (BINs) can be provided to you upon your request, and valid BINs in the sandbox can  also be obtained using the Business Search API. Please contact your Experian Account Executive to discuss obtaining production access to the Businesses API.</p> <p>&nbsp;</p> <p><strong>IPv3 Sample Subcodes</strong></p> <ul> <li>IPv3 Logistic Regression - 0586286</li> <li>IPv3 Machine Learning - 0586548</li> </ul> <p>&nbsp;</p> <p><strong>Additional Developer Tools</strong></p> <ul> <li><a href=\"https://github.com/experianplc/Experian-BIS-Postman-Collection\"><strong>BIS API Postman Collection</strong></a> - A starter Postman Collection and Environment for many BIS APIs</li> <li><a href=\"https://github.com/experianplc/BIS-HTML-Resources\"><strong>BIS HTML Resources</strong></a> - Images, CSS, and Javsscript files necessary to render BIS HTML API reports</li> </ul>
  *
- * OpenAPI spec version: 1.0.2
- * 
- * Generated by: https://github.com/swagger-api/swagger-codegen.git
- * Swagger Codegen version: 2.4.31
+ * The version of the OpenAPI document: 1.0.3
+ * Generated by: https://openapi-generator.tech
+ * Generator version: 7.17.0
  */
 
 /**
- * NOTE: This class is auto generated by the swagger code generator program.
- * https://github.com/swagger-api/swagger-codegen
+ * NOTE: This class is auto generated by OpenAPI Generator (https://openapi-generator.tech).
+ * https://openapi-generator.tech
  * Do not edit the class manually.
  */
 
@@ -37,26 +36,27 @@ use \TheLogicStudio\ExperianBusinessesPHP\ObjectSerializer;
  *
  * @category Class
  * @package  TheLogicStudio\ExperianBusinessesPHP
- * @author   Swagger Codegen team
- * @link     https://github.com/swagger-api/swagger-codegen
+ * @author   OpenAPI Generator team
+ * @link     https://openapi-generator.tech
+ * @implements \ArrayAccess<string, mixed>
  */
-class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
+class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
       *
       * @var string
       */
-    protected static $swaggerModelName = 'TradePaymentExperiencesResult';
+    protected static $openAPIModelName = 'TradePaymentExperiencesResult';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       *
       * @var string[]
       */
-    protected static $swaggerTypes = [
+    protected static $openAPITypes = [
         'payment_indicator' => '\TheLogicStudio\ExperianBusinessesPHP\Model\TradePaymentExperiencesResultPaymentIndicator',
         'business_category' => 'string',
         'date_reported' => 'string',
@@ -80,8 +80,10 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
-    protected static $swaggerFormats = [
+    protected static $openAPIFormats = [
         'payment_indicator' => null,
         'business_category' => null,
         'date_reported' => null,
@@ -102,13 +104,45 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     ];
 
     /**
+      * Array of nullable properties. Used for (de)serialization
+      *
+      * @var boolean[]
+      */
+    protected static array $openAPINullables = [
+        'payment_indicator' => false,
+        'business_category' => false,
+        'date_reported' => false,
+        'date_last_activity' => false,
+        'terms' => false,
+        'recent_high_credit' => false,
+        'account_balance' => false,
+        'current_percentage' => false,
+        'dbt30' => false,
+        'dbt60' => false,
+        'dbt90' => false,
+        'dbt91_plus' => false,
+        'comments' => false,
+        'tradeline_flag' => false,
+        'newly_reported_indicator' => false,
+        'customer_dispute_indicator' => false,
+        'itip_consolidated_number' => false
+    ];
+
+    /**
+      * If a nullable field gets set to null, insert it here
+      *
+      * @var boolean[]
+      */
+    protected array $openAPINullablesSetToNull = [];
+
+    /**
      * Array of property to type mappings. Used for (de)serialization
      *
      * @return array
      */
-    public static function swaggerTypes()
+    public static function openAPITypes()
     {
-        return self::$swaggerTypes;
+        return self::$openAPITypes;
     }
 
     /**
@@ -116,9 +150,61 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerFormats()
+    public static function openAPIFormats()
     {
-        return self::$swaggerFormats;
+        return self::$openAPIFormats;
+    }
+
+    /**
+     * Array of nullable properties
+     *
+     * @return array
+     */
+    protected static function openAPINullables(): array
+    {
+        return self::$openAPINullables;
+    }
+
+    /**
+     * Array of nullable field names deliberately set to null
+     *
+     * @return boolean[]
+     */
+    private function getOpenAPINullablesSetToNull(): array
+    {
+        return $this->openAPINullablesSetToNull;
+    }
+
+    /**
+     * Setter - Array of nullable field names deliberately set to null
+     *
+     * @param boolean[] $openAPINullablesSetToNull
+     */
+    private function setOpenAPINullablesSetToNull(array $openAPINullablesSetToNull): void
+    {
+        $this->openAPINullablesSetToNull = $openAPINullablesSetToNull;
+    }
+
+    /**
+     * Checks if a property is nullable
+     *
+     * @param string $property
+     * @return bool
+     */
+    public static function isNullable(string $property): bool
+    {
+        return self::openAPINullables()[$property] ?? false;
+    }
+
+    /**
+     * Checks if a nullable property is set to null.
+     *
+     * @param string $property
+     * @return bool
+     */
+    public function isNullableSetToNull(string $property): bool
+    {
+        return in_array($property, $this->getOpenAPINullablesSetToNull(), true);
     }
 
     /**
@@ -235,12 +321,9 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
      */
     public function getModelName()
     {
-        return self::$swaggerModelName;
+        return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -252,28 +335,46 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Constructor
      *
-     * @param mixed[] $data Associated array of property values
+     * @param mixed[]|null $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
-        $this->container['payment_indicator'] = isset($data['payment_indicator']) ? $data['payment_indicator'] : null;
-        $this->container['business_category'] = isset($data['business_category']) ? $data['business_category'] : null;
-        $this->container['date_reported'] = isset($data['date_reported']) ? $data['date_reported'] : null;
-        $this->container['date_last_activity'] = isset($data['date_last_activity']) ? $data['date_last_activity'] : null;
-        $this->container['terms'] = isset($data['terms']) ? $data['terms'] : null;
-        $this->container['recent_high_credit'] = isset($data['recent_high_credit']) ? $data['recent_high_credit'] : null;
-        $this->container['account_balance'] = isset($data['account_balance']) ? $data['account_balance'] : null;
-        $this->container['current_percentage'] = isset($data['current_percentage']) ? $data['current_percentage'] : null;
-        $this->container['dbt30'] = isset($data['dbt30']) ? $data['dbt30'] : null;
-        $this->container['dbt60'] = isset($data['dbt60']) ? $data['dbt60'] : null;
-        $this->container['dbt90'] = isset($data['dbt90']) ? $data['dbt90'] : null;
-        $this->container['dbt91_plus'] = isset($data['dbt91_plus']) ? $data['dbt91_plus'] : null;
-        $this->container['comments'] = isset($data['comments']) ? $data['comments'] : null;
-        $this->container['tradeline_flag'] = isset($data['tradeline_flag']) ? $data['tradeline_flag'] : null;
-        $this->container['newly_reported_indicator'] = isset($data['newly_reported_indicator']) ? $data['newly_reported_indicator'] : null;
-        $this->container['customer_dispute_indicator'] = isset($data['customer_dispute_indicator']) ? $data['customer_dispute_indicator'] : null;
-        $this->container['itip_consolidated_number'] = isset($data['itip_consolidated_number']) ? $data['itip_consolidated_number'] : null;
+        $this->setIfExists('payment_indicator', $data ?? [], null);
+        $this->setIfExists('business_category', $data ?? [], null);
+        $this->setIfExists('date_reported', $data ?? [], null);
+        $this->setIfExists('date_last_activity', $data ?? [], null);
+        $this->setIfExists('terms', $data ?? [], null);
+        $this->setIfExists('recent_high_credit', $data ?? [], null);
+        $this->setIfExists('account_balance', $data ?? [], null);
+        $this->setIfExists('current_percentage', $data ?? [], null);
+        $this->setIfExists('dbt30', $data ?? [], null);
+        $this->setIfExists('dbt60', $data ?? [], null);
+        $this->setIfExists('dbt90', $data ?? [], null);
+        $this->setIfExists('dbt91_plus', $data ?? [], null);
+        $this->setIfExists('comments', $data ?? [], null);
+        $this->setIfExists('tradeline_flag', $data ?? [], null);
+        $this->setIfExists('newly_reported_indicator', $data ?? [], null);
+        $this->setIfExists('customer_dispute_indicator', $data ?? [], null);
+        $this->setIfExists('itip_consolidated_number', $data ?? [], null);
+    }
+
+    /**
+    * Sets $this->container[$variableName] to the given data or to the given default Value; if $variableName
+    * is nullable and its value is set to null in the $fields array, then mark it as "set to null" in the
+    * $this->openAPINullablesSetToNull array
+    *
+    * @param string $variableName
+    * @param array  $fields
+    * @param mixed  $defaultValue
+    */
+    private function setIfExists(string $variableName, array $fields, $defaultValue): void
+    {
+        if (self::isNullable($variableName) && array_key_exists($variableName, $fields) && is_null($fields[$variableName])) {
+            $this->openAPINullablesSetToNull[] = $variableName;
+        }
+
+        $this->container[$variableName] = $fields[$variableName] ?? $defaultValue;
     }
 
     /**
@@ -303,7 +404,7 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Gets payment_indicator
      *
-     * @return \TheLogicStudio\ExperianBusinessesPHP\Model\TradePaymentExperiencesResultPaymentIndicator
+     * @return \TheLogicStudio\ExperianBusinessesPHP\Model\TradePaymentExperiencesResultPaymentIndicator|null
      */
     public function getPaymentIndicator()
     {
@@ -313,12 +414,15 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Sets payment_indicator
      *
-     * @param \TheLogicStudio\ExperianBusinessesPHP\Model\TradePaymentExperiencesResultPaymentIndicator $payment_indicator payment_indicator
+     * @param \TheLogicStudio\ExperianBusinessesPHP\Model\TradePaymentExperiencesResultPaymentIndicator|null $payment_indicator payment_indicator
      *
-     * @return $this
+     * @return self
      */
     public function setPaymentIndicator($payment_indicator)
     {
+        if (is_null($payment_indicator)) {
+            throw new \InvalidArgumentException('non-nullable payment_indicator cannot be null');
+        }
         $this->container['payment_indicator'] = $payment_indicator;
 
         return $this;
@@ -327,7 +431,7 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Gets business_category
      *
-     * @return string
+     * @return string|null
      */
     public function getBusinessCategory()
     {
@@ -337,12 +441,15 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Sets business_category
      *
-     * @param string $business_category Industry of the business
+     * @param string|null $business_category Industry of the business
      *
-     * @return $this
+     * @return self
      */
     public function setBusinessCategory($business_category)
     {
+        if (is_null($business_category)) {
+            throw new \InvalidArgumentException('non-nullable business_category cannot be null');
+        }
         $this->container['business_category'] = $business_category;
 
         return $this;
@@ -351,7 +458,7 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Gets date_reported
      *
-     * @return string
+     * @return string|null
      */
     public function getDateReported()
     {
@@ -361,12 +468,15 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Sets date_reported
      *
-     * @param string $date_reported Date reported to Experian. ISO 8601 Format = YYYY-MM-DD
+     * @param string|null $date_reported Date reported to Experian. ISO 8601 Format = YYYY-MM-DD
      *
-     * @return $this
+     * @return self
      */
     public function setDateReported($date_reported)
     {
+        if (is_null($date_reported)) {
+            throw new \InvalidArgumentException('non-nullable date_reported cannot be null');
+        }
         $this->container['date_reported'] = $date_reported;
 
         return $this;
@@ -375,7 +485,7 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Gets date_last_activity
      *
-     * @return string
+     * @return string|null
      */
     public function getDateLastActivity()
     {
@@ -385,12 +495,15 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Sets date_last_activity
      *
-     * @param string $date_last_activity Last activity date. ISO 8601 Format = YYYY-MM-DD
+     * @param string|null $date_last_activity Last activity date. ISO 8601 Format = YYYY-MM-DD
      *
-     * @return $this
+     * @return self
      */
     public function setDateLastActivity($date_last_activity)
     {
+        if (is_null($date_last_activity)) {
+            throw new \InvalidArgumentException('non-nullable date_last_activity cannot be null');
+        }
         $this->container['date_last_activity'] = $date_last_activity;
 
         return $this;
@@ -399,7 +512,7 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Gets terms
      *
-     * @return string
+     * @return string|null
      */
     public function getTerms()
     {
@@ -409,12 +522,15 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Sets terms
      *
-     * @param string $terms Payment terms. Example: NET30, NET45, etc.
+     * @param string|null $terms Payment terms. Example: NET30, NET45, etc.
      *
-     * @return $this
+     * @return self
      */
     public function setTerms($terms)
     {
+        if (is_null($terms)) {
+            throw new \InvalidArgumentException('non-nullable terms cannot be null');
+        }
         $this->container['terms'] = $terms;
 
         return $this;
@@ -423,7 +539,7 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Gets recent_high_credit
      *
-     * @return \TheLogicStudio\ExperianBusinessesPHP\Model\TradePaymentExperiencesResultRecentHighCredit
+     * @return \TheLogicStudio\ExperianBusinessesPHP\Model\TradePaymentExperiencesResultRecentHighCredit|null
      */
     public function getRecentHighCredit()
     {
@@ -433,12 +549,15 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Sets recent_high_credit
      *
-     * @param \TheLogicStudio\ExperianBusinessesPHP\Model\TradePaymentExperiencesResultRecentHighCredit $recent_high_credit recent_high_credit
+     * @param \TheLogicStudio\ExperianBusinessesPHP\Model\TradePaymentExperiencesResultRecentHighCredit|null $recent_high_credit recent_high_credit
      *
-     * @return $this
+     * @return self
      */
     public function setRecentHighCredit($recent_high_credit)
     {
+        if (is_null($recent_high_credit)) {
+            throw new \InvalidArgumentException('non-nullable recent_high_credit cannot be null');
+        }
         $this->container['recent_high_credit'] = $recent_high_credit;
 
         return $this;
@@ -447,7 +566,7 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Gets account_balance
      *
-     * @return \TheLogicStudio\ExperianBusinessesPHP\Model\TradePaymentExperiencesResultAccountBalance
+     * @return \TheLogicStudio\ExperianBusinessesPHP\Model\TradePaymentExperiencesResultAccountBalance|null
      */
     public function getAccountBalance()
     {
@@ -457,12 +576,15 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Sets account_balance
      *
-     * @param \TheLogicStudio\ExperianBusinessesPHP\Model\TradePaymentExperiencesResultAccountBalance $account_balance account_balance
+     * @param \TheLogicStudio\ExperianBusinessesPHP\Model\TradePaymentExperiencesResultAccountBalance|null $account_balance account_balance
      *
-     * @return $this
+     * @return self
      */
     public function setAccountBalance($account_balance)
     {
+        if (is_null($account_balance)) {
+            throw new \InvalidArgumentException('non-nullable account_balance cannot be null');
+        }
         $this->container['account_balance'] = $account_balance;
 
         return $this;
@@ -471,7 +593,7 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Gets current_percentage
      *
-     * @return float
+     * @return float|null
      */
     public function getCurrentPercentage()
     {
@@ -481,12 +603,15 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Sets current_percentage
      *
-     * @param float $current_percentage Percentage of the account balance considered current relative to payment terms. \"999\" indicates that the creditor has not supplied account aging
+     * @param float|null $current_percentage Percentage of the account balance considered current relative to payment terms. \"999\" indicates that the creditor has not supplied account aging
      *
-     * @return $this
+     * @return self
      */
     public function setCurrentPercentage($current_percentage)
     {
+        if (is_null($current_percentage)) {
+            throw new \InvalidArgumentException('non-nullable current_percentage cannot be null');
+        }
         $this->container['current_percentage'] = $current_percentage;
 
         return $this;
@@ -495,7 +620,7 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Gets dbt30
      *
-     * @return float
+     * @return float|null
      */
     public function getDbt30()
     {
@@ -505,12 +630,15 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Sets dbt30
      *
-     * @param float $dbt30 Percentage of the account balance that is beyond terms (late) in the 1-30 day range
+     * @param float|null $dbt30 Percentage of the account balance that is beyond terms (late) in the 1-30 day range
      *
-     * @return $this
+     * @return self
      */
     public function setDbt30($dbt30)
     {
+        if (is_null($dbt30)) {
+            throw new \InvalidArgumentException('non-nullable dbt30 cannot be null');
+        }
         $this->container['dbt30'] = $dbt30;
 
         return $this;
@@ -519,7 +647,7 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Gets dbt60
      *
-     * @return float
+     * @return float|null
      */
     public function getDbt60()
     {
@@ -529,12 +657,15 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Sets dbt60
      *
-     * @param float $dbt60 Percentage of the account balance that is beyond terms (late) in the 31-60 day range
+     * @param float|null $dbt60 Percentage of the account balance that is beyond terms (late) in the 31-60 day range
      *
-     * @return $this
+     * @return self
      */
     public function setDbt60($dbt60)
     {
+        if (is_null($dbt60)) {
+            throw new \InvalidArgumentException('non-nullable dbt60 cannot be null');
+        }
         $this->container['dbt60'] = $dbt60;
 
         return $this;
@@ -543,7 +674,7 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Gets dbt90
      *
-     * @return float
+     * @return float|null
      */
     public function getDbt90()
     {
@@ -553,12 +684,15 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Sets dbt90
      *
-     * @param float $dbt90 Percentage of the account balance that is beyond terms (late) in the 61-90 day range
+     * @param float|null $dbt90 Percentage of the account balance that is beyond terms (late) in the 61-90 day range
      *
-     * @return $this
+     * @return self
      */
     public function setDbt90($dbt90)
     {
+        if (is_null($dbt90)) {
+            throw new \InvalidArgumentException('non-nullable dbt90 cannot be null');
+        }
         $this->container['dbt90'] = $dbt90;
 
         return $this;
@@ -567,7 +701,7 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Gets dbt91_plus
      *
-     * @return float
+     * @return float|null
      */
     public function getDbt91Plus()
     {
@@ -577,12 +711,15 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Sets dbt91_plus
      *
-     * @param float $dbt91_plus Percentage of the account balance that is beyond terms (late) in the 91+ day range
+     * @param float|null $dbt91_plus Percentage of the account balance that is beyond terms (late) in the 91+ day range
      *
-     * @return $this
+     * @return self
      */
     public function setDbt91Plus($dbt91_plus)
     {
+        if (is_null($dbt91_plus)) {
+            throw new \InvalidArgumentException('non-nullable dbt91_plus cannot be null');
+        }
         $this->container['dbt91_plus'] = $dbt91_plus;
 
         return $this;
@@ -591,7 +728,7 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Gets comments
      *
-     * @return string
+     * @return string|null
      */
     public function getComments()
     {
@@ -601,12 +738,15 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Sets comments
      *
-     * @param string $comments Supplied by the creditor/data contributor
+     * @param string|null $comments Supplied by the creditor/data contributor
      *
-     * @return $this
+     * @return self
      */
     public function setComments($comments)
     {
+        if (is_null($comments)) {
+            throw new \InvalidArgumentException('non-nullable comments cannot be null');
+        }
         $this->container['comments'] = $comments;
 
         return $this;
@@ -615,7 +755,7 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Gets tradeline_flag
      *
-     * @return \TheLogicStudio\ExperianBusinessesPHP\Model\TradePaymentExperiencesResultTradelineFlag
+     * @return \TheLogicStudio\ExperianBusinessesPHP\Model\TradePaymentExperiencesResultTradelineFlag|null
      */
     public function getTradelineFlag()
     {
@@ -625,12 +765,15 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Sets tradeline_flag
      *
-     * @param \TheLogicStudio\ExperianBusinessesPHP\Model\TradePaymentExperiencesResultTradelineFlag $tradeline_flag tradeline_flag
+     * @param \TheLogicStudio\ExperianBusinessesPHP\Model\TradePaymentExperiencesResultTradelineFlag|null $tradeline_flag tradeline_flag
      *
-     * @return $this
+     * @return self
      */
     public function setTradelineFlag($tradeline_flag)
     {
+        if (is_null($tradeline_flag)) {
+            throw new \InvalidArgumentException('non-nullable tradeline_flag cannot be null');
+        }
         $this->container['tradeline_flag'] = $tradeline_flag;
 
         return $this;
@@ -639,7 +782,7 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Gets newly_reported_indicator
      *
-     * @return \TheLogicStudio\ExperianBusinessesPHP\Model\TradePaymentExperiencesResultNewlyReportedIndicator
+     * @return \TheLogicStudio\ExperianBusinessesPHP\Model\TradePaymentExperiencesResultNewlyReportedIndicator|null
      */
     public function getNewlyReportedIndicator()
     {
@@ -649,12 +792,15 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Sets newly_reported_indicator
      *
-     * @param \TheLogicStudio\ExperianBusinessesPHP\Model\TradePaymentExperiencesResultNewlyReportedIndicator $newly_reported_indicator newly_reported_indicator
+     * @param \TheLogicStudio\ExperianBusinessesPHP\Model\TradePaymentExperiencesResultNewlyReportedIndicator|null $newly_reported_indicator newly_reported_indicator
      *
-     * @return $this
+     * @return self
      */
     public function setNewlyReportedIndicator($newly_reported_indicator)
     {
+        if (is_null($newly_reported_indicator)) {
+            throw new \InvalidArgumentException('non-nullable newly_reported_indicator cannot be null');
+        }
         $this->container['newly_reported_indicator'] = $newly_reported_indicator;
 
         return $this;
@@ -663,7 +809,7 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Gets customer_dispute_indicator
      *
-     * @return string
+     * @return string|null
      */
     public function getCustomerDisputeIndicator()
     {
@@ -673,12 +819,15 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Sets customer_dispute_indicator
      *
-     * @param string $customer_dispute_indicator If true the business has disputed information in their profile
+     * @param string|null $customer_dispute_indicator If true the business has disputed information in their profile
      *
-     * @return $this
+     * @return self
      */
     public function setCustomerDisputeIndicator($customer_dispute_indicator)
     {
+        if (is_null($customer_dispute_indicator)) {
+            throw new \InvalidArgumentException('non-nullable customer_dispute_indicator cannot be null');
+        }
         $this->container['customer_dispute_indicator'] = $customer_dispute_indicator;
 
         return $this;
@@ -687,7 +836,7 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Gets itip_consolidated_number
      *
-     * @return float
+     * @return float|null
      */
     public function getItipConsolidatedNumber()
     {
@@ -697,12 +846,15 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Sets itip_consolidated_number
      *
-     * @param float $itip_consolidated_number Supplied by the creditor/data contributor
+     * @param float|null $itip_consolidated_number Supplied by the creditor/data contributor
      *
-     * @return $this
+     * @return self
      */
     public function setItipConsolidatedNumber($itip_consolidated_number)
     {
+        if (is_null($itip_consolidated_number)) {
+            throw new \InvalidArgumentException('non-nullable itip_consolidated_number cannot be null');
+        }
         $this->container['itip_consolidated_number'] = $itip_consolidated_number;
 
         return $this;
@@ -710,12 +862,11 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Returns true if offset exists. False otherwise.
      *
-     * @param integer $offset Offset
+     * @param integer|string $offset Offset
      *
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -723,26 +874,25 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Gets offset.
      *
-     * @param integer $offset Offset
+     * @param integer|string $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     #[\ReturnTypeWillChange]
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
-    #[\ReturnTypeWillChange]
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -754,14 +904,26 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
     /**
      * Unsets offset.
      *
-     * @param integer $offset Offset
+     * @param integer|string $offset Offset
      *
      * @return void
      */
-    #[\ReturnTypeWillChange]
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    #[\ReturnTypeWillChange]
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -771,13 +933,19 @@ class TradePaymentExperiencesResult implements ModelInterface, ArrayAccess
      */
     public function __toString()
     {
-        if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(
-                ObjectSerializer::sanitizeForSerialization($this),
-                JSON_PRETTY_PRINT
-            );
-        }
+        return json_encode(
+            ObjectSerializer::sanitizeForSerialization($this),
+            JSON_PRETTY_PRINT
+        );
+    }
 
+    /**
+     * Gets a header-safe presentation of the object
+     *
+     * @return string
+     */
+    public function toHeaderValue()
+    {
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }

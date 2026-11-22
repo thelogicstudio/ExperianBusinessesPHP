@@ -2,28 +2,27 @@
 /**
  * EconomicDiversity
  *
- * PHP version 5
+ * PHP version 8.1
  *
  * @category Class
  * @package  TheLogicStudio\ExperianBusinessesPHP
- * @author   Swagger Codegen team
- * @link     https://github.com/swagger-api/swagger-codegen
+ * @author   OpenAPI Generator team
+ * @link     https://openapi-generator.tech
  */
 
 /**
  * Businesses
  *
- * <p>Experian's Business Information Services is a leader in providing data and predictive insights to organizations, helping them mitigate risk and improve profitability.  The Businesses API provides integrated access to our business database which provides comprehensive, third-party-verified information on 99.9 percent of all U.S. companies, with the industry's most extensive data on the broad spectrum of small and midsize businesses.</p> <p>&nbsp;</p> <p>The Businesses API provides a la carte access to Experian's commercial credit and  commercial public record information, including commercial scores, trades, corporate linkage, bankruptcies, liens, judgments, and more.</p> <p>&nbsp;</p> <p><strong>It All Starts With a Search</strong></p> <p>The Business Search API allows you to input a business name, address, city, and state to find their Business Identification Number (BIN) - you'll need this to get data from most of the other APIs.  The primary search method is called \"Advanced Search\" and can be used for automated matching using our Match Reliability Code. A secondary search method, called \"QuickSearch\" and is a type-ahead style search that allows a human user to quickly find a business using a smaller amount of data.</p> <p><strong>SBCS Consortium Members</strong> can use the Businesses API search endpoints.</p> <p><strong>SBFE Consortium Members</strong> must use the <a href=\"/products/us/small-business-financial-exchangetm\">SBFE API</a>, using either the List of Similars product option to search for a business, or a Name/Address request for automated matching.</p> <p>&nbsp;</p> <p><strong>Businesses API in the Sandbox</strong></p> <ul> <li><strong>Advanced Search</strong> - The primary way to search for US businesses and return a List of Similars. Designed for both automation and human interaction</li> <li><strong>Quick Search</strong> - The secondary search method. A flexible, type-ahead style search API for US businesses. Designed primarily for human interaction</li> <li><strong>Headers</strong> - Business identity information. Available as stand-alone and included with most API responses</li> <li><strong>Scores</strong> - Commercial Intelliscore Plus and Financial Stability Risk Scores, with scores, score factors, and monthly and quarterly trends</li> <li><strong>Scores Auto Search</strong> - Returns the Scores API, but with a Business Name and Address request input</li> <li><strong>Premier Profiles JSON</strong> - Experian's flagship commercial credit report</li> <li><strong>Premier Profiles HTML</strong> - Renders a styled Premier Profile report using HTML/CSS</li> <li><strong>Premier Profiles PDF</strong> - Provides an encoded Premier Profile PDF report</li> <li><strong>Intelliscore Report JSON</strong> – Our score only report</li> <li><strong>Intelliscore Report HTML</strong> – Our score only report in HTML format</li> <li><strong>Intelliscore Report PDF</strong> – Our score only report in PDF format</li> <li><strong>Business Compliance Insight JSON</strong> – The BCI report helps with client onboarding and Know-Your-Customer investigations</li> <li><strong>Business Compliance Insight HTML</strong> – The BCI Report in HTML format</li> <li><strong>Business Compliance Insight PDF</strong> – The BCI report in PDF format</li> <li><strong>Aggregates</strong> - The BizAggs represent over 400 unique data attributes that represent the building blocks of commercial credit</li> <li><strong>MultiSegments</strong> - MultiSegments allows you to request segments from most Businesses API endpoints in a single API call</li> <li><strong>Risk Dashboards</strong> - Includes commercial and FSR scores, credit limit amount, current DBT</li> <li><strong>Business Facts</strong> - Key operational facts including SIC, NAICS, public status, sales, employees</li> <li><strong>Fraud Shields</strong> - Screens for potential indicators of fraud. Includes possible OFAC match</li> <li><strong>Credit Status</strong> - Key credit facts about the business including tradeline count, balance, DBT</li> <li><strong>Legal Filings and Collections Summaries</strong> - Summary of all legal filings and collections</li> <li><strong>Collections</strong> - Summary and Detail</li> <li><strong>Trades</strong> - Trade summary, payment experiences, payment totals, and trade payment trends</li> <li><strong>Bankruptcies</strong> - Summary and Detail</li> <li><strong>Liens</strong> - Summary and Detail</li> <li><strong>Judgments</strong> - Summary and Detail</li> <li><strong>UCC Filings</strong> - Summary and Trends</li> <li><strong>Corporate Registrations</strong> - Corporate registration info for the business, including filing status</li> <li><strong>Corporate Linkage</strong> - Partial and/or Full Family Tree</li> <li><strong>Business Contacts</strong> - Individual owners, company owners, contacts and titles, and contacts business affiliations</li> <li><strong>Reverse Addresses</strong> - Input an address and find businesses affiliated with that address</li> <li><strong>Reverse Phones</strong> - Input a phone number and find businesses affiliated with that phone number</li> <li><strong>Reverse Tax IDs</strong> - Input a Tax ID (EIN) and find businesses affiliated with that Tax ID</li> <li><strong>Government Details</strong> – Economic diversity and government contract data for the business</li> <li><strong>IST Watch</strong> - Manage OFAC regulatory compliance and watchlist screening with the IST Watch API</li> </ul> <p>&nbsp;</p> <p><strong>Businesses API Environments</strong></p> <ul> <li><strong>Sandbox </strong> - https://sandbox-us-api.experian.com/businessinformation/businesses</li> <li><strong>UAT </strong> - https://uat-us-api.experian.com/businessinformation/businesses</li> <li><strong>Production</strong> - https://us-api.experian.com/businessinformation/businesses</li> </ul> <p>&nbsp;</p> <p>Please note that the Businesses API in the Developer Portal Sandbox is a non-production service that is for testing and demonstration purposes only. Only a limited number of businesses are available in the sandbox test environment. A list of valid Business Identification Numbers  (BINs) can be provided to you upon your request, and valid BINs in the sandbox can  also be obtained using the Business Search API. Please contact your Experian Account Executive to discuss obtaining production access to the Businesses API.</p> <p>&nbsp;</p> <p><strong>IPv3 Sample Subcodes</strong></p> <ul> <li>IPv3 Logistic Regression - 0586286</li> <li>IPv3 Machine Learning - 0586548</li> </ul> <p>&nbsp;</p> <p><strong>Additional Developer Tools</strong></p> <ul> <li><a href=\"https://github.com/experianplc/Experian-BIS-Postman-Collection\"><strong>BIS API Postman Collection</strong></a> - A starter Postman Collection and Environment for many BIS APIs</li> <li><a href=\"https://github.com/experianplc/BIS-HTML-Resources\"><strong>BIS HTML Resources</strong></a> - Images, CSS, and Javsscript files necessary to render BIS HTML API reports</li> </ul>
+ * <p>Experian's Business Information Services is a leader in providing data and predictive insights to organizations, helping them mitigate risk and improve profitability.  The Businesses API provides integrated access to our business database which provides comprehensive, third-party-verified information on 99.9 percent of all U.S. companies, with the industry's most extensive data on the broad spectrum of small and midsize businesses.</p> <p>&nbsp;</p> <p>The Businesses API provides a la carte access to Experian's commercial credit and  commercial public record information, including commercial scores, trades, corporate linkage, bankruptcies, liens, judgments, and more.</p> <p>&nbsp;</p> <p><strong>It All Starts With a Search</strong></p> <p>The Business Search API allows you to input a business name, address, city, and state to find their Business Identification Number (BIN) - you'll need this to get data from most of the other APIs.  The primary search method is called \"Advanced Search\" and can be used for automated matching using our Match Reliability Code.   A secondary search method, called \"QuickSearch\" and is a type-ahead style search that allows a human user to quickly find a business using a smaller amount of data.</p> <p><strong>SBCS Consortium Members</strong> can use the Businesses API search endpoints.</p> <p><strong>SBFE Consortium Members</strong> must use the <a href=\"/products/us/small-business-financial-exchangetm\">SBFE API</a>, using either the  List of Similars product option to search for a business, or a Name/Address request for automated matching.</p>  <p>&nbsp;</p> <p><strong>Businesses API in the Sandbox</strong></p> <ul> <li><strong>Advanced Search</strong> - The primary way to search for US businesses and return a List of Similars. Designed for both automation and human interaction</li> <li><strong>Quick Search</strong> - The secondary search method. A flexible, type-ahead style search API for US businesses. Designed primarily for human interaction</li> <li><strong>Headers</strong> - Business identity information. Available as stand-alone and included with most API responses</li> <li><strong>Scores</strong> - Commercial Intelliscore Plus and Financial Stability Risk Scores, with scores, score factors, and monthly and quarterly trends</li> <li><strong>Scores Auto Search</strong> - Returns the Scores API, but with a Business Name and Address request input</li> <li><strong>Premier Profiles JSON</strong> - Experian's flagship commercial credit report</li> <li><strong>Premier Profiles HTML</strong> - Renders a styled Premier Profile report using HTML/CSS</li> <li><strong>Premier Profiles PDF</strong> - Provides an encoded Premier Profile PDF report</li> <li><strong>Intelliscore Report JSON</strong> – Our score only report</li> <li><strong>Intelliscore Report HTML</strong> – Our score only report in HTML format</li> <li><strong>Intelliscore Report PDF</strong> – Our score only report in PDF format</li> <li><strong>Business Compliance Insight JSON</strong> – The BCI report helps with client onboarding and Know-Your-Customer investigations</li> <li><strong>Business Compliance Insight HTML</strong> – The BCI Report in HTML format</li> <li><strong>Business Compliance Insight PDF</strong> – The BCI report in PDF format</li> <li><strong>Aggregates</strong> - The BizAggs represent over 400 unique data attributes that represent the building blocks of commercial credit</li> <li><strong>MultiSegments</strong> - MultiSegments allows you to request segments from most Businesses API endpoints in a single API call</li> <li><strong>Risk Dashboards</strong> - Includes commercial and FSR scores, credit limit amount, current DBT</li> <li><strong>Business Facts</strong> - Key operational facts including SIC, NAICS, public status, sales, employees</li> <li><strong>Fraud Shields</strong> - Screens for potential indicators of fraud. Includes possible OFAC match</li> <li><strong>Credit Status</strong> - Key credit facts about the business including tradeline count, balance, DBT</li> <li><strong>Legal Filings and Collections Summaries</strong> - Summary of all legal filings and collections</li> <li><strong>Collections</strong> - Summary and Detail</li> <li><strong>Trades</strong> - Trade summary, payment experiences, payment totals, and trade payment trends</li> <li><strong>Bankruptcies</strong> - Summary and Detail</li> <li><strong>Liens</strong> - Summary and Detail</li> <li><strong>Judgments</strong> - Summary and Detail</li> <li><strong>UCC Filings</strong> - Summary and Trends</li> <li><strong>Corporate Registrations</strong> - Corporate registration info for the business, including filing status</li> <li><strong>Corporate Linkage</strong> - Partial and/or Full Family Tree</li> <li><strong>Business Contacts</strong> - Individual owners, company owners, contacts and titles, and contacts business affiliations</li> <li><strong>Reverse Addresses</strong> - Input an address and find businesses affiliated with that address</li> <li><strong>Reverse Phones</strong> - Input a phone number and find businesses affiliated with that phone number</li> <li><strong>Reverse Tax IDs</strong> - Input a Tax ID (EIN) and find businesses affiliated with that Tax ID</li> <li><strong>Government Details</strong> – Economic diversity and government contract data for the business</li> <li><strong>IST Watch</strong> - Manage OFAC regulatory compliance and watchlist screening with the IST Watch API</li> <li><strong>Cyber Risk Score and Attributes</strong> – Identifies employee cyber risk behaviors that indicate risk for a business</li> </ul> <p>&nbsp;</p> <p><strong>Businesses API Environments</strong></p> <ul> <li><strong>Sandbox </strong> - https://sandbox-us-api.experian.com/businessinformation/businesses</li> <li><strong>UAT </strong> - https://uat-us-api.experian.com/businessinformation/businesses</li> <li><strong>Production</strong> - https://us-api.experian.com/businessinformation/businesses</li> </ul> <p>&nbsp;</p> <p>Please note that the Businesses API in the Developer Portal Sandbox is a non-production service that is for testing and demonstration purposes only. Only a limited number of businesses are available in the sandbox test environment. A list of valid Business Identification Numbers  (BINs) can be provided to you upon your request, and valid BINs in the sandbox can  also be obtained using the Business Search API. Please contact your Experian Account Executive to discuss obtaining production access to the Businesses API.</p> <p>&nbsp;</p> <p><strong>IPv3 Sample Subcodes</strong></p> <ul> <li>IPv3 Logistic Regression - 0586286</li> <li>IPv3 Machine Learning - 0586548</li> </ul> <p>&nbsp;</p> <p><strong>Additional Developer Tools</strong></p> <ul> <li><a href=\"https://github.com/experianplc/Experian-BIS-Postman-Collection\"><strong>BIS API Postman Collection</strong></a> - A starter Postman Collection and Environment for many BIS APIs</li> <li><a href=\"https://github.com/experianplc/BIS-HTML-Resources\"><strong>BIS HTML Resources</strong></a> - Images, CSS, and Javsscript files necessary to render BIS HTML API reports</li> </ul>
  *
- * OpenAPI spec version: 1.0.2
- * 
- * Generated by: https://github.com/swagger-api/swagger-codegen.git
- * Swagger Codegen version: 2.4.31
+ * The version of the OpenAPI document: 1.0.3
+ * Generated by: https://openapi-generator.tech
+ * Generator version: 7.17.0
  */
 
 /**
- * NOTE: This class is auto generated by the swagger code generator program.
- * https://github.com/swagger-api/swagger-codegen
+ * NOTE: This class is auto generated by OpenAPI Generator (https://openapi-generator.tech).
+ * https://openapi-generator.tech
  * Do not edit the class manually.
  */
 
@@ -37,26 +36,27 @@ use \TheLogicStudio\ExperianBusinessesPHP\ObjectSerializer;
  *
  * @category Class
  * @package  TheLogicStudio\ExperianBusinessesPHP
- * @author   Swagger Codegen team
- * @link     https://github.com/swagger-api/swagger-codegen
+ * @author   OpenAPI Generator team
+ * @link     https://openapi-generator.tech
+ * @implements \ArrayAccess<string, mixed>
  */
-class EconomicDiversity implements ModelInterface, ArrayAccess
+class EconomicDiversity implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
       *
       * @var string
       */
-    protected static $swaggerModelName = 'economicDiversity';
+    protected static $openAPIModelName = 'economicDiversity';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       *
       * @var string[]
       */
-    protected static $swaggerTypes = [
+    protected static $openAPITypes = [
         'minority_owned_indicator' => 'bool',
         'women_owned_indicator' => 'bool',
         'disadvantaged_indicator' => 'bool',
@@ -72,8 +72,10 @@ class EconomicDiversity implements ModelInterface, ArrayAccess
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
-    protected static $swaggerFormats = [
+    protected static $openAPIFormats = [
         'minority_owned_indicator' => null,
         'women_owned_indicator' => null,
         'disadvantaged_indicator' => null,
@@ -86,13 +88,37 @@ class EconomicDiversity implements ModelInterface, ArrayAccess
     ];
 
     /**
+      * Array of nullable properties. Used for (de)serialization
+      *
+      * @var boolean[]
+      */
+    protected static array $openAPINullables = [
+        'minority_owned_indicator' => false,
+        'women_owned_indicator' => false,
+        'disadvantaged_indicator' => false,
+        'sba_certified_indicator' => false,
+        'sba8a_indicator' => false,
+        'hub_zone_indicator' => false,
+        'veteran_owned_indicator' => false,
+        'disabled_veteran_owned_indicator' => false,
+        'historical_black_college_and_universities_indicator' => false
+    ];
+
+    /**
+      * If a nullable field gets set to null, insert it here
+      *
+      * @var boolean[]
+      */
+    protected array $openAPINullablesSetToNull = [];
+
+    /**
      * Array of property to type mappings. Used for (de)serialization
      *
      * @return array
      */
-    public static function swaggerTypes()
+    public static function openAPITypes()
     {
-        return self::$swaggerTypes;
+        return self::$openAPITypes;
     }
 
     /**
@@ -100,9 +126,61 @@ class EconomicDiversity implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerFormats()
+    public static function openAPIFormats()
     {
-        return self::$swaggerFormats;
+        return self::$openAPIFormats;
+    }
+
+    /**
+     * Array of nullable properties
+     *
+     * @return array
+     */
+    protected static function openAPINullables(): array
+    {
+        return self::$openAPINullables;
+    }
+
+    /**
+     * Array of nullable field names deliberately set to null
+     *
+     * @return boolean[]
+     */
+    private function getOpenAPINullablesSetToNull(): array
+    {
+        return $this->openAPINullablesSetToNull;
+    }
+
+    /**
+     * Setter - Array of nullable field names deliberately set to null
+     *
+     * @param boolean[] $openAPINullablesSetToNull
+     */
+    private function setOpenAPINullablesSetToNull(array $openAPINullablesSetToNull): void
+    {
+        $this->openAPINullablesSetToNull = $openAPINullablesSetToNull;
+    }
+
+    /**
+     * Checks if a property is nullable
+     *
+     * @param string $property
+     * @return bool
+     */
+    public static function isNullable(string $property): bool
+    {
+        return self::openAPINullables()[$property] ?? false;
+    }
+
+    /**
+     * Checks if a nullable property is set to null.
+     *
+     * @param string $property
+     * @return bool
+     */
+    public function isNullableSetToNull(string $property): bool
+    {
+        return in_array($property, $this->getOpenAPINullablesSetToNull(), true);
     }
 
     /**
@@ -195,12 +273,9 @@ class EconomicDiversity implements ModelInterface, ArrayAccess
      */
     public function getModelName()
     {
-        return self::$swaggerModelName;
+        return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -212,20 +287,38 @@ class EconomicDiversity implements ModelInterface, ArrayAccess
     /**
      * Constructor
      *
-     * @param mixed[] $data Associated array of property values
+     * @param mixed[]|null $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
-        $this->container['minority_owned_indicator'] = isset($data['minority_owned_indicator']) ? $data['minority_owned_indicator'] : null;
-        $this->container['women_owned_indicator'] = isset($data['women_owned_indicator']) ? $data['women_owned_indicator'] : null;
-        $this->container['disadvantaged_indicator'] = isset($data['disadvantaged_indicator']) ? $data['disadvantaged_indicator'] : null;
-        $this->container['sba_certified_indicator'] = isset($data['sba_certified_indicator']) ? $data['sba_certified_indicator'] : null;
-        $this->container['sba8a_indicator'] = isset($data['sba8a_indicator']) ? $data['sba8a_indicator'] : null;
-        $this->container['hub_zone_indicator'] = isset($data['hub_zone_indicator']) ? $data['hub_zone_indicator'] : null;
-        $this->container['veteran_owned_indicator'] = isset($data['veteran_owned_indicator']) ? $data['veteran_owned_indicator'] : null;
-        $this->container['disabled_veteran_owned_indicator'] = isset($data['disabled_veteran_owned_indicator']) ? $data['disabled_veteran_owned_indicator'] : null;
-        $this->container['historical_black_college_and_universities_indicator'] = isset($data['historical_black_college_and_universities_indicator']) ? $data['historical_black_college_and_universities_indicator'] : null;
+        $this->setIfExists('minority_owned_indicator', $data ?? [], null);
+        $this->setIfExists('women_owned_indicator', $data ?? [], null);
+        $this->setIfExists('disadvantaged_indicator', $data ?? [], null);
+        $this->setIfExists('sba_certified_indicator', $data ?? [], null);
+        $this->setIfExists('sba8a_indicator', $data ?? [], null);
+        $this->setIfExists('hub_zone_indicator', $data ?? [], null);
+        $this->setIfExists('veteran_owned_indicator', $data ?? [], null);
+        $this->setIfExists('disabled_veteran_owned_indicator', $data ?? [], null);
+        $this->setIfExists('historical_black_college_and_universities_indicator', $data ?? [], null);
+    }
+
+    /**
+    * Sets $this->container[$variableName] to the given data or to the given default Value; if $variableName
+    * is nullable and its value is set to null in the $fields array, then mark it as "set to null" in the
+    * $this->openAPINullablesSetToNull array
+    *
+    * @param string $variableName
+    * @param array  $fields
+    * @param mixed  $defaultValue
+    */
+    private function setIfExists(string $variableName, array $fields, $defaultValue): void
+    {
+        if (self::isNullable($variableName) && array_key_exists($variableName, $fields) && is_null($fields[$variableName])) {
+            $this->openAPINullablesSetToNull[] = $variableName;
+        }
+
+        $this->container[$variableName] = $fields[$variableName] ?? $defaultValue;
     }
 
     /**
@@ -255,7 +348,7 @@ class EconomicDiversity implements ModelInterface, ArrayAccess
     /**
      * Gets minority_owned_indicator
      *
-     * @return bool
+     * @return bool|null
      */
     public function getMinorityOwnedIndicator()
     {
@@ -265,12 +358,15 @@ class EconomicDiversity implements ModelInterface, ArrayAccess
     /**
      * Sets minority_owned_indicator
      *
-     * @param bool $minority_owned_indicator If true, the Business establishment is self-certified according to the US Small Business Administration as minority-owned
+     * @param bool|null $minority_owned_indicator If true, the Business establishment is self-certified according to the US Small Business Administration as minority-owned
      *
-     * @return $this
+     * @return self
      */
     public function setMinorityOwnedIndicator($minority_owned_indicator)
     {
+        if (is_null($minority_owned_indicator)) {
+            throw new \InvalidArgumentException('non-nullable minority_owned_indicator cannot be null');
+        }
         $this->container['minority_owned_indicator'] = $minority_owned_indicator;
 
         return $this;
@@ -279,7 +375,7 @@ class EconomicDiversity implements ModelInterface, ArrayAccess
     /**
      * Gets women_owned_indicator
      *
-     * @return bool
+     * @return bool|null
      */
     public function getWomenOwnedIndicator()
     {
@@ -289,12 +385,15 @@ class EconomicDiversity implements ModelInterface, ArrayAccess
     /**
      * Sets women_owned_indicator
      *
-     * @param bool $women_owned_indicator If true, the Business establishment is self-certified according to the US Small Business Administration as women-owned
+     * @param bool|null $women_owned_indicator If true, the Business establishment is self-certified according to the US Small Business Administration as women-owned
      *
-     * @return $this
+     * @return self
      */
     public function setWomenOwnedIndicator($women_owned_indicator)
     {
+        if (is_null($women_owned_indicator)) {
+            throw new \InvalidArgumentException('non-nullable women_owned_indicator cannot be null');
+        }
         $this->container['women_owned_indicator'] = $women_owned_indicator;
 
         return $this;
@@ -303,7 +402,7 @@ class EconomicDiversity implements ModelInterface, ArrayAccess
     /**
      * Gets disadvantaged_indicator
      *
-     * @return bool
+     * @return bool|null
      */
     public function getDisadvantagedIndicator()
     {
@@ -313,12 +412,15 @@ class EconomicDiversity implements ModelInterface, ArrayAccess
     /**
      * Sets disadvantaged_indicator
      *
-     * @param bool $disadvantaged_indicator If true, the Business establishment is certified by the Department of Transportation according to the US Small Business Administration as disadvantaged
+     * @param bool|null $disadvantaged_indicator If true, the Business establishment is certified by the Department of Transportation according to the US Small Business Administration as disadvantaged
      *
-     * @return $this
+     * @return self
      */
     public function setDisadvantagedIndicator($disadvantaged_indicator)
     {
+        if (is_null($disadvantaged_indicator)) {
+            throw new \InvalidArgumentException('non-nullable disadvantaged_indicator cannot be null');
+        }
         $this->container['disadvantaged_indicator'] = $disadvantaged_indicator;
 
         return $this;
@@ -327,7 +429,7 @@ class EconomicDiversity implements ModelInterface, ArrayAccess
     /**
      * Gets sba_certified_indicator
      *
-     * @return bool
+     * @return bool|null
      */
     public function getSbaCertifiedIndicator()
     {
@@ -337,12 +439,15 @@ class EconomicDiversity implements ModelInterface, ArrayAccess
     /**
      * Sets sba_certified_indicator
      *
-     * @param bool $sba_certified_indicator If true, the Business establishment is certified by the US Small Business Administration as a small-business. Small businesses that have not certified with the US government are not flagged
+     * @param bool|null $sba_certified_indicator If true, the Business establishment is certified by the US Small Business Administration as a small-business. Small businesses that have not certified with the US government are not flagged
      *
-     * @return $this
+     * @return self
      */
     public function setSbaCertifiedIndicator($sba_certified_indicator)
     {
+        if (is_null($sba_certified_indicator)) {
+            throw new \InvalidArgumentException('non-nullable sba_certified_indicator cannot be null');
+        }
         $this->container['sba_certified_indicator'] = $sba_certified_indicator;
 
         return $this;
@@ -351,7 +456,7 @@ class EconomicDiversity implements ModelInterface, ArrayAccess
     /**
      * Gets sba8a_indicator
      *
-     * @return bool
+     * @return bool|null
      */
     public function getSba8aIndicator()
     {
@@ -361,12 +466,15 @@ class EconomicDiversity implements ModelInterface, ArrayAccess
     /**
      * Sets sba8a_indicator
      *
-     * @param bool $sba8a_indicator If true, the Business enterprise participates in the Small Business Administration’s 8(a) Business Development Program
+     * @param bool|null $sba8a_indicator If true, the Business enterprise participates in the Small Business Administration’s 8(a) Business Development Program
      *
-     * @return $this
+     * @return self
      */
     public function setSba8aIndicator($sba8a_indicator)
     {
+        if (is_null($sba8a_indicator)) {
+            throw new \InvalidArgumentException('non-nullable sba8a_indicator cannot be null');
+        }
         $this->container['sba8a_indicator'] = $sba8a_indicator;
 
         return $this;
@@ -375,7 +483,7 @@ class EconomicDiversity implements ModelInterface, ArrayAccess
     /**
      * Gets hub_zone_indicator
      *
-     * @return bool
+     * @return bool|null
      */
     public function getHubZoneIndicator()
     {
@@ -385,12 +493,15 @@ class EconomicDiversity implements ModelInterface, ArrayAccess
     /**
      * Sets hub_zone_indicator
      *
-     * @param bool $hub_zone_indicator If true, the Business enterprise is certified by the US Small Business Administration as doing business in an historically underutilized business zone
+     * @param bool|null $hub_zone_indicator If true, the Business enterprise is certified by the US Small Business Administration as doing business in an historically underutilized business zone
      *
-     * @return $this
+     * @return self
      */
     public function setHubZoneIndicator($hub_zone_indicator)
     {
+        if (is_null($hub_zone_indicator)) {
+            throw new \InvalidArgumentException('non-nullable hub_zone_indicator cannot be null');
+        }
         $this->container['hub_zone_indicator'] = $hub_zone_indicator;
 
         return $this;
@@ -399,7 +510,7 @@ class EconomicDiversity implements ModelInterface, ArrayAccess
     /**
      * Gets veteran_owned_indicator
      *
-     * @return bool
+     * @return bool|null
      */
     public function getVeteranOwnedIndicator()
     {
@@ -409,12 +520,15 @@ class EconomicDiversity implements ModelInterface, ArrayAccess
     /**
      * Sets veteran_owned_indicator
      *
-     * @param bool $veteran_owned_indicator If true, the Business establishment is self-certified as veteran-owned according to the US Small Business Administration
+     * @param bool|null $veteran_owned_indicator If true, the Business establishment is self-certified as veteran-owned according to the US Small Business Administration
      *
-     * @return $this
+     * @return self
      */
     public function setVeteranOwnedIndicator($veteran_owned_indicator)
     {
+        if (is_null($veteran_owned_indicator)) {
+            throw new \InvalidArgumentException('non-nullable veteran_owned_indicator cannot be null');
+        }
         $this->container['veteran_owned_indicator'] = $veteran_owned_indicator;
 
         return $this;
@@ -423,7 +537,7 @@ class EconomicDiversity implements ModelInterface, ArrayAccess
     /**
      * Gets disabled_veteran_owned_indicator
      *
-     * @return bool
+     * @return bool|null
      */
     public function getDisabledVeteranOwnedIndicator()
     {
@@ -433,12 +547,15 @@ class EconomicDiversity implements ModelInterface, ArrayAccess
     /**
      * Sets disabled_veteran_owned_indicator
      *
-     * @param bool $disabled_veteran_owned_indicator If true, the Business establishment is self-certified according to the US Small Business Administration as service-disabled veteran-owned
+     * @param bool|null $disabled_veteran_owned_indicator If true, the Business establishment is self-certified according to the US Small Business Administration as service-disabled veteran-owned
      *
-     * @return $this
+     * @return self
      */
     public function setDisabledVeteranOwnedIndicator($disabled_veteran_owned_indicator)
     {
+        if (is_null($disabled_veteran_owned_indicator)) {
+            throw new \InvalidArgumentException('non-nullable disabled_veteran_owned_indicator cannot be null');
+        }
         $this->container['disabled_veteran_owned_indicator'] = $disabled_veteran_owned_indicator;
 
         return $this;
@@ -447,7 +564,7 @@ class EconomicDiversity implements ModelInterface, ArrayAccess
     /**
      * Gets historical_black_college_and_universities_indicator
      *
-     * @return bool
+     * @return bool|null
      */
     public function getHistoricalBlackCollegeAndUniversitiesIndicator()
     {
@@ -457,12 +574,15 @@ class EconomicDiversity implements ModelInterface, ArrayAccess
     /**
      * Sets historical_black_college_and_universities_indicator
      *
-     * @param bool $historical_black_college_and_universities_indicator If true, the Entity is certified by the US Department of Education as an accredited historically black college or university, established prior to 1964, with the principal mission of educating black Americans
+     * @param bool|null $historical_black_college_and_universities_indicator If true, the Entity is certified by the US Department of Education as an accredited historically black college or university, established prior to 1964, with the principal mission of educating black Americans
      *
-     * @return $this
+     * @return self
      */
     public function setHistoricalBlackCollegeAndUniversitiesIndicator($historical_black_college_and_universities_indicator)
     {
+        if (is_null($historical_black_college_and_universities_indicator)) {
+            throw new \InvalidArgumentException('non-nullable historical_black_college_and_universities_indicator cannot be null');
+        }
         $this->container['historical_black_college_and_universities_indicator'] = $historical_black_college_and_universities_indicator;
 
         return $this;
@@ -470,12 +590,11 @@ class EconomicDiversity implements ModelInterface, ArrayAccess
     /**
      * Returns true if offset exists. False otherwise.
      *
-     * @param integer $offset Offset
+     * @param integer|string $offset Offset
      *
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -483,26 +602,25 @@ class EconomicDiversity implements ModelInterface, ArrayAccess
     /**
      * Gets offset.
      *
-     * @param integer $offset Offset
+     * @param integer|string $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     #[\ReturnTypeWillChange]
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
-    #[\ReturnTypeWillChange]
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -514,14 +632,26 @@ class EconomicDiversity implements ModelInterface, ArrayAccess
     /**
      * Unsets offset.
      *
-     * @param integer $offset Offset
+     * @param integer|string $offset Offset
      *
      * @return void
      */
-    #[\ReturnTypeWillChange]
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    #[\ReturnTypeWillChange]
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -531,13 +661,19 @@ class EconomicDiversity implements ModelInterface, ArrayAccess
      */
     public function __toString()
     {
-        if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(
-                ObjectSerializer::sanitizeForSerialization($this),
-                JSON_PRETTY_PRINT
-            );
-        }
+        return json_encode(
+            ObjectSerializer::sanitizeForSerialization($this),
+            JSON_PRETTY_PRINT
+        );
+    }
 
+    /**
+     * Gets a header-safe presentation of the object
+     *
+     * @return string
+     */
+    public function toHeaderValue()
+    {
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }

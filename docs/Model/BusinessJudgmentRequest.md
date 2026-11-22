@@ -1,6 +1,7 @@
-# BusinessJudgmentRequest
+# # BusinessJudgmentRequest
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **bin** | **string** | 9-digit Business Identification Number (BIN) | [default to '700969989']
@@ -8,6 +9,4 @@ Name | Type | Description | Notes
 **judgment_summary** | **bool** | If true receive summary information on judgments | [optional] [default to true]
 **judgment_detail** | **bool** | If true receive judgment details | [optional] [default to true]
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
