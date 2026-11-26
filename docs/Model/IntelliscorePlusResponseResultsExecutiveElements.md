@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **collection_count** | **float** | Collection count | [optional]
 **legal_balance** | **float** | Total balance of bankruptcies, liens, judgments, and collections | [optional]
 **ucc_filings** | **float** | Count of Uniform Commercial Code (UCC) filings | [optional]
-**ucc_derogatory_count** | **float** | Derogatory UCCs include one or more of the following as collateral-   accounts, accounts receivable, contracts, hereafter acquired inventory,   leases, notes receivable, or proceeds. When a business pledges these key   assets to secure financing it may indicate the business is under financial stress | [optional]
+**ucc_derogatory_count** | **float** | Derogatory UCCs include one or more of the following as collateral-    accounts, accounts receivable, contracts, hereafter acquired inventory,   leases, notes receivable, or proceeds. When a business pledges these key   assets to secure financing it may indicate the business is under financial stress | [optional]
 **current_account_balance** | **float** | Current account balance | [optional]
 **current_tradeline_count** | **float** | Current tradeline count | [optional]
 **monthly_average_dbt** | **float** | Monthly average DBT | [optional]

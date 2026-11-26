@@ -1,4 +1,5 @@
 {
+	"templateDir":          "templates",
 	"invokerPackage":      "TheLogicStudio\\ExperianBusinessesPHP",
 	"composerPackageName": "thelogicstudio/experian-businesses-php",
 	"gitUserId":           "TheLogicStudio",

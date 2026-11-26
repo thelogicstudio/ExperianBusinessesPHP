@@ -397,7 +397,12 @@ class ObjectSerializer
         }
 
         if (strcasecmp(substr($class, -2), '[]') === 0) {
-            $data = is_string($data) ? json_decode($data) : $data;
+            if (is_string($data)) {
+                $decoded = json_decode($data);
+                // Experian returns a message string (e.g. "Your search did not match any records.")
+                // instead of an empty array when a search has no results. Treat that as no results.
+                $data = is_array($decoded) ? $decoded : [];
+            }
 
             if (!is_array($data)) {
                 throw new \InvalidArgumentException("Invalid array '$class'");
