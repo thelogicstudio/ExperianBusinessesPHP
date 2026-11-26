@@ -7,6 +7,10 @@ To updated the API Client package:
     ```
    yq 'del(.. | select(tag == "!!map") | select(.in == "header" and (.name == "Content-Type" or .name == "x-comments")))' businesses_swagger.yaml > clean.yaml
     ```
+   2. Remove `default` values from the schema definitions. Experian has filled them with sample data (e.g. `name: Experian`, test BINs and subcodes), and the generated models would send these unless you overwrite them. Every one has a matching `example`, so the docs don't lose anything.
+    ```
+   yq -i 'del(.definitions | .. | select(tag == "!!map") | select(has("default")) | .default)' clean.yaml
+    ```
 3. Set up  [OpenAPI Generator](https://github.com/OpenAPITools/openapi-generator).
 4. Run `openapi-generator-cli generate -i clean.yaml -g php -o . -c config.json`.
    - `config.json` sets `templateDir` to `templates`, which overrides some of the generator's stock templates (taken from v7.17.0). Passing `-t templates` does the same thing.

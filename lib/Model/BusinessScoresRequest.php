@@ -274,11 +274,11 @@ class BusinessScoresRequest implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('bin', $data ?? [], '700000001');
-        $this->setIfExists('subcode', $data ?? [], '0586548');
-        $this->setIfExists('model_code', $data ?? [], '000254');
-        $this->setIfExists('fsr_score', $data ?? [], true);
-        $this->setIfExists('commercial_score', $data ?? [], true);
+        $this->setIfExists('bin', $data ?? [], null);
+        $this->setIfExists('subcode', $data ?? [], null);
+        $this->setIfExists('model_code', $data ?? [], null);
+        $this->setIfExists('fsr_score', $data ?? [], null);
+        $this->setIfExists('commercial_score', $data ?? [], null);
         $this->setIfExists('collection_score', $data ?? [], null);
     }
 

@@ -256,9 +256,9 @@ class BusinessDataRequestWithModel implements ModelInterface, ArrayAccess, \Json
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('bin', $data ?? [], '807205801');
-        $this->setIfExists('subcode', $data ?? [], '0586548');
-        $this->setIfExists('model_code', $data ?? [], '000254');
+        $this->setIfExists('bin', $data ?? [], null);
+        $this->setIfExists('subcode', $data ?? [], null);
+        $this->setIfExists('model_code', $data ?? [], null);
     }
 
     /**

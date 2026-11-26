@@ -262,10 +262,10 @@ class BusinessLiensRequest implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('bin', $data ?? [], '701000078');
-        $this->setIfExists('subcode', $data ?? [], '0586548');
-        $this->setIfExists('lien_summary', $data ?? [], true);
-        $this->setIfExists('lien_detail', $data ?? [], true);
+        $this->setIfExists('bin', $data ?? [], null);
+        $this->setIfExists('subcode', $data ?? [], null);
+        $this->setIfExists('lien_summary', $data ?? [], null);
+        $this->setIfExists('lien_detail', $data ?? [], null);
     }
 
     /**

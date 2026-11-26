@@ -250,8 +250,8 @@ class BusinessReversePhonesRequest implements ModelInterface, ArrayAccess, \Json
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('subcode', $data ?? [], '0586548');
-        $this->setIfExists('phone', $data ?? [], '8006927753');
+        $this->setIfExists('subcode', $data ?? [], null);
+        $this->setIfExists('phone', $data ?? [], null);
     }
 
     /**

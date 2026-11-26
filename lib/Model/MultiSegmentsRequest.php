@@ -298,15 +298,15 @@ class MultiSegmentsRequest implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('subcode', $data ?? [], '0563736');
-        $this->setIfExists('bin', $data ?? [], '700000001');
+        $this->setIfExists('subcode', $data ?? [], null);
+        $this->setIfExists('bin', $data ?? [], null);
         $this->setIfExists('street', $data ?? [], null);
         $this->setIfExists('city', $data ?? [], null);
         $this->setIfExists('state', $data ?? [], null);
         $this->setIfExists('zip', $data ?? [], null);
-        $this->setIfExists('phone', $data ?? [], '9495673800');
-        $this->setIfExists('tax_id', $data ?? [], '123456789');
-        $this->setIfExists('comments', $data ?? [], 'test12345');
+        $this->setIfExists('phone', $data ?? [], null);
+        $this->setIfExists('tax_id', $data ?? [], null);
+        $this->setIfExists('comments', $data ?? [], null);
         $this->setIfExists('data_points', $data ?? [], null);
     }
 

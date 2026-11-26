@@ -252,7 +252,7 @@ class BusinessHeaderResultBranchLocation implements ModelInterface, ArrayAccess,
     public function __construct(?array $data = null)
     {
         $this->setIfExists('bin', $data ?? [], null);
-        $this->setIfExists('location_id', $data ?? [], '475 ANTON BLVD');
+        $this->setIfExists('location_id', $data ?? [], null);
     }
 
     /**

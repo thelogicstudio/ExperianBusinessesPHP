@@ -263,10 +263,10 @@ class BusinessBankruptcyDataRequest implements ModelInterface, ArrayAccess, \Jso
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('bin', $data ?? [], '404197602');
-        $this->setIfExists('subcode', $data ?? [], '0586548');
-        $this->setIfExists('bankruptcy_summary', $data ?? [], true);
-        $this->setIfExists('bankruptcy_detail', $data ?? [], true);
+        $this->setIfExists('bin', $data ?? [], null);
+        $this->setIfExists('subcode', $data ?? [], null);
+        $this->setIfExists('bankruptcy_summary', $data ?? [], null);
+        $this->setIfExists('bankruptcy_detail', $data ?? [], null);
     }
 
     /**

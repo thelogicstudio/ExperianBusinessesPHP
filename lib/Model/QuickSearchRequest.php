@@ -256,9 +256,9 @@ class QuickSearchRequest implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('search_string', $data ?? [], 'Experian');
-        $this->setIfExists('subcode', $data ?? [], '0586548');
-        $this->setIfExists('comments', $data ?? [], 'testing');
+        $this->setIfExists('search_string', $data ?? [], null);
+        $this->setIfExists('subcode', $data ?? [], null);
+        $this->setIfExists('comments', $data ?? [], null);
     }
 
     /**

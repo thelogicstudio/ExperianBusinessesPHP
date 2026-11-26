@@ -885,7 +885,7 @@ class IntelliscorePlusResponseResultsExecutiveElements implements ModelInterface
     /**
      * Sets ucc_derogatory_count
      *
-     * @param float|null $ucc_derogatory_count Derogatory UCCs include one or more of the following as collateral-    accounts, accounts receivable, contracts, hereafter acquired inventory,   leases, notes receivable, or proceeds. When a business pledges these key   assets to secure financing it may indicate the business is under financial stress
+     * @param float|null $ucc_derogatory_count Derogatory UCCs include one or more of the following as collateral-     accounts, accounts receivable, contracts, hereafter acquired inventory,   leases, notes receivable, or proceeds. When a business pledges these key   assets to secure financing it may indicate the business is under financial stress
      *
      * @return self
      */

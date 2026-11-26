@@ -262,10 +262,10 @@ class BusinessLegalCollectionSummariesRequest implements ModelInterface, ArrayAc
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('bin', $data ?? [], '800914632');
-        $this->setIfExists('subcode', $data ?? [], '0586548');
-        $this->setIfExists('legal_filings_collections_summary', $data ?? [], true);
-        $this->setIfExists('legal_filings_summary', $data ?? [], true);
+        $this->setIfExists('bin', $data ?? [], null);
+        $this->setIfExists('subcode', $data ?? [], null);
+        $this->setIfExists('legal_filings_collections_summary', $data ?? [], null);
+        $this->setIfExists('legal_filings_summary', $data ?? [], null);
     }
 
     /**

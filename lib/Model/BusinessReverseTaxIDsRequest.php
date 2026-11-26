@@ -250,8 +250,8 @@ class BusinessReverseTaxIDsRequest implements ModelInterface, ArrayAccess, \Json
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('subcode', $data ?? [], '0586548');
-        $this->setIfExists('tax_id', $data ?? [], '222152871');
+        $this->setIfExists('subcode', $data ?? [], null);
+        $this->setIfExists('tax_id', $data ?? [], null);
     }
 
     /**

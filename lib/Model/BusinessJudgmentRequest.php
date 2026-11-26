@@ -262,10 +262,10 @@ class BusinessJudgmentRequest implements ModelInterface, ArrayAccess, \JsonSeria
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('bin', $data ?? [], '700969989');
-        $this->setIfExists('subcode', $data ?? [], '0586548');
-        $this->setIfExists('judgment_summary', $data ?? [], true);
-        $this->setIfExists('judgment_detail', $data ?? [], true);
+        $this->setIfExists('bin', $data ?? [], null);
+        $this->setIfExists('subcode', $data ?? [], null);
+        $this->setIfExists('judgment_summary', $data ?? [], null);
+        $this->setIfExists('judgment_detail', $data ?? [], null);
     }
 
     /**

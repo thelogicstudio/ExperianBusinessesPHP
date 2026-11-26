@@ -310,7 +310,7 @@ class BusinessPremierProfileRequest implements ModelInterface, ArrayAccess, \Jso
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('bin', $data ?? [], '800914632');
+        $this->setIfExists('bin', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('street', $data ?? [], null);
         $this->setIfExists('city', $data ?? [], null);
@@ -318,10 +318,10 @@ class BusinessPremierProfileRequest implements ModelInterface, ArrayAccess, \Jso
         $this->setIfExists('zip', $data ?? [], null);
         $this->setIfExists('phone', $data ?? [], null);
         $this->setIfExists('tax_id', $data ?? [], null);
-        $this->setIfExists('subcode', $data ?? [], '0586548');
-        $this->setIfExists('model_code', $data ?? [], '000254');
-        $this->setIfExists('comments', $data ?? [], 'testing');
-        $this->setIfExists('business_aggregates', $data ?? [], false);
+        $this->setIfExists('subcode', $data ?? [], null);
+        $this->setIfExists('model_code', $data ?? [], null);
+        $this->setIfExists('comments', $data ?? [], null);
+        $this->setIfExists('business_aggregates', $data ?? [], null);
     }
 
     /**

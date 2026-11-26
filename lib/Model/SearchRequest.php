@@ -298,16 +298,16 @@ class SearchRequest implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('name', $data ?? [], 'Experian');
-        $this->setIfExists('city', $data ?? [], 'Costa Mesa');
-        $this->setIfExists('state', $data ?? [], 'CA');
-        $this->setIfExists('subcode', $data ?? [], '0563736');
-        $this->setIfExists('street', $data ?? [], '475 ANTON BLVD');
-        $this->setIfExists('zip', $data ?? [], '92626');
-        $this->setIfExists('phone', $data ?? [], '9495673800');
-        $this->setIfExists('tax_id', $data ?? [], '176970333');
-        $this->setIfExists('geo', $data ?? [], true);
-        $this->setIfExists('comments', $data ?? [], 'testing');
+        $this->setIfExists('name', $data ?? [], null);
+        $this->setIfExists('city', $data ?? [], null);
+        $this->setIfExists('state', $data ?? [], null);
+        $this->setIfExists('subcode', $data ?? [], null);
+        $this->setIfExists('street', $data ?? [], null);
+        $this->setIfExists('zip', $data ?? [], null);
+        $this->setIfExists('phone', $data ?? [], null);
+        $this->setIfExists('tax_id', $data ?? [], null);
+        $this->setIfExists('geo', $data ?? [], null);
+        $this->setIfExists('comments', $data ?? [], null);
     }
 
     /**

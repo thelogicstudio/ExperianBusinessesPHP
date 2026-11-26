@@ -276,10 +276,10 @@ class BusinessHeaderResultMatchingBranchAddress implements ModelInterface, Array
     public function __construct(?array $data = null)
     {
         $this->setIfExists('bin', $data ?? [], null);
-        $this->setIfExists('street', $data ?? [], '475 ANTON BLVD');
-        $this->setIfExists('city', $data ?? [], 'Costa Mesa');
-        $this->setIfExists('state', $data ?? [], 'CA');
-        $this->setIfExists('zip', $data ?? [], '92626');
+        $this->setIfExists('street', $data ?? [], null);
+        $this->setIfExists('city', $data ?? [], null);
+        $this->setIfExists('state', $data ?? [], null);
+        $this->setIfExists('zip', $data ?? [], null);
         $this->setIfExists('zip_extension', $data ?? [], null);
     }
 

@@ -286,14 +286,14 @@ class ISTWatchRequest implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('name', $data ?? [], 'Bank Melli Iran');
-        $this->setIfExists('city', $data ?? [], 'Paris');
-        $this->setIfExists('subcode', $data ?? [], '0586548');
-        $this->setIfExists('street', $data ?? [], '43 Avenue Montaigne');
-        $this->setIfExists('country', $data ?? [], 'FR');
+        $this->setIfExists('name', $data ?? [], null);
+        $this->setIfExists('city', $data ?? [], null);
+        $this->setIfExists('subcode', $data ?? [], null);
+        $this->setIfExists('street', $data ?? [], null);
+        $this->setIfExists('country', $data ?? [], null);
         $this->setIfExists('score_threshold', $data ?? [], null);
-        $this->setIfExists('maximum_results', $data ?? [], '3');
-        $this->setIfExists('comments', $data ?? [], 'testing');
+        $this->setIfExists('maximum_results', $data ?? [], null);
+        $this->setIfExists('comments', $data ?? [], null);
     }
 
     /**

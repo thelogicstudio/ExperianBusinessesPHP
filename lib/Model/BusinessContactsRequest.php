@@ -256,9 +256,9 @@ class BusinessContactsRequest implements ModelInterface, ArrayAccess, \JsonSeria
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('bin', $data ?? [], '725862571');
-        $this->setIfExists('subcode', $data ?? [], '0586548');
-        $this->setIfExists('comments', $data ?? [], 'test');
+        $this->setIfExists('bin', $data ?? [], null);
+        $this->setIfExists('subcode', $data ?? [], null);
+        $this->setIfExists('comments', $data ?? [], null);
     }
 
     /**

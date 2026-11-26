@@ -268,11 +268,11 @@ class BusinessCorporateLinkageRequest implements ModelInterface, ArrayAccess, \J
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('bin', $data ?? [], '700513485');
-        $this->setIfExists('subcode', $data ?? [], '0586548');
-        $this->setIfExists('model_code', $data ?? [], '000254');
-        $this->setIfExists('corporate_linkage_partial', $data ?? [], true);
-        $this->setIfExists('corporate_linkage_full', $data ?? [], true);
+        $this->setIfExists('bin', $data ?? [], null);
+        $this->setIfExists('subcode', $data ?? [], null);
+        $this->setIfExists('model_code', $data ?? [], null);
+        $this->setIfExists('corporate_linkage_partial', $data ?? [], null);
+        $this->setIfExists('corporate_linkage_full', $data ?? [], null);
     }
 
     /**

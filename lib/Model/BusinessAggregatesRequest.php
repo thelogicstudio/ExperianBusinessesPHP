@@ -256,9 +256,9 @@ class BusinessAggregatesRequest implements ModelInterface, ArrayAccess, \JsonSer
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('bin', $data ?? [], '800914632');
-        $this->setIfExists('subcode', $data ?? [], '0586548');
-        $this->setIfExists('comments', $data ?? [], 'test');
+        $this->setIfExists('bin', $data ?? [], null);
+        $this->setIfExists('subcode', $data ?? [], null);
+        $this->setIfExists('comments', $data ?? [], null);
     }
 
     /**

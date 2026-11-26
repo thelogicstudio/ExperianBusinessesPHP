@@ -257,9 +257,9 @@ class BCIRequest implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('bin', $data ?? [], '404197602');
-        $this->setIfExists('subcode', $data ?? [], '0586548');
-        $this->setIfExists('comments', $data ?? [], 'test123');
+        $this->setIfExists('bin', $data ?? [], null);
+        $this->setIfExists('subcode', $data ?? [], null);
+        $this->setIfExists('comments', $data ?? [], null);
     }
 
     /**

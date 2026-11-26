@@ -264,7 +264,7 @@ class ScoresSearchResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     {
         $this->setIfExists('request_id', $data ?? [], null);
         $this->setIfExists('success', $data ?? [], null);
-        $this->setIfExists('comments', $data ?? [], 'test123');
+        $this->setIfExists('comments', $data ?? [], null);
         $this->setIfExists('results', $data ?? [], null);
     }
 

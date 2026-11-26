@@ -268,11 +268,11 @@ class BusinessReverseAddressesRequest implements ModelInterface, ArrayAccess, \J
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('subcode', $data ?? [], '0586548');
-        $this->setIfExists('street', $data ?? [], '1 Infinite Loop');
-        $this->setIfExists('city', $data ?? [], 'Cupertino');
-        $this->setIfExists('state', $data ?? [], 'CA');
-        $this->setIfExists('zip', $data ?? [], '10118');
+        $this->setIfExists('subcode', $data ?? [], null);
+        $this->setIfExists('street', $data ?? [], null);
+        $this->setIfExists('city', $data ?? [], null);
+        $this->setIfExists('state', $data ?? [], null);
+        $this->setIfExists('zip', $data ?? [], null);
     }
 
     /**

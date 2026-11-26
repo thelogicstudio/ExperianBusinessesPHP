@@ -268,8 +268,8 @@ class EvLinkageRequest implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('subcode', $data ?? [], '0517614');
-        $this->setIfExists('comments', $data ?? [], 'testing');
+        $this->setIfExists('subcode', $data ?? [], null);
+        $this->setIfExists('comments', $data ?? [], null);
         $this->setIfExists('bin', $data ?? [], null);
         $this->setIfExists('linkage_record_key', $data ?? [], null);
         $this->setIfExists('data_points', $data ?? [], null);

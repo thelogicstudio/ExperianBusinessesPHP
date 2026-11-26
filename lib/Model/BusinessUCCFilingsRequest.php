@@ -262,10 +262,10 @@ class BusinessUCCFilingsRequest implements ModelInterface, ArrayAccess, \JsonSer
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('bin', $data ?? [], '700969989');
-        $this->setIfExists('subcode', $data ?? [], '0586548');
-        $this->setIfExists('ucc_filings_summary', $data ?? [], true);
-        $this->setIfExists('ucc_filings_detail', $data ?? [], true);
+        $this->setIfExists('bin', $data ?? [], null);
+        $this->setIfExists('subcode', $data ?? [], null);
+        $this->setIfExists('ucc_filings_summary', $data ?? [], null);
+        $this->setIfExists('ucc_filings_detail', $data ?? [], null);
     }
 
     /**

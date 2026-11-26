@@ -346,24 +346,24 @@ class EvSearchRequest implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('subcode', $data ?? [], '0517614');
-        $this->setIfExists('comments', $data ?? [], 'testing');
+        $this->setIfExists('subcode', $data ?? [], null);
+        $this->setIfExists('comments', $data ?? [], null);
         $this->setIfExists('bin', $data ?? [], null);
-        $this->setIfExists('current_company_name', $data ?? [], 'Experian');
-        $this->setIfExists('current_addr', $data ?? [], '475 ANTON BLVD');
-        $this->setIfExists('current_city', $data ?? [], 'Costa Mesa');
-        $this->setIfExists('current_state', $data ?? [], 'CA');
-        $this->setIfExists('current_zip5', $data ?? [], '92626');
-        $this->setIfExists('current_zip_extension', $data ?? [], '1111');
-        $this->setIfExists('current_phone', $data ?? [], '9495673800');
-        $this->setIfExists('tax_id', $data ?? [], '176970333');
-        $this->setIfExists('alternate_company_name', $data ?? [], 'Experian');
-        $this->setIfExists('alternate_addr', $data ?? [], '475 ANTON BLVD');
-        $this->setIfExists('alternate_city', $data ?? [], 'Costa Mesa');
-        $this->setIfExists('alternate_state', $data ?? [], 'CA');
-        $this->setIfExists('alternate_zip5', $data ?? [], '92626');
-        $this->setIfExists('alternate_zip_extension', $data ?? [], '1111');
-        $this->setIfExists('alternate_phone', $data ?? [], '9495673800');
+        $this->setIfExists('current_company_name', $data ?? [], null);
+        $this->setIfExists('current_addr', $data ?? [], null);
+        $this->setIfExists('current_city', $data ?? [], null);
+        $this->setIfExists('current_state', $data ?? [], null);
+        $this->setIfExists('current_zip5', $data ?? [], null);
+        $this->setIfExists('current_zip_extension', $data ?? [], null);
+        $this->setIfExists('current_phone', $data ?? [], null);
+        $this->setIfExists('tax_id', $data ?? [], null);
+        $this->setIfExists('alternate_company_name', $data ?? [], null);
+        $this->setIfExists('alternate_addr', $data ?? [], null);
+        $this->setIfExists('alternate_city', $data ?? [], null);
+        $this->setIfExists('alternate_state', $data ?? [], null);
+        $this->setIfExists('alternate_zip5', $data ?? [], null);
+        $this->setIfExists('alternate_zip_extension', $data ?? [], null);
+        $this->setIfExists('alternate_phone', $data ?? [], null);
     }
 
     /**

@@ -250,8 +250,8 @@ class BusinessDataRequest implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('bin', $data ?? [], '807205801');
-        $this->setIfExists('subcode', $data ?? [], '0586548');
+        $this->setIfExists('bin', $data ?? [], null);
+        $this->setIfExists('subcode', $data ?? [], null);
     }
 
     /**

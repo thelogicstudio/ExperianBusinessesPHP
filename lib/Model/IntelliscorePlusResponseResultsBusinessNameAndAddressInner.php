@@ -292,13 +292,13 @@ class IntelliscorePlusResponseResultsBusinessNameAndAddressInner implements Mode
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('bin', $data ?? [], '123456789');
+        $this->setIfExists('bin', $data ?? [], null);
         $this->setIfExists('business_name', $data ?? [], null);
         $this->setIfExists('profile_date', $data ?? [], null);
         $this->setIfExists('profile_time', $data ?? [], null);
         $this->setIfExists('file_establish_date', $data ?? [], null);
         $this->setIfExists('address', $data ?? [], null);
-        $this->setIfExists('phone', $data ?? [], '9495673800');
+        $this->setIfExists('phone', $data ?? [], null);
         $this->setIfExists('sic', $data ?? [], null);
         $this->setIfExists('matching_name_and_address', $data ?? [], null);
     }

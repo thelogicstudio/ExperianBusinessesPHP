@@ -274,12 +274,12 @@ class BusinessTradesRequest implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('bin', $data ?? [], '700000001');
-        $this->setIfExists('subcode', $data ?? [], '0586548');
-        $this->setIfExists('trade_payment_summary', $data ?? [], true);
-        $this->setIfExists('trade_payment_totals', $data ?? [], true);
-        $this->setIfExists('trade_payment_experiences', $data ?? [], true);
-        $this->setIfExists('trade_payment_trends', $data ?? [], true);
+        $this->setIfExists('bin', $data ?? [], null);
+        $this->setIfExists('subcode', $data ?? [], null);
+        $this->setIfExists('trade_payment_summary', $data ?? [], null);
+        $this->setIfExists('trade_payment_totals', $data ?? [], null);
+        $this->setIfExists('trade_payment_experiences', $data ?? [], null);
+        $this->setIfExists('trade_payment_trends', $data ?? [], null);
     }
 
     /**

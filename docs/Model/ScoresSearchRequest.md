@@ -4,20 +4,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **string** | Business name (required) | [default to 'Experian']
-**city** | **string** | Business city | [default to 'Costa Mesa']
-**state** | **string** | Business state code (e.g. CA) | [default to 'CA']
-**subcode** | **string** | Your Experian account subcode for billing purposes | [default to '0586548']
-**street** | **string** | Current street address of the business, include suite number if applicable | [optional] [default to '475 ANTON BLVD']
-**zip** | **string** | 5-digit zip code | [optional] [default to '92626']
-**phone** | **string** | 10-digit phone number | [optional] [default to '9495673800']
-**tax_id** | **string** | 9-digit federal tax ID or Employer Identification Number | [optional] [default to '176970333']
-**geo** | **bool** | If true, businessGeocode data will be returned. If geo is omitted or false, the response will not include geo data | [optional] [default to true]
-**comments** | **string** | Optionally, you can send a comment along with your request; and the comment will be returned with your response. Useful for your internal ID tracking | [optional] [default to 'testing']
-**model_code** | **string** | Optional field used only when your subcode is configured for a custom or legacy risk model | [optional] [default to '000254']
-**match_reliability_code** | **int** | Your desired Match Reliability Code threshold. The default is 96 | [optional] [default to 90]
-**commercial_score** | **bool** | If true, receive the commercial score that has been configured for your subcode | [optional] [default to true]
-**fsr_score** | **bool** | If true, receive the Financial Stability Risk score | [optional] [default to true]
+**name** | **string** | Business name (required) |
+**city** | **string** | Business city |
+**state** | **string** | Business state code (e.g. CA) |
+**subcode** | **string** | Your Experian account subcode for billing purposes |
+**street** | **string** | Current street address of the business, include suite number if applicable | [optional]
+**zip** | **string** | 5-digit zip code | [optional]
+**phone** | **string** | 10-digit phone number | [optional]
+**tax_id** | **string** | 9-digit federal tax ID or Employer Identification Number | [optional]
+**geo** | **bool** | If true, businessGeocode data will be returned. If geo is omitted or false, the response will not include geo data | [optional]
+**comments** | **string** | Optionally, you can send a comment along with your request; and the comment will be returned with your response. Useful for your internal ID tracking | [optional]
+**model_code** | **string** | Optional field used only when your subcode is configured for a custom or legacy risk model | [optional]
+**match_reliability_code** | **int** | Your desired Match Reliability Code threshold. The default is 96 | [optional]
+**commercial_score** | **bool** | If true, receive the commercial score that has been configured for your subcode | [optional]
+**fsr_score** | **bool** | If true, receive the Financial Stability Risk score | [optional]
 **collection_score** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\ScoresSearchRequestCollectionScore**](ScoresSearchRequestCollectionScore.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
