@@ -58,12 +58,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body.
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessAggregatesRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessAggregatesRequest | Business Aggregates Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->aggregates($content_type, $body, $x_comments);
+    $result = $apiInstance->aggregates($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->aggregates: ', $e->getMessage(), PHP_EOL;

@@ -47,7 +47,7 @@ All URIs are relative to https://sandbox-us-api.experian.com/businessinformation
 ## `aggregates()`
 
 ```php
-aggregates($content_type, $body, $x_comments): \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessAggregatesResponse
+aggregates($body): \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessAggregatesResponse
 ```
 
 BizAggs
@@ -71,12 +71,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body.
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessAggregatesRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessAggregatesRequest | Business Aggregates Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->aggregates($content_type, $body, $x_comments);
+    $result = $apiInstance->aggregates($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->aggregates: ', $e->getMessage(), PHP_EOL;
@@ -87,9 +85,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body. | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessAggregatesRequest**](../Model/BusinessAggregatesRequest.md)| Business Aggregates Request | |
-| **x_comments** | **string**| An echo back field that will return x-comments in the response header | [optional] [default to &#39;Test comment&#39;] |
 
 ### Return type
 
@@ -111,7 +107,7 @@ try {
 ## `bankruptcies()`
 
 ```php
-bankruptcies($content_type, $body, $x_comments): \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessBankruptcyResponse
+bankruptcies($body): \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessBankruptcyResponse
 ```
 
 Business Bankruptcies
@@ -135,12 +131,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessBankruptcyDataRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessBankruptcyDataRequest | Business Bankruptcies Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->bankruptcies($content_type, $body, $x_comments);
+    $result = $apiInstance->bankruptcies($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->bankruptcies: ', $e->getMessage(), PHP_EOL;
@@ -151,9 +145,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessBankruptcyDataRequest**](../Model/BusinessBankruptcyDataRequest.md)| Business Bankruptcies Request | |
-| **x_comments** | **string**| An echo back field that will return x-comments in the response header | [optional] [default to &#39;Test comment&#39;] |
 
 ### Return type
 
@@ -175,7 +167,7 @@ try {
 ## `bci()`
 
 ```php
-bci($content_type, $body, $x_comments): \TheLogicStudio\ExperianBusinessesPHP\Model\BCIResponse
+bci($body): \TheLogicStudio\ExperianBusinessesPHP\Model\BCIResponse
 ```
 
 Business Compliance Insight JSON
@@ -199,12 +191,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\BCIRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\BCIRequest | BCI Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->bci($content_type, $body, $x_comments);
+    $result = $apiInstance->bci($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->bci: ', $e->getMessage(), PHP_EOL;
@@ -215,9 +205,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BCIRequest**](../Model/BCIRequest.md)| BCI Request | |
-| **x_comments** | **string**| An echo back field that will return x-comments in the response header | [optional] [default to &#39;Test comment&#39;] |
 
 ### Return type
 
@@ -239,7 +227,7 @@ try {
 ## `bcihtml()`
 
 ```php
-bcihtml($content_type, $body, $x_comments): \TheLogicStudio\ExperianBusinessesPHP\Model\BCIResponseHTML
+bcihtml($body): \TheLogicStudio\ExperianBusinessesPHP\Model\BCIResponseHTML
 ```
 
 Business Compliance Insight HTML
@@ -263,12 +251,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\BCIRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\BCIRequest | BCI Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->bcihtml($content_type, $body, $x_comments);
+    $result = $apiInstance->bcihtml($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->bcihtml: ', $e->getMessage(), PHP_EOL;
@@ -279,9 +265,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BCIRequest**](../Model/BCIRequest.md)| BCI Request | |
-| **x_comments** | **string**| An echo back field that will return x-comments in the response header | [optional] [default to &#39;Test comment&#39;] |
 
 ### Return type
 
@@ -303,7 +287,7 @@ try {
 ## `bcipdf()`
 
 ```php
-bcipdf($content_type, $body, $x_comments): \TheLogicStudio\ExperianBusinessesPHP\Model\BCIResponsePDF
+bcipdf($body): \TheLogicStudio\ExperianBusinessesPHP\Model\BCIResponsePDF
 ```
 
 Business Compliance Insight PDF
@@ -327,12 +311,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\BCIRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\BCIRequest | BCI Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->bcipdf($content_type, $body, $x_comments);
+    $result = $apiInstance->bcipdf($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->bcipdf: ', $e->getMessage(), PHP_EOL;
@@ -343,9 +325,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BCIRequest**](../Model/BCIRequest.md)| BCI Request | |
-| **x_comments** | **string**| An echo back field that will return x-comments in the response header | [optional] [default to &#39;Test comment&#39;] |
 
 ### Return type
 
@@ -367,7 +347,7 @@ try {
 ## `businesscontacts()`
 
 ```php
-businesscontacts($content_type, $body, $x_comments): \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessContactsResponse
+businesscontacts($body): \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessContactsResponse
 ```
 
 Business Contacts
@@ -391,12 +371,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessContactsRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessContactsRequest | Business Data Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->businesscontacts($content_type, $body, $x_comments);
+    $result = $apiInstance->businesscontacts($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->businesscontacts: ', $e->getMessage(), PHP_EOL;
@@ -407,9 +385,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessContactsRequest**](../Model/BusinessContactsRequest.md)| Business Data Request | |
-| **x_comments** | **string**| An echo back field that will return x-comments in the response header | [optional] [default to &#39;Test comment&#39;] |
 
 ### Return type
 
@@ -431,7 +407,7 @@ try {
 ## `collections()`
 
 ```php
-collections($content_type, $body, $x_comments): \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCollectionsResponse
+collections($body): \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCollectionsResponse
 ```
 
 Commercial Collections
@@ -455,12 +431,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCollectionsRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCollectionsRequest | Commercial Collections Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->collections($content_type, $body, $x_comments);
+    $result = $apiInstance->collections($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->collections: ', $e->getMessage(), PHP_EOL;
@@ -471,9 +445,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCollectionsRequest**](../Model/BusinessCollectionsRequest.md)| Commercial Collections Request | |
-| **x_comments** | **string**| An echo back field that will return x-comments in the response header | [optional] [default to &#39;Test comment&#39;] |
 
 ### Return type
 
@@ -495,7 +467,7 @@ try {
 ## `corporateLinkage()`
 
 ```php
-corporateLinkage($content_type, $body, $x_comments): \TheLogicStudio\ExperianBusinessesPHP\Model\CorporateLinkageResponse
+corporateLinkage($body): \TheLogicStudio\ExperianBusinessesPHP\Model\CorporateLinkageResponse
 ```
 
 Corporate Linkage
@@ -519,12 +491,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCorporateLinkageRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCorporateLinkageRequest | Corporate Linkage Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->corporateLinkage($content_type, $body, $x_comments);
+    $result = $apiInstance->corporateLinkage($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->corporateLinkage: ', $e->getMessage(), PHP_EOL;
@@ -535,9 +505,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCorporateLinkageRequest**](../Model/BusinessCorporateLinkageRequest.md)| Corporate Linkage Request | |
-| **x_comments** | **string**| An echo back field that will return x-comments in the response header | [optional] [default to &#39;Test comment&#39;] |
 
 ### Return type
 
@@ -559,7 +527,7 @@ try {
 ## `corporateRegistration()`
 
 ```php
-corporateRegistration($content_type, $body, $x_comments): \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCorporateRegistrationResponse
+corporateRegistration($body): \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCorporateRegistrationResponse
 ```
 
 Corporate Registrations
@@ -583,12 +551,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCorporateRegistrationsRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCorporateRegistrationsRequest | Corporate Registrations Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->corporateRegistration($content_type, $body, $x_comments);
+    $result = $apiInstance->corporateRegistration($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->corporateRegistration: ', $e->getMessage(), PHP_EOL;
@@ -599,9 +565,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCorporateRegistrationsRequest**](../Model/BusinessCorporateRegistrationsRequest.md)| Corporate Registrations Request | |
-| **x_comments** | **string**| An echo back field that will return x-comments in the response header | [optional] [default to &#39;Test comment&#39;] |
 
 ### Return type
 
@@ -623,7 +587,7 @@ try {
 ## `creditstatus()`
 
 ```php
-creditstatus($content_type, $body, $x_comments): \TheLogicStudio\ExperianBusinessesPHP\Model\CreditStatusResponse
+creditstatus($body): \TheLogicStudio\ExperianBusinessesPHP\Model\CreditStatusResponse
 ```
 
 Commercial Credit Status
@@ -647,12 +611,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequest | Commercial Credit Status Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->creditstatus($content_type, $body, $x_comments);
+    $result = $apiInstance->creditstatus($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->creditstatus: ', $e->getMessage(), PHP_EOL;
@@ -663,9 +625,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequest**](../Model/BusinessDataRequest.md)| Commercial Credit Status Request | |
-| **x_comments** | **string**| An echo back field that will return x-comments in the response header | [optional] [default to &#39;Test comment&#39;] |
 
 ### Return type
 
@@ -687,7 +647,7 @@ try {
 ## `cyberscore()`
 
 ```php
-cyberscore($content_type, $body, $x_comments): \TheLogicStudio\ExperianBusinessesPHP\Model\CyberScoreResponse
+cyberscore($body): \TheLogicStudio\ExperianBusinessesPHP\Model\CyberScoreResponse
 ```
 
 Cyber Risk Score and Attributes
@@ -711,12 +671,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\CyberScoreRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\CyberScoreRequest | Cyber Score Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->cyberscore($content_type, $body, $x_comments);
+    $result = $apiInstance->cyberscore($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->cyberscore: ', $e->getMessage(), PHP_EOL;
@@ -727,9 +685,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\CyberScoreRequest**](../Model/CyberScoreRequest.md)| Cyber Score Request | |
-| **x_comments** | **string**| An echo back field that will return x-comments in the response header | [optional] [default to &#39;Test comment&#39;] |
 
 ### Return type
 
@@ -751,7 +707,7 @@ try {
 ## `facts()`
 
 ```php
-facts($content_type, $body, $x_comments): \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessFactsResponse
+facts($body): \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessFactsResponse
 ```
 
 Business Facts
@@ -775,12 +731,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequest | Business Facts Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->facts($content_type, $body, $x_comments);
+    $result = $apiInstance->facts($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->facts: ', $e->getMessage(), PHP_EOL;
@@ -791,9 +745,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequest**](../Model/BusinessDataRequest.md)| Business Facts Request | |
-| **x_comments** | **string**| An echo back field that will return x-comments in the response header | [optional] [default to &#39;Test comment&#39;] |
 
 ### Return type
 
@@ -815,7 +767,7 @@ try {
 ## `fraudShields()`
 
 ```php
-fraudShields($content_type, $body, $x_comments): \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessFraudShieldResponse
+fraudShields($body): \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessFraudShieldResponse
 ```
 
 Commercial Fraud Shields
@@ -839,12 +791,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequest | Commercial Fraud Shields Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->fraudShields($content_type, $body, $x_comments);
+    $result = $apiInstance->fraudShields($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->fraudShields: ', $e->getMessage(), PHP_EOL;
@@ -855,9 +805,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequest**](../Model/BusinessDataRequest.md)| Commercial Fraud Shields Request | |
-| **x_comments** | **string**| An echo back field that will return x-comments in the response header | [optional] [default to &#39;Test comment&#39;] |
 
 ### Return type
 
@@ -879,7 +827,7 @@ try {
 ## `governmentdetails()`
 
 ```php
-governmentdetails($content_type, $body, $x_comments): \TheLogicStudio\ExperianBusinessesPHP\Model\GovernmentDetailsResponse
+governmentdetails($body): \TheLogicStudio\ExperianBusinessesPHP\Model\GovernmentDetailsResponse
 ```
 
 Government Details
@@ -903,12 +851,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\GovernmentDetailsRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\GovernmentDetailsRequest | Government Details Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->governmentdetails($content_type, $body, $x_comments);
+    $result = $apiInstance->governmentdetails($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->governmentdetails: ', $e->getMessage(), PHP_EOL;
@@ -919,9 +865,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\GovernmentDetailsRequest**](../Model/GovernmentDetailsRequest.md)| Government Details Request | |
-| **x_comments** | **string**| An echo back field that will return x-comments in the response header | [optional] [default to &#39;Test comment&#39;] |
 
 ### Return type
 
@@ -943,7 +887,7 @@ try {
 ## `headers()`
 
 ```php
-headers($content_type, $body, $x_comments): \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessHeaderResponse
+headers($body): \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessHeaderResponse
 ```
 
 Business Headers
@@ -967,12 +911,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequest | Business Headers Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->headers($content_type, $body, $x_comments);
+    $result = $apiInstance->headers($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->headers: ', $e->getMessage(), PHP_EOL;
@@ -983,9 +925,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequest**](../Model/BusinessDataRequest.md)| Business Headers Request | |
-| **x_comments** | **string**| An echo back field that will return x-comments in the response header | [optional] [default to &#39;Test comment&#39;] |
 
 ### Return type
 
@@ -1007,7 +947,7 @@ try {
 ## `intelliscoreplus()`
 
 ```php
-intelliscoreplus($content_type, $body, $x_comments): \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusResponse
+intelliscoreplus($body): \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusResponse
 ```
 
 Intelliscore Plus JSON
@@ -1031,12 +971,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body.
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest | Intelliscore Plus Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->intelliscoreplus($content_type, $body, $x_comments);
+    $result = $apiInstance->intelliscoreplus($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->intelliscoreplus: ', $e->getMessage(), PHP_EOL;
@@ -1047,9 +985,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body. | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest**](../Model/IntelliscorePlusRequest.md)| Intelliscore Plus Request | |
-| **x_comments** | **string**| An echo back field that will return x-comments in the response header | [optional] [default to &#39;Test comment&#39;] |
 
 ### Return type
 
@@ -1071,7 +1007,7 @@ try {
 ## `intelliscoreplushtml()`
 
 ```php
-intelliscoreplushtml($content_type, $body, $x_comments): \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusHTMLResponse
+intelliscoreplushtml($body): \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusHTMLResponse
 ```
 
 Intelliscore Plus HTML
@@ -1095,12 +1031,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body.
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest | Intelliscore Plus HTML Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->intelliscoreplushtml($content_type, $body, $x_comments);
+    $result = $apiInstance->intelliscoreplushtml($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->intelliscoreplushtml: ', $e->getMessage(), PHP_EOL;
@@ -1111,9 +1045,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body. | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest**](../Model/IntelliscorePlusRequest.md)| Intelliscore Plus HTML Request | |
-| **x_comments** | **string**| An echo back field that will return x-comments in the response header | [optional] [default to &#39;Test comment&#39;] |
 
 ### Return type
 
@@ -1135,7 +1067,7 @@ try {
 ## `intelliscorepluspdf()`
 
 ```php
-intelliscorepluspdf($content_type, $body, $x_comments): \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusPDFResponse
+intelliscorepluspdf($body): \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusPDFResponse
 ```
 
 Intelliscore Plus PDF
@@ -1159,12 +1091,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body.
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest | Intelliscore Plus PDF Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->intelliscorepluspdf($content_type, $body, $x_comments);
+    $result = $apiInstance->intelliscorepluspdf($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->intelliscorepluspdf: ', $e->getMessage(), PHP_EOL;
@@ -1175,9 +1105,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body. | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest**](../Model/IntelliscorePlusRequest.md)| Intelliscore Plus PDF Request | |
-| **x_comments** | **string**| An echo back field that will return x-comments in the response header | [optional] [default to &#39;Test comment&#39;] |
 
 ### Return type
 
@@ -1199,7 +1127,7 @@ try {
 ## `istwatch()`
 
 ```php
-istwatch($content_type, $body, $x_comments): \TheLogicStudio\ExperianBusinessesPHP\Model\ISTWatchResponse
+istwatch($body): \TheLogicStudio\ExperianBusinessesPHP\Model\ISTWatchResponse
 ```
 
 IST Watch
@@ -1223,12 +1151,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\ISTWatchRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\ISTWatchRequest | IST Watch Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->istwatch($content_type, $body, $x_comments);
+    $result = $apiInstance->istwatch($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->istwatch: ', $e->getMessage(), PHP_EOL;
@@ -1239,9 +1165,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\ISTWatchRequest**](../Model/ISTWatchRequest.md)| IST Watch Request | |
-| **x_comments** | **string**| An echo back field that will return x-comments in the response header | [optional] [default to &#39;Test comment&#39;] |
 
 ### Return type
 
@@ -1263,7 +1187,7 @@ try {
 ## `judgments()`
 
 ```php
-judgments($content_type, $body, $x_comments): \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessJudgmentResponse
+judgments($body): \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessJudgmentResponse
 ```
 
 Business Judgments
@@ -1287,12 +1211,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessJudgmentRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessJudgmentRequest | Business Judgments Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->judgments($content_type, $body, $x_comments);
+    $result = $apiInstance->judgments($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->judgments: ', $e->getMessage(), PHP_EOL;
@@ -1303,9 +1225,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessJudgmentRequest**](../Model/BusinessJudgmentRequest.md)| Business Judgments Request | |
-| **x_comments** | **string**| An echo back field that will return x-comments in the response header | [optional] [default to &#39;Test comment&#39;] |
 
 ### Return type
 
@@ -1327,7 +1247,7 @@ try {
 ## `legalCollectionSummaries()`
 
 ```php
-legalCollectionSummaries($content_type, $body, $x_comments): \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessLegalCollectionSummariesResponse
+legalCollectionSummaries($body): \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessLegalCollectionSummariesResponse
 ```
 
 Legal Filings and Collections Summaries
@@ -1351,12 +1271,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessLegalCollectionSummariesRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessLegalCollectionSummariesRequest | Legal Filings and Collections Summaries Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->legalCollectionSummaries($content_type, $body, $x_comments);
+    $result = $apiInstance->legalCollectionSummaries($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->legalCollectionSummaries: ', $e->getMessage(), PHP_EOL;
@@ -1367,9 +1285,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessLegalCollectionSummariesRequest**](../Model/BusinessLegalCollectionSummariesRequest.md)| Legal Filings and Collections Summaries Request | |
-| **x_comments** | **string**| An echo back field that will return x-comments in the response header | [optional] [default to &#39;Test comment&#39;] |
 
 ### Return type
 
@@ -1391,7 +1307,7 @@ try {
 ## `liens()`
 
 ```php
-liens($content_type, $body, $x_comments): \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessLiensResponse
+liens($body): \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessLiensResponse
 ```
 
 Business Liens
@@ -1415,12 +1331,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessLiensRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessLiensRequest | Business Liens Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->liens($content_type, $body, $x_comments);
+    $result = $apiInstance->liens($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->liens: ', $e->getMessage(), PHP_EOL;
@@ -1431,9 +1345,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessLiensRequest**](../Model/BusinessLiensRequest.md)| Business Liens Request | |
-| **x_comments** | **string**| An echo back field that will return x-comments in the response header | [optional] [default to &#39;Test comment&#39;] |
 
 ### Return type
 
@@ -1455,7 +1367,7 @@ try {
 ## `multisegments()`
 
 ```php
-multisegments($content_type, $body, $x_comments): \TheLogicStudio\ExperianBusinessesPHP\Model\MultiSegmentsResponse
+multisegments($body): \TheLogicStudio\ExperianBusinessesPHP\Model\MultiSegmentsResponse
 ```
 
 MultiSegments. Request a la carte segments in a single call
@@ -1479,12 +1391,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\MultiSegmentsRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\MultiSegmentsRequest | Multi Segments Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->multisegments($content_type, $body, $x_comments);
+    $result = $apiInstance->multisegments($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->multisegments: ', $e->getMessage(), PHP_EOL;
@@ -1495,9 +1405,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\MultiSegmentsRequest**](../Model/MultiSegmentsRequest.md)| Multi Segments Request | |
-| **x_comments** | **string**| An echo back field that will return x-comments in the response header | [optional] [default to &#39;Test comment&#39;] |
 
 ### Return type
 
@@ -1519,7 +1427,7 @@ try {
 ## `premierprofiles()`
 
 ```php
-premierprofiles($content_type, $body, $x_comments): \TheLogicStudio\ExperianBusinessesPHP\Model\PremierProfilesResponse
+premierprofiles($body): \TheLogicStudio\ExperianBusinessesPHP\Model\PremierProfilesResponse
 ```
 
 Premier Profiles JSON
@@ -1543,12 +1451,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body.
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest | Business Premier Profile Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->premierprofiles($content_type, $body, $x_comments);
+    $result = $apiInstance->premierprofiles($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->premierprofiles: ', $e->getMessage(), PHP_EOL;
@@ -1559,9 +1465,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body. | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest**](../Model/BusinessPremierProfileRequest.md)| Business Premier Profile Request | |
-| **x_comments** | **string**| An echo back field that will return x-comments in the response header | [optional] [default to &#39;Test comment&#39;] |
 
 ### Return type
 
@@ -1583,7 +1487,7 @@ try {
 ## `premierprofileshtml()`
 
 ```php
-premierprofileshtml($content_type, $body, $x_comments): \TheLogicStudio\ExperianBusinessesPHP\Model\PremierProfilesHTMLResponse
+premierprofileshtml($body): \TheLogicStudio\ExperianBusinessesPHP\Model\PremierProfilesHTMLResponse
 ```
 
 Premier Profiles HTML
@@ -1607,12 +1511,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body.
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest | Business Premier Profile Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->premierprofileshtml($content_type, $body, $x_comments);
+    $result = $apiInstance->premierprofileshtml($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->premierprofileshtml: ', $e->getMessage(), PHP_EOL;
@@ -1623,9 +1525,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body. | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest**](../Model/BusinessPremierProfileRequest.md)| Business Premier Profile Request | |
-| **x_comments** | **string**| An echo back field that will return x-comments in the response header | [optional] [default to &#39;Test comment&#39;] |
 
 ### Return type
 
@@ -1647,7 +1547,7 @@ try {
 ## `premierprofilespdf()`
 
 ```php
-premierprofilespdf($content_type, $body, $x_comments): \TheLogicStudio\ExperianBusinessesPHP\Model\PremierProfilesPDFResponse
+premierprofilespdf($body): \TheLogicStudio\ExperianBusinessesPHP\Model\PremierProfilesPDFResponse
 ```
 
 Premier Profiles PDF
@@ -1671,12 +1571,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body.
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest | Business Premier Profile PDF Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->premierprofilespdf($content_type, $body, $x_comments);
+    $result = $apiInstance->premierprofilespdf($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->premierprofilespdf: ', $e->getMessage(), PHP_EOL;
@@ -1687,9 +1585,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body. | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest**](../Model/BusinessPremierProfileRequest.md)| Business Premier Profile PDF Request | |
-| **x_comments** | **string**| An echo back field that will return x-comments in the response header | [optional] [default to &#39;Test comment&#39;] |
 
 ### Return type
 
@@ -1711,7 +1607,7 @@ try {
 ## `quicksearch()`
 
 ```php
-quicksearch($content_type, $body, $x_comments): \TheLogicStudio\ExperianBusinessesPHP\Model\QuickSearchResponse
+quicksearch($body): \TheLogicStudio\ExperianBusinessesPHP\Model\QuickSearchResponse
 ```
 
 Quick Search.  Our secondary search method
@@ -1735,12 +1631,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\QuickSearchRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\QuickSearchRequest | QuickSearch Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->quicksearch($content_type, $body, $x_comments);
+    $result = $apiInstance->quicksearch($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->quicksearch: ', $e->getMessage(), PHP_EOL;
@@ -1751,9 +1645,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\QuickSearchRequest**](../Model/QuickSearchRequest.md)| QuickSearch Request | |
-| **x_comments** | **string**| An echo back field that will return x-comments in the response header | [optional] [default to &#39;Test comment&#39;] |
 
 ### Return type
 
@@ -1775,7 +1667,7 @@ try {
 ## `reverseaddresses()`
 
 ```php
-reverseaddresses($content_type, $body, $x_comments): \TheLogicStudio\ExperianBusinessesPHP\Model\ReverseAddressesResponse
+reverseaddresses($body): \TheLogicStudio\ExperianBusinessesPHP\Model\ReverseAddressesResponse
 ```
 
 Reverse Addresses
@@ -1799,12 +1691,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessReverseAddressesRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessReverseAddressesRequest | Reverse Address Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->reverseaddresses($content_type, $body, $x_comments);
+    $result = $apiInstance->reverseaddresses($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->reverseaddresses: ', $e->getMessage(), PHP_EOL;
@@ -1815,9 +1705,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessReverseAddressesRequest**](../Model/BusinessReverseAddressesRequest.md)| Reverse Address Request | |
-| **x_comments** | **string**| An echo back field that will return x-comments in the response header | [optional] [default to &#39;Test comment&#39;] |
 
 ### Return type
 
@@ -1839,7 +1727,7 @@ try {
 ## `reversephones()`
 
 ```php
-reversephones($content_type, $body, $x_comments): \TheLogicStudio\ExperianBusinessesPHP\Model\ReversePhonesResponse
+reversephones($body): \TheLogicStudio\ExperianBusinessesPHP\Model\ReversePhonesResponse
 ```
 
 Reverse Phones
@@ -1863,12 +1751,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessReversePhonesRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessReversePhonesRequest | Reverse Phones Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->reversephones($content_type, $body, $x_comments);
+    $result = $apiInstance->reversephones($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->reversephones: ', $e->getMessage(), PHP_EOL;
@@ -1879,9 +1765,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessReversePhonesRequest**](../Model/BusinessReversePhonesRequest.md)| Reverse Phones Request | |
-| **x_comments** | **string**| An echo back field that will return x-comments in the response header | [optional] [default to &#39;Test comment&#39;] |
 
 ### Return type
 
@@ -1903,7 +1787,7 @@ try {
 ## `reversetaxids()`
 
 ```php
-reversetaxids($content_type, $body, $x_comments): \TheLogicStudio\ExperianBusinessesPHP\Model\ReverseTaxIDsResponse
+reversetaxids($body): \TheLogicStudio\ExperianBusinessesPHP\Model\ReverseTaxIDsResponse
 ```
 
 Reverse TaxIDs
@@ -1927,12 +1811,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessReverseTaxIDsRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessReverseTaxIDsRequest | Reverse TaxID Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->reversetaxids($content_type, $body, $x_comments);
+    $result = $apiInstance->reversetaxids($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->reversetaxids: ', $e->getMessage(), PHP_EOL;
@@ -1943,9 +1825,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessReverseTaxIDsRequest**](../Model/BusinessReverseTaxIDsRequest.md)| Reverse TaxID Request | |
-| **x_comments** | **string**| An echo back field that will return x-comments in the response header | [optional] [default to &#39;Test comment&#39;] |
 
 ### Return type
 
@@ -1967,7 +1847,7 @@ try {
 ## `riskdashboards()`
 
 ```php
-riskdashboards($content_type, $body, $x_comments): \TheLogicStudio\ExperianBusinessesPHP\Model\RiskDashboardsResponse
+riskdashboards($body): \TheLogicStudio\ExperianBusinessesPHP\Model\RiskDashboardsResponse
 ```
 
 Commercial Risk Dashboards
@@ -1991,12 +1871,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequestWithModel(); // \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequestWithModel | Commercial Risk Dashboards Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->riskdashboards($content_type, $body, $x_comments);
+    $result = $apiInstance->riskdashboards($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->riskdashboards: ', $e->getMessage(), PHP_EOL;
@@ -2007,9 +1885,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequestWithModel**](../Model/BusinessDataRequestWithModel.md)| Commercial Risk Dashboards Request | |
-| **x_comments** | **string**| An echo back field that will return x-comments in the response header | [optional] [default to &#39;Test comment&#39;] |
 
 ### Return type
 
@@ -2031,7 +1907,7 @@ try {
 ## `scores()`
 
 ```php
-scores($content_type, $body): \TheLogicStudio\ExperianBusinessesPHP\Model\ScoresResponse
+scores($body): \TheLogicStudio\ExperianBusinessesPHP\Model\ScoresResponse
 ```
 
 Commercial Scores
@@ -2055,11 +1931,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessScoresRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessScoresRequest | Commercial Scores Request
 
 try {
-    $result = $apiInstance->scores($content_type, $body);
+    $result = $apiInstance->scores($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->scores: ', $e->getMessage(), PHP_EOL;
@@ -2070,7 +1945,6 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessScoresRequest**](../Model/BusinessScoresRequest.md)| Commercial Scores Request | |
 
 ### Return type
@@ -2093,7 +1967,7 @@ try {
 ## `scoressearch()`
 
 ```php
-scoressearch($content_type, $body, $x_comments): \TheLogicStudio\ExperianBusinessesPHP\Model\ScoresSearchResponse
+scoressearch($body): \TheLogicStudio\ExperianBusinessesPHP\Model\ScoresSearchResponse
 ```
 
 Scores Auto Search
@@ -2117,12 +1991,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\ScoresSearchRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\ScoresSearchRequest | Commercial Scores Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->scoressearch($content_type, $body, $x_comments);
+    $result = $apiInstance->scoressearch($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->scoressearch: ', $e->getMessage(), PHP_EOL;
@@ -2133,9 +2005,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\ScoresSearchRequest**](../Model/ScoresSearchRequest.md)| Commercial Scores Request | |
-| **x_comments** | **string**| An echo back field that will return x-comments in the response header | [optional] [default to &#39;Test comment&#39;] |
 
 ### Return type
 
@@ -2157,7 +2027,7 @@ try {
 ## `search()`
 
 ```php
-search($content_type, $body, $x_comments): \TheLogicStudio\ExperianBusinessesPHP\Model\SearchResponse
+search($body): \TheLogicStudio\ExperianBusinessesPHP\Model\SearchResponse
 ```
 
 Advanced Business Search.  The primary search method
@@ -2181,12 +2051,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\SearchRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\SearchRequest | Business Search Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->search($content_type, $body, $x_comments);
+    $result = $apiInstance->search($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->search: ', $e->getMessage(), PHP_EOL;
@@ -2197,9 +2065,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\SearchRequest**](../Model/SearchRequest.md)| Business Search Request | |
-| **x_comments** | **string**| An echo back field that will return x-comments in the response header | [optional] [default to &#39;Test comment&#39;] |
 
 ### Return type
 
@@ -2221,7 +2087,7 @@ try {
 ## `trades()`
 
 ```php
-trades($content_type, $body, $x_comments): \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessTradesResponse
+trades($body): \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessTradesResponse
 ```
 
 Commercial Trades
@@ -2245,12 +2111,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessTradesRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessTradesRequest | Commercial Trades Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->trades($content_type, $body, $x_comments);
+    $result = $apiInstance->trades($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->trades: ', $e->getMessage(), PHP_EOL;
@@ -2261,9 +2125,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessTradesRequest**](../Model/BusinessTradesRequest.md)| Commercial Trades Request | |
-| **x_comments** | **string**| An echo back field that will return x-comments in the response header | [optional] [default to &#39;Test comment&#39;] |
 
 ### Return type
 
@@ -2285,7 +2147,7 @@ try {
 ## `uccfilings()`
 
 ```php
-uccfilings($content_type, $body, $x_comments): \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessUCCFilingsResponse
+uccfilings($body): \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessUCCFilingsResponse
 ```
 
 UCC Filings
@@ -2309,12 +2171,10 @@ $apiInstance = new TheLogicStudio\ExperianBusinessesPHP\Api\BusinessInformationS
     new GuzzleHttp\Client(),
     $config
 );
-$content_type = 'application/json'; // string | Content-Type field is to describe the data contained in the body
 $body = new \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessUCCFilingsRequest(); // \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessUCCFilingsRequest | UCC Filings Request
-$x_comments = 'Test comment'; // string | An echo back field that will return x-comments in the response header
 
 try {
-    $result = $apiInstance->uccfilings($content_type, $body, $x_comments);
+    $result = $apiInstance->uccfilings($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BusinessInformationServicesApi->uccfilings: ', $e->getMessage(), PHP_EOL;
@@ -2325,9 +2185,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **content_type** | **string**| Content-Type field is to describe the data contained in the body | [default to &#39;application/json&#39;] |
 | **body** | [**\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessUCCFilingsRequest**](../Model/BusinessUCCFilingsRequest.md)| UCC Filings Request | |
-| **x_comments** | **string**| An echo back field that will return x-comments in the response header | [optional] [default to &#39;Test comment&#39;] |
 
 ### Return type
 

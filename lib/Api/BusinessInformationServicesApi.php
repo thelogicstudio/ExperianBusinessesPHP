@@ -235,18 +235,16 @@ class BusinessInformationServicesApi
      *
      * BizAggs
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessAggregatesRequest $body Business Aggregates Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['aggregates'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessAggregatesResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function aggregates($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['aggregates'][0])
+    public function aggregates($body, string $contentType = self::contentTypes['aggregates'][0])
     {
-        list($response) = $this->aggregatesWithHttpInfo($content_type, $body, $x_comments, $contentType);
+        list($response) = $this->aggregatesWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -255,18 +253,16 @@ class BusinessInformationServicesApi
      *
      * BizAggs
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessAggregatesRequest $body Business Aggregates Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['aggregates'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessAggregatesResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function aggregatesWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['aggregates'][0])
+    public function aggregatesWithHttpInfo($body, string $contentType = self::contentTypes['aggregates'][0])
     {
-        $request = $this->aggregatesRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->aggregatesRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -426,17 +422,15 @@ class BusinessInformationServicesApi
      *
      * BizAggs
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessAggregatesRequest $body Business Aggregates Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['aggregates'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function aggregatesAsync($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['aggregates'][0])
+    public function aggregatesAsync($body, string $contentType = self::contentTypes['aggregates'][0])
     {
-        return $this->aggregatesAsyncWithHttpInfo($content_type, $body, $x_comments, $contentType)
+        return $this->aggregatesAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -449,18 +443,16 @@ class BusinessInformationServicesApi
      *
      * BizAggs
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessAggregatesRequest $body Business Aggregates Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['aggregates'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function aggregatesAsyncWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['aggregates'][0])
+    public function aggregatesAsyncWithHttpInfo($body, string $contentType = self::contentTypes['aggregates'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessAggregatesResponse';
-        $request = $this->aggregatesRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->aggregatesRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -501,23 +493,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'aggregates'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessAggregatesRequest $body Business Aggregates Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['aggregates'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function aggregatesRequest($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['aggregates'][0])
+    public function aggregatesRequest($body, string $contentType = self::contentTypes['aggregates'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling aggregates'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -525,7 +508,6 @@ class BusinessInformationServicesApi
                 'Missing the required parameter $body when calling aggregates'
             );
         }
-
 
 
         $resourcePath = '/v1/aggregates';
@@ -536,14 +518,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
-        // header params
-        if ($x_comments !== null) {
-            $headerParams['x-comments'] = ObjectSerializer::toHeaderValue($x_comments);
-        }
 
 
 
@@ -616,18 +590,16 @@ class BusinessInformationServicesApi
      *
      * Business Bankruptcies
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessBankruptcyDataRequest $body Business Bankruptcies Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bankruptcies'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessBankruptcyResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function bankruptcies($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['bankruptcies'][0])
+    public function bankruptcies($body, string $contentType = self::contentTypes['bankruptcies'][0])
     {
-        list($response) = $this->bankruptciesWithHttpInfo($content_type, $body, $x_comments, $contentType);
+        list($response) = $this->bankruptciesWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -636,18 +608,16 @@ class BusinessInformationServicesApi
      *
      * Business Bankruptcies
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessBankruptcyDataRequest $body Business Bankruptcies Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bankruptcies'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessBankruptcyResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function bankruptciesWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['bankruptcies'][0])
+    public function bankruptciesWithHttpInfo($body, string $contentType = self::contentTypes['bankruptcies'][0])
     {
-        $request = $this->bankruptciesRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->bankruptciesRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -807,17 +777,15 @@ class BusinessInformationServicesApi
      *
      * Business Bankruptcies
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessBankruptcyDataRequest $body Business Bankruptcies Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bankruptcies'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function bankruptciesAsync($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['bankruptcies'][0])
+    public function bankruptciesAsync($body, string $contentType = self::contentTypes['bankruptcies'][0])
     {
-        return $this->bankruptciesAsyncWithHttpInfo($content_type, $body, $x_comments, $contentType)
+        return $this->bankruptciesAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -830,18 +798,16 @@ class BusinessInformationServicesApi
      *
      * Business Bankruptcies
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessBankruptcyDataRequest $body Business Bankruptcies Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bankruptcies'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function bankruptciesAsyncWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['bankruptcies'][0])
+    public function bankruptciesAsyncWithHttpInfo($body, string $contentType = self::contentTypes['bankruptcies'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessBankruptcyResponse';
-        $request = $this->bankruptciesRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->bankruptciesRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -882,23 +848,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'bankruptcies'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessBankruptcyDataRequest $body Business Bankruptcies Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bankruptcies'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function bankruptciesRequest($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['bankruptcies'][0])
+    public function bankruptciesRequest($body, string $contentType = self::contentTypes['bankruptcies'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling bankruptcies'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -906,7 +863,6 @@ class BusinessInformationServicesApi
                 'Missing the required parameter $body when calling bankruptcies'
             );
         }
-
 
 
         $resourcePath = '/v1/bankruptcies';
@@ -917,14 +873,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
-        // header params
-        if ($x_comments !== null) {
-            $headerParams['x-comments'] = ObjectSerializer::toHeaderValue($x_comments);
-        }
 
 
 
@@ -997,18 +945,16 @@ class BusinessInformationServicesApi
      *
      * Business Compliance Insight JSON
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BCIRequest $body BCI Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bci'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\BCIResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function bci($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['bci'][0])
+    public function bci($body, string $contentType = self::contentTypes['bci'][0])
     {
-        list($response) = $this->bciWithHttpInfo($content_type, $body, $x_comments, $contentType);
+        list($response) = $this->bciWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -1017,18 +963,16 @@ class BusinessInformationServicesApi
      *
      * Business Compliance Insight JSON
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BCIRequest $body BCI Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bci'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\BCIResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function bciWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['bci'][0])
+    public function bciWithHttpInfo($body, string $contentType = self::contentTypes['bci'][0])
     {
-        $request = $this->bciRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->bciRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1188,17 +1132,15 @@ class BusinessInformationServicesApi
      *
      * Business Compliance Insight JSON
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BCIRequest $body BCI Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bci'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function bciAsync($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['bci'][0])
+    public function bciAsync($body, string $contentType = self::contentTypes['bci'][0])
     {
-        return $this->bciAsyncWithHttpInfo($content_type, $body, $x_comments, $contentType)
+        return $this->bciAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1211,18 +1153,16 @@ class BusinessInformationServicesApi
      *
      * Business Compliance Insight JSON
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BCIRequest $body BCI Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bci'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function bciAsyncWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['bci'][0])
+    public function bciAsyncWithHttpInfo($body, string $contentType = self::contentTypes['bci'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\BCIResponse';
-        $request = $this->bciRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->bciRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1263,23 +1203,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'bci'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BCIRequest $body BCI Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bci'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function bciRequest($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['bci'][0])
+    public function bciRequest($body, string $contentType = self::contentTypes['bci'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling bci'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -1287,7 +1218,6 @@ class BusinessInformationServicesApi
                 'Missing the required parameter $body when calling bci'
             );
         }
-
 
 
         $resourcePath = '/v1/bci';
@@ -1298,14 +1228,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
-        // header params
-        if ($x_comments !== null) {
-            $headerParams['x-comments'] = ObjectSerializer::toHeaderValue($x_comments);
-        }
 
 
 
@@ -1378,18 +1300,16 @@ class BusinessInformationServicesApi
      *
      * Business Compliance Insight HTML
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BCIRequest $body BCI Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bcihtml'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\BCIResponseHTML|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function bcihtml($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['bcihtml'][0])
+    public function bcihtml($body, string $contentType = self::contentTypes['bcihtml'][0])
     {
-        list($response) = $this->bcihtmlWithHttpInfo($content_type, $body, $x_comments, $contentType);
+        list($response) = $this->bcihtmlWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -1398,18 +1318,16 @@ class BusinessInformationServicesApi
      *
      * Business Compliance Insight HTML
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BCIRequest $body BCI Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bcihtml'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\BCIResponseHTML|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function bcihtmlWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['bcihtml'][0])
+    public function bcihtmlWithHttpInfo($body, string $contentType = self::contentTypes['bcihtml'][0])
     {
-        $request = $this->bcihtmlRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->bcihtmlRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1569,17 +1487,15 @@ class BusinessInformationServicesApi
      *
      * Business Compliance Insight HTML
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BCIRequest $body BCI Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bcihtml'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function bcihtmlAsync($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['bcihtml'][0])
+    public function bcihtmlAsync($body, string $contentType = self::contentTypes['bcihtml'][0])
     {
-        return $this->bcihtmlAsyncWithHttpInfo($content_type, $body, $x_comments, $contentType)
+        return $this->bcihtmlAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1592,18 +1508,16 @@ class BusinessInformationServicesApi
      *
      * Business Compliance Insight HTML
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BCIRequest $body BCI Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bcihtml'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function bcihtmlAsyncWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['bcihtml'][0])
+    public function bcihtmlAsyncWithHttpInfo($body, string $contentType = self::contentTypes['bcihtml'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\BCIResponseHTML';
-        $request = $this->bcihtmlRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->bcihtmlRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1644,23 +1558,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'bcihtml'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BCIRequest $body BCI Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bcihtml'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function bcihtmlRequest($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['bcihtml'][0])
+    public function bcihtmlRequest($body, string $contentType = self::contentTypes['bcihtml'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling bcihtml'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -1668,7 +1573,6 @@ class BusinessInformationServicesApi
                 'Missing the required parameter $body when calling bcihtml'
             );
         }
-
 
 
         $resourcePath = '/v1/bci/html';
@@ -1679,14 +1583,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
-        // header params
-        if ($x_comments !== null) {
-            $headerParams['x-comments'] = ObjectSerializer::toHeaderValue($x_comments);
-        }
 
 
 
@@ -1759,18 +1655,16 @@ class BusinessInformationServicesApi
      *
      * Business Compliance Insight PDF
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BCIRequest $body BCI Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bcipdf'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\BCIResponsePDF|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function bcipdf($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['bcipdf'][0])
+    public function bcipdf($body, string $contentType = self::contentTypes['bcipdf'][0])
     {
-        list($response) = $this->bcipdfWithHttpInfo($content_type, $body, $x_comments, $contentType);
+        list($response) = $this->bcipdfWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -1779,18 +1673,16 @@ class BusinessInformationServicesApi
      *
      * Business Compliance Insight PDF
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BCIRequest $body BCI Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bcipdf'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\BCIResponsePDF|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function bcipdfWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['bcipdf'][0])
+    public function bcipdfWithHttpInfo($body, string $contentType = self::contentTypes['bcipdf'][0])
     {
-        $request = $this->bcipdfRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->bcipdfRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1950,17 +1842,15 @@ class BusinessInformationServicesApi
      *
      * Business Compliance Insight PDF
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BCIRequest $body BCI Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bcipdf'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function bcipdfAsync($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['bcipdf'][0])
+    public function bcipdfAsync($body, string $contentType = self::contentTypes['bcipdf'][0])
     {
-        return $this->bcipdfAsyncWithHttpInfo($content_type, $body, $x_comments, $contentType)
+        return $this->bcipdfAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1973,18 +1863,16 @@ class BusinessInformationServicesApi
      *
      * Business Compliance Insight PDF
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BCIRequest $body BCI Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bcipdf'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function bcipdfAsyncWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['bcipdf'][0])
+    public function bcipdfAsyncWithHttpInfo($body, string $contentType = self::contentTypes['bcipdf'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\BCIResponsePDF';
-        $request = $this->bcipdfRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->bcipdfRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2025,23 +1913,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'bcipdf'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BCIRequest $body BCI Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bcipdf'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function bcipdfRequest($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['bcipdf'][0])
+    public function bcipdfRequest($body, string $contentType = self::contentTypes['bcipdf'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling bcipdf'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -2049,7 +1928,6 @@ class BusinessInformationServicesApi
                 'Missing the required parameter $body when calling bcipdf'
             );
         }
-
 
 
         $resourcePath = '/v1/bci/pdf';
@@ -2060,14 +1938,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
-        // header params
-        if ($x_comments !== null) {
-            $headerParams['x-comments'] = ObjectSerializer::toHeaderValue($x_comments);
-        }
 
 
 
@@ -2140,18 +2010,16 @@ class BusinessInformationServicesApi
      *
      * Business Contacts
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessContactsRequest $body Business Data Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['businesscontacts'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessContactsResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function businesscontacts($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['businesscontacts'][0])
+    public function businesscontacts($body, string $contentType = self::contentTypes['businesscontacts'][0])
     {
-        list($response) = $this->businesscontactsWithHttpInfo($content_type, $body, $x_comments, $contentType);
+        list($response) = $this->businesscontactsWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -2160,18 +2028,16 @@ class BusinessInformationServicesApi
      *
      * Business Contacts
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessContactsRequest $body Business Data Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['businesscontacts'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessContactsResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function businesscontactsWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['businesscontacts'][0])
+    public function businesscontactsWithHttpInfo($body, string $contentType = self::contentTypes['businesscontacts'][0])
     {
-        $request = $this->businesscontactsRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->businesscontactsRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2331,17 +2197,15 @@ class BusinessInformationServicesApi
      *
      * Business Contacts
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessContactsRequest $body Business Data Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['businesscontacts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function businesscontactsAsync($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['businesscontacts'][0])
+    public function businesscontactsAsync($body, string $contentType = self::contentTypes['businesscontacts'][0])
     {
-        return $this->businesscontactsAsyncWithHttpInfo($content_type, $body, $x_comments, $contentType)
+        return $this->businesscontactsAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2354,18 +2218,16 @@ class BusinessInformationServicesApi
      *
      * Business Contacts
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessContactsRequest $body Business Data Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['businesscontacts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function businesscontactsAsyncWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['businesscontacts'][0])
+    public function businesscontactsAsyncWithHttpInfo($body, string $contentType = self::contentTypes['businesscontacts'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessContactsResponse';
-        $request = $this->businesscontactsRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->businesscontactsRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2406,23 +2268,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'businesscontacts'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessContactsRequest $body Business Data Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['businesscontacts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function businesscontactsRequest($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['businesscontacts'][0])
+    public function businesscontactsRequest($body, string $contentType = self::contentTypes['businesscontacts'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling businesscontacts'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -2430,7 +2283,6 @@ class BusinessInformationServicesApi
                 'Missing the required parameter $body when calling businesscontacts'
             );
         }
-
 
 
         $resourcePath = '/v1/businesscontacts';
@@ -2441,14 +2293,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
-        // header params
-        if ($x_comments !== null) {
-            $headerParams['x-comments'] = ObjectSerializer::toHeaderValue($x_comments);
-        }
 
 
 
@@ -2521,18 +2365,16 @@ class BusinessInformationServicesApi
      *
      * Commercial Collections
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCollectionsRequest $body Commercial Collections Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['collections'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCollectionsResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function collections($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['collections'][0])
+    public function collections($body, string $contentType = self::contentTypes['collections'][0])
     {
-        list($response) = $this->collectionsWithHttpInfo($content_type, $body, $x_comments, $contentType);
+        list($response) = $this->collectionsWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -2541,18 +2383,16 @@ class BusinessInformationServicesApi
      *
      * Commercial Collections
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCollectionsRequest $body Commercial Collections Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['collections'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCollectionsResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function collectionsWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['collections'][0])
+    public function collectionsWithHttpInfo($body, string $contentType = self::contentTypes['collections'][0])
     {
-        $request = $this->collectionsRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->collectionsRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2712,17 +2552,15 @@ class BusinessInformationServicesApi
      *
      * Commercial Collections
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCollectionsRequest $body Commercial Collections Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['collections'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function collectionsAsync($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['collections'][0])
+    public function collectionsAsync($body, string $contentType = self::contentTypes['collections'][0])
     {
-        return $this->collectionsAsyncWithHttpInfo($content_type, $body, $x_comments, $contentType)
+        return $this->collectionsAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2735,18 +2573,16 @@ class BusinessInformationServicesApi
      *
      * Commercial Collections
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCollectionsRequest $body Commercial Collections Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['collections'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function collectionsAsyncWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['collections'][0])
+    public function collectionsAsyncWithHttpInfo($body, string $contentType = self::contentTypes['collections'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCollectionsResponse';
-        $request = $this->collectionsRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->collectionsRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2787,23 +2623,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'collections'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCollectionsRequest $body Commercial Collections Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['collections'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function collectionsRequest($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['collections'][0])
+    public function collectionsRequest($body, string $contentType = self::contentTypes['collections'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling collections'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -2811,7 +2638,6 @@ class BusinessInformationServicesApi
                 'Missing the required parameter $body when calling collections'
             );
         }
-
 
 
         $resourcePath = '/v1/collections';
@@ -2822,14 +2648,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
-        // header params
-        if ($x_comments !== null) {
-            $headerParams['x-comments'] = ObjectSerializer::toHeaderValue($x_comments);
-        }
 
 
 
@@ -2902,18 +2720,16 @@ class BusinessInformationServicesApi
      *
      * Corporate Linkage
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCorporateLinkageRequest $body Corporate Linkage Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['corporateLinkage'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\CorporateLinkageResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function corporateLinkage($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['corporateLinkage'][0])
+    public function corporateLinkage($body, string $contentType = self::contentTypes['corporateLinkage'][0])
     {
-        list($response) = $this->corporateLinkageWithHttpInfo($content_type, $body, $x_comments, $contentType);
+        list($response) = $this->corporateLinkageWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -2922,18 +2738,16 @@ class BusinessInformationServicesApi
      *
      * Corporate Linkage
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCorporateLinkageRequest $body Corporate Linkage Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['corporateLinkage'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\CorporateLinkageResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function corporateLinkageWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['corporateLinkage'][0])
+    public function corporateLinkageWithHttpInfo($body, string $contentType = self::contentTypes['corporateLinkage'][0])
     {
-        $request = $this->corporateLinkageRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->corporateLinkageRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3093,17 +2907,15 @@ class BusinessInformationServicesApi
      *
      * Corporate Linkage
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCorporateLinkageRequest $body Corporate Linkage Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['corporateLinkage'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function corporateLinkageAsync($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['corporateLinkage'][0])
+    public function corporateLinkageAsync($body, string $contentType = self::contentTypes['corporateLinkage'][0])
     {
-        return $this->corporateLinkageAsyncWithHttpInfo($content_type, $body, $x_comments, $contentType)
+        return $this->corporateLinkageAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3116,18 +2928,16 @@ class BusinessInformationServicesApi
      *
      * Corporate Linkage
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCorporateLinkageRequest $body Corporate Linkage Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['corporateLinkage'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function corporateLinkageAsyncWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['corporateLinkage'][0])
+    public function corporateLinkageAsyncWithHttpInfo($body, string $contentType = self::contentTypes['corporateLinkage'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\CorporateLinkageResponse';
-        $request = $this->corporateLinkageRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->corporateLinkageRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3168,23 +2978,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'corporateLinkage'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCorporateLinkageRequest $body Corporate Linkage Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['corporateLinkage'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function corporateLinkageRequest($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['corporateLinkage'][0])
+    public function corporateLinkageRequest($body, string $contentType = self::contentTypes['corporateLinkage'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling corporateLinkage'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -3192,7 +2993,6 @@ class BusinessInformationServicesApi
                 'Missing the required parameter $body when calling corporateLinkage'
             );
         }
-
 
 
         $resourcePath = '/v1/corporatelinkage';
@@ -3203,14 +3003,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
-        // header params
-        if ($x_comments !== null) {
-            $headerParams['x-comments'] = ObjectSerializer::toHeaderValue($x_comments);
-        }
 
 
 
@@ -3283,18 +3075,16 @@ class BusinessInformationServicesApi
      *
      * Corporate Registrations
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCorporateRegistrationsRequest $body Corporate Registrations Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['corporateRegistration'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCorporateRegistrationResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function corporateRegistration($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['corporateRegistration'][0])
+    public function corporateRegistration($body, string $contentType = self::contentTypes['corporateRegistration'][0])
     {
-        list($response) = $this->corporateRegistrationWithHttpInfo($content_type, $body, $x_comments, $contentType);
+        list($response) = $this->corporateRegistrationWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -3303,18 +3093,16 @@ class BusinessInformationServicesApi
      *
      * Corporate Registrations
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCorporateRegistrationsRequest $body Corporate Registrations Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['corporateRegistration'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCorporateRegistrationResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function corporateRegistrationWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['corporateRegistration'][0])
+    public function corporateRegistrationWithHttpInfo($body, string $contentType = self::contentTypes['corporateRegistration'][0])
     {
-        $request = $this->corporateRegistrationRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->corporateRegistrationRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3474,17 +3262,15 @@ class BusinessInformationServicesApi
      *
      * Corporate Registrations
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCorporateRegistrationsRequest $body Corporate Registrations Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['corporateRegistration'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function corporateRegistrationAsync($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['corporateRegistration'][0])
+    public function corporateRegistrationAsync($body, string $contentType = self::contentTypes['corporateRegistration'][0])
     {
-        return $this->corporateRegistrationAsyncWithHttpInfo($content_type, $body, $x_comments, $contentType)
+        return $this->corporateRegistrationAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3497,18 +3283,16 @@ class BusinessInformationServicesApi
      *
      * Corporate Registrations
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCorporateRegistrationsRequest $body Corporate Registrations Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['corporateRegistration'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function corporateRegistrationAsyncWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['corporateRegistration'][0])
+    public function corporateRegistrationAsyncWithHttpInfo($body, string $contentType = self::contentTypes['corporateRegistration'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCorporateRegistrationResponse';
-        $request = $this->corporateRegistrationRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->corporateRegistrationRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3549,23 +3333,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'corporateRegistration'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessCorporateRegistrationsRequest $body Corporate Registrations Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['corporateRegistration'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function corporateRegistrationRequest($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['corporateRegistration'][0])
+    public function corporateRegistrationRequest($body, string $contentType = self::contentTypes['corporateRegistration'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling corporateRegistration'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -3573,7 +3348,6 @@ class BusinessInformationServicesApi
                 'Missing the required parameter $body when calling corporateRegistration'
             );
         }
-
 
 
         $resourcePath = '/v1/corporateregistrations';
@@ -3584,14 +3358,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
-        // header params
-        if ($x_comments !== null) {
-            $headerParams['x-comments'] = ObjectSerializer::toHeaderValue($x_comments);
-        }
 
 
 
@@ -3664,18 +3430,16 @@ class BusinessInformationServicesApi
      *
      * Commercial Credit Status
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequest $body Commercial Credit Status Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['creditstatus'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\CreditStatusResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function creditstatus($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['creditstatus'][0])
+    public function creditstatus($body, string $contentType = self::contentTypes['creditstatus'][0])
     {
-        list($response) = $this->creditstatusWithHttpInfo($content_type, $body, $x_comments, $contentType);
+        list($response) = $this->creditstatusWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -3684,18 +3448,16 @@ class BusinessInformationServicesApi
      *
      * Commercial Credit Status
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequest $body Commercial Credit Status Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['creditstatus'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\CreditStatusResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function creditstatusWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['creditstatus'][0])
+    public function creditstatusWithHttpInfo($body, string $contentType = self::contentTypes['creditstatus'][0])
     {
-        $request = $this->creditstatusRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->creditstatusRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3855,17 +3617,15 @@ class BusinessInformationServicesApi
      *
      * Commercial Credit Status
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequest $body Commercial Credit Status Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['creditstatus'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function creditstatusAsync($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['creditstatus'][0])
+    public function creditstatusAsync($body, string $contentType = self::contentTypes['creditstatus'][0])
     {
-        return $this->creditstatusAsyncWithHttpInfo($content_type, $body, $x_comments, $contentType)
+        return $this->creditstatusAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3878,18 +3638,16 @@ class BusinessInformationServicesApi
      *
      * Commercial Credit Status
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequest $body Commercial Credit Status Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['creditstatus'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function creditstatusAsyncWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['creditstatus'][0])
+    public function creditstatusAsyncWithHttpInfo($body, string $contentType = self::contentTypes['creditstatus'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\CreditStatusResponse';
-        $request = $this->creditstatusRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->creditstatusRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3930,23 +3688,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'creditstatus'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequest $body Commercial Credit Status Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['creditstatus'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function creditstatusRequest($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['creditstatus'][0])
+    public function creditstatusRequest($body, string $contentType = self::contentTypes['creditstatus'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling creditstatus'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -3954,7 +3703,6 @@ class BusinessInformationServicesApi
                 'Missing the required parameter $body when calling creditstatus'
             );
         }
-
 
 
         $resourcePath = '/v1/creditstatus';
@@ -3965,14 +3713,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
-        // header params
-        if ($x_comments !== null) {
-            $headerParams['x-comments'] = ObjectSerializer::toHeaderValue($x_comments);
-        }
 
 
 
@@ -4045,18 +3785,16 @@ class BusinessInformationServicesApi
      *
      * Cyber Risk Score and Attributes
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\CyberScoreRequest $body Cyber Score Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cyberscore'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\CyberScoreResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function cyberscore($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['cyberscore'][0])
+    public function cyberscore($body, string $contentType = self::contentTypes['cyberscore'][0])
     {
-        list($response) = $this->cyberscoreWithHttpInfo($content_type, $body, $x_comments, $contentType);
+        list($response) = $this->cyberscoreWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -4065,18 +3803,16 @@ class BusinessInformationServicesApi
      *
      * Cyber Risk Score and Attributes
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\CyberScoreRequest $body Cyber Score Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cyberscore'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\CyberScoreResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function cyberscoreWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['cyberscore'][0])
+    public function cyberscoreWithHttpInfo($body, string $contentType = self::contentTypes['cyberscore'][0])
     {
-        $request = $this->cyberscoreRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->cyberscoreRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4236,17 +3972,15 @@ class BusinessInformationServicesApi
      *
      * Cyber Risk Score and Attributes
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\CyberScoreRequest $body Cyber Score Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cyberscore'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function cyberscoreAsync($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['cyberscore'][0])
+    public function cyberscoreAsync($body, string $contentType = self::contentTypes['cyberscore'][0])
     {
-        return $this->cyberscoreAsyncWithHttpInfo($content_type, $body, $x_comments, $contentType)
+        return $this->cyberscoreAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4259,18 +3993,16 @@ class BusinessInformationServicesApi
      *
      * Cyber Risk Score and Attributes
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\CyberScoreRequest $body Cyber Score Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cyberscore'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function cyberscoreAsyncWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['cyberscore'][0])
+    public function cyberscoreAsyncWithHttpInfo($body, string $contentType = self::contentTypes['cyberscore'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\CyberScoreResponse';
-        $request = $this->cyberscoreRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->cyberscoreRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4311,23 +4043,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'cyberscore'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\CyberScoreRequest $body Cyber Score Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cyberscore'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function cyberscoreRequest($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['cyberscore'][0])
+    public function cyberscoreRequest($body, string $contentType = self::contentTypes['cyberscore'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling cyberscore'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -4335,7 +4058,6 @@ class BusinessInformationServicesApi
                 'Missing the required parameter $body when calling cyberscore'
             );
         }
-
 
 
         $resourcePath = '/v1/cyberscore';
@@ -4346,14 +4068,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
-        // header params
-        if ($x_comments !== null) {
-            $headerParams['x-comments'] = ObjectSerializer::toHeaderValue($x_comments);
-        }
 
 
 
@@ -4426,18 +4140,16 @@ class BusinessInformationServicesApi
      *
      * Business Facts
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequest $body Business Facts Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['facts'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessFactsResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function facts($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['facts'][0])
+    public function facts($body, string $contentType = self::contentTypes['facts'][0])
     {
-        list($response) = $this->factsWithHttpInfo($content_type, $body, $x_comments, $contentType);
+        list($response) = $this->factsWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -4446,18 +4158,16 @@ class BusinessInformationServicesApi
      *
      * Business Facts
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequest $body Business Facts Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['facts'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessFactsResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function factsWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['facts'][0])
+    public function factsWithHttpInfo($body, string $contentType = self::contentTypes['facts'][0])
     {
-        $request = $this->factsRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->factsRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4617,17 +4327,15 @@ class BusinessInformationServicesApi
      *
      * Business Facts
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequest $body Business Facts Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['facts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function factsAsync($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['facts'][0])
+    public function factsAsync($body, string $contentType = self::contentTypes['facts'][0])
     {
-        return $this->factsAsyncWithHttpInfo($content_type, $body, $x_comments, $contentType)
+        return $this->factsAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4640,18 +4348,16 @@ class BusinessInformationServicesApi
      *
      * Business Facts
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequest $body Business Facts Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['facts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function factsAsyncWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['facts'][0])
+    public function factsAsyncWithHttpInfo($body, string $contentType = self::contentTypes['facts'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessFactsResponse';
-        $request = $this->factsRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->factsRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4692,23 +4398,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'facts'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequest $body Business Facts Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['facts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function factsRequest($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['facts'][0])
+    public function factsRequest($body, string $contentType = self::contentTypes['facts'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling facts'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -4716,7 +4413,6 @@ class BusinessInformationServicesApi
                 'Missing the required parameter $body when calling facts'
             );
         }
-
 
 
         $resourcePath = '/v1/facts';
@@ -4727,14 +4423,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
-        // header params
-        if ($x_comments !== null) {
-            $headerParams['x-comments'] = ObjectSerializer::toHeaderValue($x_comments);
-        }
 
 
 
@@ -4807,18 +4495,16 @@ class BusinessInformationServicesApi
      *
      * Commercial Fraud Shields
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequest $body Commercial Fraud Shields Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['fraudShields'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessFraudShieldResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function fraudShields($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['fraudShields'][0])
+    public function fraudShields($body, string $contentType = self::contentTypes['fraudShields'][0])
     {
-        list($response) = $this->fraudShieldsWithHttpInfo($content_type, $body, $x_comments, $contentType);
+        list($response) = $this->fraudShieldsWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -4827,18 +4513,16 @@ class BusinessInformationServicesApi
      *
      * Commercial Fraud Shields
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequest $body Commercial Fraud Shields Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['fraudShields'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessFraudShieldResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function fraudShieldsWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['fraudShields'][0])
+    public function fraudShieldsWithHttpInfo($body, string $contentType = self::contentTypes['fraudShields'][0])
     {
-        $request = $this->fraudShieldsRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->fraudShieldsRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4998,17 +4682,15 @@ class BusinessInformationServicesApi
      *
      * Commercial Fraud Shields
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequest $body Commercial Fraud Shields Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['fraudShields'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function fraudShieldsAsync($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['fraudShields'][0])
+    public function fraudShieldsAsync($body, string $contentType = self::contentTypes['fraudShields'][0])
     {
-        return $this->fraudShieldsAsyncWithHttpInfo($content_type, $body, $x_comments, $contentType)
+        return $this->fraudShieldsAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -5021,18 +4703,16 @@ class BusinessInformationServicesApi
      *
      * Commercial Fraud Shields
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequest $body Commercial Fraud Shields Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['fraudShields'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function fraudShieldsAsyncWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['fraudShields'][0])
+    public function fraudShieldsAsyncWithHttpInfo($body, string $contentType = self::contentTypes['fraudShields'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessFraudShieldResponse';
-        $request = $this->fraudShieldsRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->fraudShieldsRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -5073,23 +4753,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'fraudShields'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequest $body Commercial Fraud Shields Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['fraudShields'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function fraudShieldsRequest($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['fraudShields'][0])
+    public function fraudShieldsRequest($body, string $contentType = self::contentTypes['fraudShields'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling fraudShields'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -5097,7 +4768,6 @@ class BusinessInformationServicesApi
                 'Missing the required parameter $body when calling fraudShields'
             );
         }
-
 
 
         $resourcePath = '/v1/fraudshields';
@@ -5108,14 +4778,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
-        // header params
-        if ($x_comments !== null) {
-            $headerParams['x-comments'] = ObjectSerializer::toHeaderValue($x_comments);
-        }
 
 
 
@@ -5188,18 +4850,16 @@ class BusinessInformationServicesApi
      *
      * Government Details
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\GovernmentDetailsRequest $body Government Details Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['governmentdetails'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\GovernmentDetailsResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function governmentdetails($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['governmentdetails'][0])
+    public function governmentdetails($body, string $contentType = self::contentTypes['governmentdetails'][0])
     {
-        list($response) = $this->governmentdetailsWithHttpInfo($content_type, $body, $x_comments, $contentType);
+        list($response) = $this->governmentdetailsWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -5208,18 +4868,16 @@ class BusinessInformationServicesApi
      *
      * Government Details
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\GovernmentDetailsRequest $body Government Details Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['governmentdetails'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\GovernmentDetailsResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function governmentdetailsWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['governmentdetails'][0])
+    public function governmentdetailsWithHttpInfo($body, string $contentType = self::contentTypes['governmentdetails'][0])
     {
-        $request = $this->governmentdetailsRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->governmentdetailsRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -5379,17 +5037,15 @@ class BusinessInformationServicesApi
      *
      * Government Details
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\GovernmentDetailsRequest $body Government Details Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['governmentdetails'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function governmentdetailsAsync($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['governmentdetails'][0])
+    public function governmentdetailsAsync($body, string $contentType = self::contentTypes['governmentdetails'][0])
     {
-        return $this->governmentdetailsAsyncWithHttpInfo($content_type, $body, $x_comments, $contentType)
+        return $this->governmentdetailsAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -5402,18 +5058,16 @@ class BusinessInformationServicesApi
      *
      * Government Details
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\GovernmentDetailsRequest $body Government Details Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['governmentdetails'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function governmentdetailsAsyncWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['governmentdetails'][0])
+    public function governmentdetailsAsyncWithHttpInfo($body, string $contentType = self::contentTypes['governmentdetails'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\GovernmentDetailsResponse';
-        $request = $this->governmentdetailsRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->governmentdetailsRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -5454,23 +5108,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'governmentdetails'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\GovernmentDetailsRequest $body Government Details Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['governmentdetails'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function governmentdetailsRequest($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['governmentdetails'][0])
+    public function governmentdetailsRequest($body, string $contentType = self::contentTypes['governmentdetails'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling governmentdetails'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -5478,7 +5123,6 @@ class BusinessInformationServicesApi
                 'Missing the required parameter $body when calling governmentdetails'
             );
         }
-
 
 
         $resourcePath = '/v1/governmentdetails';
@@ -5489,14 +5133,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
-        // header params
-        if ($x_comments !== null) {
-            $headerParams['x-comments'] = ObjectSerializer::toHeaderValue($x_comments);
-        }
 
 
 
@@ -5569,18 +5205,16 @@ class BusinessInformationServicesApi
      *
      * Business Headers
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequest $body Business Headers Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['headers'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessHeaderResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function headers($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['headers'][0])
+    public function headers($body, string $contentType = self::contentTypes['headers'][0])
     {
-        list($response) = $this->headersWithHttpInfo($content_type, $body, $x_comments, $contentType);
+        list($response) = $this->headersWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -5589,18 +5223,16 @@ class BusinessInformationServicesApi
      *
      * Business Headers
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequest $body Business Headers Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['headers'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessHeaderResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function headersWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['headers'][0])
+    public function headersWithHttpInfo($body, string $contentType = self::contentTypes['headers'][0])
     {
-        $request = $this->headersRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->headersRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -5760,17 +5392,15 @@ class BusinessInformationServicesApi
      *
      * Business Headers
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequest $body Business Headers Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['headers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function headersAsync($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['headers'][0])
+    public function headersAsync($body, string $contentType = self::contentTypes['headers'][0])
     {
-        return $this->headersAsyncWithHttpInfo($content_type, $body, $x_comments, $contentType)
+        return $this->headersAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -5783,18 +5413,16 @@ class BusinessInformationServicesApi
      *
      * Business Headers
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequest $body Business Headers Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['headers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function headersAsyncWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['headers'][0])
+    public function headersAsyncWithHttpInfo($body, string $contentType = self::contentTypes['headers'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessHeaderResponse';
-        $request = $this->headersRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->headersRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -5835,23 +5463,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'headers'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequest $body Business Headers Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['headers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function headersRequest($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['headers'][0])
+    public function headersRequest($body, string $contentType = self::contentTypes['headers'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling headers'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -5859,7 +5478,6 @@ class BusinessInformationServicesApi
                 'Missing the required parameter $body when calling headers'
             );
         }
-
 
 
         $resourcePath = '/v1/headers';
@@ -5870,14 +5488,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
-        // header params
-        if ($x_comments !== null) {
-            $headerParams['x-comments'] = ObjectSerializer::toHeaderValue($x_comments);
-        }
 
 
 
@@ -5950,18 +5560,16 @@ class BusinessInformationServicesApi
      *
      * Intelliscore Plus JSON
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest $body Intelliscore Plus Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['intelliscoreplus'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function intelliscoreplus($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['intelliscoreplus'][0])
+    public function intelliscoreplus($body, string $contentType = self::contentTypes['intelliscoreplus'][0])
     {
-        list($response) = $this->intelliscoreplusWithHttpInfo($content_type, $body, $x_comments, $contentType);
+        list($response) = $this->intelliscoreplusWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -5970,18 +5578,16 @@ class BusinessInformationServicesApi
      *
      * Intelliscore Plus JSON
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest $body Intelliscore Plus Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['intelliscoreplus'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function intelliscoreplusWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['intelliscoreplus'][0])
+    public function intelliscoreplusWithHttpInfo($body, string $contentType = self::contentTypes['intelliscoreplus'][0])
     {
-        $request = $this->intelliscoreplusRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->intelliscoreplusRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -6141,17 +5747,15 @@ class BusinessInformationServicesApi
      *
      * Intelliscore Plus JSON
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest $body Intelliscore Plus Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['intelliscoreplus'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function intelliscoreplusAsync($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['intelliscoreplus'][0])
+    public function intelliscoreplusAsync($body, string $contentType = self::contentTypes['intelliscoreplus'][0])
     {
-        return $this->intelliscoreplusAsyncWithHttpInfo($content_type, $body, $x_comments, $contentType)
+        return $this->intelliscoreplusAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -6164,18 +5768,16 @@ class BusinessInformationServicesApi
      *
      * Intelliscore Plus JSON
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest $body Intelliscore Plus Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['intelliscoreplus'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function intelliscoreplusAsyncWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['intelliscoreplus'][0])
+    public function intelliscoreplusAsyncWithHttpInfo($body, string $contentType = self::contentTypes['intelliscoreplus'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusResponse';
-        $request = $this->intelliscoreplusRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->intelliscoreplusRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -6216,23 +5818,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'intelliscoreplus'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest $body Intelliscore Plus Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['intelliscoreplus'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function intelliscoreplusRequest($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['intelliscoreplus'][0])
+    public function intelliscoreplusRequest($body, string $contentType = self::contentTypes['intelliscoreplus'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling intelliscoreplus'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -6240,7 +5833,6 @@ class BusinessInformationServicesApi
                 'Missing the required parameter $body when calling intelliscoreplus'
             );
         }
-
 
 
         $resourcePath = '/v1/reports/intelliscoreplus';
@@ -6251,14 +5843,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
-        // header params
-        if ($x_comments !== null) {
-            $headerParams['x-comments'] = ObjectSerializer::toHeaderValue($x_comments);
-        }
 
 
 
@@ -6331,18 +5915,16 @@ class BusinessInformationServicesApi
      *
      * Intelliscore Plus HTML
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest $body Intelliscore Plus HTML Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['intelliscoreplushtml'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusHTMLResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function intelliscoreplushtml($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['intelliscoreplushtml'][0])
+    public function intelliscoreplushtml($body, string $contentType = self::contentTypes['intelliscoreplushtml'][0])
     {
-        list($response) = $this->intelliscoreplushtmlWithHttpInfo($content_type, $body, $x_comments, $contentType);
+        list($response) = $this->intelliscoreplushtmlWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -6351,18 +5933,16 @@ class BusinessInformationServicesApi
      *
      * Intelliscore Plus HTML
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest $body Intelliscore Plus HTML Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['intelliscoreplushtml'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusHTMLResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function intelliscoreplushtmlWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['intelliscoreplushtml'][0])
+    public function intelliscoreplushtmlWithHttpInfo($body, string $contentType = self::contentTypes['intelliscoreplushtml'][0])
     {
-        $request = $this->intelliscoreplushtmlRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->intelliscoreplushtmlRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -6522,17 +6102,15 @@ class BusinessInformationServicesApi
      *
      * Intelliscore Plus HTML
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest $body Intelliscore Plus HTML Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['intelliscoreplushtml'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function intelliscoreplushtmlAsync($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['intelliscoreplushtml'][0])
+    public function intelliscoreplushtmlAsync($body, string $contentType = self::contentTypes['intelliscoreplushtml'][0])
     {
-        return $this->intelliscoreplushtmlAsyncWithHttpInfo($content_type, $body, $x_comments, $contentType)
+        return $this->intelliscoreplushtmlAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -6545,18 +6123,16 @@ class BusinessInformationServicesApi
      *
      * Intelliscore Plus HTML
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest $body Intelliscore Plus HTML Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['intelliscoreplushtml'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function intelliscoreplushtmlAsyncWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['intelliscoreplushtml'][0])
+    public function intelliscoreplushtmlAsyncWithHttpInfo($body, string $contentType = self::contentTypes['intelliscoreplushtml'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusHTMLResponse';
-        $request = $this->intelliscoreplushtmlRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->intelliscoreplushtmlRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -6597,23 +6173,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'intelliscoreplushtml'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest $body Intelliscore Plus HTML Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['intelliscoreplushtml'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function intelliscoreplushtmlRequest($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['intelliscoreplushtml'][0])
+    public function intelliscoreplushtmlRequest($body, string $contentType = self::contentTypes['intelliscoreplushtml'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling intelliscoreplushtml'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -6621,7 +6188,6 @@ class BusinessInformationServicesApi
                 'Missing the required parameter $body when calling intelliscoreplushtml'
             );
         }
-
 
 
         $resourcePath = '/v1/reports/intelliscoreplus/html';
@@ -6632,14 +6198,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
-        // header params
-        if ($x_comments !== null) {
-            $headerParams['x-comments'] = ObjectSerializer::toHeaderValue($x_comments);
-        }
 
 
 
@@ -6712,18 +6270,16 @@ class BusinessInformationServicesApi
      *
      * Intelliscore Plus PDF
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest $body Intelliscore Plus PDF Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['intelliscorepluspdf'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusPDFResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function intelliscorepluspdf($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['intelliscorepluspdf'][0])
+    public function intelliscorepluspdf($body, string $contentType = self::contentTypes['intelliscorepluspdf'][0])
     {
-        list($response) = $this->intelliscorepluspdfWithHttpInfo($content_type, $body, $x_comments, $contentType);
+        list($response) = $this->intelliscorepluspdfWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -6732,18 +6288,16 @@ class BusinessInformationServicesApi
      *
      * Intelliscore Plus PDF
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest $body Intelliscore Plus PDF Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['intelliscorepluspdf'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusPDFResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function intelliscorepluspdfWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['intelliscorepluspdf'][0])
+    public function intelliscorepluspdfWithHttpInfo($body, string $contentType = self::contentTypes['intelliscorepluspdf'][0])
     {
-        $request = $this->intelliscorepluspdfRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->intelliscorepluspdfRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -6903,17 +6457,15 @@ class BusinessInformationServicesApi
      *
      * Intelliscore Plus PDF
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest $body Intelliscore Plus PDF Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['intelliscorepluspdf'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function intelliscorepluspdfAsync($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['intelliscorepluspdf'][0])
+    public function intelliscorepluspdfAsync($body, string $contentType = self::contentTypes['intelliscorepluspdf'][0])
     {
-        return $this->intelliscorepluspdfAsyncWithHttpInfo($content_type, $body, $x_comments, $contentType)
+        return $this->intelliscorepluspdfAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -6926,18 +6478,16 @@ class BusinessInformationServicesApi
      *
      * Intelliscore Plus PDF
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest $body Intelliscore Plus PDF Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['intelliscorepluspdf'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function intelliscorepluspdfAsyncWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['intelliscorepluspdf'][0])
+    public function intelliscorepluspdfAsyncWithHttpInfo($body, string $contentType = self::contentTypes['intelliscorepluspdf'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusPDFResponse';
-        $request = $this->intelliscorepluspdfRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->intelliscorepluspdfRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -6978,23 +6528,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'intelliscorepluspdf'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\IntelliscorePlusRequest $body Intelliscore Plus PDF Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['intelliscorepluspdf'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function intelliscorepluspdfRequest($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['intelliscorepluspdf'][0])
+    public function intelliscorepluspdfRequest($body, string $contentType = self::contentTypes['intelliscorepluspdf'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling intelliscorepluspdf'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -7002,7 +6543,6 @@ class BusinessInformationServicesApi
                 'Missing the required parameter $body when calling intelliscorepluspdf'
             );
         }
-
 
 
         $resourcePath = '/v1/reports/intelliscoreplus/pdf';
@@ -7013,14 +6553,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
-        // header params
-        if ($x_comments !== null) {
-            $headerParams['x-comments'] = ObjectSerializer::toHeaderValue($x_comments);
-        }
 
 
 
@@ -7093,18 +6625,16 @@ class BusinessInformationServicesApi
      *
      * IST Watch
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\ISTWatchRequest $body IST Watch Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['istwatch'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\ISTWatchResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function istwatch($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['istwatch'][0])
+    public function istwatch($body, string $contentType = self::contentTypes['istwatch'][0])
     {
-        list($response) = $this->istwatchWithHttpInfo($content_type, $body, $x_comments, $contentType);
+        list($response) = $this->istwatchWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -7113,18 +6643,16 @@ class BusinessInformationServicesApi
      *
      * IST Watch
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\ISTWatchRequest $body IST Watch Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['istwatch'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\ISTWatchResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function istwatchWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['istwatch'][0])
+    public function istwatchWithHttpInfo($body, string $contentType = self::contentTypes['istwatch'][0])
     {
-        $request = $this->istwatchRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->istwatchRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -7284,17 +6812,15 @@ class BusinessInformationServicesApi
      *
      * IST Watch
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\ISTWatchRequest $body IST Watch Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['istwatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function istwatchAsync($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['istwatch'][0])
+    public function istwatchAsync($body, string $contentType = self::contentTypes['istwatch'][0])
     {
-        return $this->istwatchAsyncWithHttpInfo($content_type, $body, $x_comments, $contentType)
+        return $this->istwatchAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -7307,18 +6833,16 @@ class BusinessInformationServicesApi
      *
      * IST Watch
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\ISTWatchRequest $body IST Watch Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['istwatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function istwatchAsyncWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['istwatch'][0])
+    public function istwatchAsyncWithHttpInfo($body, string $contentType = self::contentTypes['istwatch'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\ISTWatchResponse';
-        $request = $this->istwatchRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->istwatchRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -7359,23 +6883,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'istwatch'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\ISTWatchRequest $body IST Watch Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['istwatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function istwatchRequest($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['istwatch'][0])
+    public function istwatchRequest($body, string $contentType = self::contentTypes['istwatch'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling istwatch'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -7383,7 +6898,6 @@ class BusinessInformationServicesApi
                 'Missing the required parameter $body when calling istwatch'
             );
         }
-
 
 
         $resourcePath = '/v1/istwatch';
@@ -7394,14 +6908,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
-        // header params
-        if ($x_comments !== null) {
-            $headerParams['x-comments'] = ObjectSerializer::toHeaderValue($x_comments);
-        }
 
 
 
@@ -7474,18 +6980,16 @@ class BusinessInformationServicesApi
      *
      * Business Judgments
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessJudgmentRequest $body Business Judgments Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['judgments'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessJudgmentResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function judgments($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['judgments'][0])
+    public function judgments($body, string $contentType = self::contentTypes['judgments'][0])
     {
-        list($response) = $this->judgmentsWithHttpInfo($content_type, $body, $x_comments, $contentType);
+        list($response) = $this->judgmentsWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -7494,18 +6998,16 @@ class BusinessInformationServicesApi
      *
      * Business Judgments
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessJudgmentRequest $body Business Judgments Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['judgments'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessJudgmentResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function judgmentsWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['judgments'][0])
+    public function judgmentsWithHttpInfo($body, string $contentType = self::contentTypes['judgments'][0])
     {
-        $request = $this->judgmentsRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->judgmentsRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -7665,17 +7167,15 @@ class BusinessInformationServicesApi
      *
      * Business Judgments
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessJudgmentRequest $body Business Judgments Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['judgments'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function judgmentsAsync($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['judgments'][0])
+    public function judgmentsAsync($body, string $contentType = self::contentTypes['judgments'][0])
     {
-        return $this->judgmentsAsyncWithHttpInfo($content_type, $body, $x_comments, $contentType)
+        return $this->judgmentsAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -7688,18 +7188,16 @@ class BusinessInformationServicesApi
      *
      * Business Judgments
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessJudgmentRequest $body Business Judgments Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['judgments'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function judgmentsAsyncWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['judgments'][0])
+    public function judgmentsAsyncWithHttpInfo($body, string $contentType = self::contentTypes['judgments'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessJudgmentResponse';
-        $request = $this->judgmentsRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->judgmentsRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -7740,23 +7238,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'judgments'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessJudgmentRequest $body Business Judgments Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['judgments'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function judgmentsRequest($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['judgments'][0])
+    public function judgmentsRequest($body, string $contentType = self::contentTypes['judgments'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling judgments'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -7764,7 +7253,6 @@ class BusinessInformationServicesApi
                 'Missing the required parameter $body when calling judgments'
             );
         }
-
 
 
         $resourcePath = '/v1/judgments';
@@ -7775,14 +7263,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
-        // header params
-        if ($x_comments !== null) {
-            $headerParams['x-comments'] = ObjectSerializer::toHeaderValue($x_comments);
-        }
 
 
 
@@ -7855,18 +7335,16 @@ class BusinessInformationServicesApi
      *
      * Legal Filings and Collections Summaries
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessLegalCollectionSummariesRequest $body Legal Filings and Collections Summaries Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['legalCollectionSummaries'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessLegalCollectionSummariesResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function legalCollectionSummaries($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['legalCollectionSummaries'][0])
+    public function legalCollectionSummaries($body, string $contentType = self::contentTypes['legalCollectionSummaries'][0])
     {
-        list($response) = $this->legalCollectionSummariesWithHttpInfo($content_type, $body, $x_comments, $contentType);
+        list($response) = $this->legalCollectionSummariesWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -7875,18 +7353,16 @@ class BusinessInformationServicesApi
      *
      * Legal Filings and Collections Summaries
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessLegalCollectionSummariesRequest $body Legal Filings and Collections Summaries Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['legalCollectionSummaries'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessLegalCollectionSummariesResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function legalCollectionSummariesWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['legalCollectionSummaries'][0])
+    public function legalCollectionSummariesWithHttpInfo($body, string $contentType = self::contentTypes['legalCollectionSummaries'][0])
     {
-        $request = $this->legalCollectionSummariesRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->legalCollectionSummariesRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -8046,17 +7522,15 @@ class BusinessInformationServicesApi
      *
      * Legal Filings and Collections Summaries
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessLegalCollectionSummariesRequest $body Legal Filings and Collections Summaries Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['legalCollectionSummaries'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function legalCollectionSummariesAsync($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['legalCollectionSummaries'][0])
+    public function legalCollectionSummariesAsync($body, string $contentType = self::contentTypes['legalCollectionSummaries'][0])
     {
-        return $this->legalCollectionSummariesAsyncWithHttpInfo($content_type, $body, $x_comments, $contentType)
+        return $this->legalCollectionSummariesAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -8069,18 +7543,16 @@ class BusinessInformationServicesApi
      *
      * Legal Filings and Collections Summaries
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessLegalCollectionSummariesRequest $body Legal Filings and Collections Summaries Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['legalCollectionSummaries'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function legalCollectionSummariesAsyncWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['legalCollectionSummaries'][0])
+    public function legalCollectionSummariesAsyncWithHttpInfo($body, string $contentType = self::contentTypes['legalCollectionSummaries'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessLegalCollectionSummariesResponse';
-        $request = $this->legalCollectionSummariesRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->legalCollectionSummariesRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -8121,23 +7593,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'legalCollectionSummaries'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessLegalCollectionSummariesRequest $body Legal Filings and Collections Summaries Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['legalCollectionSummaries'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function legalCollectionSummariesRequest($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['legalCollectionSummaries'][0])
+    public function legalCollectionSummariesRequest($body, string $contentType = self::contentTypes['legalCollectionSummaries'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling legalCollectionSummaries'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -8145,7 +7608,6 @@ class BusinessInformationServicesApi
                 'Missing the required parameter $body when calling legalCollectionSummaries'
             );
         }
-
 
 
         $resourcePath = '/v1/legalcollectionsummaries';
@@ -8156,14 +7618,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
-        // header params
-        if ($x_comments !== null) {
-            $headerParams['x-comments'] = ObjectSerializer::toHeaderValue($x_comments);
-        }
 
 
 
@@ -8236,18 +7690,16 @@ class BusinessInformationServicesApi
      *
      * Business Liens
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessLiensRequest $body Business Liens Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['liens'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessLiensResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function liens($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['liens'][0])
+    public function liens($body, string $contentType = self::contentTypes['liens'][0])
     {
-        list($response) = $this->liensWithHttpInfo($content_type, $body, $x_comments, $contentType);
+        list($response) = $this->liensWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -8256,18 +7708,16 @@ class BusinessInformationServicesApi
      *
      * Business Liens
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessLiensRequest $body Business Liens Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['liens'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessLiensResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function liensWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['liens'][0])
+    public function liensWithHttpInfo($body, string $contentType = self::contentTypes['liens'][0])
     {
-        $request = $this->liensRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->liensRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -8427,17 +7877,15 @@ class BusinessInformationServicesApi
      *
      * Business Liens
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessLiensRequest $body Business Liens Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['liens'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function liensAsync($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['liens'][0])
+    public function liensAsync($body, string $contentType = self::contentTypes['liens'][0])
     {
-        return $this->liensAsyncWithHttpInfo($content_type, $body, $x_comments, $contentType)
+        return $this->liensAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -8450,18 +7898,16 @@ class BusinessInformationServicesApi
      *
      * Business Liens
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessLiensRequest $body Business Liens Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['liens'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function liensAsyncWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['liens'][0])
+    public function liensAsyncWithHttpInfo($body, string $contentType = self::contentTypes['liens'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessLiensResponse';
-        $request = $this->liensRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->liensRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -8502,23 +7948,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'liens'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessLiensRequest $body Business Liens Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['liens'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function liensRequest($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['liens'][0])
+    public function liensRequest($body, string $contentType = self::contentTypes['liens'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling liens'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -8526,7 +7963,6 @@ class BusinessInformationServicesApi
                 'Missing the required parameter $body when calling liens'
             );
         }
-
 
 
         $resourcePath = '/v1/liens';
@@ -8537,14 +7973,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
-        // header params
-        if ($x_comments !== null) {
-            $headerParams['x-comments'] = ObjectSerializer::toHeaderValue($x_comments);
-        }
 
 
 
@@ -8617,18 +8045,16 @@ class BusinessInformationServicesApi
      *
      * MultiSegments. Request a la carte segments in a single call
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\MultiSegmentsRequest $body Multi Segments Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['multisegments'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\MultiSegmentsResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function multisegments($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['multisegments'][0])
+    public function multisegments($body, string $contentType = self::contentTypes['multisegments'][0])
     {
-        list($response) = $this->multisegmentsWithHttpInfo($content_type, $body, $x_comments, $contentType);
+        list($response) = $this->multisegmentsWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -8637,18 +8063,16 @@ class BusinessInformationServicesApi
      *
      * MultiSegments. Request a la carte segments in a single call
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\MultiSegmentsRequest $body Multi Segments Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['multisegments'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\MultiSegmentsResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function multisegmentsWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['multisegments'][0])
+    public function multisegmentsWithHttpInfo($body, string $contentType = self::contentTypes['multisegments'][0])
     {
-        $request = $this->multisegmentsRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->multisegmentsRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -8808,17 +8232,15 @@ class BusinessInformationServicesApi
      *
      * MultiSegments. Request a la carte segments in a single call
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\MultiSegmentsRequest $body Multi Segments Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['multisegments'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function multisegmentsAsync($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['multisegments'][0])
+    public function multisegmentsAsync($body, string $contentType = self::contentTypes['multisegments'][0])
     {
-        return $this->multisegmentsAsyncWithHttpInfo($content_type, $body, $x_comments, $contentType)
+        return $this->multisegmentsAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -8831,18 +8253,16 @@ class BusinessInformationServicesApi
      *
      * MultiSegments. Request a la carte segments in a single call
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\MultiSegmentsRequest $body Multi Segments Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['multisegments'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function multisegmentsAsyncWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['multisegments'][0])
+    public function multisegmentsAsyncWithHttpInfo($body, string $contentType = self::contentTypes['multisegments'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\MultiSegmentsResponse';
-        $request = $this->multisegmentsRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->multisegmentsRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -8883,23 +8303,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'multisegments'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\MultiSegmentsRequest $body Multi Segments Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['multisegments'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function multisegmentsRequest($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['multisegments'][0])
+    public function multisegmentsRequest($body, string $contentType = self::contentTypes['multisegments'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling multisegments'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -8907,7 +8318,6 @@ class BusinessInformationServicesApi
                 'Missing the required parameter $body when calling multisegments'
             );
         }
-
 
 
         $resourcePath = '/v1/multisegments';
@@ -8918,14 +8328,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
-        // header params
-        if ($x_comments !== null) {
-            $headerParams['x-comments'] = ObjectSerializer::toHeaderValue($x_comments);
-        }
 
 
 
@@ -8998,18 +8400,16 @@ class BusinessInformationServicesApi
      *
      * Premier Profiles JSON
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest $body Business Premier Profile Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['premierprofiles'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\PremierProfilesResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function premierprofiles($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['premierprofiles'][0])
+    public function premierprofiles($body, string $contentType = self::contentTypes['premierprofiles'][0])
     {
-        list($response) = $this->premierprofilesWithHttpInfo($content_type, $body, $x_comments, $contentType);
+        list($response) = $this->premierprofilesWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -9018,18 +8418,16 @@ class BusinessInformationServicesApi
      *
      * Premier Profiles JSON
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest $body Business Premier Profile Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['premierprofiles'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\PremierProfilesResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function premierprofilesWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['premierprofiles'][0])
+    public function premierprofilesWithHttpInfo($body, string $contentType = self::contentTypes['premierprofiles'][0])
     {
-        $request = $this->premierprofilesRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->premierprofilesRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -9189,17 +8587,15 @@ class BusinessInformationServicesApi
      *
      * Premier Profiles JSON
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest $body Business Premier Profile Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['premierprofiles'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function premierprofilesAsync($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['premierprofiles'][0])
+    public function premierprofilesAsync($body, string $contentType = self::contentTypes['premierprofiles'][0])
     {
-        return $this->premierprofilesAsyncWithHttpInfo($content_type, $body, $x_comments, $contentType)
+        return $this->premierprofilesAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -9212,18 +8608,16 @@ class BusinessInformationServicesApi
      *
      * Premier Profiles JSON
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest $body Business Premier Profile Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['premierprofiles'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function premierprofilesAsyncWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['premierprofiles'][0])
+    public function premierprofilesAsyncWithHttpInfo($body, string $contentType = self::contentTypes['premierprofiles'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\PremierProfilesResponse';
-        $request = $this->premierprofilesRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->premierprofilesRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -9264,23 +8658,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'premierprofiles'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest $body Business Premier Profile Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['premierprofiles'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function premierprofilesRequest($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['premierprofiles'][0])
+    public function premierprofilesRequest($body, string $contentType = self::contentTypes['premierprofiles'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling premierprofiles'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -9288,7 +8673,6 @@ class BusinessInformationServicesApi
                 'Missing the required parameter $body when calling premierprofiles'
             );
         }
-
 
 
         $resourcePath = '/v1/reports/premierprofiles';
@@ -9299,14 +8683,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
-        // header params
-        if ($x_comments !== null) {
-            $headerParams['x-comments'] = ObjectSerializer::toHeaderValue($x_comments);
-        }
 
 
 
@@ -9379,18 +8755,16 @@ class BusinessInformationServicesApi
      *
      * Premier Profiles HTML
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest $body Business Premier Profile Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['premierprofileshtml'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\PremierProfilesHTMLResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function premierprofileshtml($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['premierprofileshtml'][0])
+    public function premierprofileshtml($body, string $contentType = self::contentTypes['premierprofileshtml'][0])
     {
-        list($response) = $this->premierprofileshtmlWithHttpInfo($content_type, $body, $x_comments, $contentType);
+        list($response) = $this->premierprofileshtmlWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -9399,18 +8773,16 @@ class BusinessInformationServicesApi
      *
      * Premier Profiles HTML
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest $body Business Premier Profile Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['premierprofileshtml'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\PremierProfilesHTMLResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function premierprofileshtmlWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['premierprofileshtml'][0])
+    public function premierprofileshtmlWithHttpInfo($body, string $contentType = self::contentTypes['premierprofileshtml'][0])
     {
-        $request = $this->premierprofileshtmlRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->premierprofileshtmlRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -9570,17 +8942,15 @@ class BusinessInformationServicesApi
      *
      * Premier Profiles HTML
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest $body Business Premier Profile Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['premierprofileshtml'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function premierprofileshtmlAsync($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['premierprofileshtml'][0])
+    public function premierprofileshtmlAsync($body, string $contentType = self::contentTypes['premierprofileshtml'][0])
     {
-        return $this->premierprofileshtmlAsyncWithHttpInfo($content_type, $body, $x_comments, $contentType)
+        return $this->premierprofileshtmlAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -9593,18 +8963,16 @@ class BusinessInformationServicesApi
      *
      * Premier Profiles HTML
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest $body Business Premier Profile Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['premierprofileshtml'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function premierprofileshtmlAsyncWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['premierprofileshtml'][0])
+    public function premierprofileshtmlAsyncWithHttpInfo($body, string $contentType = self::contentTypes['premierprofileshtml'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\PremierProfilesHTMLResponse';
-        $request = $this->premierprofileshtmlRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->premierprofileshtmlRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -9645,23 +9013,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'premierprofileshtml'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest $body Business Premier Profile Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['premierprofileshtml'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function premierprofileshtmlRequest($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['premierprofileshtml'][0])
+    public function premierprofileshtmlRequest($body, string $contentType = self::contentTypes['premierprofileshtml'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling premierprofileshtml'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -9669,7 +9028,6 @@ class BusinessInformationServicesApi
                 'Missing the required parameter $body when calling premierprofileshtml'
             );
         }
-
 
 
         $resourcePath = '/v1/reports/premierprofiles/html';
@@ -9680,14 +9038,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
-        // header params
-        if ($x_comments !== null) {
-            $headerParams['x-comments'] = ObjectSerializer::toHeaderValue($x_comments);
-        }
 
 
 
@@ -9760,18 +9110,16 @@ class BusinessInformationServicesApi
      *
      * Premier Profiles PDF
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest $body Business Premier Profile PDF Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['premierprofilespdf'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\PremierProfilesPDFResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function premierprofilespdf($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['premierprofilespdf'][0])
+    public function premierprofilespdf($body, string $contentType = self::contentTypes['premierprofilespdf'][0])
     {
-        list($response) = $this->premierprofilespdfWithHttpInfo($content_type, $body, $x_comments, $contentType);
+        list($response) = $this->premierprofilespdfWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -9780,18 +9128,16 @@ class BusinessInformationServicesApi
      *
      * Premier Profiles PDF
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest $body Business Premier Profile PDF Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['premierprofilespdf'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\PremierProfilesPDFResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function premierprofilespdfWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['premierprofilespdf'][0])
+    public function premierprofilespdfWithHttpInfo($body, string $contentType = self::contentTypes['premierprofilespdf'][0])
     {
-        $request = $this->premierprofilespdfRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->premierprofilespdfRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -9951,17 +9297,15 @@ class BusinessInformationServicesApi
      *
      * Premier Profiles PDF
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest $body Business Premier Profile PDF Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['premierprofilespdf'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function premierprofilespdfAsync($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['premierprofilespdf'][0])
+    public function premierprofilespdfAsync($body, string $contentType = self::contentTypes['premierprofilespdf'][0])
     {
-        return $this->premierprofilespdfAsyncWithHttpInfo($content_type, $body, $x_comments, $contentType)
+        return $this->premierprofilespdfAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -9974,18 +9318,16 @@ class BusinessInformationServicesApi
      *
      * Premier Profiles PDF
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest $body Business Premier Profile PDF Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['premierprofilespdf'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function premierprofilespdfAsyncWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['premierprofilespdf'][0])
+    public function premierprofilespdfAsyncWithHttpInfo($body, string $contentType = self::contentTypes['premierprofilespdf'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\PremierProfilesPDFResponse';
-        $request = $this->premierprofilespdfRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->premierprofilespdfRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -10026,23 +9368,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'premierprofilespdf'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body. (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessPremierProfileRequest $body Business Premier Profile PDF Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['premierprofilespdf'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function premierprofilespdfRequest($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['premierprofilespdf'][0])
+    public function premierprofilespdfRequest($body, string $contentType = self::contentTypes['premierprofilespdf'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling premierprofilespdf'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -10050,7 +9383,6 @@ class BusinessInformationServicesApi
                 'Missing the required parameter $body when calling premierprofilespdf'
             );
         }
-
 
 
         $resourcePath = '/v1/reports/premierprofiles/pdf';
@@ -10061,14 +9393,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
-        // header params
-        if ($x_comments !== null) {
-            $headerParams['x-comments'] = ObjectSerializer::toHeaderValue($x_comments);
-        }
 
 
 
@@ -10141,18 +9465,16 @@ class BusinessInformationServicesApi
      *
      * Quick Search.  Our secondary search method
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\QuickSearchRequest $body QuickSearch Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['quicksearch'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\QuickSearchResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function quicksearch($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['quicksearch'][0])
+    public function quicksearch($body, string $contentType = self::contentTypes['quicksearch'][0])
     {
-        list($response) = $this->quicksearchWithHttpInfo($content_type, $body, $x_comments, $contentType);
+        list($response) = $this->quicksearchWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -10161,18 +9483,16 @@ class BusinessInformationServicesApi
      *
      * Quick Search.  Our secondary search method
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\QuickSearchRequest $body QuickSearch Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['quicksearch'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\QuickSearchResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function quicksearchWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['quicksearch'][0])
+    public function quicksearchWithHttpInfo($body, string $contentType = self::contentTypes['quicksearch'][0])
     {
-        $request = $this->quicksearchRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->quicksearchRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -10332,17 +9652,15 @@ class BusinessInformationServicesApi
      *
      * Quick Search.  Our secondary search method
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\QuickSearchRequest $body QuickSearch Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['quicksearch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function quicksearchAsync($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['quicksearch'][0])
+    public function quicksearchAsync($body, string $contentType = self::contentTypes['quicksearch'][0])
     {
-        return $this->quicksearchAsyncWithHttpInfo($content_type, $body, $x_comments, $contentType)
+        return $this->quicksearchAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -10355,18 +9673,16 @@ class BusinessInformationServicesApi
      *
      * Quick Search.  Our secondary search method
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\QuickSearchRequest $body QuickSearch Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['quicksearch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function quicksearchAsyncWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['quicksearch'][0])
+    public function quicksearchAsyncWithHttpInfo($body, string $contentType = self::contentTypes['quicksearch'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\QuickSearchResponse';
-        $request = $this->quicksearchRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->quicksearchRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -10407,23 +9723,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'quicksearch'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\QuickSearchRequest $body QuickSearch Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['quicksearch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function quicksearchRequest($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['quicksearch'][0])
+    public function quicksearchRequest($body, string $contentType = self::contentTypes['quicksearch'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling quicksearch'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -10431,7 +9738,6 @@ class BusinessInformationServicesApi
                 'Missing the required parameter $body when calling quicksearch'
             );
         }
-
 
 
         $resourcePath = '/v1/quicksearch';
@@ -10442,14 +9748,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
-        // header params
-        if ($x_comments !== null) {
-            $headerParams['x-comments'] = ObjectSerializer::toHeaderValue($x_comments);
-        }
 
 
 
@@ -10522,18 +9820,16 @@ class BusinessInformationServicesApi
      *
      * Reverse Addresses
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessReverseAddressesRequest $body Reverse Address Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reverseaddresses'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\ReverseAddressesResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function reverseaddresses($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['reverseaddresses'][0])
+    public function reverseaddresses($body, string $contentType = self::contentTypes['reverseaddresses'][0])
     {
-        list($response) = $this->reverseaddressesWithHttpInfo($content_type, $body, $x_comments, $contentType);
+        list($response) = $this->reverseaddressesWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -10542,18 +9838,16 @@ class BusinessInformationServicesApi
      *
      * Reverse Addresses
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessReverseAddressesRequest $body Reverse Address Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reverseaddresses'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\ReverseAddressesResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function reverseaddressesWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['reverseaddresses'][0])
+    public function reverseaddressesWithHttpInfo($body, string $contentType = self::contentTypes['reverseaddresses'][0])
     {
-        $request = $this->reverseaddressesRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->reverseaddressesRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -10713,17 +10007,15 @@ class BusinessInformationServicesApi
      *
      * Reverse Addresses
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessReverseAddressesRequest $body Reverse Address Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reverseaddresses'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function reverseaddressesAsync($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['reverseaddresses'][0])
+    public function reverseaddressesAsync($body, string $contentType = self::contentTypes['reverseaddresses'][0])
     {
-        return $this->reverseaddressesAsyncWithHttpInfo($content_type, $body, $x_comments, $contentType)
+        return $this->reverseaddressesAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -10736,18 +10028,16 @@ class BusinessInformationServicesApi
      *
      * Reverse Addresses
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessReverseAddressesRequest $body Reverse Address Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reverseaddresses'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function reverseaddressesAsyncWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['reverseaddresses'][0])
+    public function reverseaddressesAsyncWithHttpInfo($body, string $contentType = self::contentTypes['reverseaddresses'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\ReverseAddressesResponse';
-        $request = $this->reverseaddressesRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->reverseaddressesRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -10788,23 +10078,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'reverseaddresses'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessReverseAddressesRequest $body Reverse Address Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reverseaddresses'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function reverseaddressesRequest($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['reverseaddresses'][0])
+    public function reverseaddressesRequest($body, string $contentType = self::contentTypes['reverseaddresses'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling reverseaddresses'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -10812,7 +10093,6 @@ class BusinessInformationServicesApi
                 'Missing the required parameter $body when calling reverseaddresses'
             );
         }
-
 
 
         $resourcePath = '/v1/reverseaddresses';
@@ -10823,14 +10103,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
-        // header params
-        if ($x_comments !== null) {
-            $headerParams['x-comments'] = ObjectSerializer::toHeaderValue($x_comments);
-        }
 
 
 
@@ -10903,18 +10175,16 @@ class BusinessInformationServicesApi
      *
      * Reverse Phones
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessReversePhonesRequest $body Reverse Phones Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reversephones'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\ReversePhonesResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function reversephones($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['reversephones'][0])
+    public function reversephones($body, string $contentType = self::contentTypes['reversephones'][0])
     {
-        list($response) = $this->reversephonesWithHttpInfo($content_type, $body, $x_comments, $contentType);
+        list($response) = $this->reversephonesWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -10923,18 +10193,16 @@ class BusinessInformationServicesApi
      *
      * Reverse Phones
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessReversePhonesRequest $body Reverse Phones Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reversephones'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\ReversePhonesResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function reversephonesWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['reversephones'][0])
+    public function reversephonesWithHttpInfo($body, string $contentType = self::contentTypes['reversephones'][0])
     {
-        $request = $this->reversephonesRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->reversephonesRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -11094,17 +10362,15 @@ class BusinessInformationServicesApi
      *
      * Reverse Phones
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessReversePhonesRequest $body Reverse Phones Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reversephones'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function reversephonesAsync($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['reversephones'][0])
+    public function reversephonesAsync($body, string $contentType = self::contentTypes['reversephones'][0])
     {
-        return $this->reversephonesAsyncWithHttpInfo($content_type, $body, $x_comments, $contentType)
+        return $this->reversephonesAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -11117,18 +10383,16 @@ class BusinessInformationServicesApi
      *
      * Reverse Phones
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessReversePhonesRequest $body Reverse Phones Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reversephones'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function reversephonesAsyncWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['reversephones'][0])
+    public function reversephonesAsyncWithHttpInfo($body, string $contentType = self::contentTypes['reversephones'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\ReversePhonesResponse';
-        $request = $this->reversephonesRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->reversephonesRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -11169,23 +10433,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'reversephones'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessReversePhonesRequest $body Reverse Phones Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reversephones'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function reversephonesRequest($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['reversephones'][0])
+    public function reversephonesRequest($body, string $contentType = self::contentTypes['reversephones'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling reversephones'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -11193,7 +10448,6 @@ class BusinessInformationServicesApi
                 'Missing the required parameter $body when calling reversephones'
             );
         }
-
 
 
         $resourcePath = '/v1/reversephones';
@@ -11204,14 +10458,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
-        // header params
-        if ($x_comments !== null) {
-            $headerParams['x-comments'] = ObjectSerializer::toHeaderValue($x_comments);
-        }
 
 
 
@@ -11284,18 +10530,16 @@ class BusinessInformationServicesApi
      *
      * Reverse TaxIDs
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessReverseTaxIDsRequest $body Reverse TaxID Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reversetaxids'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\ReverseTaxIDsResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function reversetaxids($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['reversetaxids'][0])
+    public function reversetaxids($body, string $contentType = self::contentTypes['reversetaxids'][0])
     {
-        list($response) = $this->reversetaxidsWithHttpInfo($content_type, $body, $x_comments, $contentType);
+        list($response) = $this->reversetaxidsWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -11304,18 +10548,16 @@ class BusinessInformationServicesApi
      *
      * Reverse TaxIDs
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessReverseTaxIDsRequest $body Reverse TaxID Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reversetaxids'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\ReverseTaxIDsResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function reversetaxidsWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['reversetaxids'][0])
+    public function reversetaxidsWithHttpInfo($body, string $contentType = self::contentTypes['reversetaxids'][0])
     {
-        $request = $this->reversetaxidsRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->reversetaxidsRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -11475,17 +10717,15 @@ class BusinessInformationServicesApi
      *
      * Reverse TaxIDs
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessReverseTaxIDsRequest $body Reverse TaxID Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reversetaxids'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function reversetaxidsAsync($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['reversetaxids'][0])
+    public function reversetaxidsAsync($body, string $contentType = self::contentTypes['reversetaxids'][0])
     {
-        return $this->reversetaxidsAsyncWithHttpInfo($content_type, $body, $x_comments, $contentType)
+        return $this->reversetaxidsAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -11498,18 +10738,16 @@ class BusinessInformationServicesApi
      *
      * Reverse TaxIDs
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessReverseTaxIDsRequest $body Reverse TaxID Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reversetaxids'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function reversetaxidsAsyncWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['reversetaxids'][0])
+    public function reversetaxidsAsyncWithHttpInfo($body, string $contentType = self::contentTypes['reversetaxids'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\ReverseTaxIDsResponse';
-        $request = $this->reversetaxidsRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->reversetaxidsRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -11550,23 +10788,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'reversetaxids'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessReverseTaxIDsRequest $body Reverse TaxID Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reversetaxids'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function reversetaxidsRequest($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['reversetaxids'][0])
+    public function reversetaxidsRequest($body, string $contentType = self::contentTypes['reversetaxids'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling reversetaxids'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -11574,7 +10803,6 @@ class BusinessInformationServicesApi
                 'Missing the required parameter $body when calling reversetaxids'
             );
         }
-
 
 
         $resourcePath = '/v1/reversetaxids';
@@ -11585,14 +10813,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
-        // header params
-        if ($x_comments !== null) {
-            $headerParams['x-comments'] = ObjectSerializer::toHeaderValue($x_comments);
-        }
 
 
 
@@ -11665,18 +10885,16 @@ class BusinessInformationServicesApi
      *
      * Commercial Risk Dashboards
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequestWithModel $body Commercial Risk Dashboards Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['riskdashboards'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\RiskDashboardsResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function riskdashboards($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['riskdashboards'][0])
+    public function riskdashboards($body, string $contentType = self::contentTypes['riskdashboards'][0])
     {
-        list($response) = $this->riskdashboardsWithHttpInfo($content_type, $body, $x_comments, $contentType);
+        list($response) = $this->riskdashboardsWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -11685,18 +10903,16 @@ class BusinessInformationServicesApi
      *
      * Commercial Risk Dashboards
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequestWithModel $body Commercial Risk Dashboards Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['riskdashboards'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\RiskDashboardsResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function riskdashboardsWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['riskdashboards'][0])
+    public function riskdashboardsWithHttpInfo($body, string $contentType = self::contentTypes['riskdashboards'][0])
     {
-        $request = $this->riskdashboardsRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->riskdashboardsRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -11856,17 +11072,15 @@ class BusinessInformationServicesApi
      *
      * Commercial Risk Dashboards
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequestWithModel $body Commercial Risk Dashboards Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['riskdashboards'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function riskdashboardsAsync($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['riskdashboards'][0])
+    public function riskdashboardsAsync($body, string $contentType = self::contentTypes['riskdashboards'][0])
     {
-        return $this->riskdashboardsAsyncWithHttpInfo($content_type, $body, $x_comments, $contentType)
+        return $this->riskdashboardsAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -11879,18 +11093,16 @@ class BusinessInformationServicesApi
      *
      * Commercial Risk Dashboards
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequestWithModel $body Commercial Risk Dashboards Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['riskdashboards'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function riskdashboardsAsyncWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['riskdashboards'][0])
+    public function riskdashboardsAsyncWithHttpInfo($body, string $contentType = self::contentTypes['riskdashboards'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\RiskDashboardsResponse';
-        $request = $this->riskdashboardsRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->riskdashboardsRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -11931,23 +11143,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'riskdashboards'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessDataRequestWithModel $body Commercial Risk Dashboards Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['riskdashboards'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function riskdashboardsRequest($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['riskdashboards'][0])
+    public function riskdashboardsRequest($body, string $contentType = self::contentTypes['riskdashboards'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling riskdashboards'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -11955,7 +11158,6 @@ class BusinessInformationServicesApi
                 'Missing the required parameter $body when calling riskdashboards'
             );
         }
-
 
 
         $resourcePath = '/v1/riskdashboards';
@@ -11966,14 +11168,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
-        // header params
-        if ($x_comments !== null) {
-            $headerParams['x-comments'] = ObjectSerializer::toHeaderValue($x_comments);
-        }
 
 
 
@@ -12046,7 +11240,6 @@ class BusinessInformationServicesApi
      *
      * Commercial Scores
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessScoresRequest $body Commercial Scores Request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['scores'] to see the possible values for this operation
      *
@@ -12054,9 +11247,9 @@ class BusinessInformationServicesApi
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\ScoresResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function scores($content_type, $body, string $contentType = self::contentTypes['scores'][0])
+    public function scores($body, string $contentType = self::contentTypes['scores'][0])
     {
-        list($response) = $this->scoresWithHttpInfo($content_type, $body, $contentType);
+        list($response) = $this->scoresWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -12065,7 +11258,6 @@ class BusinessInformationServicesApi
      *
      * Commercial Scores
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessScoresRequest $body Commercial Scores Request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['scores'] to see the possible values for this operation
      *
@@ -12073,9 +11265,9 @@ class BusinessInformationServicesApi
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\ScoresResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function scoresWithHttpInfo($content_type, $body, string $contentType = self::contentTypes['scores'][0])
+    public function scoresWithHttpInfo($body, string $contentType = self::contentTypes['scores'][0])
     {
-        $request = $this->scoresRequest($content_type, $body, $contentType);
+        $request = $this->scoresRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -12235,16 +11427,15 @@ class BusinessInformationServicesApi
      *
      * Commercial Scores
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessScoresRequest $body Commercial Scores Request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['scores'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function scoresAsync($content_type, $body, string $contentType = self::contentTypes['scores'][0])
+    public function scoresAsync($body, string $contentType = self::contentTypes['scores'][0])
     {
-        return $this->scoresAsyncWithHttpInfo($content_type, $body, $contentType)
+        return $this->scoresAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -12257,17 +11448,16 @@ class BusinessInformationServicesApi
      *
      * Commercial Scores
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessScoresRequest $body Commercial Scores Request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['scores'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function scoresAsyncWithHttpInfo($content_type, $body, string $contentType = self::contentTypes['scores'][0])
+    public function scoresAsyncWithHttpInfo($body, string $contentType = self::contentTypes['scores'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\ScoresResponse';
-        $request = $this->scoresRequest($content_type, $body, $contentType);
+        $request = $this->scoresRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -12308,22 +11498,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'scores'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessScoresRequest $body Commercial Scores Request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['scores'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function scoresRequest($content_type, $body, string $contentType = self::contentTypes['scores'][0])
+    public function scoresRequest($body, string $contentType = self::contentTypes['scores'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling scores'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -12341,10 +11523,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
 
 
 
@@ -12417,18 +11595,16 @@ class BusinessInformationServicesApi
      *
      * Scores Auto Search
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\ScoresSearchRequest $body Commercial Scores Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['scoressearch'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\ScoresSearchResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function scoressearch($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['scoressearch'][0])
+    public function scoressearch($body, string $contentType = self::contentTypes['scoressearch'][0])
     {
-        list($response) = $this->scoressearchWithHttpInfo($content_type, $body, $x_comments, $contentType);
+        list($response) = $this->scoressearchWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -12437,18 +11613,16 @@ class BusinessInformationServicesApi
      *
      * Scores Auto Search
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\ScoresSearchRequest $body Commercial Scores Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['scoressearch'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\ScoresSearchResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function scoressearchWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['scoressearch'][0])
+    public function scoressearchWithHttpInfo($body, string $contentType = self::contentTypes['scoressearch'][0])
     {
-        $request = $this->scoressearchRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->scoressearchRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -12608,17 +11782,15 @@ class BusinessInformationServicesApi
      *
      * Scores Auto Search
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\ScoresSearchRequest $body Commercial Scores Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['scoressearch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function scoressearchAsync($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['scoressearch'][0])
+    public function scoressearchAsync($body, string $contentType = self::contentTypes['scoressearch'][0])
     {
-        return $this->scoressearchAsyncWithHttpInfo($content_type, $body, $x_comments, $contentType)
+        return $this->scoressearchAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -12631,18 +11803,16 @@ class BusinessInformationServicesApi
      *
      * Scores Auto Search
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\ScoresSearchRequest $body Commercial Scores Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['scoressearch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function scoressearchAsyncWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['scoressearch'][0])
+    public function scoressearchAsyncWithHttpInfo($body, string $contentType = self::contentTypes['scoressearch'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\ScoresSearchResponse';
-        $request = $this->scoressearchRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->scoressearchRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -12683,23 +11853,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'scoressearch'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\ScoresSearchRequest $body Commercial Scores Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['scoressearch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function scoressearchRequest($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['scoressearch'][0])
+    public function scoressearchRequest($body, string $contentType = self::contentTypes['scoressearch'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling scoressearch'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -12707,7 +11868,6 @@ class BusinessInformationServicesApi
                 'Missing the required parameter $body when calling scoressearch'
             );
         }
-
 
 
         $resourcePath = '/v1/scores/search';
@@ -12718,14 +11878,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
-        // header params
-        if ($x_comments !== null) {
-            $headerParams['x-comments'] = ObjectSerializer::toHeaderValue($x_comments);
-        }
 
 
 
@@ -12798,18 +11950,16 @@ class BusinessInformationServicesApi
      *
      * Advanced Business Search.  The primary search method
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\SearchRequest $body Business Search Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['search'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\SearchResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function search($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['search'][0])
+    public function search($body, string $contentType = self::contentTypes['search'][0])
     {
-        list($response) = $this->searchWithHttpInfo($content_type, $body, $x_comments, $contentType);
+        list($response) = $this->searchWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -12818,18 +11968,16 @@ class BusinessInformationServicesApi
      *
      * Advanced Business Search.  The primary search method
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\SearchRequest $body Business Search Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['search'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\SearchResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function searchWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['search'][0])
+    public function searchWithHttpInfo($body, string $contentType = self::contentTypes['search'][0])
     {
-        $request = $this->searchRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->searchRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -12989,17 +12137,15 @@ class BusinessInformationServicesApi
      *
      * Advanced Business Search.  The primary search method
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\SearchRequest $body Business Search Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['search'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function searchAsync($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['search'][0])
+    public function searchAsync($body, string $contentType = self::contentTypes['search'][0])
     {
-        return $this->searchAsyncWithHttpInfo($content_type, $body, $x_comments, $contentType)
+        return $this->searchAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -13012,18 +12158,16 @@ class BusinessInformationServicesApi
      *
      * Advanced Business Search.  The primary search method
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\SearchRequest $body Business Search Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['search'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function searchAsyncWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['search'][0])
+    public function searchAsyncWithHttpInfo($body, string $contentType = self::contentTypes['search'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\SearchResponse';
-        $request = $this->searchRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->searchRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -13064,23 +12208,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'search'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\SearchRequest $body Business Search Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['search'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function searchRequest($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['search'][0])
+    public function searchRequest($body, string $contentType = self::contentTypes['search'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling search'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -13088,7 +12223,6 @@ class BusinessInformationServicesApi
                 'Missing the required parameter $body when calling search'
             );
         }
-
 
 
         $resourcePath = '/v1/search';
@@ -13099,14 +12233,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
-        // header params
-        if ($x_comments !== null) {
-            $headerParams['x-comments'] = ObjectSerializer::toHeaderValue($x_comments);
-        }
 
 
 
@@ -13179,18 +12305,16 @@ class BusinessInformationServicesApi
      *
      * Commercial Trades
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessTradesRequest $body Commercial Trades Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['trades'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessTradesResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function trades($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['trades'][0])
+    public function trades($body, string $contentType = self::contentTypes['trades'][0])
     {
-        list($response) = $this->tradesWithHttpInfo($content_type, $body, $x_comments, $contentType);
+        list($response) = $this->tradesWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -13199,18 +12323,16 @@ class BusinessInformationServicesApi
      *
      * Commercial Trades
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessTradesRequest $body Commercial Trades Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['trades'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessTradesResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function tradesWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['trades'][0])
+    public function tradesWithHttpInfo($body, string $contentType = self::contentTypes['trades'][0])
     {
-        $request = $this->tradesRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->tradesRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -13370,17 +12492,15 @@ class BusinessInformationServicesApi
      *
      * Commercial Trades
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessTradesRequest $body Commercial Trades Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['trades'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function tradesAsync($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['trades'][0])
+    public function tradesAsync($body, string $contentType = self::contentTypes['trades'][0])
     {
-        return $this->tradesAsyncWithHttpInfo($content_type, $body, $x_comments, $contentType)
+        return $this->tradesAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -13393,18 +12513,16 @@ class BusinessInformationServicesApi
      *
      * Commercial Trades
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessTradesRequest $body Commercial Trades Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['trades'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function tradesAsyncWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['trades'][0])
+    public function tradesAsyncWithHttpInfo($body, string $contentType = self::contentTypes['trades'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessTradesResponse';
-        $request = $this->tradesRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->tradesRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -13445,23 +12563,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'trades'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessTradesRequest $body Commercial Trades Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['trades'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function tradesRequest($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['trades'][0])
+    public function tradesRequest($body, string $contentType = self::contentTypes['trades'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling trades'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -13469,7 +12578,6 @@ class BusinessInformationServicesApi
                 'Missing the required parameter $body when calling trades'
             );
         }
-
 
 
         $resourcePath = '/v1/trades';
@@ -13480,14 +12588,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
-        // header params
-        if ($x_comments !== null) {
-            $headerParams['x-comments'] = ObjectSerializer::toHeaderValue($x_comments);
-        }
 
 
 
@@ -13560,18 +12660,16 @@ class BusinessInformationServicesApi
      *
      * UCC Filings
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessUCCFilingsRequest $body UCC Filings Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uccfilings'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessUCCFilingsResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503
      */
-    public function uccfilings($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['uccfilings'][0])
+    public function uccfilings($body, string $contentType = self::contentTypes['uccfilings'][0])
     {
-        list($response) = $this->uccfilingsWithHttpInfo($content_type, $body, $x_comments, $contentType);
+        list($response) = $this->uccfilingsWithHttpInfo($body, $contentType);
         return $response;
     }
 
@@ -13580,18 +12678,16 @@ class BusinessInformationServicesApi
      *
      * UCC Filings
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessUCCFilingsRequest $body UCC Filings Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uccfilings'] to see the possible values for this operation
      *
      * @throws \TheLogicStudio\ExperianBusinessesPHP\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessUCCFilingsResponse|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse400|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse401|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse404|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse500|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse502|\TheLogicStudio\ExperianBusinessesPHP\Model\ErrorResponse503, HTTP status code, HTTP response headers (array of strings)
      */
-    public function uccfilingsWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['uccfilings'][0])
+    public function uccfilingsWithHttpInfo($body, string $contentType = self::contentTypes['uccfilings'][0])
     {
-        $request = $this->uccfilingsRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->uccfilingsRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -13751,17 +12847,15 @@ class BusinessInformationServicesApi
      *
      * UCC Filings
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessUCCFilingsRequest $body UCC Filings Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uccfilings'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uccfilingsAsync($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['uccfilings'][0])
+    public function uccfilingsAsync($body, string $contentType = self::contentTypes['uccfilings'][0])
     {
-        return $this->uccfilingsAsyncWithHttpInfo($content_type, $body, $x_comments, $contentType)
+        return $this->uccfilingsAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -13774,18 +12868,16 @@ class BusinessInformationServicesApi
      *
      * UCC Filings
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessUCCFilingsRequest $body UCC Filings Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uccfilings'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uccfilingsAsyncWithHttpInfo($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['uccfilings'][0])
+    public function uccfilingsAsyncWithHttpInfo($body, string $contentType = self::contentTypes['uccfilings'][0])
     {
         $returnType = '\TheLogicStudio\ExperianBusinessesPHP\Model\BusinessUCCFilingsResponse';
-        $request = $this->uccfilingsRequest($content_type, $body, $x_comments, $contentType);
+        $request = $this->uccfilingsRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -13826,23 +12918,14 @@ class BusinessInformationServicesApi
     /**
      * Create request for operation 'uccfilings'
      *
-     * @param  string $content_type Content-Type field is to describe the data contained in the body (required)
      * @param  \TheLogicStudio\ExperianBusinessesPHP\Model\BusinessUCCFilingsRequest $body UCC Filings Request (required)
-     * @param  string|null $x_comments An echo back field that will return x-comments in the response header (optional, default to 'Test comment')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uccfilings'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function uccfilingsRequest($content_type, $body, $x_comments = 'Test comment', string $contentType = self::contentTypes['uccfilings'][0])
+    public function uccfilingsRequest($body, string $contentType = self::contentTypes['uccfilings'][0])
     {
-
-        // verify the required parameter 'content_type' is set
-        if ($content_type === null || (is_array($content_type) && count($content_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $content_type when calling uccfilings'
-            );
-        }
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -13850,7 +12933,6 @@ class BusinessInformationServicesApi
                 'Missing the required parameter $body when calling uccfilings'
             );
         }
-
 
 
         $resourcePath = '/v1/uccfilings';
@@ -13861,14 +12943,6 @@ class BusinessInformationServicesApi
         $multipart = false;
 
 
-        // header params
-        if ($content_type !== null) {
-            $headerParams['Content-Type'] = ObjectSerializer::toHeaderValue($content_type);
-        }
-        // header params
-        if ($x_comments !== null) {
-            $headerParams['x-comments'] = ObjectSerializer::toHeaderValue($x_comments);
-        }
 
 
 
